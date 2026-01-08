@@ -23,6 +23,25 @@ import Japan_Market_Expansion from "../../../assets/milestones/Japan_Market_Expa
 import Architecturalglassline from "../../../assets/milestones/Architecturalglassline.jpg";
 import expanding_into_asia from "../../../assets/milestones/expanding-into-asia.jpg";
 import Temperingline from "../../../assets/milestones/Tempering_Line.jpg";
+import plantexpansion from "../../../assets/milestones/Plantexpansion.webp";
+import SAFlamination from "../../../assets/milestones/SAFLaminated.JPG";
+import Isologo from "../../../assets/milestones/ISOStandard.jpg";
+import curved from "../../../assets/milestones/Curvedglassfurnace.JPG";
+import Capacity from "../../../assets/milestones/CapacityEnhancement.jpg";
+import ArchietecturalExpansion from "../../../assets/milestones/ArchietecturalExpansion.jpg";
+import Busglass from "../../../assets/milestones/BusglassBending.webp";
+import Temperingfurnance from "../../../assets/milestones/Temperingfurnance.jpg";
+import Bandoline from "../../../assets/milestones/Bandoline.webp";
+import Certificateachieved from "../../../assets/milestones/Certificateachieved.jpg";
+import Awarded from "../../../assets/milestones/Awarded.jpg";
+import Collaboration from "../../../assets/milestones/Collaboration.jpg";
+import Polishing from "../../../assets/milestones/Polishing.jpg";
+import snamcertification from "../../../assets/milestones/snamcertification.jpg";
+import Discussion from "../../../assets/milestones/Discussion.jpg";
+import IATF169 from "../../../assets/milestones/IATF16949.jpg";
+import Ceer_psa from "../../../assets/milestones/Success.jpg";
+import Success from "../../../assets/milestones/Success.jpg";
+import Achievement from "../../../assets/milestones/Achievement.jpg";
 
 /* ================= FILTERS (FIXED ERROR) ================= */
 const filters = [
@@ -123,120 +142,121 @@ const milestones = [
     year: "2003",
     title: "Plant Expansion",
     desc: "Manufacturing capacity enhanced through plant expansion.",
-    image: heroImage,
+    image: plantexpansion,
   },
   {
     year: "2005",
     title: "SEF Lamination Furnace Added",
     desc: "Installed SEF Excon laminated glass furnace.",
-    image: heroImage,
+    image: SAFlamination,
   },
   {
     year: "2006",
     title: "ISO 9001 Certification",
     desc: "Achieved ISO 9001 quality management certification.",
-    image: heroImage,
+    image: Isologo,
   },
   {
     year: "2008",
     title: "Curved Glass Furnace Added",
     desc: "Midi furnace installed for curved glass production.",
-    image: heroImage,
+    image: curved,
   },
   {
     year: "2010",
     title: "Capacity Enhancement Expansion",
     desc: "Major expansion to meet increasing market demand.",
-    image: heroImage,
+    image: Capacity,
   },
   {
     year: "2012",
     title: "Architectural Line Expansion",
     desc: "Architectural glass line capacity further expanded.",
-    image: heroImage,
+    image: ArchietecturalExpansion,
   },
   {
     year: "2013",
     title: "Bus Glass Bending Furnace",
     desc: "Screen Max furnace installed for bus glass applications.",
-    image: heroImage,
+    image: Busglass,
   },
   {
     year: "2014",
     title: "Tempering Furnace Setup",
     desc: "New tempering furnace commissioned for quality enhancement.",
-    image: heroImage,
+    image: Temperingfurnance,
   },
   {
     year: "2017",
     title: "New Bando Line Installation",
     desc: "Production efficiency improved with Bando line installation.",
-    image: heroImage,
+    image: Bandoline,
   },
   {
     year: "2020",
     title: "SGCC Certification",
     desc: "Achieved SGCC certification for automotive safety glass.",
+    image: Certificateachieved,
   },
   {
     year: "2023",
     title: "OEM Business Collaborations",
     desc: "Automotive OEM visits and collaborations initiated.",
-    image: heroImage,
+    image: Collaboration,
   },
   {
     year: "2023",
     title: "CEER Prototype Development Awarded",
     desc: "Awarded prototype development for P800/P700 models.",
-    image: heroImage,
+    image: Awarded,
   },
   {
     year: "2023",
     title: "ISO 45001 & ISO 14001",
     desc: "Certified for occupational health, safety, and environmental management.",
-    image: heroImage,
+    image: Isologo,
   },
   {
     year: "2024",
     title: "Polishing Machine Installation",
     desc: "Advanced polishing machine installed for surface finish improvement.",
-    image: heroImage,
+    image: Polishing,
   },
   {
     year: "2024",
     title: "SNAM Prototype Development",
     desc: "Prototype development initiated for SNAM project.",
-    image: heroImage,
+    image: snamcertification,
   },
   {
     year: "2024",
     title: "OEM Business Discussions",
     desc: "Strategic discussions held with Lucid and Volvo.",
-    image: heroImage,
+    image: Discussion,
   },
   {
     year: "2025",
     title: "CEER PSA Audit Success",
     desc: "Achieved 89.9 score in CEER PSA audit.",
-    image: heroImage,
+    image: Ceer_psa,
   },
   {
     year: "2025",
     title: "PT2 Sample Development",
     desc: "Successful development of PT2 samples for CEER project.",
-    image: heroImage,
+    image: Success,
   },
   {
     year: "2025",
     title: "Hyundai – HMME Discussions",
     desc: "Business collaboration discussions initiated with Hyundai HMME.",
-    image: heroImage,
+    image: Achievement,
   },
   {
     year: "2025",
     title: "IATF 16949 Certification Initiated",
     desc: "IATF 16949 certification process initiated as part of continuous quality improvement.",
-    image: heroImage,
+    image: IATF169,
   },
 ];
 export default function Milestones() {
