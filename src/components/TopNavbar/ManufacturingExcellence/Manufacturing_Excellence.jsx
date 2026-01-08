@@ -17,7 +17,7 @@ import heroImg from "../../../assets/TopNavbar/ManufacturingExcellence/Images/ma
 import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Cut&Grinding.jpg";
 import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image2.JPG";
 import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.JPG";
-import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image4.jpg";
+import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image4.JPG";
 import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.webp";
 import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.JPG";
 import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.JPG";
