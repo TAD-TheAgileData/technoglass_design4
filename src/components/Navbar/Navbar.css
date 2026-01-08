@@ -73,7 +73,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 11000;
 
   /* 🔑 CRITICAL: allow dropdown to escape */
   overflow: visible;
@@ -109,21 +109,21 @@ body {
 }
 
 /* ================= DROPDOWN ================= */
-.top-dropdown {
+  /* 🔑 MOBILE FIX */
+  .top-dropdown {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 56px); /* push below main navbar */
   left: 0;
 
   background: #ffffff;
-  color: #0b2b3a;
   min-width: 280px;
   padding: 12px 0;
-
   border-radius: 6px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-  z-index: 3000;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
 
-  /* 🔑 MOBILE FIX */
+  z-index: 12000; /* MUST be higher than .navbar */
+
+
   max-height: 60vh;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -590,16 +590,6 @@ body {
 
 /* ================= TOP BAR DROPDOWN MATCH MAIN DROPDOWN ================= */
 
-.top-dropdown {
-  font-family:
-    "Helvetica Neue",
-    "Montserrat",
-    "Futura",
-    "Roboto",
-    "Avenir",
-    Arial,
-    sans-serif;
-}
 
 /* EXACT MATCH WITH MAIN NAVBAR DROPDOWN */
 .top-dropdown span {
@@ -618,19 +608,6 @@ body {
   color: rgb(41, 60, 140);
 }
 
-/* ================= TOP BAR DROPDOWN SPACING FIX ================= */
-
-/* bring dropdown closer to top bar */
-.top-dropdown {
-  top: 100%;           /* remove extra gap */
-  padding: 8px 0;      /* reduce overall height */
-}
-
-/* tighter item spacing */
-.top-dropdown span {
-  padding: 10px 22px;  /* reduced from 14px 26px */
-  line-height: 1.4;
-}
 
 /* ================= TOP BAR DROPDOWN LINKS ================= */
 
@@ -749,4 +726,33 @@ body {
 /* remove line from last item */
 .top-dropdown a:last-child::after {
   display: none;
+}
+
+/* ================= TOP BAR DROPDOWN TEXT FIX (DO NOT DELETE ABOVE CODE) ================= */
+
+.top-dropdown {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+}
+
+/* 🔑 IMPORTANT: your dropdown uses <Link> = <a>, not <span> */
+.top-dropdown a {
+  display: block;
+  padding: 12px 22px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #293c8c;
+  text-decoration: none;
+
+  line-height: 1.45;
+}
+
+.top-dropdown a:hover {
+  background: rgba(41, 60, 140, 0.08);
+  color: #293c8c;
 }
