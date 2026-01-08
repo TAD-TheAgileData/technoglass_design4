@@ -6,7 +6,7 @@ import Hero from "../../../assets/About_us/Hero.jpg";
 import CompanyOverview from "../../../assets/About_us/CompanyOverview.jpg";
 import VMV from "../../../assets/About_us/VMV.jpg";
 import Leadership from "../../../assets/About_us/Leadership.jpg";
-import Manufacturing from "../../../assets/About_us/Manufacturig.jpg";
+
 import Sustainable from "../../../assets/About_us/sustainable&ESG.webp";
 import Milestone from "../../../assets/About_us/Milestone.jpg";
 
@@ -32,13 +32,6 @@ const aboutCards = [
       "A message from our leadership team sharing insights, direction, and commitment to excellence.",
     image: Leadership,
     path: "/about/leadership",
-  },
-  {
-    title: "Manufacturing Footprint",
-    description:
-      "Explore our global manufacturing presence and advanced production capabilities.",
-    image: Manufacturing,
-    path: "/about/manufacturing",
   },
   {
     title: "Sustainability & ESG",

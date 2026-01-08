@@ -1,0 +1,106 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+/* ================= PAGE ================= */
+.ethics-page {
+  font-family: "Inter", "Montserrat", system-ui, sans-serif;
+  background: #f6f8fa;
+  color: #0b2b3a;
+}
+
+/* ================= HERO ================= */
+.ethics-hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0b2b3a, #1f6f8b);
+  color: #ffffff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* ================= CONTENT ================= */
+.ethics-sections {
+  padding: 80px 20px;
+}
+
+.ethics-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ================= CARD ================= */
+.ethics-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.ethics-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #1f6f8b, #6ec1e4);
+}
+
+.ethics-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  padding-left: 16px;
+}
+
+.ethics-card ul {
+  list-style: none;
+  padding-left: 16px;
+  margin: 0;
+}
+
+.ethics-card li {
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6ecef;
+}
+
+.ethics-card li:last-child {
+  border-bottom: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .ethics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ethics-sections {
+    padding: 60px 16px;
+  }
+}

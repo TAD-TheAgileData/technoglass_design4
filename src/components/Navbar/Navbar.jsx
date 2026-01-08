@@ -17,10 +17,8 @@ const menuData = [
         path: "/about/vision_mission",
       },
       { label: "Leadership Message", path: "/about/leadership" },
-      {
-        label: "Manufacturing Footprint",
-        path: "/about/manufacturing",
-      },
+      {label:" code of ethics" , path: "/about/codeofethics" },
+      {label:"Startegic Drivers" , path:"/about/StartegicDrivers"},
       { label: "Sustainability & ESG", path: "/about/sustainability" },
       { label: "Corporate Milestones", path: "/about/milestones" },
     ],
@@ -71,7 +69,7 @@ const menuData = [
       { label: "Technical Resources", path: "/services/technical-resources" },
     ],
   },
-  
+
   {
     title: "Industries",
     links: [

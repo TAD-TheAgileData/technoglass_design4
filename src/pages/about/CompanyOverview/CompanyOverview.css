@@ -10,7 +10,8 @@
 
 /* ================= PAGE ROOT ================= */
 .company-overview {
-  font-family: "Montserrat", "Roboto", "Helvetica Neue", "Avenir", "Futura", sans-serif;
+  font-family: "Montserrat", "Roboto", "Helvetica Neue", "Avenir", "Futura",
+    sans-serif;
   background: #f6f8fa;
   color: #0b2b3a;
 }
@@ -69,6 +70,8 @@
   padding: 32px;
   text-align: center;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  outline: 4px solid rgba(10, 10, 10, 0.448);
+  outline-offset: -2px;
 }
 
 .stat-card h2 {
@@ -130,16 +133,25 @@
 }
 
 /* ================= LEFT ACCENT BORDER ================= */
-.overview-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 20px;
-  bottom: 20px;
-  width: 4px;
-  background-color: #f36b21; /* 🔸 CHANGE COLOR HERE */
-  border-radius: 2px;
-  z-index: 2;
+.overview-card {
+  border-left: 4px solid #f5a623; /* reference yellow */
+  padding-left: 1rem; /* compensate for border */
+}
+
+/* Even cards: move yellow line to right side */
+.overview-card:nth-child(even) {
+  border-left: none;
+  border-right: 4px solid #f5a623; /* reference yellow */
+  padding-left: 0;
+  padding-right: 1rem; /* compensate for border */
+}
+
+/* Last card: ensure it has a yellow line */
+.overview-card:last-child {
+  border-left: 4px solid #f5a623 !important; /* reference yellow */
+  border-right: none;
+  padding-left: 1rem !important; /* compensate for border */
+  padding-right: 0;
 }
 
 /* Rotate diagonal for even cards */
@@ -243,7 +255,6 @@
 /* ================= MOBILE FIX (FINAL) ==================== */
 /* ========================================================= */
 @media (max-width: 768px) {
-
   /* Force same layout for ALL cards */
   .overview-row {
     display: flex;
@@ -295,4 +306,47 @@
     grid-template-columns: 1fr;
     gap: 0.6rem;
   }
+}
+
+/* ========================================================= */
+/* ===== BIG LIGHT TRIANGLE (REFERENCE STYLE ONLY) ========= */
+/* ========================================================= */
+
+.overview-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Big light blue triangle - ODD cards (bottom-right) */
+.overview-card:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #b7d2db;
+  clip-path: polygon(100% 25%, 25% 100%, 100% 100%);
+  z-index: 0;
+}
+
+/* Big light blue triangle - EVEN cards (bottom-left) */
+.overview-card:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #b7d2db;
+  clip-path: polygon(0 100%, 75% 100%, 0 25%);
+  z-index: 0;
+}
+
+/* Keep content above triangle */
+.overview-row,
+.overview-content,
+.overview-image {
+  position: relative;
+  z-index: 2;
 }

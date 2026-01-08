@@ -125,10 +125,21 @@
   color: #c9dee6;
 }
 
+.footer-bottom-logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .footer-bottom-logo {
-  width: 110px;
+  height: 50px;      /* same height for both logos */
+  width: auto;       /* keeps correct proportions */
+  object-fit: contain;
   opacity: 0.85;
 }
+ 
+ 
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {

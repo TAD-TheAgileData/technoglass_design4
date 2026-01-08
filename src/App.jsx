@@ -15,7 +15,7 @@ import About from "./pages/about/About_US/About_US.jsx";
 import CompanyOverview from "./pages/about/CompanyOverview/CompanyOverview.jsx";
 import Vision_mission from "./pages/about/vision-mission/Vision.jsx";
 import Leadership from "./pages/about/leadership/Leadership.jsx";
-import Manufacturing from "./pages/about/manufacturing/Manufacturing.jsx";
+
 import Sustainability from "./pages/about/Sustainability/Sustainability.jsx";
 import Milestones from "./pages/about/Milestone/Milestones.jsx";
 
@@ -73,6 +73,8 @@ import Location from "./pages/Contact/Location/Location.jsx";
 import Services from "./pages/OurServices/Servicescard/Services.jsx";
 import Trust from "./pages/Trust/Trust.jsx";
 import ProductProtofolio from "./pages/Portfolio/ProductProtofolio.jsx";
+import Codeofethics from "./pages/about/CodeEthics/Codeofethics.jsx";
+import StartegicDrivers from "./pages/about/StartegicDrivers/StartegicDrivers.jsx";
 
 function App() {
   return (
@@ -93,7 +95,8 @@ function App() {
           <Route path="/about/company-overview" element={<CompanyOverview />} />
           <Route path="/about/vision_mission" element={<Vision_mission />} />
           <Route path="/about/leadership" element={<Leadership />} />
-          <Route path="/about/manufacturing" element={<Manufacturing />} />
+          <Route path="/about/codeofethics" element={<Codeofethics/>}/>
+          <Route path="/about/StartegicDrivers" element={<StartegicDrivers/>}/>
           <Route path="/about/sustainability" element={<Sustainability />} />
           <Route path="/about/milestones" element={<Milestones />} />
 

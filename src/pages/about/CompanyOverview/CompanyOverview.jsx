@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import "./CompanyOverview.css";
 import { FaCheckCircle } from "react-icons/fa";
+
+// Using placeholder images
 import heroImage from "../../../assets/Hero/CompanyOverview.jpg";
 
 /* ✅ ADDED: content images */
@@ -10,7 +12,7 @@ import overviewImg3 from "../../../assets/Companyoverview/Whatweprovide.jpg";
 import overviewImg4 from "../../../assets/Companyoverview/Manufacturig.jpg";
 import overviewImg5 from "../../../assets/Companyoverview/Technologycollab.jpg";
 
-export default function CompanyOverview() {
+export default function App() {
   return (
     <section className="company-overview">
       {/* ================= HERO ================= */}
@@ -127,7 +129,7 @@ const sections = [
         are among the most preferred suppliers in the Gulf region. Over the
         decades, Technoglass has earned the trust of customers through
         consistent quality, dependable delivery timelines, and a strong
-        commitment to customer satisfaction. The company’s strategic location
+        commitment to customer satisfaction. The company's strategic location
         and deep understanding of regional market demands have enabled it to
         serve leading automotive distributors and OEM partners across the Gulf
         region. Today, Technoglass is widely recognized as one of the most
