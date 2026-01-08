@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 //Top Navbar
 import Global_Reach from "./components/TopNavbar/Global Reach/Global_Reach.jsx";
-import Manufacturing_Excellence from "./components/TopNavbar/Manufacturing Excellence/Manufacturing_Excellence.jsx";
+import Manufacturing_Excellence from "./components/TopNavbar/ManufacturingExcellence/Manufacturing_Excellence.jsx";
 import Our_Values from "./components/TopNavbar/Our Values/Our_Values.jsx";
 import Why_choose_us from "./components/TopNavbar/Why Choose Us/Why_choose_us.jsx";
 
