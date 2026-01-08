@@ -88,7 +88,7 @@ const milestones = [
     year: "1993",
     title: "MENA Export Operations",
     desc: "Exports commenced across Middle East and North Africa regions.",
-    image: MENA_Export,
+    image: MENA_Export , 
   },
   {
     year: "1993",
