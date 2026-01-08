@@ -1,0 +1,131 @@
+/* ================= ROOT ================= */
+.industries-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.industries-hero {
+  position: relative;
+  height: 75vh;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+
+  /* GPU optimization */
+  transform: translateZ(0);
+}
+
+.industries-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 42, 64, 0.85),
+    rgba(10, 42, 64, 0.45)
+  );
+}
+
+.industries-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.industries-title {
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.industries-subtitle {
+  color: #e5e7eb;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* ================= SECTION ================= */
+.industries-section {
+  background: #f8fafc;
+  padding: 60px 0;
+
+  /* isolate scroll repaint */
+  contain: layout paint;
+}
+
+/* ================= GRID ================= */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.industries-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= CARD ================= */
+.industries-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transform: translateZ(0);
+  will-change: transform;
+  contain: layout paint;
+  transition: transform 0.25s ease;
+}
+
+.industries-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ================= IMAGE ================= */
+.industries-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.industries-card:hover .industries-card-image {
+  transform: scale(1.04);
+}
+
+/* ================= OVERLAY ================= */
+.industries-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 42, 64, 0.75);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+
+  pointer-events: none;
+}
+
+.industries-card-overlay h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.industries-card-overlay p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.industries-card-overlay span {
+  font-weight: 600;
+  font-size: 13px;
+}

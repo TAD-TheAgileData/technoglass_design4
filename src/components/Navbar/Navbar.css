@@ -1,0 +1,752 @@
+/* ================= GOOGLE FONT ================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Helvetica Neue",
+    "Montserrat",
+    "Futura",
+    "Avenir",
+    "Roboto",
+    Arial,
+    sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* ================= GLOBAL SCROLL FIX ================= */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary: #176179;
+  --secondary: #1f7f9a;
+  --text-dark: #1f3f46;
+  --text-muted: #6f8796;
+  --bg-light: #f3f6f8;
+  --bg-white: #ffffff;
+  --border-light: #e6ebef;
+  --topbar-height: 44px;
+}
+
+/* ================= BODY OFFSET ================= */
+body {
+  font-weight: 300;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 120px;
+}
+
+/* ================= TOP BAR ================= */
+/* ================= TOP BAR ================= */
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: var(--primary);
+  display: flex;
+  gap: 22px;
+  padding: 0 40px;
+  height: var(--topbar-height);
+  line-height: var(--topbar-height);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+
+  /* 🔑 CRITICAL: allow dropdown to escape */
+  overflow: visible;
+}
+
+/* ================= TOP ITEM ================= */
+.top-item {
+  position: relative;
+
+  /* 🔑 CRITICAL: prevent clipping */
+  overflow: visible;
+}
+
+/* ================= BUTTON ================= */
+.top-item button {
+  background: none;
+  border: none;
+  color: #fff;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  height: var(--topbar-height);
+  line-height: var(--topbar-height);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.top-item button svg {
+  margin-left: 6px;
+  font-size: 10px;
+}
+
+/* ================= DROPDOWN ================= */
+.top-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+
+  background: #ffffff;
+  color: #0b2b3a;
+  min-width: 280px;
+  padding: 12px 0;
+
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  z-index: 3000;
+
+  /* 🔑 MOBILE FIX */
+  max-height: 60vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  pointer-events: auto;
+}
+
+/* ================= DROPDOWN ITEM ================= */
+.top-dropdown span {
+  display: block;
+  padding: 10px 18px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.top-dropdown span:hover {
+  background: #f3f6f9;
+}
+
+/* ================= TEXT + CHEVRON ================= */
+.top-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ================= TEXT LINK ================= */
+.top-link a {
+  color: #fff;
+  text-decoration: none;
+  height: var(--topbar-height);
+  line-height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+}
+
+/* ================= CHEVRON BUTTON ================= */
+.chevron-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+}
+
+.chevron-btn svg {
+  font-size: 10px;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 0 16px;
+    gap: 14px;
+    z-index: 4000;
+  }
+
+  .top-dropdown {
+    left: 0;
+    right: auto;
+    width: max-content;
+    max-width: 90vw;
+  }
+}
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  border-bottom: 1px solid #eee;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: var(--topbar-height);
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 38px;
+  animation: logoFloat 3s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+.logo img:hover {
+  filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.6));
+}
+
+/* Floating Loop Animation */
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= DESKTOP MENU ================= */
+.nav-links > ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item > button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 6px;
+}
+
+.nav-item span {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  min-width: 260px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  padding: 14px 0;
+  z-index: 3000;
+}
+
+.dropdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-link {
+  flex: 1;
+  padding: 14px 26px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.dropdown-link:hover {
+  background: var(--bg-light);
+}
+
+/* ================= SUB DROPDOWN ================= */
+.sub-dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  min-width: 240px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  padding: 14px 0;
+  z-index: 4000;
+}
+
+.sub-dropdown a {
+  display: block;
+  padding: 12px 26px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.sub-dropdown a:hover {
+  background: var(--bg-light);
+}
+
+/* ================= ACTIONS ================= */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.lang-desktop .active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  padding: 24px 20px;
+  overflow: hidden;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  overflow-y: auto;
+}
+
+/* 🔴 IMPORTANT FIX — REMOVE DEFAULT LINK STYLES */
+.mobile-menu a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* ================= MOBILE HEADER ================= */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mobile-header img {
+  height: 30px;
+}
+
+/* ================= MOBILE LANGUAGE ================= */
+.mobile-lang {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+.mobile-lang .active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ================= MOBILE ITEMS ================= */
+.mobile-item {
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mobile-title svg {
+  transition: transform 0.3s ease;
+}
+
+/* 🔴 MAIN FIX — MOBILE DROPDOWN LINKS */
+.mobile-dropdown a,
+.mobile-sub-title {
+  display: block;
+  width: 100%;
+  padding: 14px 0 14px 18px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* SUB CHILD LINKS */
+.mobile-sub-dropdown a {
+  display: block;
+  padding: 12px 0 12px 36px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* HOVER FEEL */
+.mobile-dropdown a:hover,
+.mobile-sub-dropdown a:hover,
+.mobile-sub-title:hover {
+  color: var(--primary);
+}
+
+/* CHEVRON ROTATION */
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .lang-desktop {
+    display: none;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .top-bar {
+    position: relative;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 10px;
+    gap: 12px;
+    height: auto;
+    line-height: normal;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .navbar {
+    position: relative;
+    padding: 14px 18px;
+    top: 0;
+  }
+
+  body {
+    padding-top: 0;
+  }
+}
+
+/* ================= DROPDOWN FONT & COLOR FIX ================= */
+
+/* DESKTOP MAIN DROPDOWN */
+.dropdown,
+.sub-dropdown {
+  font-family:
+    "Helvetica Neue",
+    "Montserrat",
+    "Futura",
+    "Roboto",
+    "Avenir",
+    Arial,
+    sans-serif;
+}
+
+.dropdown-link {
+  color: rgb(41, 60, 140);
+  font-weight: 500;
+}
+
+.dropdown-link:hover {
+  color: rgb(41, 60, 140);
+  background: rgba(41, 60, 140, 0.08);
+}
+
+/* DESKTOP SUB DROPDOWN */
+.sub-dropdown a {
+  color: rgb(41, 60, 140);
+  font-weight: 400;
+}
+
+.sub-dropdown a:hover {
+  color: rgb(41, 60, 140);
+  background: rgba(41, 60, 140, 0.08);
+}
+
+/* ================= MOBILE DROPDOWN ================= */
+
+.mobile-dropdown a,
+.mobile-sub-title {
+  font-family:
+    "Helvetica Neue",
+    "Montserrat",
+    "Futura",
+    "Roboto",
+    "Avenir",
+    Arial,
+    sans-serif;
+
+  color: rgb(41, 60, 140);
+  font-weight: 500;
+}
+
+.mobile-sub-dropdown a {
+  font-family:
+    "Helvetica Neue",
+    "Montserrat",
+    "Futura",
+    "Roboto",
+    "Avenir",
+    Arial,
+    sans-serif;
+
+  color: rgb(41, 60, 140);
+  font-weight: 400;
+}
+
+/* MOBILE HOVER */
+.mobile-dropdown a:hover,
+.mobile-sub-dropdown a:hover,
+.mobile-sub-title:hover {
+  color: rgb(41, 60, 140);
+}
+
+/* ================= TOP BAR DROPDOWN FONT & COLOR ================= */
+
+.top-dropdown {
+  font-family:
+    "Helvetica Neue",
+    "Montserrat",
+    "Futura",
+    "Roboto",
+    "Avenir",
+    Arial,
+    sans-serif;
+}
+
+/* Top dropdown items */
+.top-dropdown span {
+  color: rgb(41, 60, 140);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Hover effect */
+.top-dropdown span:hover {
+  color: rgb(41, 60, 140);
+  background: rgba(41, 60, 140, 0.08);
+}
+
+/* ================= TOP BAR DROPDOWN MATCH MAIN DROPDOWN ================= */
+
+.top-dropdown {
+  font-family:
+    "Helvetica Neue",
+    "Montserrat",
+    "Futura",
+    "Roboto",
+    "Avenir",
+    Arial,
+    sans-serif;
+}
+
+/* EXACT MATCH WITH MAIN NAVBAR DROPDOWN */
+.top-dropdown span {
+  font-size: 13px;                 /* match main dropdown */
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: rgb(41, 60, 140);
+  padding: 14px 26px;              /* match dropdown-link spacing */
+}
+
+/* Hover same as main dropdown */
+.top-dropdown span:hover {
+  background: rgba(41, 60, 140, 0.08);
+  color: rgb(41, 60, 140);
+}
+
+/* ================= TOP BAR DROPDOWN SPACING FIX ================= */
+
+/* bring dropdown closer to top bar */
+.top-dropdown {
+  top: 100%;           /* remove extra gap */
+  padding: 8px 0;      /* reduce overall height */
+}
+
+/* tighter item spacing */
+.top-dropdown span {
+  padding: 10px 22px;  /* reduced from 14px 26px */
+  line-height: 1.4;
+}
+
+/* ================= TOP BAR DROPDOWN LINKS ================= */
+
+.top-dropdown a {
+  display: block;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: rgb(41, 60, 140);
+  text-decoration: none;
+}
+
+.top-dropdown a:hover {
+  background: rgba(41, 60, 140, 0.08);
+}
+
+/* ================= MOBILE TOP NAVBAR FIX ================= */
+
+@media (max-width: 768px) {
+  .top-bar {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .top-dropdown {
+    position: static;        /* important */
+    width: 100%;
+    background-color: #165c6d;
+    box-shadow: none;
+  }
+
+  .top-dropdown a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 13px;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .top-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* ================= DESKTOP DROPDOWN DIVIDER ================= */
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-item::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #e6ebef;
+  margin: 0 20px;
+}
+
+.dropdown-item:last-child::after {
+  display: none;
+}
+
+/* ================= SUB DROPDOWN DIVIDER ================= */
+.sub-dropdown li {
+  position: relative;
+}
+
+.sub-dropdown li::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #e6ebef;
+  margin: 0 20px;
+}
+
+.sub-dropdown li:last-child::after {
+  display: none;
+}
+
+/* ================= MOBILE DROPDOWN DIVIDER ================= */
+.mobile-dropdown li {
+  border-bottom: 1px solid #e6ebef;
+}
+
+.mobile-dropdown li:last-child {
+  border-bottom: none;
+}
+
+/* ================= MOBILE SUB DROPDOWN DIVIDER ================= */
+.mobile-sub-dropdown li {
+  border-bottom: 1px solid #e6ebef;
+}
+
+.mobile-sub-dropdown li:last-child {
+  border-bottom: none;
+}
+
+/* ================= TOP NAVBAR DROPDOWN DIVIDER ================= */
+.top-dropdown a {
+  position: relative;
+  padding-bottom: 12px; /* space above line */
+}
+
+.top-dropdown a::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(41, 60, 140, 0.25);
+}
+
+/* remove line from last item */
+.top-dropdown a:last-child::after {
+  display: none;
+}

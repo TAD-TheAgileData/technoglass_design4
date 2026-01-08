@@ -1,0 +1,104 @@
+/* ================= PAGE ================= */
+.sustainability-page {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+/* ================= HERO ================= */
+.sustainability-hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  max-width: 550px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ================= CONTENT ================= */
+.sustainability-content {
+  padding: 80px 8%;
+  background: #f9f9f9;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Image */
+.content-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Text */
+.commitment-header {
+  background: #e8ebed93;
+  padding: 15px 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.commitment-header h2 {
+  color: black;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+
+}
+
+.commitment-text {
+  background: #f7f7f7;
+  padding: 30px 40px;
+  border-radius: 15px;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #333;
+  font-weight: 500;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-overlay {
+    padding: 0 6%;
+    text-align: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .commitment-text {
+    font-size: 1.2rem;
+  }
+}
+
+

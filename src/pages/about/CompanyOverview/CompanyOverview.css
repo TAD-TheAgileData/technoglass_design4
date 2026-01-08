@@ -1,0 +1,298 @@
+/* ================= FONT IMPORT ================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= PAGE ROOT ================= */
+.company-overview {
+  font-family: "Montserrat", "Roboto", "Helvetica Neue", "Avenir", "Futura", sans-serif;
+  background: #f6f8fa;
+  color: #0b2b3a;
+}
+
+/* ========================================================= */
+/* ================= HERO (UNCHANGED) ====================== */
+/* ========================================================= */
+.overview-hero {
+  position: relative;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.overview-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 30, 50, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-overlay p {
+  color: #dce7ec;
+  font-weight: 400;
+}
+
+/* ========================================================= */
+/* ================= STATS (UNCHANGED) ===================== */
+/* ========================================================= */
+.stats-bar {
+  max-width: 1200px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h2 {
+  font-size: 34px;
+  font-weight: 600;
+  color: #004f6e;
+}
+
+.stat-card p {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  color: #555;
+}
+
+/* ========================================================= */
+/* ================= CONTENT SECTION ======================= */
+/* ========================================================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+/* ========================================================= */
+/* ================= CONTENT CARD ========================== */
+/* ========================================================= */
+.overview-card {
+  position: relative;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 2.5rem;
+  min-height: 280px;
+  background: #ffffff;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* ===== DIAGONAL CORNER ===== */
+.overview-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    transparent 72%,
+    #cfcfcf99 72%,
+    #cfcfcf5e 75%,
+    #0ca5a3b0 75%
+  );
+  clip-path: polygon(100% 100%, 0% 100%, 100% 0%);
+  z-index: 0;
+}
+
+/* ================= LEFT ACCENT BORDER ================= */
+.overview-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  bottom: 20px;
+  width: 4px;
+  background-color: #f36b21; /* 🔸 CHANGE COLOR HERE */
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* Rotate diagonal for even cards */
+.overview-card:nth-child(even)::after {
+  top: 0;
+  right: 0;
+  bottom: auto;
+  transform: rotate(270deg);
+}
+
+/* Highlighted card */
+.overview-card.highlight {
+  border-color: #e4f1f1;
+}
+
+/* ========================================================= */
+/* ================= CARD CONTENT LAYOUT =================== */
+/* ========================================================= */
+.overview-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Zig-zag layout */
+.overview-row.reverse {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.overview-row.reverse .overview-image {
+  order: 2;
+}
+
+.overview-row.reverse .overview-content {
+  order: 1;
+}
+
+/* ========================================================= */
+/* ================= IMAGE ================================ */
+/* ========================================================= */
+.overview-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ========================================================= */
+/* ================= TEXT ================================ */
+/* ========================================================= */
+.overview-content h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #08394c;
+  margin-bottom: 0.8rem;
+}
+
+.overview-content p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #4e616d;
+}
+
+/* ========================================================= */
+/* ================= GRID LIST ============================ */
+/* ========================================================= */
+.grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem 3rem;
+}
+
+.grid-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #4e616d;
+}
+
+.list-icon {
+  color: #22b3b1;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ========================================================= */
+/* ================= MOBILE =============================== */
+/* ========================================================= */
+/* ========================================================= */
+/* ================= MOBILE FIX (FINAL) ==================== */
+/* ========================================================= */
+@media (max-width: 768px) {
+
+  /* Force same layout for ALL cards */
+  .overview-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  /* Disable zig-zag behavior */
+  .overview-row.reverse {
+    grid-template-columns: unset;
+  }
+
+  .overview-row.reverse .overview-image,
+  .overview-row.reverse .overview-content {
+    order: unset;
+  }
+
+  /* Image always on top */
+  .overview-image {
+    width: 100%;
+  }
+
+  .overview-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  /* Text below image */
+  .overview-content {
+    width: 100%;
+  }
+
+  /* Card padding adjustment */
+  .overview-card {
+    padding: 1.4rem;
+  }
+
+  /* Keep diagonal but make it subtle */
+  .overview-card::after {
+    width: 180px;
+    height: 180px;
+    opacity: 0.4;
+  }
+
+  /* Lists single column on mobile */
+  .grid-list {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}

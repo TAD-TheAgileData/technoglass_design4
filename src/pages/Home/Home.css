@@ -1,0 +1,765 @@
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+:root {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  --primary:#176179 ;
+  --accent: #0aa6a6;
+  --gold: #e5c97b;
+  --muted: #6b7280;
+  --bg-light: #f8fafc;
+}
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  
+}
+
+/* =====================================================
+   REVEAL ON SCROLL ANIMATION
+===================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+.home-snap-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.home-hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 60px 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.home-hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home-hero-content p {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  opacity: 0.9;
+}
+
+/* =====================================================
+   SUCCESS STORY
+===================================================== */
+.success-story-modern {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  background: url("../../assets/Hero/Success.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Elegant gradient overlay */
+.success-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(6, 25, 34, 0.85),
+    rgba(6, 25, 34, 0.55)
+  );
+  z-index: 1;
+}
+
+/* Content container */
+.success-content {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  color: #ffffff;
+}
+
+/* Small tag */
+.success-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  position: relative;
+}
+
+.success-tag::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(to right, #38bdf8, transparent);
+  margin-top: 6px;
+}
+
+/* Heading */
+.success-content h2 {
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.success-content h2 span {
+  color: #38bdf8;
+}
+
+/* Description */
+.success-content p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #e5e7eb;
+  margin-bottom: 36px;
+}
+
+/* CTA button */
+.success-cta {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.35s ease;
+}
+
+.success-cta:hover {
+  background: #38bdf8;
+  color: #02161f;
+  border-color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .success-story-modern {
+    padding: 80px 6%;
+    min-height: auto;
+  }
+
+  .success-content {
+    max-width: 100%;
+  }
+}
+
+/* =====================================================
+   SECTION WRAPPER
+===================================================== */
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section-wrapper.light {
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 50px;
+  color: var(--primary);
+}
+
+/* =====================================================
+   PRODUCT CARDS
+===================================================== */
+/* .card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.info-card {
+  transition: transform 0.4s ease;
+}
+
+.info-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+} */
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* ===== IMAGE CARD ===== */
+.image-card {
+  position: relative;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.image-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.25)
+  );
+  transition: opacity 0.4s ease;
+}
+
+/* ===== CONTENT ===== */
+.image-card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  z-index: 1;
+}
+
+.image-card-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.image-card-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.read-more {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.image-card:hover {
+  transform: translateY(-8px);
+}
+
+.image-card:hover::before {
+  opacity: 0.85;
+}
+
+.image-card:hover .read-more {
+  transform: translateX(6px);
+}
+
+/* =====================================================
+   CLIENT MARQUEE
+===================================================== */
+/* ======================================
+   SECTION WRAPPER
+====================================== */
+.section-wrapper {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #176179;
+  margin-bottom: 50px;
+}
+
+/* ======================================
+   MARQUEE CONTAINER
+====================================== */
+.industrial-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ======================================
+   TRACK
+====================================== */
+.industrial-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: max-content;
+
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+/* ======================================
+   LOGO CARD
+====================================== */
+.industrial-logo-card {
+  width: 170px;
+  height: 90px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.industrial-logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  filter: grayscale(40%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.industrial-logo-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+/* ======================================
+   MARQUEE ANIMATION
+====================================== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ======================================
+   MOBILE RESPONSIVE FIX (IMPORTANT)
+====================================== */
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+
+  .industrial-track {
+    gap: 30px;
+    animation-duration: 18s;
+  }
+
+  .industrial-logo-card {
+    width: 120px;
+    height: 70px;
+    padding: 10px;
+  }
+}
+
+/* ======================================
+   EXTRA SMALL DEVICES
+====================================== */
+@media (max-width: 480px) {
+  .industrial-track {
+    animation-duration: 15s;
+  }
+}
+
+/* =====================================================
+   CERTIFICATIONS
+===================================================== */
+.cert-section {
+  background: linear-gradient(180deg, #176179, #0aa6a6);
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cert-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+/* SLIDER WRAPPER */
+.cert-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* MOVING TRACK */
+.cert-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.cert-slider:hover .cert-track {
+  animation-play-state: paused;
+}
+
+/* CARD */
+.cert-card {
+  min-width: 260px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px 20px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  background: rgba(229, 201, 123, 0.12);
+}
+
+/* STAR */
+.cert-icon {
+  color: #e5c97b;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.cert-card h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* BUTTON */
+.success-btn {
+  margin-top: 50px;
+  padding: 14px 48px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #176179;
+  background: #ffffff;
+  border: 1.5px solid #176179;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.success-btn:hover {
+  background: #176179;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(23, 97, 121, 0.35);
+}
+
+/* ANIMATION */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =====================================================
+   GLOBAL REACH
+===================================================== */
+.global-reach-section {
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #176179,
+ #0aa6a6);
+  text-align: center;
+}
+
+.global-reach-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color:#ffff;
+  margin-bottom: 20px;
+}
+
+.global-reach-text {
+  color: #ffffff;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+}
+
+/* =====================================================
+   VALUE SECTION
+===================================================== */
+.value-section {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transition: all 0.35s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero-content {
+    padding: 40px 20px;
+  }
+
+  .industrial-track {
+    gap: 40px;
+  }
+}
+
+
+
+
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== REVEAL FIX ===== */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 60px, 0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ===== MARQUEE PERFORMANCE ===== */
+.industrial-marquee {
+  overflow: hidden;
+  contain: content;
+}
+
+.industrial-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ===== HERO ===== */
+.home-hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+/* =====================================================
+   GET QUOTE CTA SECTION
+===================================================== */
+.get-quote-section {
+  position: relative;
+  padding: 120px 20px;
+  background: linear-gradient(
+    135deg,
+    #176179,
+    #0aa6a6
+  );
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Soft overlay for depth */
+.get-quote-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Content */
+.get-quote-content {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.get-quote-content h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.get-quote-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Button */
+.get-quote-btn {
+  background: #ffffff;
+  color: #176179;
+  padding: 16px 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.get-quote-btn:hover {
+  background: #e5c97b;
+  color: #02161f;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .get-quote-section {
+    padding: 80px 20px;
+  }
+
+  .get-quote-content p {
+    font-size: 1rem;
+  }
+}
