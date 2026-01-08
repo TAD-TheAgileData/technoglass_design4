@@ -44,6 +44,11 @@ import Jumbo from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Jumbol
 /* ================= FALLBACK LOGO ================= */
 const defaultLogo = northGlassLogo;
 
+/* ================= INTRO CONTENT ================= */
+const introBlock = {
+  title: "Advanced Manufacturing Infrastructure",
+  text: "Our manufacturing facility integrates precision CNC cutting, automatic ceramic printing, high-accuracy bending, and controlled lamination processes. Each operation is optimized to ensure dimensional accuracy, surface quality, and consistent performance.",
+};
 /* ================= DATA ================= */
 const blocks = [
   {
@@ -209,7 +214,37 @@ const Manufacturing_Excellence = () => {
           </Typography>
         </Box>
       </Box>
+      {/* ================= INTRO TEXT SECTION ================= */}
+      <Box sx={{ py: 8, background: "#ffffff" }}>
+        <Container maxWidth="md">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Typography
+              variant="h4"
+              fontWeight={800}
+              align="center"
+              sx={{ color: "#303E81", mb: 2 }}
+            >
+              {introBlock.title}
+            </Typography>
 
+            <Typography
+              align="center"
+              sx={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#475569",
+              }}
+            >
+              {introBlock.text}
+            </Typography>
+          </motion.div>
+        </Container>
+      </Box>
       {/* ================= CONTENT ================= */}
       <Box sx={{ py: 10 }}>
         <Container maxWidth="lg">
@@ -245,7 +280,7 @@ const Manufacturing_Excellence = () => {
                     sx={{
                       height: 170, // ✅ FIXED IMAGE HEIGHT
                       width: "100%",
-                      flexShrink: 0, 
+                      flexShrink: 0,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -272,7 +307,7 @@ const Manufacturing_Excellence = () => {
                       textAlign: "center",
                       display: "flex",
                       flexDirection: "column",
-                      flexGrow: 1, 
+                      flexGrow: 1,
                     }}
                   >
                     <Box
@@ -300,7 +335,7 @@ const Manufacturing_Excellence = () => {
                         fontSize: "0.8rem",
                         lineHeight: 1.6,
                         color: "#475569",
-                       
+
                         display: "-webkit-box",
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: "vertical",
