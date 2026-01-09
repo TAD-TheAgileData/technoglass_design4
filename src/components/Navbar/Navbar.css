@@ -112,24 +112,25 @@ body {
   /* 🔑 MOBILE FIX */
   .top-dropdown {
   position: absolute;
-  top: calc(100% + 56px); /* push below main navbar */
+  top: calc(100% + 56px);
   left: 0;
 
-  background: #ffffff;
-  min-width: 280px;
-  padding: 12px 0;
+  /* ✅ MATCH TOP NAVBAR COLOR */
+  background: var(--primary); /* #176179 */
+
+  min-width: 300px;
+
+  /* ✅ INCREASE HEIGHT */
+  padding: 28px 0;          /* more vertical height */
+  max-height: 660px;        /* taller dropdown */
+
   border-radius: 6px;
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
 
-  z-index: 12000; /* MUST be higher than .navbar */
-
-
-  max-height: 60vh;
+  z-index: 12000;
   overflow-y: auto;
-  overscroll-behavior: contain;
-
-  pointer-events: auto;
 }
+
 
 /* ================= DROPDOWN ITEM ================= */
 .top-dropdown span {
@@ -720,7 +721,7 @@ body {
   right: 16px;
   bottom: 0;
   height: 1px;
-  background: rgba(41, 60, 140, 0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* remove line from last item */
@@ -729,30 +730,43 @@ body {
 }
 
 /* ================= TOP BAR DROPDOWN TEXT FIX (DO NOT DELETE ABOVE CODE) ================= */
+/* ================= TOP BAR DROPDOWN FINAL FIX ================= */
 
 .top-dropdown {
-  background: #ffffff;
+  background: var(--primary); /* ✅ same as top navbar */
   border-radius: 6px;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
 }
 
+
 /* 🔑 IMPORTANT: your dropdown uses <Link> = <a>, not <span> */
+
 .top-dropdown a {
   display: block;
-  padding: 12px 22px;
-
+  padding: 14px 22px;     /* ⬅ increases height per item */
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  color: #293c8c;
+  color: #ffffff;        /* ✅ white text */
   text-decoration: none;
-
-  line-height: 1.45;
 }
 
 .top-dropdown a:hover {
-  background: rgba(41, 60, 140, 0.08);
+  background: rgba(255, 255, 255, 0.12);
   color: #293c8c;
+}
+
+/* ================= DESKTOP ONLY: MOVE TOP BAR RIGHT ================= */
+@media (min-width: 1025px) {
+  .top-bar {
+    padding-left: 180px; /* adjust value as needed */
+  }
+}
+
+@media (min-width: 769px) {
+  .top-dropdown {
+    top: 100%;
+  }
 }
