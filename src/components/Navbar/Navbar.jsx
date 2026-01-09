@@ -19,6 +19,7 @@ const menuData = [
       { label: "Leadership Message", path: "/about/leadership" },
       {label:" code of ethics" , path: "/about/codeofethics" },
       {label:"Startegic Drivers" , path:"/about/StartegicDrivers"},
+      {label:"Value and Proposition" , path:"/about/valueproposition"},
       { label: "Sustainability & ESG", path: "/about/sustainability" },
       { label: "Corporate Milestones", path: "/about/milestones" },
     ],

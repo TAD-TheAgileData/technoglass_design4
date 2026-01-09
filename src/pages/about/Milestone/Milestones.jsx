@@ -1,13 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Milestones.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-/* ===== MODERN FRAMER MOTION FIX (NO DEPRECATION) ===== */
 const MotionDiv = motion.create("div");
 const MotionImg = motion.create("img");
 
-/* ================= ASSETS ================= */
+/* ================= ASSETS (deferred) ================= */
 import heroImage from "../../../assets/milestones/Milestonehero.jpg";
 import foundation from "../../../assets/milestones/foundation.jpg";
 import Construction from "../../../assets/milestones/Construction.jpg";
@@ -43,7 +42,41 @@ import Ceer_psa from "../../../assets/milestones/Success.jpg";
 import Success from "../../../assets/milestones/Success.jpg";
 import Achievement from "../../../assets/milestones/Achievement.jpg";
 
-/* ================= FILTERS (FIXED ERROR) ================= */
+const imageMap = {
+  "foundation.jpg": foundation,
+  "Construction.jpg": Construction,
+  "Automotiveproductive.jpg": Automotiveproductive,
+  "Designfacility.jpg": Designfacility,
+  "Domestic_Sales_Initiated.jpg": Domestic_Sales_Initiated,
+  "MENA_Export.jpg": MENA_Export,
+  "Certification_Achieved.jpg": Certification_Achieved,
+  "ExportNAmerica.jpg": ExportNAmerica,
+  "ECRCertified.jpg": ECRCertified,
+  "Europeanmarketentry.jpg": Europeanmarketentry,
+  "Japan_Market_Expansion.jpg": Japan_Market_Expansion,
+  "Architecturalglassline.jpg": Architecturalglassline,
+  "expanding-into-asia.jpg": expanding_into_asia,
+  "Tempering_Line.jpg": Temperingline,
+  "Plantexpansion.webp": plantexpansion,
+  "SAFLaminated.JPG": SAFlamination,
+  "ISOStandard.jpg": Isologo,
+  "Curvedglassfurnace.JPG": curved,
+  "CapacityEnhancement.jpg": Capacity,
+  "ArchietecturalExpansion.jpg": ArchietecturalExpansion,
+  "BusglassBending.webp": Busglass,
+  "Temperingfurnance.jpg": Temperingfurnance,
+  "Bandoline.webp": Bandoline,
+  "Certificateachieved.jpg": Certificateachieved,
+  "Awarded.jpg": Awarded,
+  "Collaboration.jpg": Collaboration,
+  "Polishing.jpg": Polishing,
+  "snamcertification.jpg": snamcertification,
+  "Discussion.jpg": Discussion,
+  "Success.jpg": Success,
+  "Achievement.jpg": Achievement,
+  "IATF16949.jpg": IATF169,
+};
+
 const filters = [
   { label: "All", value: "all" },
   { label: "1990s", value: "1990" },
@@ -52,227 +85,227 @@ const filters = [
   { label: "2020s", value: "2020" },
 ];
 
-/* ================= MILESTONES ================= */
 const milestones = [
   {
     year: "1991",
     title: "Stone Laying Ceremony",
     desc: "The foundation stone was laid, marking the beginning of our manufacturing journey.",
-    image: foundation,
+    image: "foundation.jpg",
   },
   {
     year: "1992",
     title: "Construction Completed",
     desc: "Completion of the manufacturing facility and infrastructure development.",
-    image: Construction,
+    image: "Construction.jpg",
   },
   {
     year: "1992",
     title: "Automotive Production Line Setup",
     desc: "Installation of the first automotive glass production line.",
-    image: Automotiveproductive,
+    image: "Automotiveproductive.jpg",
   },
   {
     year: "1992",
     title: "Design & Tooling Facility Established",
     desc: "In-house screen and tooling development facility commissioned.",
-    image: Designfacility,
+    image: "Designfacility.jpg",
   },
   {
     year: "1992",
     title: "Domestic Sales Initiated",
     desc: "Commercial operations began with domestic market penetration.",
-    image: Domestic_Sales_Initiated,
+    image: "Domestic_Sales_Initiated.jpg",
   },
   {
     year: "1993",
     title: "MENA Export Operations",
     desc: "Exports commenced across Middle East and North Africa regions.",
-    image: MENA_Export , 
+    image: "MENA_Export.jpg",
   },
   {
     year: "1993",
     title: "DOT Certification Achieved",
     desc: "Received DOT certification, meeting international safety standards.",
-    image: Certification_Achieved,
+    image: "Certification_Achieved.jpg",
   },
   {
     year: "1993",
     title: "Exports to North America",
     desc: "Expanded exports to the USA and Canada markets.",
-    image: ExportNAmerica,
+    image: "ExportNAmerica.jpg",
   },
   {
     year: "1994",
     title: "ECE R-43 Certification",
     desc: "Certified under ECE R-43 automotive glass regulations.",
-    image: ECRCertified,
+    image: "ECRCertified.jpg",
   },
   {
     year: "1994",
     title: "European Market Entry",
     desc: "Exports initiated to European automotive markets.",
-    image: Europeanmarketentry,
+    image: "Europeanmarketentry.jpg",
   },
   {
     year: "1995",
     title: "Japan Market Expansion",
     desc: "Export operations expanded into the Japanese market.",
-    image: Japan_Market_Expansion,
+    image: "Japan_Market_Expansion.jpg",
   },
   {
     year: "1997",
     title: "Architectural Glass Line Setup",
     desc: "Commissioned double-glass architectural production line.",
-    image: Architecturalglassline,
+    image: "Architecturalglassline.jpg",
   },
   {
     year: "1998",
     title: "Asian Market Expansion",
     desc: "Export footprint extended across Asian markets.",
-    image: expanding_into_asia,
+    image: "expanding-into-asia.jpg",
   },
   {
     year: "1998",
     title: "Tempering Line Installed",
     desc: "Advanced glass tempering line commissioned.",
-    image: Temperingline,
+    image: "Tempering_Line.jpg",
   },
   {
     year: "2003",
     title: "Plant Expansion",
     desc: "Manufacturing capacity enhanced through plant expansion.",
-    image: plantexpansion,
+    image: "Plantexpansion.webp",
   },
   {
     year: "2005",
     title: "SEF Lamination Furnace Added",
     desc: "Installed SEF Excon laminated glass furnace.",
-    image: SAFlamination,
+    image: "SAFLaminated.JPG",
   },
   {
     year: "2006",
     title: "ISO 9001 Certification",
     desc: "Achieved ISO 9001 quality management certification.",
-    image: Isologo,
+    image: "ISOStandard.jpg",
   },
   {
     year: "2008",
     title: "Curved Glass Furnace Added",
     desc: "Midi furnace installed for curved glass production.",
-    image: curved,
+    image: "Curvedglassfurnace.JPG",
   },
   {
     year: "2010",
     title: "Capacity Enhancement Expansion",
     desc: "Major expansion to meet increasing market demand.",
-    image: Capacity,
+    image: "CapacityEnhancement.jpg",
   },
   {
     year: "2012",
     title: "Architectural Line Expansion",
     desc: "Architectural glass line capacity further expanded.",
-    image: ArchietecturalExpansion,
+    image: "ArchietecturalExpansion.jpg",
   },
   {
     year: "2013",
     title: "Bus Glass Bending Furnace",
     desc: "Screen Max furnace installed for bus glass applications.",
-    image: Busglass,
+    image: "BusglassBending.webp",
   },
   {
     year: "2014",
     title: "Tempering Furnace Setup",
     desc: "New tempering furnace commissioned for quality enhancement.",
-    image: Temperingfurnance,
+    image: "Temperingfurnance.jpg",
   },
   {
     year: "2017",
     title: "New Bando Line Installation",
     desc: "Production efficiency improved with Bando line installation.",
-    image: Bandoline,
+    image: "Bandoline.webp",
   },
   {
     year: "2020",
     title: "SGCC Certification",
     desc: "Achieved SGCC certification for automotive safety glass.",
-    image: Certificateachieved,
+    image: "Certificateachieved.jpg",
   },
   {
     year: "2023",
     title: "OEM Business Collaborations",
     desc: "Automotive OEM visits and collaborations initiated.",
-    image: Collaboration,
+    image: "Collaboration.jpg",
   },
   {
     year: "2023",
     title: "CEER Prototype Development Awarded",
     desc: "Awarded prototype development for P800/P700 models.",
-    image: Awarded,
+    image: "Awarded.jpg",
   },
   {
     year: "2023",
     title: "ISO 45001 & ISO 14001",
     desc: "Certified for occupational health, safety, and environmental management.",
-    image: Isologo,
+    image: "ISOStandard.jpg",
   },
   {
     year: "2024",
     title: "Polishing Machine Installation",
     desc: "Advanced polishing machine installed for surface finish improvement.",
-    image: Polishing,
+    image: "Polishing.jpg",
   },
   {
     year: "2024",
     title: "SNAM Prototype Development",
     desc: "Prototype development initiated for SNAM project.",
-    image: snamcertification,
+    image: "snamcertification.jpg",
   },
   {
     year: "2024",
     title: "OEM Business Discussions",
     desc: "Strategic discussions held with Lucid and Volvo.",
-    image: Discussion,
+    image: "Discussion.jpg",
   },
   {
     year: "2025",
     title: "CEER PSA Audit Success",
     desc: "Achieved 89.9 score in CEER PSA audit.",
-    image: Ceer_psa,
+    image: "Success.jpg",
   },
   {
     year: "2025",
     title: "PT2 Sample Development",
     desc: "Successful development of PT2 samples for CEER project.",
-    image: Success,
+    image: "Success.jpg",
   },
   {
     year: "2025",
     title: "Hyundai – HMME Discussions",
     desc: "Business collaboration discussions initiated with Hyundai HMME.",
-    image: Achievement,
+    image: "Achievement.jpg",
   },
   {
     year: "2025",
     title: "IATF 16949 Certification Initiated",
     desc: "IATF 16949 certification process initiated as part of continuous quality improvement.",
-    image: IATF169,
+    image: "IATF16949.jpg",
   },
 ];
+
 export default function Milestones() {
   const [filter, setFilter] = useState("all");
 
-  /* ===== SORT + FILTER (LATEST FIRST) ===== */
   const filteredData =
     filter === "all"
-      ? [...milestones].sort((a, b) => b.year - a.year)
+      ? [...milestones].sort((a, b) => Number(b.year) - Number(a.year))
       : [...milestones]
-          .filter((m) => Math.floor(m.year / 10) * 10 === Number(filter))
-          .sort((a, b) => b.year - a.year);
+          .filter(
+            (m) => Math.floor(Number(m.year) / 10) * 10 === Number(filter)
+          )
+          .sort((a, b) => Number(b.year) - Number(a.year));
 
   return (
     <section className="milestones-page">
-      {/* ================= HERO ================= */}
       <div className="milestones-hero">
         <MotionImg
           src={heroImage}
@@ -286,7 +319,6 @@ export default function Milestones() {
         </div>
       </div>
 
-      {/* ================= INTRO ================= */}
       <div className="milestones-intro">
         <p>
           Since our establishment, Technoglass has steadily evolved into a
@@ -294,7 +326,6 @@ export default function Milestones() {
         </p>
       </div>
 
-      {/* ================= FILTERS ================= */}
       <div className="timeline-filters">
         {filters.map((f) => (
           <button
@@ -307,7 +338,6 @@ export default function Milestones() {
         ))}
       </div>
 
-      {/* ================= TIMELINE ================= */}
       <div className="timeline">
         {filteredData.map((item, index) => {
           const isLeft = index % 2 === 0;
@@ -321,10 +351,8 @@ export default function Milestones() {
               viewport={{ amount: 0.6 }}
               transition={{ duration: 0.6 }}
             >
-              {/* YEAR CIRCLE */}
               <span className="year-dot">{item.year}</span>
 
-              {/* CARD */}
               <MotionDiv
                 className="timeline-content"
                 initial={{ scale: 0.95, opacity: 0.7 }}
@@ -336,25 +364,24 @@ export default function Milestones() {
                 viewport={{ amount: 0.6 }}
                 transition={{ duration: 0.6 }}
               >
-                {/* DIRECTION ICON */}
-                <span
-                  className={`direction-icon ${
-                    isLeft ? "left-icon" : "right-icon"
-                  }`}
-                >
-                  {isLeft ? <FaChevronLeft /> : <FaChevronRight />}
-                </span>
-
-                <h3>{item.title}</h3>
+                <div className="card-header">
+                  {isLeft && <h3>{item.title}</h3>}
+                  <span
+                    className={`direction-icon ${
+                      isLeft ? "left-icon" : "right-icon"
+                    }`}
+                  >
+                    {isLeft ? <FaChevronLeft /> : <FaChevronRight />}
+                  </span>
+                  {!isLeft && <h3>{item.title}</h3>}
+                </div>
                 <p>{item.desc}</p>
 
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="timeline-image"
-                  />
-                )}
+                <img
+                  src={imageMap[item.image]}
+                  alt={item.title}
+                  className="timeline-image"
+                />
               </MotionDiv>
             </MotionDiv>
           );

@@ -1,0 +1,99 @@
+/* ================= ROOT ================= */
+.value-proposition {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  color: #1f2d2f;
+}
+
+/* ================= HERO ================= */
+.vp-hero {
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.vp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 40, 50, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.vp-hero-overlay h1 {
+  color: #ffffff;
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.vp-hero-overlay p {
+  color: #e0f2f1;
+  font-size: 1.1rem;
+  max-width: 720px;
+}
+
+/* ================= CONTENT ================= */
+.vp-content {
+  padding: 80px 20px;
+  background-color: #f7f9fa;
+}
+
+.vp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* ================= CARD ================= */
+.vp-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.vp-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f5f6b;
+  margin-bottom: 16px;
+}
+
+.vp-card ul {
+  padding-left: 18px;
+}
+
+.vp-card li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #3b4a4d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .vp-hero {
+    height: 60vh;
+  }
+
+  .vp-hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .vp-hero-overlay p {
+    font-size: 1rem;
+  }
+}

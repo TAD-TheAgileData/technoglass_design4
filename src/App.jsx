@@ -75,6 +75,7 @@ import Trust from "./pages/Trust/Trust.jsx";
 import ProductProtofolio from "./pages/Portfolio/ProductProtofolio.jsx";
 import Codeofethics from "./pages/about/CodeEthics/Codeofethics.jsx";
 import StartegicDrivers from "./pages/about/StartegicDrivers/StartegicDrivers.jsx";
+import ValueProposition from "./pages/about/ValueProposition/ValueProposition.jsx";
 
 function App() {
   return (
@@ -99,6 +100,7 @@ function App() {
           <Route path="/about/StartegicDrivers" element={<StartegicDrivers/>}/>
           <Route path="/about/sustainability" element={<Sustainability />} />
           <Route path="/about/milestones" element={<Milestones />} />
+          <Route path="/about/valueproposition" element={<ValueProposition/>}/>
 
           <Route path="/industries" element={<Industries />} />
 
