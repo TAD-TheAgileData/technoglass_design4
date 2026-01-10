@@ -169,11 +169,11 @@ const InfoRow = ({ label, value }) => (
       justifyContent: "space-between",
       px: 1.5,
       py: 0.6,
-      mt: 1,
       borderRadius: "8px",
       background: "#f4f6fb",
       fontSize: "0.75rem",
       fontWeight: 600,
+      mt: 1,
     }}
   >
     <span>{label}</span>
@@ -185,18 +185,18 @@ const InfoRow = ({ label, value }) => (
 const Manufacturing_Excellence = () => {
   return (
     <>
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <Box
         sx={{
-          height: "60vh",
-          backgroundImage: `url(${heroImg})`,
+          height: "55vh",
+          backgroundImage:`url(${heroImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          position: "relative",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           color: "#fff",
+          position: "relative",
           "&::before": {
             content: '""',
             position: "absolute",
@@ -214,131 +214,71 @@ const Manufacturing_Excellence = () => {
           </Typography>
         </Box>
       </Box>
-      {/* ================= INTRO TEXT SECTION ================= */}
-      <Box sx={{ py: 8, background: "#ffffff" }}>
-        <Container maxWidth="md">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Typography
-              variant="h4"
-              fontWeight={800}
-              align="center"
-              sx={{ color: "#303E81", mb: 2 }}
-            >
-              {introBlock.title}
-            </Typography>
 
-            <Typography
-              align="center"
-              sx={{
-                fontSize: "1rem",
-                lineHeight: 1.9,
-                color: "#475569",
-              }}
-            >
-              {introBlock.text}
-            </Typography>
-          </motion.div>
-        </Container>
-      </Box>
-      {/* ================= CONTENT ================= */}
+      {/* CONTENT */}
       <Box sx={{ py: 10 }}>
         <Container maxWidth="lg">
-          <Grid container spacing={3} alignItems="stretch">
+          <Grid container spacing={4}>
             {blocks.map((block, index) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                key={index}
-                sx={{ display: "flex" }}
-              >
+              <Grid item xs={12} md={6} key={index} sx={{ display: "flex" }}>
                 <MotionCard
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.04 }}
-                  whileHover={{
-                    y: -6,
-                    boxShadow: "0 16px 32px rgba(0,0,0,0.15)",
-                  }}
+                  transition={{ duration: 0.4 }}
                   sx={{
-                    borderRadius: "16px",
+                    width: "100%",
+                    height: 460,                // 🔒 FIXED CARD HEIGHT
+                    borderRadius: "18px",
                     overflow: "hidden",
                     display: "flex",
                     flexDirection: "column",
-                    height: "100%", // 🔥 FIXED HEIGHT
-                    width: "100%", // 🔥 FIXED WIDTH
+                    boxShadow: "0 18px 36px rgba(0,0,0,0.08)",
                   }}
                 >
-                  <Box
+                  {/* FIXED IMAGE */}
+                  <CardMedia
+                    component="img"
+                    image={block.image}
+                    alt={block.process}
                     sx={{
-                      height: 170, // ✅ FIXED IMAGE HEIGHT
-                      width: "100%",
+                      height: 220,             // 🔒 FIXED IMAGE HEIGHT
+                      objectFit: "cover",
                       flexShrink: 0,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      backgroundColor: "#fff",
-                      overflow: "hidden",
                     }}
-                  >
-                    <Box
-                      component="img"
-                      src={block.image}
-                      alt={block.process}
-                      sx={{
-                        height: "100%",
-                        width: "100%",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </Box>
+                  />
 
+                  {/* CONTENT */}
                   <CardContent
                     sx={{
-                      // 🔥 FIXED CONTENT HEIGHT
-                      p: 2,
-                      textAlign: "center",
+                      flexGrow: 1,
                       display: "flex",
                       flexDirection: "column",
-                      flexGrow: 1,
+                      textAlign: "center",
+                      p: 2,
                     }}
                   >
-                    <Box
-                      sx={{
-                        height: 40, // ✅ FIXED LOGO AREA
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        mb: 1,
-                      }}
-                    >
+                    <Box sx={{ mb: 1 }}>
                       <Box
                         component="img"
-                        src={block.logo || defaultLogo}
-                        sx={{ maxHeight: 32, maxWidth: 120 }}
+                        src={block.logo}
+                        alt="logo"
+                        sx={{ height: 30 }}
                       />
                     </Box>
 
                     <InfoRow label="MAKE" value={block.make} />
                     <InfoRow label="PROCESS" value={block.process} />
 
+                    {/* FIXED TEXT HEIGHT */}
                     <Typography
                       sx={{
-                        mt: "auto",
+                        mt: 1.5,
                         fontSize: "0.8rem",
                         lineHeight: 1.6,
                         color: "#475569",
-
-                        display: "-webkit-box",
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: "vertical",
+                        minHeight: 64,          // 🔒 SAME TEXT HEIGHT
+                        maxHeight: 64,
                         overflow: "hidden",
                       }}
                     >

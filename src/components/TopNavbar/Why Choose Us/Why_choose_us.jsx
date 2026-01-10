@@ -5,11 +5,13 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 /* IMAGES */
 import heroImg from "../../../assets/About_us/LeaderShip/White.jpg";
 import iso9001 from "../../../assets/About_us/LeaderShip/White.jpg";
-import iso45001 from "../../../assets/About_us/LeaderShip/White.jpg";
-import iso14001 from "../../../assets/About_us/LeaderShip/White.jpg";
+// import iso45001 from "../../../assets/About_us/LeaderShip/White.jpg";
+// import iso14001 from "../../../assets/About_us/LeaderShip/White.jpg";
 import fssc from "../../../assets/About_us/LeaderShip/White.jpg";
 import encon from "../../../assets/About_us/LeaderShip/White.jpg";
-
+import Copcertificate from "../../../assets/Certificate/Copcertificate.jpeg";
+import ISO14001 from "../../../assets/Certificate/ISO14001Certificate.jpeg";
+import ISO45001 from "../../../assets/Certificate/ISO45001.jpeg";
 /* DATA */
 const certCards = [
   {
@@ -36,7 +38,7 @@ Delivers a structured framework for consistent product and service quality.
   },
   {
     title: "ISO 14001:2015 – Environmental Management System",
-    image: iso14001,
+    image: ISO14001,
     desc: `
 Supports environmental responsibility and sustainability.
 
@@ -47,7 +49,7 @@ Supports environmental responsibility and sustainability.
   },
   {
     title: "ISO 45001:2018 – Occupational Health & Safety",
-    image: iso45001,
+    image: ISO45001,
     desc: `
 Improves workplace safety and employee well-being.
 
@@ -69,7 +71,7 @@ UN regulation for automotive glazing materials.
   },
   {
     title: "CoP Certification – Conformity of Production",
-    image: encon,
+    image: Copcertificate,
     desc: `
 Ensures mass production consistency.
 

@@ -60,7 +60,7 @@ const regions = [
 
 const theme = createTheme();
 
-function GlobalReach() {
+function Global_Reach() {
   const ref = useRef(null);
   const [activeRegion, setActiveRegion] = useState(null);
 
@@ -221,13 +221,12 @@ const testimonials = [
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               sx={{
-                backdropFilter: "blur(0px)",
+                backdropFilter: "blur(22px)",
                 background: "rgba(64, 75, 87, 0.57)",
-
-                borderRadius: 16,
+                borderRadius: 6,
                 p: 6,
                 maxWidth: 720,
-                border: "0px solid rgba(0, 0, 0, 0.49)",
+                border: "1px solid rgba(0, 0, 0, 0.49)",
               }}
             >
               <Typography
@@ -245,70 +244,7 @@ const testimonials = [
             </MotionBox>
           </Container>
         </Box>
-        {/* ================= ETHICS AND DRIVERS ================= */}
-        <Box sx={{ py: 12, bgcolor: "#F8FAFC" }}>
-          <Container maxWidth="lg">
-            {/* CODE OF ETHICS */}
-            <Typography
-              variant="h3"
-              fontWeight={800}
-              align="center"
-              sx={{ mb: 6, color: "#0e2c6e" }}
-            >
-              Code of Ethics & Conduct
-            </Typography>
-
-            <Grid container spacing={4}>
-              {[
-                "Professional Commitment",
-                "Respect for Others",
-                "Integrity",
-                "Loyalty & Solidarity",
-                "Respect for the Law",
-                "Caring for the Environment",
-                "Workers' Health & Safety",
-                "Employee Rights",
-                "Customer Intimacy",
-              ].map((item, i) => (
-                <Grid item xs={12} sm={6} md={4} key={i}>
-                  <Card sx={{ borderRadius: 3 }}>
-                    <CardContent>
-                      <Typography fontWeight={700}>{item}</Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-
-            {/* STRATEGIC DRIVERS */}
-            <Typography
-              variant="h3"
-              fontWeight={800}
-              align="center"
-              sx={{ mt: 10, mb: 6, color: "#0e2c6e" }}
-            >
-              Strategic Drivers
-            </Typography>
-
-            <Grid container spacing={4}>
-              {[
-                "Sustainability",
-                "Profitability & Competitiveness",
-                "People Development",
-                "Customer Satisfaction",
-              ].map((item, i) => (
-                <Grid item xs={12} sm={6} md={3} key={i}>
-                  <Card sx={{ borderRadius: 3 }}>
-                    <CardContent>
-                      <Typography fontWeight={700}>{item}</Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box>
-
+       
 
         {/* ================= HOW WE DELIVER GLOBALLY ================= */}
         <Box sx={{ py: 18, bgcolor: "#fff", position: "relative" }}>
@@ -481,7 +417,8 @@ const testimonials = [
           </Container>
         </Box>
 {/* ================= CUSTOMER TESTIMONIALS ================= */}
-<Box sx={{ py: 16, bgcolor: "#F8FAFC" }}>
+{/* ================= CUSTOMER TESTIMONIALS ================= */}
+<Box sx={{ py: 18, bgcolor: "#F8FAFC" }}>
   <Container maxWidth="lg">
     <Typography
       variant="h3"
@@ -494,65 +431,112 @@ const testimonials = [
 
     <Typography
       align="center"
-      sx={{ maxWidth: 720, mx: "auto", mb: 10, color: "grey.700" }}
+      sx={{
+        maxWidth: 720,
+        mx: "auto",
+        mb: 12,
+        color: "grey.700",
+        fontSize: "1.05rem",
+      }}
     >
-      Trusted by automotive OEMs, Tier-1 suppliers, and global distributors
-      across multiple continents.
+      Trusted by global automotive OEMs, Tier-1 suppliers, and aftermarket
+      distributors worldwide.
     </Typography>
 
-    {/* === SINGLE ROW, 3 CARDS === */}
-    <Grid container spacing={4} justifyContent="center">
+    {/* ===== SINGLE ROW – 3 PREMIUM CARDS ===== */}
+    <Grid
+      container
+      spacing={5}
+      justifyContent="center"
+      alignItems="stretch"
+    >
       {testimonials.map((item, i) => (
-        <Grid item xs={12} sm={6} md={4} key={i}>
+        <Grid
+          item
+          key={i}
+          xs={12}
+          md={4}                 // ✅ EXACTLY 3 cards per row
+          sx={{ display: "flex" }}
+        >
           <motion.div
+            style={{ width: "100%" }}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: i * 0.15 }}
+            transition={{
+              duration: 0.9,
+              delay: i * 0.15,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <Box
               sx={{
                 height: "100%",
+                display: "flex",
+                flexDirection: "column",
                 p: 5,
                 borderRadius: 5,
-                background: "#ffffff",
+                background: "linear-gradient(180deg, #ffffff, #f9fbff)",
                 border: "1px solid #E5E7EB",
-                boxShadow: "0 25px 60px rgba(2,6,23,0.08)",
+                boxShadow: "0 30px 70px rgba(2,6,23,0.08)",
+                position: "relative",
                 transition: "all 0.35s ease",
                 "&:hover": {
-                  transform: "translateY(-8px)",
-                  boxShadow: "0 35px 80px rgba(37,99,235,0.18)",
+                  transform: "translateY(-10px)",
+                  boxShadow: "0 45px 90px rgba(37,99,235,0.18)",
                 },
               }}
             >
+              {/* Decorative quote */}
               <Typography
                 sx={{
-                  fontSize: "3rem",
+                  fontSize: "3.2rem",
                   lineHeight: 1,
                   color: "#2563EB",
                   mb: 2,
+                  opacity: 0.85,
                 }}
               >
                 “
               </Typography>
 
+              {/* Review */}
               <Typography
                 sx={{
                   fontSize: "0.95rem",
                   lineHeight: 1.9,
                   color: "grey.700",
                   mb: 4,
+                  flexGrow: 1,   // ✅ equal height cards
                 }}
               >
                 {item.review}
               </Typography>
 
-              <Typography fontWeight={800} color="#0e2c6e">
-                {item.name}
-              </Typography>
-              <Typography fontSize="0.85rem" color="grey.600">
-                {item.company}
-              </Typography>
+              {/* Divider */}
+              <Box
+                sx={{
+                  height: 1,
+                  width: "100%",
+                  bgcolor: "#E5E7EB",
+                  mb: 3,
+                }}
+              />
+
+              {/* Footer */}
+              <Box>
+                <Typography
+                  fontWeight={800}
+                  sx={{ color: "#0e2c6e", fontSize: "1rem" }}
+                >
+                  {item.name}
+                </Typography>
+                <Typography
+                  sx={{ fontSize: "0.85rem", color: "grey.600" }}
+                >
+                  {item.company}
+                </Typography>
+              </Box>
             </Box>
           </motion.div>
         </Grid>
@@ -560,6 +544,7 @@ const testimonials = [
     </Grid>
   </Container>
 </Box>
+
 
         {/* ================= REGION MODAL ================= */}
         <Dialog
@@ -590,8 +575,4 @@ const testimonials = [
   );
 }
 
-export default GlobalReach;
-
-
-
-
+export default Global_Reach;
