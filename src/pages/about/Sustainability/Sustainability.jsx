@@ -3,7 +3,7 @@ import "./Sustainability.css";
 
 /* ===== IMAGES ===== */
 import heroImg from "../../../assets/About_us/Sustainability/Hero.jpg";
-import sustainImg from "../../../assets/About_us/Sustainability/Imagesec.jpg";
+import sustainImg from "../../../assets/About_us/Sustainability/Hero2.jpg";
 
 const Sustainability = () => {
   return (

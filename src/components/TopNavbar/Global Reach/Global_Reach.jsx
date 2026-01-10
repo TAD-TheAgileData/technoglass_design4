@@ -111,73 +111,11 @@ const testimonials = [
 ];
 
   return (
+    
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <>
-        {/* ================= ETHICS AND DRIVERS ================= */}
-        <Box sx={{ py: 12, bgcolor: "#F8FAFC" }}>
-          <Container maxWidth="lg">
-            {/* CODE OF ETHICS */}
-            <Typography
-              variant="h3"
-              fontWeight={800}
-              align="center"
-              sx={{ mb: 6, color: "#0e2c6e" }}
-            >
-              Code of Ethics & Conduct
-            </Typography>
-
-            <Grid container spacing={4}>
-              {[
-                "Professional Commitment",
-                "Respect for Others",
-                "Integrity",
-                "Loyalty & Solidarity",
-                "Respect for the Law",
-                "Caring for the Environment",
-                "Workers' Health & Safety",
-                "Employee Rights",
-                "Customer Intimacy",
-              ].map((item, i) => (
-                <Grid item xs={12} sm={6} md={4} key={i}>
-                  <Card sx={{ borderRadius: 3 }}>
-                    <CardContent>
-                      <Typography fontWeight={700}>{item}</Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-
-            {/* STRATEGIC DRIVERS */}
-            <Typography
-              variant="h3"
-              fontWeight={800}
-              align="center"
-              sx={{ mt: 10, mb: 6, color: "#0e2c6e" }}
-            >
-              Strategic Drivers
-            </Typography>
-
-            <Grid container spacing={4}>
-              {[
-                "Sustainability",
-                "Profitability & Competitiveness",
-                "People Development",
-                "Customer Satisfaction",
-              ].map((item, i) => (
-                <Grid item xs={12} sm={6} md={3} key={i}>
-                  <Card sx={{ borderRadius: 3 }}>
-                    <CardContent>
-                      <Typography fontWeight={700}>{item}</Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box>
-
+      
         {/* ================= GLOBAL REACH ================= */}
         <Box
           ref={ref}
@@ -283,12 +221,13 @@ const testimonials = [
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               sx={{
-                backdropFilter: "blur(22px)",
+                backdropFilter: "blur(0px)",
                 background: "rgba(64, 75, 87, 0.57)",
-                borderRadius: 6,
+
+                borderRadius: 16,
                 p: 6,
                 maxWidth: 720,
-                border: "1px solid rgba(0, 0, 0, 0.49)",
+                border: "0px solid rgba(0, 0, 0, 0.49)",
               }}
             >
               <Typography
@@ -306,6 +245,70 @@ const testimonials = [
             </MotionBox>
           </Container>
         </Box>
+        {/* ================= ETHICS AND DRIVERS ================= */}
+        <Box sx={{ py: 12, bgcolor: "#F8FAFC" }}>
+          <Container maxWidth="lg">
+            {/* CODE OF ETHICS */}
+            <Typography
+              variant="h3"
+              fontWeight={800}
+              align="center"
+              sx={{ mb: 6, color: "#0e2c6e" }}
+            >
+              Code of Ethics & Conduct
+            </Typography>
+
+            <Grid container spacing={4}>
+              {[
+                "Professional Commitment",
+                "Respect for Others",
+                "Integrity",
+                "Loyalty & Solidarity",
+                "Respect for the Law",
+                "Caring for the Environment",
+                "Workers' Health & Safety",
+                "Employee Rights",
+                "Customer Intimacy",
+              ].map((item, i) => (
+                <Grid item xs={12} sm={6} md={4} key={i}>
+                  <Card sx={{ borderRadius: 3 }}>
+                    <CardContent>
+                      <Typography fontWeight={700}>{item}</Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+
+            {/* STRATEGIC DRIVERS */}
+            <Typography
+              variant="h3"
+              fontWeight={800}
+              align="center"
+              sx={{ mt: 10, mb: 6, color: "#0e2c6e" }}
+            >
+              Strategic Drivers
+            </Typography>
+
+            <Grid container spacing={4}>
+              {[
+                "Sustainability",
+                "Profitability & Competitiveness",
+                "People Development",
+                "Customer Satisfaction",
+              ].map((item, i) => (
+                <Grid item xs={12} sm={6} md={3} key={i}>
+                  <Card sx={{ borderRadius: 3 }}>
+                    <CardContent>
+                      <Typography fontWeight={700}>{item}</Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </Box>
+
 
         {/* ================= HOW WE DELIVER GLOBALLY ================= */}
         <Box sx={{ py: 18, bgcolor: "#fff", position: "relative" }}>
@@ -588,3 +591,7 @@ const testimonials = [
 }
 
 export default GlobalReach;
+
+
+
+

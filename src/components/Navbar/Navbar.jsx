@@ -13,7 +13,7 @@ const menuData = [
     links: [
       { label: "Company Overview", path: "/about/company-overview" },
       {
-        label: "Vision, Mission & Values",
+        label: "Vision, Mission & Purpose",
         path: "/about/vision_mission",
       },
       { label: "Leadership Message", path: "/about/leadership" },
