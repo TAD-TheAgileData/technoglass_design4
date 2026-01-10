@@ -73,6 +73,7 @@
 .timeline {
   --card-height: -800px; /* reduced card height to decrease spacing */
   padding-bottom: 600px;
+  padding-top: 250px;
 }
 
 /* THICK CENTER LINE */
@@ -211,5 +212,50 @@
     width: 50px;
     height: 50px;
     font-size: 13px;
+  }
+}
+
+/* ================= PRESENT TAG ================= */
+.timeline-present {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  padding-top: 50px;
+}
+
+.timeline-present span {
+  display: inline-block;
+  padding: 10px 34px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #002b3d;
+  background: linear-gradient(135deg, #9ee3ff, #c9f1ff);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 79, 110, 0.25);
+}
+
+/* vertical connector below PRESENT */
+.present-line {
+  width: 4px;
+  height: 40px;
+  margin: 12px auto 0;
+  background: linear-gradient(to bottom, #007aa3, #004f6e);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .timeline-present {
+    left: 26px;
+    transform: none;
+    top: -60px;
+  }
+
+  .timeline-present span {
+    font-size: 14px;
+    padding: 8px 20px;
   }
 }

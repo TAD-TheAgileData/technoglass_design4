@@ -96,14 +96,14 @@ export default function LeadershipMessage() {
 
             <p style={text()}>
               <strong>Leadership</strong> begins with vision and responsibility.
-              At <strong>Technoglass</strong>, our journey has always been guided
-              by integrity, trust, and long-term partnerships.
+              At <strong>Technoglass</strong>, our journey has always been
+              guided by integrity, trust, and long-term partnerships.
             </p>
 
             <p style={text()}>
               We believe sustainable growth is achieved through ethical
-              leadership, continuous innovation, and an unwavering commitment
-              to quality.
+              leadership, continuous innovation, and an unwavering commitment to
+              quality.
             </p>
           </div>
         </motion.div>
@@ -129,14 +129,48 @@ export default function LeadershipMessage() {
           />
 
           <div style={leaderContent(isMobile)}>
-            <h2 style={leaderName(isMobile)}>Mr. Mousa El Gedaily</h2>
+            <h2 style={leaderName(isMobile)}>Mr. Mousa Al Gedaily</h2>
             <span style={leaderRole()}>Managing Director</span>
 
             <p style={text()}>
-              Our focus remains on operational excellence, technological
-              advancement, and customer-centric solutions. By empowering our
-              teams and investing in innovation, we continue to deliver
-              world-class glass solutions.
+              For the last three decades, Technoglass has provided the
+              automotive replacement glass market from KSA to Gulf regions and
+              is a leading independent exporter to the rest of the world. For
+              many years, we have witnessed consistent growth, achieved
+              long-term success, and faced challenging times. In the recent past
+              economic conditions of the Gulf region, we worked hard to navigate
+              both the global economy and the significant changes in our
+              business. We did so with the ever-present priority to preserve the
+              culture and guiding Purpose, Vision, and Mission of our company.
+              We pride ourselves on being the customer’s first choice, ensuring
+              every glass delivered provides a great experience to our
+              customers. Technoglass is one of the biggest companies in the
+              Architectural & Automotive market in the Gulf region and holds
+              international homologation certificates such as AS-1, ECE
+              Regulation, SABS, Saudi Made, DUNS, etc. Technoglass continuously
+              adapts its organization and resources to match the MENA (Middle
+              East and Africa) market situation and the shifting balance of the
+              markets in which we operate. We take these measures from a
+              position of financial and strategic strength, reacting to certain
+              trends and anticipating others. The result of this continuous
+              process is an efficient, flexible, and dedicated organization.
+              However, the more things change, the more some things stay the
+              same. Technoglass will always aim to be an indispensable trade
+              partner—a recipe that has proven successful for many years. Our
+              key strategic business plan is now to shift our focus toward
+              becoming a preferred OEM supplier through process innovations
+              using state-of-the-art equipment, in partnership with our
+              long-term technical partner TAMGLASS, Finland. We work
+              continuously to provide our customers with superior service and
+              high-quality products at competitive prices. To achieve this, our
+              strategic drivers are Sustainability, Profitability &
+              Competitiveness, People Development, and Customer Satisfaction. 
+              <br />
+              On Quality Management Systems The Technoglass management team is
+              committed to the company’s core values, which have been the
+              foundation of Technoglass’s success over the years. Technoglass’s
+              success is built on professional commitment, dedication, hard
+              work, integrity, and honesty.
             </p>
           </div>
         </motion.div>
@@ -177,8 +211,6 @@ export default function LeadershipMessage() {
             />
           </div>
         </motion.div>
-
-       
       </div>
     </div>
   );
@@ -262,7 +294,11 @@ const leaderName = (isMobile) => ({
   color: COLORS.navy,
 });
 const leaderRole = () => ({ color: COLORS.primary, fontWeight: 600 });
-const text = () => ({ color: COLORS.frost, lineHeight: 1.75, fontSize: "0.95rem" });
+const text = () => ({
+  color: COLORS.frost,
+  lineHeight: 1.75,
+  fontSize: "0.95rem",
+});
 
 const sectionTitle = (isMobile) => ({
   fontSize: isMobile ? "1.6rem" : "2rem",

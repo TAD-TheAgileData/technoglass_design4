@@ -6,10 +6,11 @@ import Hero from "../../../assets/About_us/Hero.jpg";
 import CompanyOverview from "../../../assets/About_us/CompanyOverview.jpg";
 import VMV from "../../../assets/About_us/VMV.jpg";
 import Leadership from "../../../assets/About_us/Leadership.jpg";
-
+import value from "../../../assets/About_us/ValuePropsition/HeroValue.jpg";
 import Sustainable from "../../../assets/About_us/sustainable&ESG.webp";
 import Milestone from "../../../assets/About_us/Milestone.jpg";
-
+import Ethics from "../../../assets/About_us/Ethics/Ethicshero.jpg";
+import Startegic from "../../../assets/About_us/StartegicDrivers/Startegic.jpg"
 /* ===== ABOUT US CARD DATA ===== */
 const aboutCards = [
   {
@@ -26,6 +27,29 @@ const aboutCards = [
     image: VMV,
     path: "/about/vision_mission",
   },
+  {
+    title: "Value Proposition",
+    description:
+      "Precision-driven glass solutions engineered for performance, reliability, and global compliance.",
+    image: value,
+    path: "/about/valueproposition",
+  },
+  {
+    title: "Code Of Ethics",
+    description:
+      "At Technoglass, our Code of Ethics defines the values, principles, and standards that guide our decisions, behavior, and relationships with employees, customers, and society.",
+    image: Ethics,
+    path: "/about/codeofethics",
+  },
+
+  {
+    title: "Startegic Drivers",
+    description:
+      "The key pillars guiding our growth, innovation, and commitment to excellence.",
+    image: Startegic,
+    path: "/about/StartegicDrivers",
+  },
+
   {
     title: "Leadership Message",
     description:

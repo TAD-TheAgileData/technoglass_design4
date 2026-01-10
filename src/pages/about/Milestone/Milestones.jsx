@@ -339,6 +339,10 @@ export default function Milestones() {
       </div>
 
       <div className="timeline">
+        <div className="timeline-present">
+          <span>PRESENT</span>
+          <div className="present-line"></div>
+        </div>
         {filteredData.map((item, index) => {
           const isLeft = index % 2 === 0;
 

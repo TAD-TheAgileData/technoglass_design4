@@ -219,27 +219,15 @@ body {
 }
 
 .logo img {
-  height: 38px;
-  animation: logoFloat 3s ease-in-out infinite;
+  height: 50px;          /* ⬅ increased size */
+  width: auto;
   transition: filter 0.3s ease;
 }
 
 .logo img:hover {
-  filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.6));
+  filter: drop-shadow(0 0 6px rgba(0, 180, 255, 0.4));
 }
 
-/* Floating Loop Animation */
-@keyframes logoFloat {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-4px) scale(1.03);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
 
 /* ================= DESKTOP MENU ================= */
 .nav-links > ul {
@@ -374,7 +362,7 @@ body {
 }
 
 .mobile-header img {
-  height: 30px;
+  height: 45px;
 }
 
 /* ================= MOBILE LANGUAGE ================= */

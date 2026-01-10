@@ -121,7 +121,7 @@ const sections = [
     image: overviewImg1,
     text: (
       <>
-        <strong>Technoglass (Technical Glass Co.)</strong> is a leading
+        <strong> Technical Glass Co.(Technoglass)</strong> is a leading
         automotive glass manufacturer established in <strong>1993</strong>. With
         over <strong>30+ years of experience</strong>, Technoglass is known for
         engineering precision, consistent quality, and dependable delivery.
