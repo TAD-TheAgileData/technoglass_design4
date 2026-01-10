@@ -9,16 +9,17 @@ import {
   CardMedia,
 } from "@mui/material";
 import { motion } from "framer-motion";
-
+import "./ManufacturingExcellence.css";
 /* ================= HERO IMAGE ================= */
 import heroImg from "../../../assets/TopNavbar/ManufacturingExcellence/Images/manufacturingExcellence.jpg";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 /* ================= MACHINE IMAGES ================= */
-import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Cut&Grinding.jpg";
-import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image2.JPG";
-import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.JPG";
+import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image1.png";
+import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image2.png";
+import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.png";
 import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image4.JPG";
-import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.webp";
+import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.JPG";
 import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.JPG";
 import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.JPG";
 import img8 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image8.JPG";
@@ -41,256 +42,246 @@ import ChanZhou from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Cha
 import Bystroniclogo from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Bystroniclogo.png";
 import Jumbo from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Jumbologo.png";
 
-/* ================= FALLBACK LOGO ================= */
-const defaultLogo = northGlassLogo;
-
-/* ================= INTRO CONTENT ================= */
-const introBlock = {
-  title: "Advanced Manufacturing Infrastructure",
-  text: "Our manufacturing facility integrates precision CNC cutting, automatic ceramic printing, high-accuracy bending, and controlled lamination processes. Each operation is optimized to ensure dimensional accuracy, surface quality, and consistent performance.",
-};
-/* ================= DATA ================= */
-const blocks = [
+/* ===== CARD DATA ===== */
+const cardData = [
   {
     image: img1,
     logo: bandoLogo,
     make: "Japan",
     process: "Cut & Grinding",
-    desc: "High-precision CNC cutting and edge grinding ensure accurate dimensions and smooth finishes.",
+    desc: [
+      "High-precision CNC cutting",
+      "Smooth edge grinding",
+      "Accurate dimensions",
+    ],
   },
   {
     image: img2,
     logo: joisonLogo,
     make: "China",
     process: "Screen Printing",
-    desc: "Automated ceramic printing delivers uniform patterns with long-term durability.",
+    desc: ["Automated ceramic printing", "Uniform patterns", "Long durability"],
   },
   {
     image: img3,
     logo: joisonLogo,
     make: "China",
     process: "Enamel Drying",
-    desc: "Controlled drying stabilizes coatings for color consistency and adhesion strength.",
+    desc: ["Controlled drying", "Color consistency", "Strong adhesion"],
   },
   {
     image: img4,
     logo: tamglassLogo,
     make: "Finland",
     process: "Bending",
-    desc: "Advanced furnaces provide precise curvature control with optical clarity.",
+    desc: ["Advanced furnaces", "Optical clarity", "Precise curvature"],
   },
   {
     image: img5,
     logo: tamglassLogo,
     make: "Finland",
     process: "Bending",
-    desc: "Thermal forming enables complex geometries with repeatable accuracy.",
+    desc: ["Thermal forming", "Complex geometry", "Repeatable accuracy"],
   },
   {
     image: img6,
     logo: tamglassLogo,
     make: "Finland",
     process: "Bending",
-    desc: "Engineered bending lines ensure uniform curvature and minimal distortion.",
+    desc: [
+      "Engineered bending lines",
+      "Uniform curvature",
+      "Minimal distortion",
+    ],
   },
   {
     image: img7,
     logo: northGlassLogo,
     make: "China",
     process: "Bending",
-    desc: "Precision-controlled bending supports architectural glass applications.",
+    desc: ["Precision control", "Architectural glass", "High reliability"],
   },
   {
     image: img8,
     logo: northGlassLogo,
     make: "China",
     process: "Bending",
-    desc: "High-volume bending with consistent quality and dimensional accuracy.",
+    desc: ["High-volume output", "Consistent quality", "Dimensional accuracy"],
   },
   {
     image: img9,
     logo: glastonLogo,
     make: "Finland",
     process: "Deairing",
-    desc: "Vacuum deairing eliminates trapped air for flawless lamination.",
-  },
-  {
-    image: img15,
-    logo: glastonLogo,
-    make: "Finland",
-    process: "Autoclave",
-    desc: "Autoclave bonding ensures maximum strength and durability.",
+    desc: ["Vacuum deairing", "No air bubbles", "Perfect lamination"],
   },
   {
     image: img10,
-    logo: ChanZhou,
-    make: "China",
+    logo: glastonLogo,
+    make: "Finland",
     process: "Autoclave",
-    desc: "Industrial autoclaves ensure uniform lamination quality.",
+    desc: ["High-pressure bonding", "Maximum strength", "Durable lamination"],
   },
   {
     image: img11,
-    logo: chinalogo,
+    logo: northGlassLogo,
     make: "China",
-    process: "Bending",
-    desc: "Optimized bending operations support scalable production.",
+    process: "Autoclave",
+    desc: ["Uniform bonding", "Industrial scale", "Quality consistency"],
   },
   {
     image: img12,
-    logo: Jumbo,
+    logo: northGlassLogo,
     make: "China",
-    process: "Cutting",
-    desc: "High-speed cutting maintains tight tolerances with minimal waste.",
+    process: "Bending",
+    desc: ["Optimized workflow", "Scalable production", "High efficiency"],
   },
   {
     image: img13,
-    logo: Bystroniclogo,
-    make: "USA",
+    logo: northGlassLogo,
+    make: "China",
     process: "Cutting",
-    desc: "Precision cutting delivers clean edges for demanding applications.",
+    desc: ["High-speed cutting", "Low material waste", "Tight tolerances"],
   },
   {
     image: img14,
-    logo: chinalogo,
+    logo: northGlassLogo,
+    make: "USA",
+    process: "Cutting",
+    desc: ["Precision edges", "Clean finish", "Demanding applications"],
+  },
+  {
+    image: img15,
+    logo: northGlassLogo,
     make: "China",
     process: "Flat Lamination",
-    desc: "Flat lamination produces high-strength safety glass.",
+    desc: ["Safety glass", "High strength", "Uniform bonding"],
   },
 ];
 
-/* ================= MOTION ================= */
+/* ===== ANIMATION VARIANTS ===== */
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.96 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const bulletVariants = {
+  hidden: { opacity: 0, x: -8 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+};
+
 const MotionCard = motion.create(Card);
 
-/* ================= INFO ROW ================= */
-const InfoRow = ({ label, value }) => (
-  <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      px: 1.5,
-      py: 0.6,
-      borderRadius: "8px",
-      background: "#f4f6fb",
-      fontSize: "0.75rem",
-      fontWeight: 600,
-      mt: 1,
-    }}
-  >
-    <span>{label}</span>
-    <span>{value}</span>
-  </Box>
-);
-
-/* ================= COMPONENT ================= */
+/* ===== COMPONENT ===== */
 const Manufacturing_Excellence = () => {
   return (
     <>
       {/* HERO */}
-      <Box
-        sx={{
-          height: "55vh",
-          backgroundImage:`url(${heroImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#fff",
-          position: "relative",
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0,0,0,0.55)",
-          },
-        }}
-      >
-        <Box sx={{ position: "relative", zIndex: 2, textAlign: "center" }}>
-          <Typography variant="h2" fontWeight={800}>
-            Our Capacity & Capabilities
-          </Typography>
-          <Typography variant="h6">
-            Precision-driven glass manufacturing excellence
-          </Typography>
+      <Box className="mc-hero">
+        <img src={heroImg} alt="Manufacturing" className="mc-hero-img" />
+
+        <Box className="mc-hero-overlay">
+          <Box className="mc-hero-text">
+            <h1 className="mc-hero-title">Manufacturing Excellence</h1>
+
+            <p className="mc-hero-subtitle">
+              Precision. Automation. Global Standards.
+            </p>
+          </Box>
         </Box>
       </Box>
-
-      {/* CONTENT */}
-      <Box sx={{ py: 10 }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4}>
-            {blocks.map((block, index) => (
-              <Grid item xs={12} md={6} key={index} sx={{ display: "flex" }}>
-                <MotionCard
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
-                  sx={{
-                    width: "100%",
-                    height: 460,                // 🔒 FIXED CARD HEIGHT
-                    borderRadius: "18px",
-                    overflow: "hidden",
-                    display: "flex",
-                    flexDirection: "column",
-                    boxShadow: "0 18px 36px rgba(0,0,0,0.08)",
-                  }}
-                >
-                  {/* FIXED IMAGE */}
-                  <CardMedia
-                    component="img"
-                    image={block.image}
-                    alt={block.process}
-                    sx={{
-                      height: 220,             // 🔒 FIXED IMAGE HEIGHT
-                      objectFit: "cover",
-                      flexShrink: 0,
-                    }}
-                  />
-
-                  {/* CONTENT */}
-                  <CardContent
-                    sx={{
-                      flexGrow: 1,
-                      display: "flex",
-                      flexDirection: "column",
-                      textAlign: "center",
-                      p: 2,
-                    }}
-                  >
-                    <Box sx={{ mb: 1 }}>
-                      <Box
-                        component="img"
-                        src={block.logo}
-                        alt="logo"
-                        sx={{ height: 30 }}
-                      />
-                    </Box>
-
-                    <InfoRow label="MAKE" value={block.make} />
-                    <InfoRow label="PROCESS" value={block.process} />
-
-                    {/* FIXED TEXT HEIGHT */}
-                    <Typography
-                      sx={{
-                        mt: 1.5,
-                        fontSize: "0.8rem",
-                        lineHeight: 1.6,
-                        color: "#475569",
-                        minHeight: 64,          // 🔒 SAME TEXT HEIGHT
-                        maxHeight: 64,
-                        overflow: "hidden",
-                      }}
-                    >
-                      {block.desc}
-                    </Typography>
-                  </CardContent>
-                </MotionCard>
-              </Grid>
-            ))}
-          </Grid>
+      {/* FEATURE SECTION: Advanced Manufacturing */}
+      <motion.div
+        className="mc-feature-section"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true }}
+      >
+        <Container maxWidth="md" className="mc-feature-content">
+          <Typography className="mc-feature-title">
+            Advanced Manufacturing Infrastructure
+          </Typography>
+          <Typography className="mc-feature-text">
+            Our manufacturing facility integrates precision CNC cutting,
+            automatic ceramic printing, high-accuracy bending, and controlled
+            lamination processes. Each operation is optimized to ensure
+            dimensional accuracy, surface quality, and consistent performance.
+          </Typography>
         </Container>
-      </Box>
+      </motion.div>
+
+      {/* CARDS */}
+      <Container maxWidth="lg" className="mc-container">
+        <Grid
+          container
+          spacing={4}
+          component={motion.div}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {cardData.map((item, index) => (
+            <Grid item xs={12} sm={6} md={6} key={index}>
+              <MotionCard
+                className="mc-card"
+                variants={cardVariants}
+                whileHover={{
+                  y: -10,
+                  boxShadow: "0 25px 60px rgba(0,123,255,0.25)",
+                }}
+              >
+                {/* IMAGE */}
+                <CardMedia
+                  component="img"
+                  image={item.image}
+                  alt={item.process}
+                  className="mc-image"
+                />
+
+                {/* CONTENT */}
+                <CardContent className="mc-content">
+                  {/* LOGO */}
+                  <img src={item.logo} alt="Logo" className="mc-logo" />
+
+                  <Typography className="mc-make">MAKE: {item.make}</Typography>
+
+                  <Typography className="mc-process">
+                    PROCESS: {item.process}
+                  </Typography>
+
+                  {/* BULLET DESCRIPTION */}
+                  <ul className="mc-desc">
+                    {item.desc.map((point, i) => (
+                      <motion.li
+                        key={i}
+                        variants={bulletVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                      >
+                        <CheckCircleIcon className="mc-bullet-icon" />
+                        {point}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </MotionCard>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </>
   );
 };
