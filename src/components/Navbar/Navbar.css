@@ -201,7 +201,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 40px;
+  padding: 22px 0px;
+  padding-left: 5px;
+  padding-right: 40px;
   border-bottom: 1px solid #eee;
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
@@ -216,10 +218,11 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .logo img {
-  height: 50px;          /* ⬅ increased size */
+  height: 58px;          /* ⬅ increased size */
   width: auto;
   transition: filter 0.3s ease;
 }
@@ -749,7 +752,7 @@ body {
 /* ================= DESKTOP ONLY: MOVE TOP BAR RIGHT ================= */
 @media (min-width: 1025px) {
   .top-bar {
-    padding-left: 180px; /* adjust value as needed */
+    padding-left: 300px; /* adjust value as needed */
   }
 }
 
