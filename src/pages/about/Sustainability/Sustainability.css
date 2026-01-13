@@ -1,3 +1,12 @@
+:root {
+  --page-bg: #f2f6fb;        /* FULL PAGE BACKGROUND */
+  --section-bg: #eef2f7;    /* CONTENT SECTION BACKGROUND */
+  --card-bg: #ffffff;       /* ALL CARD BACKGROUND */
+  --title-bg: #e1e8ef;      /* HEADER STRIP BACKGROUND */
+}
+
+
+
 /* ================= PAGE ================= */
 .sustainability-page {
   width: 100%;
@@ -100,5 +109,3 @@
     font-size: 1.2rem;
   }
 }
-
-

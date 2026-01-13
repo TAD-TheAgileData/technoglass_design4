@@ -297,28 +297,27 @@ export default function Milestones() {
 
   const filteredData =
     filter === "all"
-      ? [...milestones].sort((a, b) => Number(b.year) - Number(a.year))
-      : [...milestones]
-          .filter(
-            (m) => Math.floor(Number(m.year) / 10) * 10 === Number(filter)
-          )
-          .sort((a, b) => Number(b.year) - Number(a.year));
+      ? [...milestones].sort((a, b) => b.year - a.year)
+      : milestones.filter(
+          (m) => Math.floor(Number(m.year) / 10) * 10 === Number(filter)
+        );
 
   return (
     <section className="milestones-page">
+      {/* HERO */}
       <div className="milestones-hero">
         <MotionImg
           src={heroImage}
-          alt="Milestones Hero"
-          initial={{ scale: 1.1 }}
+          initial={{ scale: 1.15 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 2.5, ease: "easeOut" }}
         />
         <div className="hero-overlay">
           <h1>Our Milestones</h1>
         </div>
       </div>
 
+      {/* INTRO */}
       <div className="milestones-intro">
         <p>
           Since our establishment, Technoglass has steadily evolved into a
@@ -326,6 +325,7 @@ export default function Milestones() {
         </p>
       </div>
 
+      {/* FILTER */}
       <div className="timeline-filters">
         {filters.map((f) => (
           <button
@@ -338,11 +338,13 @@ export default function Milestones() {
         ))}
       </div>
 
+      {/* TIMELINE */}
       <div className="timeline">
         <div className="timeline-present">
           <span>PRESENT</span>
           <div className="present-line"></div>
         </div>
+
         {filteredData.map((item, index) => {
           const isLeft = index % 2 === 0;
 
@@ -350,41 +352,35 @@ export default function Milestones() {
             <MotionDiv
               key={index}
               className={`timeline-item ${isLeft ? "left" : "right"}`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ amount: 0.6 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 80, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="year-dot">{item.year}</span>
+              {/* YEAR */}
+              <MotionDiv className="year-dot">{item.year}</MotionDiv>
 
+              {/* CARD */}
               <MotionDiv
                 className="timeline-content"
-                initial={{ scale: 0.95, opacity: 0.7 }}
-                whileInView={{
-                  scale: 1,
-                  opacity: 1,
-                  boxShadow: "0 22px 50px rgba(0,0,0,0.18)",
-                }}
-                viewport={{ amount: 0.6 }}
-                transition={{ duration: 0.6 }}
+                whileHover={{ y: -12, scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 160, damping: 14 }}
               >
                 <div className="card-header">
                   {isLeft && <h3>{item.title}</h3>}
-                  <span
-                    className={`direction-icon ${
-                      isLeft ? "left-icon" : "right-icon"
-                    }`}
-                  >
+                  <span className="direction-icon">
                     {isLeft ? <FaChevronLeft /> : <FaChevronRight />}
                   </span>
                   {!isLeft && <h3>{item.title}</h3>}
                 </div>
+
                 <p>{item.desc}</p>
 
-                <img
+                <MotionImg
                   src={imageMap[item.image]}
-                  alt={item.title}
                   className="timeline-image"
+                  whileHover={{ scale: 1.06 }}
+                  transition={{ duration: 0.6 }}
                 />
               </MotionDiv>
             </MotionDiv>

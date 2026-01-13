@@ -1,8 +1,7 @@
 /* ================= HERO ================= */
 .mc-hero {
   position: relative;
-  height: 400px;
-  width: 100%;
+  height: 360px;
 }
 
 .mc-hero-img {
@@ -20,251 +19,148 @@
   justify-content: center;
 }
 
-.mc-hero-text {
-  text-align: center;
-}
-
-/* TITLE */
 .mc-hero-title {
-  margin: 0;
   color: #fff;
+  font-size: 3rem;
   font-weight: 900;
-  letter-spacing: 1.5px;
-  font-size: 2.2rem; /* mobile */
 }
 
-/* SUBTITLE */
 .mc-hero-subtitle {
-  margin-top: 12px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 400;
+  color: #ddd;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 0.95rem;
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-  .mc-hero-title {
-    font-size: 3.8rem; /* BIG & CLEAR */
-  }
-
-  .mc-hero-subtitle {
-    font-size: 1.3rem;
-  }
-}
-
-
-
-
-/* ================= FEATURE SECTION ================= */
-.mc-feature-section {
-  background: #f8f9fa; /* light background */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.mc-feature-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mc-feature-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  color: #007bff;
-}
-
-.mc-feature-text {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .mc-feature-title {
-    font-size: 2rem;
-  }
-
-  .mc-feature-text {
-    font-size: 1rem;
-  }
-
-  .mc-feature-section {
-    padding: 60px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mc-feature-title {
-    font-size: 1.6rem;
-  }
-
-  .mc-feature-text {
-    font-size: 0.9rem;
-  }
-
-  .mc-feature-section {
-    padding: 40px 10px;
-  }
+  margin-top: 6px;
 }
 
 /* ================= PAGE ================= */
 .mc-container {
-  padding: 60px 0;
-}
-
-.MuiGrid-item {
-  display: flex;
+  padding: 70px 0;
 }
 
 /* ================= CARD ================= */
 .mc-card {
   width: 100%;
-  height: 480px; /* uniform card height */
-  display: flex;
-  flex-direction: column;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
 }
 
-.mc-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 60px rgba(0, 123, 255, 0.25);
-}
-
-/* ================= IMAGE ================= */
-.mc-image {
-  height: 220px; /* fixed for all cards */
+/* ================= ZIG-ZAG LAYOUT ================= */
+.mc-zigzag {
+  display: flex;
   width: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
+  align-items: stretch;
 }
 
-/* ================= CONTENT ================= */
+/* ================= IMAGE SECTION ================= */
+.mc-image-wrap {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.mc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= IMAGE BADGE ================= */
+.mc-image-badge {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= CONTENT SECTION ================= */
 .mc-content {
-  flex: 1;
-  padding: 20px;
+  width: 50%;
+  padding: 40px 42px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 14px;
 }
 
-/* ================= LOGO ================= */
+/* LOGO */
 .mc-logo {
-  height: 40px;
+  height: 46px;
   margin-bottom: 10px;
 }
 
-/* ================= TEXT ================= */
+/* TEXT */
 .mc-make {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.85rem;
+  color: #777;
+  letter-spacing: 0.5px;
 }
 
 .mc-process {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #007bff;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
-/* ================= BULLET DESC ================= */
+/* ================= BULLET LIST ================= */
 .mc-desc {
-  margin-top: auto;
-  padding-left: 0;
-  max-height: 70px;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.mc-card:hover .mc-desc {
-  max-height: 120px;
+  padding: 0;
+  margin-top: 14px;
 }
 
 .mc-desc li {
   list-style: none;
   display: flex;
-  align-items: center;
-  font-size: 0.85rem;
-  color: #555;
+  align-items: flex-start;   /* 🔑 FIXED ICON ALIGNMENT */
+  gap: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin-bottom: 6px;
 }
 
 .mc-bullet-icon {
-  font-size: 0.9rem;
   color: #007bff;
-  margin-right: 6px;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  margin-top: 4px;           /* aligns with first text line */
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 1024px) {
-  .mc-hero {
-    height: 320px;
-  }
-
-  
-  
-  
-
-  .mc-card {
-    height: 450px;
-  }
-
-  .mc-image {
-    height: 200px;
-  }
-}
-
 @media (max-width: 768px) {
-  .mc-hero {
-    height: 260px;
+
+  .mc-zigzag {
+    flex-direction: column;
   }
 
- 
- 
-  
-
-  .mc-card {
-    height: 420px;
-  }
-
-  .mc-image {
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mc-hero {
-    height: 200px;
-  }
-
-  
-  
-  
-  
-
-  .mc-card {
-    height: 400px;
-  }
-
-  .mc-image {
-    height: 150px;
+  .mc-image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   .mc-content {
-    padding: 15px;
+    width: 100%;
+    padding: 20px 18px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mc-logo {
+    height: 42px;
   }
 
   .mc-make {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   .mc-process {
@@ -272,16 +168,86 @@
   }
 
   .mc-desc li {
-    font-size: 0.8rem;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    text-align: left;
   }
 }
 
-@media (max-width: 360px) {
-  
-  
-  
+/* ================= TABLET (CORRECTED) ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
 
-  .mc-hero-subtitle {
-    font-size: 0.75rem;
+  .mc-zigzag {
+    flex-direction: column;   /* 🔥 FIXED */
+  }
+
+  .mc-image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .mc-content {
+    width: 100%;
+    padding: 28px 40px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .mc-logo {
+    height: 48px;
+  }
+
+  .mc-zigzag {
+    flex-direction: column;
+  }
+
+  /* 🔥 LIMIT IMAGE HEIGHT ON iPAD */
+  .mc-image-wrap {
+    width: 100%;
+    aspect-ratio: auto;
+    height: 260px;             /* ✅ KEY FIX */
+  }
+
+  .mc-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 🔥 SEPARATION FIX */
+  .mc-content {
+    width: 100%;
+    padding: 24px 40px 32px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* 🔥 KEEP CARD FEEL COMPACT */
+  .mc-card {
+    overflow: hidden;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+
+  .mc-zigzag {
+    flex-direction: row;
+  }
+
+  .mc-image-wrap {
+    width: 50%;
+  }
+
+  .mc-content {
+    width: 50%;
+    padding: 40px 42px;
+  }
+}
+
+/* ================= CENTER CARDS (MOBILE + TABLET) ================= */
+@media (max-width: 1024px) {
+  .mc-card {
+    max-width: 720px;
+    margin: auto;
   }
 }

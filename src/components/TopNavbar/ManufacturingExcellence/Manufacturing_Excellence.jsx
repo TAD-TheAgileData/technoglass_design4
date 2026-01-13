@@ -9,10 +9,11 @@ import {
   CardMedia,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import "./ManufacturingExcellence.css";
 /* ================= HERO IMAGE ================= */
 import heroImg from "../../../assets/TopNavbar/ManufacturingExcellence/Images/manufacturingExcellence.jpg";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+// import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 /* ================= MACHINE IMAGES ================= */
 import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image1.png";
@@ -159,131 +160,88 @@ const cardData = [
   },
 ];
 
-/* ===== ANIMATION VARIANTS ===== */
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
-};
-
+/* ANIMATION */
 const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.96 },
+  hidden: (dir) => ({
+    opacity: 0,
+    x: dir === "left" ? -120 : 120,
+  }),
   visible: {
     opacity: 1,
-    y: 0,
-    scale: 1,
+    x: 0,
     transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
-const bulletVariants = {
-  hidden: { opacity: 0, x: -8 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-};
-
 const MotionCard = motion.create(Card);
 
-/* ===== COMPONENT ===== */
-const Manufacturing_Excellence = () => {
+/* COMPONENT */
+export default function Manufacturing_Excellence() {
   return (
     <>
       {/* HERO */}
       <Box className="mc-hero">
-        <img src={heroImg} alt="Manufacturing" className="mc-hero-img" />
-
+        <img src={heroImg} className="mc-hero-img" alt="" />
         <Box className="mc-hero-overlay">
-          <Box className="mc-hero-text">
+          <Box>
             <h1 className="mc-hero-title">Manufacturing Excellence</h1>
-
-            <p className="mc-hero-subtitle">
-              Precision. Automation. Global Standards.
-            </p>
+            <p className="mc-hero-subtitle">Precision • Automation • Global Standards</p>
           </Box>
         </Box>
       </Box>
-      {/* FEATURE SECTION: Advanced Manufacturing */}
-      <motion.div
-        className="mc-feature-section"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        viewport={{ once: true }}
-      >
-        <Container maxWidth="md" className="mc-feature-content">
-          <Typography className="mc-feature-title">
-            Advanced Manufacturing Infrastructure
-          </Typography>
-          <Typography className="mc-feature-text">
-            Our manufacturing facility integrates precision CNC cutting,
-            automatic ceramic printing, high-accuracy bending, and controlled
-            lamination processes. Each operation is optimized to ensure
-            dimensional accuracy, surface quality, and consistent performance.
-          </Typography>
-        </Container>
-      </motion.div>
 
       {/* CARDS */}
       <Container maxWidth="lg" className="mc-container">
-        <Grid
-          container
-          spacing={4}
-          component={motion.div}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {cardData.map((item, index) => (
-            <Grid item xs={12} sm={6} md={6} key={index}>
-              <MotionCard
-                className="mc-card"
-                variants={cardVariants}
-                whileHover={{
-                  y: -10,
-                  boxShadow: "0 25px 60px rgba(0,123,255,0.25)",
-                }}
-              >
-                {/* IMAGE */}
-                <CardMedia
-                  component="img"
-                  image={item.image}
-                  alt={item.process}
-                  className="mc-image"
-                />
+        <Grid container direction="column" spacing={5}>
 
-                {/* CONTENT */}
-                <CardContent className="mc-content">
-                  {/* LOGO */}
-                  <img src={item.logo} alt="Logo" className="mc-logo" />
+          {cardData.map((item, index) => {
+            const reverse = index % 2 !== 0;
 
-                  <Typography className="mc-make">MAKE: {item.make}</Typography>
+            return (
+              <Grid item xs={12} md={12} lg={12} key={index}>
 
-                  <Typography className="mc-process">
-                    PROCESS: {item.process}
-                  </Typography>
+                <MotionCard
+                  className="mc-card"
+                  custom={reverse ? "right" : "left"}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  <Box
+                    className="mc-zigzag"
+                    sx={{
+                      flexDirection: { xs: "column", md: reverse ? "row-reverse" : "row" },
+                    }}
+                  >
+                    {/* IMAGE */}
+                    <Box className="mc-image-wrap">
+                      <CardMedia component="img" image={item.image} className="mc-image" />
+                      <div className="mc-image-badge">{item.process}</div>
+                    </Box>
 
-                  {/* BULLET DESCRIPTION */}
-                  <ul className="mc-desc">
-                    {item.desc.map((point, i) => (
-                      <motion.li
-                        key={i}
-                        variants={bulletVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                      >
-                        <CheckCircleIcon className="mc-bullet-icon" />
-                        {point}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </MotionCard>
-            </Grid>
-          ))}
+                    {/* CONTENT */}
+                    <CardContent className="mc-content">
+                      <img src={item.logo} className="mc-logo" alt="" />
+                      <Typography className="mc-make">MAKE: {item.make}</Typography>
+                      <Typography className="mc-process">PROCESS: {item.process}</Typography>
+
+                      <ul className="mc-desc">
+                        {item.desc.map((p, i) => (
+                          <li key={i}>
+                            <CheckCircleIcon className="mc-bullet-icon" />
+                            {p}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Box>
+                </MotionCard>
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </>
   );
-};
-
-export default Manufacturing_Excellence;
+}

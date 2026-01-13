@@ -5,12 +5,7 @@ import { motion } from "framer-motion";
 import heroImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
 import chairmanImg from "../../../assets/About_us/LeaderShip/White.jpg";
 import mdImg from "../../../assets/About_us/LeaderShip/White.jpg";
-import gmImg from "../../../assets/About_us/LeaderShip/White.jpg";
-import headEngImg from "../../../assets/About_us/LeaderShip/White.jpg";
-import engLeadImg from "../../../assets/About_us/LeaderShip/White.jpg";
-import rndImg from "../../../assets/About_us/LeaderShip/White.jpg";
 
-/* ====== COLORS ====== */
 const COLORS = {
   white: "#FFFFFF",
   frost: "#6B7280",
@@ -42,6 +37,50 @@ const hoverLift = {
     transition: { duration: 0.35 },
   },
 };
+const mdCard = (isMobile) => ({
+  display: "grid",
+  gridTemplateColumns: isMobile ? "1fr" : "320px 1fr",
+  gap: 36,
+  padding: isMobile ? 22 : 42,
+  marginBottom: 60,
+  borderRadius: 26,
+  background: "#fff",
+  border: `1px solid ${COLORS.steel}`,
+  boxShadow: "0 25px 70px rgba(0,0,0,0.12)",
+});
+
+const mdLeft = (isMobile) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: 18,
+});
+
+const mdRight = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 12,
+};
+
+const mdImgStyle = {
+  width: "100%",
+  height: 280,
+  borderRadius: 18,
+  objectFit: "cover",
+};
+const mdFlowWrap = () => ({
+  width: "100%",
+});
+
+const mdFloatImg = (isMobile) => ({
+  width: isMobile ? "100%" : 300,
+  height: isMobile ? 260 : 280,
+  float: isMobile ? "none" : "left",
+  marginRight: isMobile ? 0 : 28,
+  marginBottom: 18,
+  borderRadius: 18,
+  objectFit: "cover",
+});
+
 
 /* ====== COMPONENT ====== */
 export default function LeadershipMessage() {
@@ -109,31 +148,31 @@ export default function LeadershipMessage() {
         </motion.div>
 
         {/* ===== MANAGING DIRECTOR ===== */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          style={{
-            ...leaderCard(isMobile),
-            flexDirection: isMobile ? "column" : "row-reverse",
-          }}
-          {...hoverLift}
-        >
-          <motion.img
-            src={mdImg}
-            alt="Managing Director"
-            style={leaderImg(isMobile)}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.4 }}
-          />
+ {/* ===== MANAGING DIRECTOR ===== */}
+<motion.div
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  style={leaderCard(isMobile)}
+  {...hoverLift}
+>
+  <div style={mdFlowWrap(isMobile)}>
+    {/* FLOAT IMAGE */}
+    <motion.img
+      src={mdImg}
+      alt="Managing Director"
+      style={mdFloatImg(isMobile)}
+      whileHover={{ scale: 1.04 }}
+      transition={{ duration: 0.4 }}
+    />
 
-          <div style={leaderContent(isMobile)}>
-            <h2 style={leaderName(isMobile)}>Mr. Mousa Al Gedaily</h2>
-            <span style={leaderRole()}>Managing Director</span>
+    {/* FLOWING CONTENT — UNCHANGED */}
+    <h2 style={leaderName(isMobile)}>Mr. Mousa Al Gedaily</h2>
+    <span style={leaderRole()}>Managing Director</span>
 
-            <p style={text()}>
-              For the last three decades, Technoglass has provided the
+    <p style={text()}>
+     For the last three decades, Technoglass has provided the
               automotive replacement glass market from KSA to Gulf regions and
               is a leading independent exporter to the rest of the world. For
               many years, we have witnessed consistent growth, achieved
@@ -172,8 +211,15 @@ export default function LeadershipMessage() {
               success is built on professional commitment, dedication, hard
               work, integrity, and honesty.
             </p>
-          </div>
-        </motion.div>
+
+    
+
+    
+
+    <div style={{ clear: "both" }} />
+  </div>
+</motion.div>
+
 
         {/* ===== MANAGEMENT TEAM ===== */}
         <motion.div variants={stagger} initial="hidden" whileInView="show">
@@ -185,31 +231,28 @@ export default function LeadershipMessage() {
           </p>
 
           <div style={teamGrid()}>
-            <TeamCard
-              img={gmImg}
-              name="General Manager"
-              role="General Manager"
-              desc="Responsible for overall business operations, strategic execution, and organizational performance."
-            />
-            <TeamCard
-              img={headEngImg}
-              name="Head of Engineering"
-              role="Head of Engineering"
-              desc="Leads engineering governance, manufacturing systems, and technical compliance."
-            />
-            <TeamCard
-              img={rndImg}
-              name="Head of R&D"
-              role="Research & Development"
-              desc="Drives innovation, advanced material research, and next-generation glass solutions."
-            />
-            <TeamCard
-              img={engLeadImg}
-              name="Engineering Lead"
-              role="Engineering Lead"
-              desc="Manages complex engineering projects, design validation, and execution excellence."
-            />
-          </div>
+  <TeamCard
+    name="General Manager"
+    role="General Manager"
+    desc="Responsible for overall business operations, strategic execution, and organizational performance."
+  />
+  <TeamCard
+    name="Head of Engineering"
+    role="Head of Engineering"
+    desc="Leads engineering governance, manufacturing systems, and technical compliance."
+  />
+  <TeamCard
+    name="Head of R&D"
+    role="Research & Development"
+    desc="Drives innovation, advanced material research, and next-generation glass solutions."
+  />
+  <TeamCard
+    name="Engineering Lead"
+    role="Engineering Lead"
+    desc="Manages complex engineering projects, design validation, and execution excellence."
+  />
+</div>
+
         </motion.div>
       </div>
     </div>
@@ -219,7 +262,7 @@ export default function LeadershipMessage() {
 /* ====== TEAM CARD ====== */
 const TeamCard = ({ img, name, role, desc }) => (
   <motion.div variants={fadeUp} style={teamCard()} whileHover={{ y: -10 }}>
-    <motion.img src={img} alt={name} style={teamImg()} />
+    
     <div style={teamContent()}>
       <h3 style={teamName()}>{name}</h3>
       <span style={teamRole()}>{role}</span>
@@ -298,6 +341,11 @@ const text = () => ({
   color: COLORS.frost,
   lineHeight: 1.75,
   fontSize: "0.95rem",
+
+  /* ✅ Perfect left & right alignment */
+  textAlign: "justify",
+  textJustify: "inter-word",
+  hyphens: "auto",
 });
 
 const sectionTitle = (isMobile) => ({
@@ -313,15 +361,21 @@ const sectionSubtitle = () => ({
   marginBottom: 40,
 });
 
-const teamGrid = () => ({
+const teamGrid = (isMobile) => ({
   display: "grid",
-  gridTemplateColumns: "1fr",
+  gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
   gap: 26,
 });
+
 
 const teamCard = () => ({
   background: "#fff",
   borderRadius: 24,
+  minHeight: 260,
+display: "flex",
+flexDirection: "column",
+justifyContent: "center",
+
   overflow: "hidden",
   border: `1px solid ${COLORS.steel}`,
   boxShadow: "0 20px 55px rgba(0,0,0,0.1)",

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, Dialog } from "@mui/material";
 
 /* IMAGES */
 import heroImg from "../../../assets/About_us/LeaderShip/White.jpg";
@@ -10,110 +10,171 @@ import iso9001 from "../../../assets/About_us/LeaderShip/White.jpg";
 import fssc from "../../../assets/About_us/LeaderShip/White.jpg";
 import encon from "../../../assets/About_us/LeaderShip/White.jpg";
 import Copcertificate from "../../../assets/Certificate/Copcertificate.jpeg";
-import ISO14001 from "../../../assets/Certificate/ISO14001Certificate.jpeg";
-import ISO45001 from "../../../assets/Certificate/ISO45001.jpeg";
+import iso14001 from "../../../assets/Certificate/ISO14001Certificate.jpeg";
+import iso45001 from "../../../assets/Certificate/ISO45001.jpeg";
 /* DATA */
 const certCards = [
   {
-    title: "IATF 16949:2016 – Automotive Quality Management System",
+    title: "IATF 16949:2016– Automotive Quality Management System",
+    subtitle: (
+      <strong>
+        Ensures consistent quality, defect prevention, and reduction of
+        variation and waste.
+      </strong>
+    ),
     image: iso9001,
-    desc: `
-Ensures consistent quality, defect prevention, and reduction of variation and waste.
-
-• Harmonizes global automotive quality requirements  
-• Ensures suppliers meet OEM expectations  
-• Focuses on customer satisfaction and continuous improvement
-`,
+    desc: `➤ Harmonizes global automotive quality requirements  
+➤ Ensures suppliers meet OEM expectations  
+➤ Focuses on customer satisfaction and continuous improvement`,
   },
   {
-    title: "ISO 9001:2015 – Quality Management System",
+    title: "ISO 9001:2015– Quality Management System",
+    subtitle: (
+      <strong>
+        Delivers a structured framework for consistent product and service
+        quality.
+      </strong>
+    ),
     image: iso9001,
-    desc: `
-Delivers a structured framework for consistent product and service quality.
-
-• Improves operational efficiency  
-• Enhances customer satisfaction  
-• Encourages continual improvement
-`,
+    desc: `➤ Improves operational efficiency  
+➤ Enhances customer satisfaction  
+➤ Encourages continual improvement`,
   },
   {
-    title: "ISO 14001:2015 – Environmental Management System",
-    image: ISO14001,
-    desc: `
-Supports environmental responsibility and sustainability.
-
-• Reduces environmental impact  
-• Ensures regulatory compliance  
-• Promotes pollution prevention
-`,
+    title: "ISO 14001:2015– Environmental Management System",
+    subtitle: (
+      <strong>Supports environmental responsibility and sustainability.</strong>
+    ),
+    image: iso14001,
+    desc: `➤ Reduces environmental impact  
+➤ Ensures regulatory compliance  
+➤ Promotes pollution prevention`,
   },
   {
-    title: "ISO 45001:2018 – Occupational Health & Safety",
-    image: ISO45001,
-    desc: `
-Improves workplace safety and employee well-being.
-
-• Identifies hazards and risks  
-• Reduces work-related incidents  
-• Demonstrates OH&S compliance
-`,
+    title: "ISO 45001:2018– Occupational Health & Safety",
+    subtitle: (
+      <strong>Improves workplace safety and employee well-being.</strong>
+    ),
+    image: iso45001,
+    desc: `➤ Identifies hazards and risks  
+➤ Reduces work-related incidents  
+➤ Demonstrates OH&S compliance`,
   },
   {
-    title: "ECE R-43 – Automotive Safety Glazing",
+    title: "ECE R-43– Automotive Safety Glazing",
+    subtitle: <strong>UN regulation for automotive glazing materials.</strong>,
     image: fssc,
-    desc: `
-UN regulation for automotive glazing materials.
-
-• Prevents dangerous glass fragmentation  
-• Ensures optical clarity  
-• Withstands mechanical stress
-`,
+    desc: `➤ Prevents dangerous glass fragmentation  
+➤ Ensures optical clarity  
+➤ Withstands mechanical stress`,
   },
   {
-    title: "CoP Certification – Conformity of Production",
-    image: Copcertificate,
-    desc: `
-Ensures mass production consistency.
-
-• Maintains approved specifications  
-• Reduces recall risks  
-• Builds regulatory confidence
-`,
-  },
-  {
-    title: "NM 22.0.010 – Morocco Automotive Standard",
+    title: "CoP Certification– Conformity of Production",
+    subtitle: <strong>Ensures mass production consistency.</strong>,
     image: encon,
-    desc: `
-Mandatory Moroccan automotive compliance.
-
-• Meets national safety laws  
-• Required for exporters  
-• Confirms product conformity
-`,
+    desc: `➤ Maintains approved specifications  
+➤ Reduces recall risks  
+➤ Builds regulatory confidence`,
+  },
+  {
+    title: "NM 22.0.010– Morocco Automotive Standard",
+    subtitle: <strong>Mandatory Moroccan automotive compliance.</strong>,
+    image: encon,
+    desc: `➤ Meets national safety laws  
+➤ Required for exporters  
+➤ Confirms product conformity`,
   },
   {
     title: "Global Tier-1 Partnership for Strategic Materials",
+    subtitle: <strong>Strategic partnerships with global suppliers.</strong>,
     image: encon,
-    desc: `
-Strategic partnerships with global suppliers.
-
-Raw Glass:
-• Guardian – Thailand  
-• Asahi – China  
-• Pilkington – China  
+    desc: `Raw Glass:
+➤ Guardian – Thailand  
+➤ Asahi – China  
+➤ Pilkington – China  
 
 PVB:
-• Eastman Saflex – Belgium  
-• Trosifol – Germany  
-• Sekisui – Japan  
+➤ Eastman Saflex – Belgium  
+➤ Trosifol – Germany  
+➤ Sekisui – Japan  
 
 Black Ceramic:
-• Ferro – Germany  
-• Torrecid – Spain
-`,
+➤ Ferro – Germany  
+➤ Torrecid – Spain`,
   },
 ];
 
+/* ================= Certification Image Zoom Component ================= */
+const CertificationImageZoom = ({ item }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      {/* Image Box */}
+      <Box
+        sx={{
+          position: "relative",
+          height: 210,
+          width: 240,
+          mx: "auto",
+          borderRadius: 5,
+          bgcolor: "#fff",
+          backgroundImage: `url(${item.image})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          boxShadow: "0 40px 90px rgba(0,0,0,0.28)",
+          transition: "all 0.4s ease",
+          cursor: "pointer", // indicate clickable
+          "&:hover": {
+            transform: "rotateY(8deg) scale(1.08)",
+            boxShadow: "0 50px 120px rgba(0,0,0,0.32)",
+          },
+        }}
+        onClick={() => setOpen(true)}
+      />
+
+      {/* Zoom Modal */}
+
+      {/* Zoom Modal */}
+      <Dialog
+        open={open}
+        onClose={() => setOpen(false)}
+        fullScreen
+        sx={{ backgroundColor: "rgba(0,0,0,0.85)" }}
+      >
+        <Box
+          onClick={() => setOpen(false)}
+          sx={{
+            width: "100vw",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            overflowY: "auto",
+            p: 4,
+            cursor: "zoom-out",
+          }}
+        >
+          <Box
+            component="img"
+            src={item.image}
+            alt={item.title}
+            sx={{
+              width: "100%",
+              maxWidth: "900px",
+              height: "auto",
+              borderRadius: 2,
+              boxShadow: "0 25px 80px rgba(0,0,0,0.6)",
+            }}
+          />
+        </Box>
+      </Dialog>
+    </>
+  );
+};
+
+/* ================= MAIN COMPONENT ================= */
 export default function Certifications() {
   return (
     <Box sx={{ position: "relative", bgcolor: "#f8fafc", overflow: "hidden" }}>
@@ -225,26 +286,8 @@ export default function Certifications() {
                       ease: "easeInOut",
                     }}
                   >
-                    <Box
-                      sx={{
-                        position: "relative",
-                        height: 210,
-                        width: 240,
-                        mx: "auto",
-                        borderRadius: 5,
-                        bgcolor: "#fff",
-                        backgroundImage: `url(${item.image})`,
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                        boxShadow: "0 40px 90px rgba(0,0,0,0.28)",
-                        transition: "all 0.4s ease",
-                        "&:hover": {
-                          transform: "rotateY(8deg) scale(1.08)",
-                          boxShadow: "0 50px 120px rgba(0,0,0,0.32)",
-                        },
-                      }}
-                    />
+                    {/* Use Zoom Component */}
+                    <CertificationImageZoom item={item} />
 
                     {/* Pedestal */}
                     <Box
@@ -276,13 +319,14 @@ export default function Certifications() {
                   <Box
                     sx={{
                       position: "relative",
-                      bgcolor: "#fff",
+                      background:
+                        "linear-gradient(135deg, #f8fafc 0%, #eef2f7 50%, #e2e8f0 100%)",
                       p: { xs: 4.5, md: 5.5 },
                       borderRadius: 4,
                       maxWidth: 760,
                       ml: reverse ? "auto" : 0,
                       mr: reverse ? 0 : "auto",
-                      boxShadow: "0 30px 100px rgba(0,0,0,0.09)",
+                      boxShadow: "0 35px 120px rgba(155, 159, 169, 0.83)",
                       overflow: "hidden",
                     }}
                   >
@@ -291,8 +335,7 @@ export default function Certifications() {
                       sx={{
                         position: "absolute",
                         inset: 0,
-                        background:
-                          "linear-gradient(120deg, rgba(15,23,42,0.04), transparent)",
+                        background:"rgba(72, 75, 83, 0.54)",
                         pointerEvents: "none",
                       }}
                     />
@@ -310,6 +353,7 @@ export default function Certifications() {
                       }}
                     />
 
+                    {/* TITLE */}
                     <Typography
                       variant="h5"
                       fontWeight={800}
@@ -319,6 +363,17 @@ export default function Certifications() {
                       {item.title}
                     </Typography>
 
+                    {/* SUBTITLE */}
+                    <Typography
+                      variant="subtitle1"
+                      fontWeight={500}
+                      gutterBottom
+                      sx={{ pl: 3, color: "#6b7280" }}
+                    >
+                      {item.subtitle}
+                    </Typography>
+
+                    {/* DESCRIPTION */}
                     <Typography
                       sx={{
                         pl: 3,

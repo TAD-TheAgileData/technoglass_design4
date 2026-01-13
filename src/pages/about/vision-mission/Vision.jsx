@@ -14,6 +14,13 @@ import BackgroundAnimation from "./BackgroundAnimation";
 /* HERO IMAGE */
 import heroImg from "../../../assets/About_us/Visionmissionhero/Hero1.jpg";
 
+import purposeImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
+import visionImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
+import missionImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
+
+/* ================= COLOR CONTROL (CHANGE ONLY HERE) ================= */
+const PAGE_BG_COLOR = "#eef2f7";   // page background
+const CARD_BG_COLOR = "#756565";   // all cards background
 /* ================= ANIMATIONS ================= */
 const cardEntrance = {
   hidden: { opacity: 0, y: 80, scale: 0.95 },
@@ -25,12 +32,30 @@ const cardEntrance = {
   },
 };
 
+/* ================= IMAGE COMPONENT ================= */
+const CardImage = ({ src }) => (
+  <motion.img
+    src={src}
+    alt=""
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true }}
+    style={{
+      width: "100%",
+      height: 360,
+      objectFit: "cover",
+      borderRadius: 16,
+      boxShadow: "0 20px 50px rgba(0,0,0,0.18)",
+    }}
+  />
+);
+
 /* ================= COMPONENT ================= */
 const Vision = () => {
   const particlesInit = async (main) => await loadFull(main);
-
   const { scrollYProgress } = useScroll();
-  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
     <>
@@ -78,14 +103,14 @@ const Vision = () => {
         <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.55)" }} />
       </Box>
 
-      {/* ================= PURPOSE ================= */}
-      <Box sx={{ py: 14, bgcolor: "#f8fafc", position: "relative" }}>
+      {/* ================= PURPOSE (CONTENT | IMAGE) ================= */}
+      <Box sx={{ py: 14, bgcolor: PAGE_BG_COLOR }}>
         <BackgroundAnimation />
         <Container maxWidth="lg">
-          <Grid container spacing={8} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
-                <Paper sx={{ p: 5, borderRadius: 4 }}>
+          <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
+            <Paper sx={cardStyle}>
+              <Grid container spacing={6} alignItems="center" wrap="nowrap">
+                <Grid item xs={6}>
                   <Typography variant="h4" fontWeight={700} color="#176179">
                     Our Purpose
                   </Typography>
@@ -93,11 +118,9 @@ const Vision = () => {
                   <Typography sx={{ mt: 2, lineHeight: 1.8 }}>
                     <strong>Supporting Mobility & Home for a Better Life.</strong>
                     <br /><br />
-
                     Our diverse and multi-lingual <strong>Sales Teams travel the globe constantly</strong>,
                     strengthening customer relationships and keeping us ahead of international trends.
                     <br /><br />
-
                     <strong>A key to our success is our extensive knowledge of:</strong>
                     <ul>
                       <li>Glass processing</li>
@@ -105,28 +128,35 @@ const Vision = () => {
                       <li>Cultures</li>
                       <li>Business customs</li>
                     </ul>
-
                     By working in collaboration with our business partners, we ensure that our
                     <strong> quality products and services meet or exceed customer expectations.</strong>
                   </Typography>
-                </Paper>
-              </motion.div>
-            </Grid>
+                </Grid>
 
-            <Grid item xs={12} md={6}>
-              <motion.div style={{ y: parallaxY }} />
-            </Grid>
-          </Grid>
+                <Grid item xs={6}>
+                  <motion.div style={{ y: parallaxY }}>
+                    <CardImage src={purposeImg} />
+                  </motion.div>
+                </Grid>
+              </Grid>
+            </Paper>
+          </motion.div>
         </Container>
       </Box>
 
-      {/* ================= VISION ================= */}
-      <Box sx={{ py: 14, bgcolor: "#ffffff" }}>
+      {/* ================= VISION (IMAGE | CONTENT) ================= */}
+      <Box sx={{ py: 14, bgcolor: PAGE_BG_COLOR }}>
         <Container maxWidth="lg">
-          <Grid container spacing={8} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
-                <Paper sx={{ p: 5, borderRadius: 4 }}>
+          <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
+            <Paper sx={cardStyle}>
+              <Grid container spacing={6} alignItems="center" wrap="nowrap">
+                <Grid item xs={6}>
+                  <motion.div style={{ y: parallaxY }}>
+                    <CardImage src={visionImg} />
+                  </motion.div>
+                </Grid>
+
+                <Grid item xs={6}>
                   <Typography variant="h4" fontWeight={700} color="#176179">
                     Our Vision
                   </Typography>
@@ -134,18 +164,13 @@ const Vision = () => {
                   <Typography sx={{ mt: 2, lineHeight: 1.8 }}>
                     <strong>“Make every glass to deliver a great experience”</strong>
                     <br /><br />
-
                     Technical Glass Co. success is based on <strong>commitment, dedication, integrity,
                     hard work, and the vision of its founders and employees.</strong>
                     <br /><br />
-
-                    <strong>Leadership:</strong>
-                    <br />
-                    Mr. Hashim Al Sheikh
-                    <br />
+                    <strong>Leadership:</strong><br />
+                    Mr. Hashim Al Sheikh<br />
                     Eng. Mousa Al-Gedaily
                     <br /><br />
-
                     As a trusted automotive partner, we create innovative glazing solutions that enhance:
                     <ul>
                       <li>Visibility</li>
@@ -153,20 +178,20 @@ const Vision = () => {
                       <li>Sustainability</li>
                     </ul>
                   </Typography>
-                </Paper>
-              </motion.div>
-            </Grid>
-          </Grid>
+                </Grid>
+              </Grid>
+            </Paper>
+          </motion.div>
         </Container>
       </Box>
 
-      {/* ================= MISSION ================= */}
-      <Box sx={{ py: 14, bgcolor: "#f8fafc" }}>
+      {/* ================= MISSION (CONTENT | IMAGE) ================= */}
+      <Box sx={{ py: 14, bgcolor: PAGE_BG_COLOR }}>
         <Container maxWidth="lg">
-          <Grid container spacing={8} alignItems="center" direction="row-reverse">
-            <Grid item xs={12} md={6}>
-              <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
-                <Paper sx={{ p: 5, borderRadius: 4 }}>
+          <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
+            <Paper sx={cardStyle}>
+              <Grid container spacing={6} alignItems="center" wrap="nowrap">
+                <Grid item xs={6}>
                   <Typography variant="h4" fontWeight={700} color="#176179">
                     Our Mission
                   </Typography>
@@ -177,29 +202,40 @@ const Vision = () => {
                       position & profitable growth”
                     </strong>
                     <br /><br />
-
                     Technical Glass Company Ltd. <strong>(Techno Glass)</strong> was established in 1993,
                     specializing in auto glass manufacturing and technically supported by TAMGLASS, Finland.
                     <br /><br />
-
                     <strong>Certifications & Standards:</strong>
                     <ul>
                       <li>American & Canadian Standard AS-1 (DOT 531)</li>
-                      <li>European ECE Regulation R-43 (43R-00154 & 43R-00155)</li>
+                      <li>European ECE Regulation R-43</li>
                       <li>South Africa SABS 1191:1978</li>
                       <li>SAUDI MADE</li>
                       <li>ISO 9001, ISO 14001, ISO 45001</li>
-                      <li>D-U-N-S (Data Universal Numbering System)</li>
+                      <li>D-U-N-S</li>
                     </ul>
                   </Typography>
-                </Paper>
-              </motion.div>
-            </Grid>
-          </Grid>
+                </Grid>
+
+                <Grid item xs={6}>
+                  <motion.div style={{ y: parallaxY }}>
+                    <CardImage src={missionImg} />
+                  </motion.div>
+                </Grid>
+              </Grid>
+            </Paper>
+          </motion.div>
         </Container>
       </Box>
     </>
   );
 };
 
+/* ================= CARD STYLE (ONLY COLOR CHANGE) ================= */
+const cardStyle = {
+  p: 6,
+  borderRadius: 4,
+  backgroundColor: CARD_BG_COLOR,
+  boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
+};
 export default Vision;
