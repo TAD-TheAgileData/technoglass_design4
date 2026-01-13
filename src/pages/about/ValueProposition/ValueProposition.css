@@ -2,6 +2,7 @@
 .value-proposition {
   font-family: "Montserrat", "Roboto", sans-serif;
   color: #1f2d2f;
+  background-color: #eef2f6; /* PAGE BG */
 }
 
 /* ================= HERO ================= */
@@ -15,7 +16,7 @@
 .vp-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(10, 40, 50, 0.65);
+  background: rgba(8, 32, 48, 0.7); /* HERO OVERLAY COLOR */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,17 +33,18 @@
 }
 
 .vp-hero-overlay p {
-  color: #e0f2f1;
+  color: #d9f0f6;
   font-size: 1.1rem;
   max-width: 720px;
 }
 
-/* ================= CONTENT ================= */
+/* ================= CONTENT BG ================= */
 .vp-content {
   padding: 80px 20px;
-  background-color: #f7f9fa;
+  background-color: #c7d7dcc6; /* CONTENT BG */
 }
 
+/* ================= GRID ================= */
 .vp-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -51,24 +53,25 @@
   gap: 32px;
 }
 
-/* ================= CARD ================= */
+/* ================= CARD COLOR ================= */
 .vp-card {
-  background: #ffffff;
+  background: linear-gradient(120deg,rgba(241, 243, 246, 0.9),rgba(80, 80, 76, 0.518)); /* CARD BG */
   padding: 28px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .vp-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
 }
 
+/* ================= TEXT COLORS (UNCHANGED STRUCTURE) ================= */
 .vp-card h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #0f5f6b;
+  color: #0a3a4a; /* heading color */
   margin-bottom: 16px;
 }
 
@@ -80,7 +83,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 10px;
-  color: #3b4a4d;
+  color: #445a60;
 }
 
 /* ================= RESPONSIVE ================= */

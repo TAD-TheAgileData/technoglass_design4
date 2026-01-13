@@ -272,7 +272,9 @@ const TeamCard = ({ img, name, role, desc }) => (
 );
 
 /* ====== STYLES ====== */
-const pageBg = () => ({ background: COLORS.white });
+const pageBg = () => ({
+  background: "#c7d7dcc6", // <-- PAGE BACKGROUND COLOR
+});
 
 const container = (isMobile) => ({
   maxWidth: 1100,

@@ -4,7 +4,7 @@ import { Box, Container, Typography, Grid, Dialog } from "@mui/material";
 
 /* IMAGES */
 import heroImg from "../../../assets/About_us/LeaderShip/White.jpg";
-import iso9001 from "../../../assets/About_us/LeaderShip/White.jpg";
+import iso9001 from "../../../assets/Certificate/Iso9001.jpg";
 // import iso45001 from "../../../assets/About_us/LeaderShip/White.jpg";
 // import iso14001 from "../../../assets/About_us/LeaderShip/White.jpg";
 import fssc from "../../../assets/About_us/LeaderShip/White.jpg";
@@ -71,7 +71,7 @@ const certCards = [
   {
     title: "CoP Certification– Conformity of Production",
     subtitle: <strong>Ensures mass production consistency.</strong>,
-    image: encon,
+    image: Copcertificate,
     desc: `➤ Maintains approved specifications  
 ➤ Reduces recall risks  
 ➤ Builds regulatory confidence`,
@@ -335,7 +335,7 @@ export default function Certifications() {
                       sx={{
                         position: "absolute",
                         inset: 0,
-                        background:"rgba(72, 75, 83, 0.54)",
+                        background:"rgba(72, 75, 83, 0.05)",
                         pointerEvents: "none",
                       }}
                     />

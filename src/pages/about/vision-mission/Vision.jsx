@@ -14,13 +14,13 @@ import BackgroundAnimation from "./BackgroundAnimation";
 /* HERO IMAGE */
 import heroImg from "../../../assets/About_us/Visionmissionhero/Hero1.jpg";
 
-import purposeImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
-import visionImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
-import missionImg from "../../../assets/About_us/LeaderShip/leadership.jpg";
+import purposeImg from "../../../assets/About_us/Visionmissionhero/Purpose.jpg";
+import visionImg from "../../../assets/About_us/Visionmissionhero/Vision.jpg";
+import missionImg from "../../../assets/About_us/Visionmissionhero/Mission.jpg";
 
 /* ================= COLOR CONTROL (CHANGE ONLY HERE) ================= */
-const PAGE_BG_COLOR = "#eef2f7";   // page background
-const CARD_BG_COLOR = "#756565";   // all cards background
+const PAGE_BG_COLOR = "#c7d7dcc6";   // page background
+const CARD_BG_COLOR = "#d5d3d3";   // all cards background
 /* ================= ANIMATIONS ================= */
 const cardEntrance = {
   hidden: { opacity: 0, y: 80, scale: 0.95 },
@@ -198,7 +198,7 @@ const Vision = () => {
 
                   <Typography sx={{ mt: 2, lineHeight: 1.8 }}>
                     <strong>
-                      “To build a Customer Centric organization for achieving sustainable leadership
+                      “To build a Customer Centric organization for achieving sVisionmissionhero/Purpose.jpg
                       position & profitable growth”
                     </strong>
                     <br /><br />

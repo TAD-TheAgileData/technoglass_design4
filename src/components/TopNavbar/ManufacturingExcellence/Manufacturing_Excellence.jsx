@@ -42,6 +42,7 @@ import chinalogo from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Ch
 import ChanZhou from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/ChanZhou.jpeg";
 import Bystroniclogo from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Bystroniclogo.png";
 import Jumbo from "../../../assets/TopNavbar/ManufacturingExcellence/Logo/Jumbologo.png";
+import { linearGradient } from "framer-motion/client";
 
 /* ===== CARD DATA ===== */
 const cardData = [
@@ -185,7 +186,9 @@ export default function Manufacturing_Excellence() {
         <Box className="mc-hero-overlay">
           <Box>
             <h1 className="mc-hero-title">Manufacturing Excellence</h1>
-            <p className="mc-hero-subtitle">Precision • Automation • Global Standards</p>
+            <p className="mc-hero-subtitle">
+              Precision • Automation • Global Standards
+            </p>
           </Box>
         </Box>
       </Box>
@@ -193,15 +196,16 @@ export default function Manufacturing_Excellence() {
       {/* CARDS */}
       <Container maxWidth="lg" className="mc-container">
         <Grid container direction="column" spacing={5}>
-
           {cardData.map((item, index) => {
             const reverse = index % 2 !== 0;
 
             return (
               <Grid item xs={12} md={12} lg={12} key={index}>
-
                 <MotionCard
                   className="mc-card"
+                  sx={{
+                    background: "linear-gradient(135deg, #f1f4f6, #979899)", // 👈 CARD COLOR HERE
+                  }}
                   custom={reverse ? "right" : "left"}
                   variants={cardVariants}
                   initial="hidden"
@@ -211,20 +215,31 @@ export default function Manufacturing_Excellence() {
                   <Box
                     className="mc-zigzag"
                     sx={{
-                      flexDirection: { xs: "column", md: reverse ? "row-reverse" : "row" },
+                      flexDirection: {
+                        xs: "column",
+                        md: reverse ? "row-reverse" : "row",
+                      },
                     }}
                   >
                     {/* IMAGE */}
                     <Box className="mc-image-wrap">
-                      <CardMedia component="img" image={item.image} className="mc-image" />
+                      <CardMedia
+                        component="img"
+                        image={item.image}
+                        className="mc-image"
+                      />
                       <div className="mc-image-badge">{item.process}</div>
                     </Box>
 
                     {/* CONTENT */}
                     <CardContent className="mc-content">
                       <img src={item.logo} className="mc-logo" alt="" />
-                      <Typography className="mc-make">MAKE: {item.make}</Typography>
-                      <Typography className="mc-process">PROCESS: {item.process}</Typography>
+                      <Typography className="mc-make">
+                        MAKE: {item.make}
+                      </Typography>
+                      <Typography className="mc-process">
+                        PROCESS: {item.process}
+                      </Typography>
 
                       <ul className="mc-desc">
                         {item.desc.map((p, i) => (

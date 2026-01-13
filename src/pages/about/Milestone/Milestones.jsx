@@ -24,14 +24,14 @@ import expanding_into_asia from "../../../assets/milestones/expanding-into-asia.
 import Temperingline from "../../../assets/OGmilestone/Temperingfurnance.jpeg";
 import plantexpansion from "../../../assets/OGmilestone/plant1.png";
 import SAFlamination from "../../../assets/OGmilestone/Flatlaminationline.jpeg";
-import Isologo from "../../../assets/milestones/ISOStandard.jpg";
+import Isologo from "../../../assets/Certificate/ISO45001.jpeg";
 import curved from "../../../assets/OGmilestone/Curvedglassfurnace.jpeg";
 import Capacity from "../../../assets/OGmilestone/CapacityExpansion.png";
 import ArchietecturalExpansion from "../../../assets/OGmilestone/Archietecturalglassimage2jpeg.jpeg";
 import Busglass from "../../../assets/milestones/BusglassBending.webp";
 import Temperingfurnance from "../../../assets/OGmilestone/Temperingfurnance.jpeg";
 import Bandoline from "../../../assets/OGmilestone/BandoMachine.jpeg";
-import Certificateachieved from "../../../assets/milestones/Certificateachieved.jpg";
+import Certificateachieved from "../../../assets/Certificate/TGC01SA26.jpg";
 import Awarded from "../../../assets/milestones/Awarded.jpg";
 import Collaboration from "../../../assets/milestones/Collaboration.jpg";
 import Polishing from "../../../assets/OGmilestone/Polishingmachine.jpeg";
@@ -292,9 +292,10 @@ const milestones = [
   },
 ];
 
+/* ================= COMPONENT ================= */
 export default function Milestones() {
   const [filter, setFilter] = useState("all");
-
+  const [zoomImage, setZoomImage] = useState(null); // ✅ HERE
   const filteredData =
     filter === "all"
       ? [...milestones].sort((a, b) => b.year - a.year)
@@ -381,12 +382,25 @@ export default function Milestones() {
                   className="timeline-image"
                   whileHover={{ scale: 1.06 }}
                   transition={{ duration: 0.6 }}
+                  onClick={() => setZoomImage(imageMap[item.image])}
+                  style={{ cursor: "zoom-in" }}
                 />
               </MotionDiv>
             </MotionDiv>
           );
         })}
       </div>
+      {zoomImage && (
+        <div className="image-zoom-overlay" onClick={() => setZoomImage(null)}>
+          <motion.img
+            src={zoomImage}
+            className="image-zoomed"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      )}
     </section>
   );
 }

@@ -11,7 +11,7 @@ import {
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import heroImage from "../../../assets/TopNavbar/GlobalReach/map2.jpeg";
+import heroImage from "../../../assets/TopNavbar/GlobalReach/map3.jpeg";
 
 const MotionBox = motion(Box);
 const CARD_BG_COLOR = "#aebebea1"

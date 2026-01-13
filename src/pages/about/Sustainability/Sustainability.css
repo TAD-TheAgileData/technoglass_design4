@@ -1,7 +1,7 @@
 :root {
   --page-bg: #f2f6fb;        /* FULL PAGE BACKGROUND */
   --section-bg: #eef2f7;    /* CONTENT SECTION BACKGROUND */
-  --card-bg: #ffffff;       /* ALL CARD BACKGROUND */
+  --card-bg: #e92222;       /* ALL CARD BACKGROUND */
   --title-bg: #e1e8ef;      /* HEADER STRIP BACKGROUND */
 }
 
@@ -11,7 +11,7 @@
 .sustainability-page {
   width: 100%;
   font-family: "Poppins", sans-serif;
-  color: #222;
+  color: #181515;
 }
 
 /* ================= HERO ================= */
@@ -48,7 +48,7 @@
 /* ================= CONTENT ================= */
 .sustainability-content {
   padding: 80px 8%;
-  background: #f9f9f9;
+  background: linear-gradient(140deg,rgba(0,0,0,0),rgba(1, 1, 1, 0.442));
 }
 
 .content-wrapper {
@@ -67,7 +67,7 @@
 
 /* Text */
 .commitment-header {
-  background: #e8ebed93;
+  background: #7a7c7e93;
   padding: 15px 30px;
   margin-bottom: 40px;
   margin-top: 40px;
@@ -82,7 +82,9 @@
 }
 
 .commitment-text {
-  background: #f7f7f7;
+  background: linear-gradient(145deg,
+#ffffff,
+#5d60636a);
   padding: 30px 40px;
   border-radius: 15px;
   font-size: 1.25rem;
