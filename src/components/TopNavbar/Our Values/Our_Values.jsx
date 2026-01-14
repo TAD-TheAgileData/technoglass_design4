@@ -61,7 +61,7 @@ Innovation is not limited to big breakthroughs — even small, incremental impro
   {
     title: "Customer Commitment",
     icon: <FaHandshake />,
-     image: customerImg,
+    image: customerImg,
     text: `CUSTOMER COMMITMENT - is the dedication an organization shows to understanding, meeting, and exceeding customer needs. It reflects a long‑term focus on building trust, delivering consistent value, and creating positive experiences at every interaction. Customer‑committed organizations listen actively, respond promptly, and continuously improve their products and services based on customer feedback.
 
 • Reliability — delivering what is promised, every time  
@@ -73,7 +73,6 @@ Innovation is not limited to big breakthroughs — even small, incremental impro
 Strong customer commitment leads to loyalty, repeat business, and long‑term relationships that strengthen the organization’s reputation and competitiveness.`,
   },
 ];
-
 
 const MotionCard = motion(Card);
 
@@ -114,7 +113,7 @@ export default function OurValues() {
 
       cardRefs.current[index]?.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "start",
       });
 
       index = (index + 1) % values.length;
@@ -167,8 +166,7 @@ export default function OurValues() {
             variant="h2"
             fontWeight={800}
             sx={{
-              background:
-                "linear-gradient(90deg,#FF6F61,#00FFF0,#0B3D91)",
+              background: "linear-gradient(90deg,#FF6F61,#00FFF0,#0B3D91)",
               WebkitBackgroundClip: "text",
               color: "transparent",
               mb: 2,
@@ -184,7 +182,16 @@ export default function OurValues() {
       </Box>
 
       {/* ================= VALUES ================= */}
-      <Box sx={{ bgcolor: "#cadaeb", py: 18 }}>
+      {/* ================= VALUES ================= */}
+      <Box
+        sx={{
+          bgcolor: "#cadaeb",
+          py: 0,
+           pb: "30vh",  
+          scrollSnapType: "y mandatory", // 👈 ADD HERE
+          
+        }}
+      >
         <Container maxWidth="lg">
           <motion.div
             variants={containerVariants}
@@ -197,35 +204,36 @@ export default function OurValues() {
                 <Grid
                   item
                   xs={12}
-                  md={6}
                   key={index}
                   ref={(el) => (cardRefs.current[index] = el)}
                 >
                   <MotionCard
-  variants={cardVariants}
-  whileHover={{ y: -14, scale: 1.02 }}
-  sx={{
-    height: "100%",
-    borderRadius: 5,
-    backgroundImage: `url(${item.image})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    position: "relative",
-    overflow: "hidden",
-    boxShadow:
-      activeIndex === index
-        ? "0 25px 60px rgba(0,255,240,0.35)"
-        : "0 18px 45px rgba(0,0,0,0.18)",
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      inset: 0,
-      background:
-        "linear-gradient(180deg,rgba(0,0,0,0.55),rgba(0,0,0,0.75))",
-    },
-  }}
->
-
+                    variants={cardVariants}
+                    whileHover={{ y: -14, scale: 1.02 }}
+                    sx={{
+                      minHeight: "90vh", // 👈 FULL SCREEN CARD
+                      display: "flex",
+                      alignItems: "center",
+                      scrollSnapAlign: "start",
+                      borderRadius: 0,
+                      backgroundImage: `url(${item.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      position: "relative",
+                      overflow: "hidden",
+                      boxShadow:
+                        activeIndex === index
+                          ? "0 25px 60px rgba(0,255,240,0.35)"
+                          : "0 18px 45px rgba(0,0,0,0.18)",
+                      "&::before": {
+                        content: '""',
+                        position: "absolute",
+                        inset: 0,
+                        background:
+                          "linear-gradient(180deg,rgba(0,0,0,0.55),rgba(0,0,0,0.75))",
+                      },
+                    }}
+                  >
                     <CardContent sx={{ p: 5, position: "relative", zIndex: 2 }}>
                       {/* ICON */}
                       <motion.div
@@ -242,17 +250,18 @@ export default function OurValues() {
 
                       <Typography
                         variant="h5"
-                        fontWeight={800}
-                        sx={{ color: "#fff", mt: 2, mb: 2 }}
+                        fontWeight={1000}
+                        sx={{ fontSize: "2.2rem", color: "#fff", mt: 2, mb: 2 }}
                       >
                         {item.title}
                       </Typography>
 
                       <Typography
                         sx={{
+                          fontSize: "1.22rem",
                           color: "#e5e7eb",
                           whiteSpace: "pre-line",
-                          lineHeight: 1.7,
+                          lineHeight: 1.9,
                         }}
                       >
                         {item.text}

@@ -16,15 +16,15 @@ import heroImg from "../../../assets/TopNavbar/ManufacturingExcellence/Images/ma
 // import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 /* ================= MACHINE IMAGES ================= */
-import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image1.png";
-import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image2.png";
-import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.png";
+import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image1.1.jpg";
+import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Images2.1.jpg";
+import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.1.webp";
 import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image4.JPG";
-import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image5.JPG";
+import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image5.1.webp";
 import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.JPG";
-import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.JPG";
+import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.1.webp";
 import img8 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image8.JPG";
-import img9 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image9.JPG";
+import img9 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image9.1.jpg";
 import img10 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image10.jpeg";
 import img11 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image11.png";
 import img12 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image12.png";
