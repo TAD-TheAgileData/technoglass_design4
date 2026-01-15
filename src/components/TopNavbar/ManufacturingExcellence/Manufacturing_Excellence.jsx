@@ -20,7 +20,7 @@ import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image
 import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Images2.1.jpg";
 import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.1.webp";
 import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image4.JPG";
-import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image5.1.webp";
+import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.1.webp";
 import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.JPG";
 import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.1.webp";
 import img8 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image8.JPG";
