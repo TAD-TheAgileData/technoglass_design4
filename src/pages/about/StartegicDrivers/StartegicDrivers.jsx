@@ -37,7 +37,7 @@ const StrategicDrivers = () => {
 
   return (
     <div className="strategic-container">
-      {/* Hero Section */}
+      {/* ================= HERO SECTION ================= */}
       <section className="strategic-hero">
         <div className="strategic-hero-overlay">
           <h1>Technoglass Strategic Drivers</h1>
@@ -48,7 +48,7 @@ const StrategicDrivers = () => {
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* ================= CONTENT SECTION ================= */}
       <section className="strategic-drivers-section">
         <h2>Our Strategic Focus Areas</h2>
 

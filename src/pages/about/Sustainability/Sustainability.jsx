@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Sustainability.css";
 
 /* ===== IMAGES ===== */
@@ -35,14 +36,20 @@ const Sustainability = () => {
           <div className="content-image">
             <img src={sustainImg} alt="Sustainability Practices" />
           </div>
-          <div className="commitment-text">
-            <ul>
-              <li> <strong>Zero work-related accidents</strong></li>
-              <li><strong>Zero occupational illness</strong></li>
-              <li>
-                <strong>Zero non-recovered waste!</strong>
-              </li>
-            </ul>
+
+          {/* Right side cards */}
+          <div className="commitment-cards">
+            <div className="commitment-card">
+              <strong>Zero work-related accidents</strong>
+            </div>
+
+            <div className="commitment-card">
+              <strong>Zero occupational illness</strong>
+            </div>
+
+            <div className="commitment-card">
+              <strong>Zero non-recovered waste!</strong>
+            </div>
           </div>
         </div>
       </section>

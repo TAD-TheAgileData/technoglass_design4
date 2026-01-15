@@ -133,7 +133,8 @@ export default function LeadershipMessage() {
             <h2 style={leaderName(isMobile)}>Mr. Hashim Al Sheikh</h2>
             <span style={leaderRole()}>Chairman</span>
 
-            <p style={text()}>
+            <p style={text(isMobile)}>
+
               <strong>Leadership</strong> begins with vision and responsibility.
               At <strong>Technoglass</strong>, our journey has always been
               guided by integrity, trust, and long-term partnerships.
@@ -171,7 +172,8 @@ export default function LeadershipMessage() {
     <h2 style={leaderName(isMobile)}>Mr. Mousa Al Gedaily</h2>
     <span style={leaderRole()}>Managing Director</span>
 
-    <p style={text()}>
+    <p style={text(isMobile)}>
+
      For the last three decades, Technoglass has provided the
               automotive replacement glass market from KSA to Gulf regions and
               is a leading independent exporter to the rest of the world. For
@@ -221,60 +223,16 @@ export default function LeadershipMessage() {
 </motion.div>
 
 
-        {/* ===== MANAGEMENT TEAM ===== */}
-        <motion.div variants={stagger} initial="hidden" whileInView="show">
-          <h2 style={sectionTitle(isMobile)}>
-            Management & Engineering Leadership
-          </h2>
-          <p style={sectionSubtitle()}>
-            Driving precision, innovation, and operational strength.
-          </p>
 
-          <div style={teamGrid()}>
-  <TeamCard
-    name="General Manager"
-    role="General Manager"
-    desc="Responsible for overall business operations, strategic execution, and organizational performance."
-  />
-  <TeamCard
-    name="Head of Engineering"
-    role="Head of Engineering"
-    desc="Leads engineering governance, manufacturing systems, and technical compliance."
-  />
-  <TeamCard
-    name="Head of R&D"
-    role="Research & Development"
-    desc="Drives innovation, advanced material research, and next-generation glass solutions."
-  />
-  <TeamCard
-    name="Engineering Lead"
-    role="Engineering Lead"
-    desc="Manages complex engineering projects, design validation, and execution excellence."
-  />
-</div>
-
-        </motion.div>
+       
       </div>
     </div>
   );
 }
 
-/* ====== TEAM CARD ====== */
-const TeamCard = ({ img, name, role, desc }) => (
-  <motion.div variants={fadeUp} style={teamCard()} whileHover={{ y: -10 }}>
-    
-    <div style={teamContent()}>
-      <h3 style={teamName()}>{name}</h3>
-      <span style={teamRole()}>{role}</span>
-      <p style={teamDesc()}>{desc}</p>
-    </div>
-  </motion.div>
-);
 
 /* ====== STYLES ====== */
-const pageBg = () => ({
-  background: "#c7d7dcc6", // <-- PAGE BACKGROUND COLOR
-});
+const pageBg = () => ({ background: COLORS.white });
 
 const container = (isMobile) => ({
   maxWidth: 1100,
@@ -306,7 +264,7 @@ const heroTitle = (isMobile) => ({
 const heroSubtitle = (isMobile) => ({
   color: COLORS.ice,
   fontSize: isMobile ? "0.95rem" : "1rem",
-  marginTop: 10,
+  marginTop: 20,
   padding: isMobile ? "0 14px" : 0,
 });
 
@@ -334,15 +292,21 @@ const leaderImg = (isMobile) => ({
 
 const leaderContent = (isMobile) => ({ flex: 1 });
 const leaderName = (isMobile) => ({
-  fontSize: isMobile ? "1.3rem" : "1.6rem",
+  fontSize: isMobile ? "1.3rem" : "1.9rem",
   fontWeight: 700,
   color: COLORS.navy,
 });
-const leaderRole = () => ({ color: COLORS.primary, fontWeight: 600 });
-const text = () => ({
+const leaderRole = () => ({
+  color: COLORS.primary,
+  fontWeight: 900,
+  fontSize: "1.5rem", // 🔥 Bigger subtitle
+  display: "block",
+  marginBottom: 16,
+});
+const text = (isMobile) => ({
   color: COLORS.frost,
   lineHeight: 1.75,
-  fontSize: "0.95rem",
+  fontSize: "1.2rem",
 
   /* ✅ Perfect left & right alignment */
   textAlign: "justify",
@@ -360,7 +324,7 @@ const sectionTitle = (isMobile) => ({
 const sectionSubtitle = () => ({
   textAlign: "center",
   color: COLORS.frost,
-  marginBottom: 40,
+  marginBottom: 60,
 });
 
 const teamGrid = (isMobile) => ({

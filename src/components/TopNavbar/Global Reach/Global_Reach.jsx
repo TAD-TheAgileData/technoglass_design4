@@ -11,8 +11,7 @@ import {
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import heroImage from "../../../assets/TopNavbar/GlobalReach/map3.jpeg";
-
+import heroImage from "../../../assets/TopNavbar/GlobalReach/map9.1.png";
 const MotionBox = motion(Box);
 const CARD_BG_COLOR = "#aebebea1"
 /* Regions for modal */
@@ -125,7 +124,7 @@ export default function GlobalReach() {
       {/* ================= HERO ================= */}
       <Box
         sx={{
-          height: { xs: "65vh", md: "80vh" },
+          height: { xs: "90vh", md: "90vh" },
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",

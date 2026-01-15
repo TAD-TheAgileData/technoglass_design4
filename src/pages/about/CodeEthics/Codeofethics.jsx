@@ -16,7 +16,7 @@ const heroVariant = {
 const containerVariant = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.5 }, // cards appear one by one
+    transition: { staggerChildren: 0.5 },
   },
 };
 
@@ -26,20 +26,19 @@ const cardVariant = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.8, 
-      ease: "easeOut", 
-      staggerChildren: 0.3, // items stagger inside card
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
     },
   },
 };
 
-// List item animation (smooth fade + slide)
+// List item animation
 const itemVariant = {
   hidden: { opacity: 0, x: -20 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
+  visible: {
+    opacity: 1,
+    x: 0,
     transition: { duration: 0.4, ease: "easeOut" },
   },
 };
@@ -103,6 +102,7 @@ export default function CodeOfEthics() {
               whileHover={{ y: -12 }}
             >
               <h2>{card.title}</h2>
+
               <motion.ul>
                 {card.items.map((item, i) => (
                   <motion.li key={i} variants={itemVariant}>

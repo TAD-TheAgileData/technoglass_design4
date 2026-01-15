@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Box, Container, Typography, Grid, Dialog } from "@mui/material";
 
 /* IMAGES */
@@ -18,11 +18,11 @@ const certCards = [
     title: "IATF 16949:2016– Automotive Quality Management System",
     subtitle: (
       <strong>
-        Ensures consistent quality, defect prevention, and reduction of
-        variation and waste.
+        Ensures consistent quality, defect prevention, 
+        and reduction of variation and waste.
       </strong>
     ),
-    image: iso9001,
+    image:iso9001,
     desc: `➤ Harmonizes global automotive quality requirements  
 ➤ Ensures suppliers meet OEM expectations  
 ➤ Focuses on customer satisfaction and continuous improvement`,
@@ -104,16 +104,14 @@ Black Ceramic:
   },
 ];
 
-/* ================= Certification Image Zoom Component ================= */
+/* IMAGE ZOOM */
 const CertificationImageZoom = ({ item }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* Image Box */}
       <Box
         sx={{
-          position: "relative",
           height: 210,
           width: 240,
           mx: "auto",
@@ -124,294 +122,470 @@ const CertificationImageZoom = ({ item }) => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           boxShadow: "0 40px 90px rgba(0,0,0,0.28)",
+          cursor: "pointer",
           transition: "all 0.4s ease",
-          cursor: "pointer", // indicate clickable
           "&:hover": {
-            transform: "rotateY(8deg) scale(1.08)",
-            boxShadow: "0 50px 120px rgba(0,0,0,0.32)",
+            transform: "scale(1.08)",
           },
         }}
         onClick={() => setOpen(true)}
       />
 
-      {/* Zoom Modal */}
-
-      {/* Zoom Modal */}
-      <Dialog
-        open={open}
-        onClose={() => setOpen(false)}
-        fullScreen
-        sx={{ backgroundColor: "rgba(0,0,0,0.85)" }}
-      >
+      <Dialog open={open} onClose={() => setOpen(false)} maxWidth="lg">
         <Box
-          onClick={() => setOpen(false)}
+          component="img"
+          src={item.image}
+          alt={item.title}
           sx={{
-            width: "100vw",
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            overflowY: "auto",
-            p: 4,
-            cursor: "zoom-out",
+            width: { xs: "90vw", md: "70vw" },
+            maxHeight: "90vh",
+            borderRadius: 2,
           }}
-        >
-          <Box
-            component="img"
-            src={item.image}
-            alt={item.title}
-            sx={{
-              width: "100%",
-              maxWidth: "900px",
-              height: "auto",
-              borderRadius: 2,
-              boxShadow: "0 25px 80px rgba(0,0,0,0.6)",
-            }}
-          />
-        </Box>
+        />
       </Dialog>
     </>
   );
 };
 
-/* ================= MAIN COMPONENT ================= */
+/* MAIN COMPONENT */
 export default function Certifications() {
-  return (
-    <Box sx={{ position: "relative", bgcolor: "#f8fafc", overflow: "hidden" }}>
-      {/* ================= PARTICLE BACKGROUND ================= */}
-      <Box className="particle-background" />
+  const { scrollYProgress } = useScroll();
 
-      {/* ================= HERO ================= */}
-      <Box
-        sx={{
-          position: "relative",
-          minHeight: { xs: "60vh", md: "75vh" },
-          display: "flex",
-          alignItems: "center",
-          overflow: "hidden",
-        }}
-      >
+  /* SCROLL COLOR CHANGE */
+  const accentGradient = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.6, 1],
+    [
+      "linear-gradient(180deg, #0ea5e9, #6366f1)",
+      "linear-gradient(180deg, #22c55e, #16a34a)",
+      "linear-gradient(180deg, #f97316, #dc2626)",
+      "linear-gradient(180deg, #9333ea, #6366f1)",
+    ]
+  );
+
+  return (
+    <Box sx={{ bgcolor: "#f8fafc", overflow: "hidden" }}>
+      {/* HERO */}
+      <Box sx={{ position: "relative", minHeight: "70vh" }}>
         <motion.div
-          initial={{ scale: 1.15 }}
+          initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1.8, ease: "easeOut" }}
+          transition={{ duration: 1.5 }}
           style={{
             position: "absolute",
             inset: 0,
             backgroundImage: `url(${heroImg})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
           }}
         />
-        <Box
-          sx={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85))",
-          }}
-        />
+        <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.75)" }} />
 
-        <Container sx={{ position: "relative", zIndex: 2 }}>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            <Typography
-              variant="h2"
-              fontWeight={900}
-              color="#fff"
-              gutterBottom
-              letterSpacing={-1}
-            >
-              Certifications & Compliance
-            </Typography>
-
-            <Typography
-              variant="h6"
-              sx={{ color: "#d1d5db", maxWidth: 650, lineHeight: 1.6 }}
-            >
-              International standards ensuring quality, safety, and sustainable
-              manufacturing excellence.
-            </Typography>
-          </motion.div>
+        <Container sx={{ position: "relative", zIndex: 1, pt: 18 }}>
+          <Typography variant="h2" fontWeight={900} color="#fff">
+            Certifications & Compliance
+          </Typography>
+          <Typography variant="h6" color="#cbd5f5" maxWidth={640}>
+            International standards ensuring quality, safety, and sustainability.
+          </Typography>
         </Container>
       </Box>
 
-      {/* ================= LIST ================= */}
-      <Container maxWidth="lg" sx={{ py: 16, position: "relative" }}>
-        {/* Vertical spine */}
-        <Box
-          sx={{
-            position: "absolute",
-            left: "50%",
-            top: 0,
-            bottom: 0,
-            width: 1,
-            bgcolor: "#e5e7eb",
-            display: { xs: "none", md: "block" },
-          }}
-        />
-
+      {/* CONTENT */}
+      <Container maxWidth="lg" sx={{ py: 16 }}>
         {certCards.map((item, index) => {
           const reverse = index % 2 !== 0;
 
           return (
             <Grid
               container
-              key={index}
               spacing={8}
-              alignItems="center"
+              key={index}
               direction={reverse ? "row-reverse" : "row"}
-              sx={{ mb: 14, position: "relative" }}
+              alignItems="center"
+              sx={{ mb: 14 }}
             >
-              {/* IMAGE */}
               <Grid item xs={12} md={4}>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.9,
-                    ease: "easeOut",
-                    delay: index * 0.15,
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <motion.div
-                    animate={{ y: [0, -8, 0], rotateY: [0, 3, -3, 0] }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 8,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    {/* Use Zoom Component */}
-                    <CertificationImageZoom item={item} />
-
-                    {/* Pedestal */}
-                    <Box
-                      sx={{
-                        mt: 2,
-                        mx: "auto",
-                        width: 120,
-                        height: 6,
-                        borderRadius: 10,
-                        bgcolor: "#e5e7eb",
-                        filter: "blur(0.5px)",
-                      }}
-                    />
-                  </motion.div>
-                </motion.div>
+                <CertificationImageZoom item={item} />
               </Grid>
 
-              {/* CONTENT */}
               <Grid item xs={12} md={8}>
-                <motion.div
-                  initial={{ opacity: 0, y: 35 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 0.15 + index * 0.1,
-                  }}
-                  viewport={{ once: true }}
-                >
+                <motion.div whileHover={{ y: -6 }}>
                   <Box
-                    sx={{
-                      position: "relative",
-                      background:
-                        "linear-gradient(135deg, #f8fafc 0%, #eef2f7 50%, #e2e8f0 100%)",
-                      p: { xs: 4.5, md: 5.5 },
-                      borderRadius: 4,
-                      maxWidth: 760,
-                      ml: reverse ? "auto" : 0,
-                      mr: reverse ? 0 : "auto",
-                      boxShadow: "0 35px 120px rgba(155, 159, 169, 0.83)",
-                      overflow: "hidden",
-                    }}
-                  >
-                    {/* Ambient gradient shimmer */}
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        inset: 0,
-                        background:"rgba(72, 75, 83, 0.05)",
-                        pointerEvents: "none",
-                      }}
-                    />
+  sx={{
+    position: "relative",
+    bgcolor: "#fff",
+    p: 5,
+    borderRadius: 4,
+    boxShadow: "0 30px 100px rgba(0,0,0,0.1)",
+    overflow: "hidden",
+    transition: "0.3s ease",
+  }}
+>
+{/* BACKGROUND DESIGN UI/UX */}
+<motion.div
+  animate={{ rotate: [0, 360] }}
+  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+  style={{
+    position: "absolute",
+    inset: 0,
+    borderRadius: 16,
+    background: `
+      radial-gradient(circle at 20% 20%, rgba(14,165,233,0.05), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(99,102,241,0.05), transparent 50%),
+      repeating-conic-gradient(from 0deg, rgba(14,165,233,0.03) 0deg 45deg, transparent 45deg 90deg)
+    `,
+    zIndex: 0,
+    pointerEvents: "none",
+  }}
+/>
 
-                    {/* Accent bar */}
-                    <Box
-                      sx={{
-                        position: "absolute",
-                        left: 0,
-                        top: 0,
-                        height: "100%",
-                        width: 5,
-                        bgcolor: "#0f172a",
-                        borderRadius: "5px 0 0 5px",
-                      }}
-                    />
+{/* OPTIONAL — subtle animated pulse circles */}
+<motion.div
+  animate={{ scale: [1, 1.15, 1] }}
+  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+  style={{
+    position: "absolute",
+    top: "30%",
+    left: "30%",
+    width: 180,
+    height: 180,
+    borderRadius: "50%",
+    background: "rgba(14,165,233,0.05)",
+    zIndex: 0,
+  }}
+/>
+<motion.div
+  animate={{ scale: [1, 1.12, 1] }}
+  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+  style={{
+    position: "absolute",
+    top: "50%",
+    left: "55%",
+    width: 120,
+    height: 120,
+    borderRadius: "50%",
+    background: "rgba(99,102,241,0.05)",
+    zIndex: 0,
+  }}
+/>
 
-                    {/* TITLE */}
-                    <Typography
-                      variant="h5"
-                      fontWeight={800}
-                      gutterBottom
-                      sx={{ pl: 3, letterSpacing: -0.4 }}
-                    >
-                      {item.title}
-                    </Typography>
 
-                    {/* SUBTITLE */}
-                    <Typography
-                      variant="subtitle1"
-                      fontWeight={500}
-                      gutterBottom
-                      sx={{ pl: 3, color: "#6b7280" }}
-                    >
-                      {item.subtitle}
-                    </Typography>
+{/* GLOW BORDER */}
+<motion.div
+  animate={{ opacity: [0.4, 0.8, 0.4] }}
+  transition={{ duration: 4, repeat: Infinity }}
+  style={{
+    position: "absolute",
+    inset: -2,
+    borderRadius: 20,
+    background: accentGradient,
+    filter: "blur(18px)",
+    zIndex: -1,
+  }}
+/>
+{/* LEFT TECH SCAN LINE */}
+<motion.div
+  animate={{ backgroundPositionY: ["0%", "300%"] }}
+  transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
+  style={{
+    position: "absolute",
+    top: 26,
+    bottom: 26,
+    left: 8,
+    width: 6,
+    borderRadius: 12,
+    background: `
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(255,255,255,0.6) 20%,
+        transparent 45%,
+        rgba(255,255,255,0.9) 60%,
+        transparent 80%
+      ),
+      ${accentGradient}
+    `,
+    backgroundSize: "100% 300%",
+    boxShadow: "0 0 24px rgba(99,102,241,0.55)",
+  }}
+/>
 
-                    {/* DESCRIPTION */}
-                    <Typography
-                      sx={{
-                        pl: 3,
-                        color: "#475569",
-                        lineHeight: 1.95,
-                        whiteSpace: "pre-line",
-                        fontSize: 15.5,
-                      }}
-                    >
-                      {item.desc}
-                    </Typography>
-                  </Box>
+{/* RIGHT TECH SCAN LINE */}
+<motion.div
+  animate={{ backgroundPositionY: ["300%", "0%"] }}
+  transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
+  style={{
+    position: "absolute",
+    top: 26,
+    bottom: 26,
+    right: 8,
+    width: 6,
+    borderRadius: 12,
+    background: `
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(255,255,255,0.6) 20%,
+        transparent 45%,
+        rgba(255,255,255,0.9) 60%,
+        transparent 80%
+      ),
+      ${accentGradient}
+    `,
+    backgroundSize: "100% 300%",
+    boxShadow: "0 0 24px rgba(99,102,241,0.55)",
+  }}
+/>
+
+                    {/* ACCENT BAR */}
+                    {/* LEFT ACCENT BAR */}
+<motion.div
+  whileHover={{ scaleY: 1.15 }}
+  style={{
+    position: "absolute",
+    top: 30,
+    bottom: 30,
+    left: 0,
+    width: 6,
+    borderRadius: 12,
+    background: accentGradient,
+    boxShadow: "0 0 22px rgba(99,102,241,0.45)",
+  }}
+/>
+
+{/* RIGHT ACCENT BAR */}
+<motion.div
+  whileHover={{ scaleY: 1.15 }}
+  style={{
+    position: "absolute",
+    top: 30,
+    bottom: 30,
+    right: 0,
+    width: 6,
+    borderRadius: 12,
+    background: accentGradient,
+    boxShadow: "0 0 22px rgba(99,102,241,0.45)",
+  }}
+/>
+{/* LEFT PREMIUM GLOW LINE */}
+<div
+  style={{
+    position: "absolute",
+    top: 28,
+    bottom: 28,
+    left: 10,
+    width: 8,
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      borderRadius: 10,
+      background: accentGradient,
+      filter: "blur(8px)",
+      opacity: 0.6,
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      inset: 2,
+      borderRadius: 8,
+      background: accentGradient,
+    }}
+  />
+</div>
+
+{/* RIGHT PREMIUM GLOW LINE */}
+<div
+  style={{
+    position: "absolute",
+    top: 28,
+    bottom: 28,
+    right: 10,
+    width: 8,
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      borderRadius: 10,
+      background: accentGradient,
+      filter: "blur(8px)",
+      opacity: 0.6,
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      inset: 2,
+      borderRadius: 8,
+      background: accentGradient,
+    }}
+  />
+</div>
+
+{/* LEFT CUT LINE */}
+<div
+  style={{
+    position: "absolute",
+    top: 34,
+    bottom: 34,
+    left: 6,
+    width: 5,
+    background: accentGradient,
+    borderRadius: 10,
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      top: -10,
+      left: -4,
+      width: 14,
+      height: 14,
+      borderRadius: "50%",
+      background: accentGradient,
+      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      bottom: -10,
+      left: -4,
+      width: 14,
+      height: 14,
+      borderRadius: "50%",
+      background: accentGradient,
+      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+    }}
+  />
+</div>
+
+{/* RIGHT CUT LINE */}
+<div
+  style={{
+    position: "absolute",
+    top: 34,
+    bottom: 34,
+    right: 6,
+    width: 5,
+    background: accentGradient,
+    borderRadius: 10,
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      top: -10,
+      right: -4,
+      width: 14,
+      height: 14,
+      borderRadius: "50%",
+      background: accentGradient,
+      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+    }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      bottom: -10,
+      right: -4,
+      width: 14,
+      height: 14,
+      borderRadius: "50%",
+      background: accentGradient,
+      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+    }}
+  />
+</div>
+
+  <Box
+  sx={{
+    position: "relative",
+    bgcolor: "#fff",
+    p: 5,
+    borderRadius: 4,
+    boxShadow: "0 30px 100px rgba(0,0,0,0.1)",
+    overflow: "hidden",
+    transition: "0.3s ease",
+  }}
+>
+  {/* BACKGROUND ANIMATION */}
+  <motion.div
+    animate={{ rotate: [0, 360] }}
+    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+    style={{
+      position: "absolute",
+      inset: 0,
+      borderRadius: 16,
+      background: `
+        radial-gradient(circle at 20% 20%, rgba(14,165,233,0.05), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(99,102,241,0.05), transparent 50%),
+        repeating-conic-gradient(from 0deg, rgba(14,165,233,0.03) 0deg 45deg, transparent 45deg 90deg)
+      `,
+      zIndex: 0,
+      pointerEvents: "none",
+    }}
+  />
+
+  {/* TITLE */}
+  <Typography
+    variant="h5"
+    fontWeight={900}
+    color="#111827"
+    sx={{ position: "relative", zIndex: 1, mb: 2 }}
+  >
+    {item.title}
+  </Typography>
+
+  {/* SUBTITLE */}
+  <Typography
+    variant="h7"
+    fontWeight={600}
+    color="#4b5563"
+    sx={{ position: "relative", zIndex: 1, mb: 2 ,pl:1}}
+  >
+    {item.subtitle}
+  </Typography>
+
+  {/* DASH SEPARATOR */}
+  <Box
+    sx={{
+      width: "60px",
+      height: 2,
+      bgcolor: "#e5e7eb",
+      mb: 2,
+      
+      position: "relative",
+      zIndex: 1,
+      borderRadius: 1,
+    }}
+  />
+
+  {/* DESCRIPTION */}
+  <Typography
+    variant="body1"
+    color="#6b7280"
+    lineHeight={1.8}
+    whiteSpace="pre-line"
+    sx={{ position: "relative", zIndex: 1, pl: 4 }}
+  >
+    {item.desc}
+  </Typography>
+</Box>
+
+
+</Box>
                 </motion.div>
               </Grid>
             </Grid>
           );
         })}
       </Container>
-
-      {/* ================= PARTICLE BACKGROUND CSS ================= */}
-      <style>
-        {`
-          .particle-background {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-            background: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
-            background-size: 20px 20px;
-            animation: moveParticles 60s linear infinite;
-          }
-
-          @keyframes moveParticles {
-            0% { background-position: 0 0; }
-            100% { background-position: 2000px 2000px; }
-          }
-        `}
-      </style>
     </Box>
   );
 }

@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import "./CompanyOverview.css";
 import { FaCheckCircle } from "react-icons/fa";
 
-// Using placeholder images
+/* HERO IMAGE */
 import heroImage from "../../../assets/Hero/CompanyOverview.jpg";
 
-/* ✅ ADDED: content images */
+/* CONTENT IMAGES */
 import overviewImg1 from "../../../assets/Companyoverview/Whoweare.jpg";
 import overviewImg2 from "../../../assets/Companyoverview/ExpYears.jpg";
 import overviewImg3 from "../../../assets/Companyoverview/Whatweprovide.jpg";
 import overviewImg4 from "../../../assets/Companyoverview/Manufacturig.jpg";
 import overviewImg5 from "../../../assets/Companyoverview/Technologycollab.jpg";
 
-export default function App() {
+export default function CompanyOverview() {
   return (
     <section className="company-overview">
       {/* ================= HERO ================= */}
@@ -74,28 +74,39 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* ✅ ADDED zig-zag wrapper */}
             <div className={`overview-row ${index % 2 !== 0 ? "reverse" : ""}`}>
-              {/* ✅ ADDED image */}
+              {/* IMAGE */}
               <div className="overview-image">
                 <img src={section.image} alt={section.title} />
               </div>
 
-              {/* ✅ EXISTING CONTENT (UNCHANGED) */}
+              {/* CONTENT */}
               <div className="overview-content">
-                <h3>{section.title}</h3>
+                <h3 className="card-title">{section.title}</h3>
 
-                {section.text && <p>{section.text}</p>}
+                {section.subtitle && (
+                  <p className="card-subtitle">{section.subtitle}</p>
+                )}
+
+                {section.text && (
+                  <p className="card-text">{section.text}</p>
+                )}
 
                 {section.list && (
-                  <ul className={section.grid ? "grid-list" : ""}>
+                  <div
+                    className={
+                      section.grid
+                        ? "icon-grid card-list"
+                        : "card-list"
+                    }
+                  >
                     {section.list.map((item, i) => (
-                      <li key={i} className="list-item">
+                      <div key={i} className="icon-row">
                         <FaCheckCircle className="list-icon" />
                         <span>{item}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 )}
               </div>
             </div>
@@ -121,7 +132,7 @@ const sections = [
     image: overviewImg1,
     text: (
       <>
-        <strong> Technical Glass Co.(Technoglass)</strong> is a leading
+          <strong> Technical Glass Co.(Technoglass)</strong> is a leading
         automotive glass manufacturer established in <strong>1993</strong>. With
         over <strong>30+ years of experience</strong>, Technoglass is known for
         engineering precision, consistent quality, and dependable delivery.
@@ -135,7 +146,7 @@ const sections = [
         region. Today, Technoglass is widely recognized as one of the most
         preferred automotive glass suppliers in the GCC, driven by its
         dedication to innovation, continuous improvement, and long-term
-        partnerships built on trust, performance, and excellence.
+        partnerships built on trust, performance, and excellence
       </>
     ),
   },
