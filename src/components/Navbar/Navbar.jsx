@@ -17,9 +17,9 @@ const menuData = [
         path: "/about/vision_mission",
       },
       { label: "Leadership Message", path: "/about/leadership" },
-      {label:" code of ethics" , path: "/about/codeofethics" },
-      {label:"Startegic Drivers" , path:"/about/StartegicDrivers"},
-      {label:"Value and Proposition" , path:"/about/valueproposition"},
+      { label: " code of ethics", path: "/about/codeofethics" },
+      { label: "Startegic Drivers", path: "/about/StartegicDrivers" },
+      { label: "Value and Proposition", path: "/about/valueproposition" },
       { label: "Sustainability & ESG", path: "/about/sustainability" },
       { label: "Corporate Milestones", path: "/about/milestones" },
     ],
@@ -115,7 +115,7 @@ const menuData = [
       { label: "Quality Assurance", path: "/trust/quality-assurance" },
       {
         label: "Environmental Compliance",
-        path: "/trust/environmental-compliance",
+        path: "/trust/enivornmentalcompilance",
       },
       { label: "Partnerships & Clients", path: "/trust/partnerships-clients" },
       { label: "Media & Gallery", path: "/trust/media-gallery" },
@@ -249,7 +249,7 @@ export default function Navbar() {
               className="chevron-btn"
               onClick={() =>
                 setTopBarOpen(
-                  topBarOpen === "manufacturing" ? null : "manufacturing"
+                  topBarOpen === "manufacturing" ? null : "manufacturing",
                 )
               }
             >
@@ -362,7 +362,7 @@ export default function Navbar() {
                   type="button"
                   onClick={() =>
                     setDesktopOpen(
-                      desktopOpen === item.title ? null : item.title
+                      desktopOpen === item.title ? null : item.title,
                     )
                   }
                   aria-expanded={desktopOpen === item.title}
@@ -391,7 +391,7 @@ export default function Navbar() {
                                 setDesktopSubOpen(
                                   desktopSubOpen === link.label
                                     ? null
-                                    : link.label
+                                    : link.label,
                                 )
                               }
                               aria-expanded={desktopSubOpen === link.label}
@@ -487,11 +487,12 @@ export default function Navbar() {
         <ul>
           {menuData.map((item) => (
             <li key={item.title} className="mobile-item">
+              {/* MAIN CATEGORY */}
               <button
                 className="mobile-title"
                 onClick={() =>
                   setMobileDropdown(
-                    mobileDropdown === item.title ? null : item.title
+                    mobileDropdown === item.title ? null : item.title,
                   )
                 }
               >
@@ -505,6 +506,7 @@ export default function Navbar() {
                 <ul className="mobile-dropdown">
                   {item.links.map((link) => (
                     <li key={link.label}>
+                      {/* NO CHILD */}
                       {!link.children ? (
                         <Link
                           to={link.path}
@@ -515,34 +517,56 @@ export default function Navbar() {
                         </Link>
                       ) : (
                         <>
-                          <button
-                            className="mobile-sub-title"
-                            onClick={() =>
-                              setMobileSubDropdown(
-                                mobileSubDropdown === link.label
-                                  ? null
-                                  : link.label
-                              )
-                            }
-                          >
-                            {link.label} <FaChevronDown />
-                          </button>
+                          {/* LINK + ARROW */}
+                          <div className="mobile-sub-row">
+                            {/* TEXT → NAVIGATE */}
+                            <Link
+                              to={link.path}
+                              onClick={closeAllDropdowns}
+                              className="mobile-sub-title"
+                            >
+                              {link.label}
+                            </Link>
 
-                          {link.children &&
-                            mobileSubDropdown === link.label && (
-                              <ul className="mobile-sub-dropdown">
-                                {link.children.map((child) => (
-                                  <li key={child.label}>
-                                    <Link
-                                      to={child.path}
-                                      onClick={closeAllDropdowns}
-                                    >
-                                      {child.label}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
+                            {/* ARROW → DROPDOWN */}
+                            <button
+                              className="mobile-sub-toggle"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setMobileSubDropdown(
+                                  mobileSubDropdown === link.label
+                                    ? null
+                                    : link.label,
+                                );
+                              }}
+                              aria-expanded={mobileSubDropdown === link.label}
+                            >
+                              <FaChevronDown
+                                className={
+                                  mobileSubDropdown === link.label
+                                    ? "rotate"
+                                    : ""
+                                }
+                              />
+                            </button>
+                          </div>
+
+                          {/* SECOND LEVEL */}
+                          {mobileSubDropdown === link.label && (
+                            <ul className="mobile-sub-dropdown">
+                              {link.children.map((child) => (
+                                <li key={child.label}>
+                                  <Link
+                                    to={child.path}
+                                    onClick={closeAllDropdowns}
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </>
                       )}
                     </li>

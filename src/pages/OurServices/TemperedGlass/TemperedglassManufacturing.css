@@ -1,0 +1,252 @@
+/* ================= ROOT ================= */
+/* ================= TG PAGE THEME ================= */
+.tg-page {
+  --primary: #0f172a;
+  --secondary: #e2e8f0;
+  --accent: #0284c7;
+
+  --bg-main: #f8fafc;
+  --overlay-dark: rgba(2, 8, 23, 0.85);
+
+  --shadow-soft: 0 25px 60px rgba(15,23,42,0.18);
+  --shadow-strong: 0 40px 90px rgba(15,23,42,0.35);
+
+  background: var(--bg-main);
+  font-family: "Inter","Helvetica Neue",Arial,sans-serif;
+  overflow-x: hidden;
+  padding-top: 140px; /* if navbar is fixed */
+}
+
+/* ================= PAGE ================= */
+.tg-page {
+  background: var(--bg-main);
+  font-family: "Inter","Helvetica Neue",Arial,sans-serif;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+/* ================= HERO ================= */
+.tg-hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tg-hero-overlay {
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.2),
+    rgba(255,255,255,0.96)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tg-hero h1 {
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--primary);
+  animation: heroFadeDown 1s ease forwards;
+}
+
+.tg-hero p {
+  margin-top: 14px;
+  font-size: 1.15rem;
+  color: #475569;
+  animation: heroFadeUp 1.2s ease forwards;
+}
+
+/* ================= INTRO ================= */
+.tg-intro {
+  max-width: 1000px;
+  margin: -90px auto 130px;
+  padding: 46px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  animation: introReveal 1.2s ease forwards;
+}
+
+.tg-intro p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #475569;
+}
+
+/* ================= GRID ================= */
+.tg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  padding: 0 6% 140px;
+}
+
+/* ================= IMAGE CARD ================= */
+.tg-img-card {
+  position: relative;
+  height: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  cursor: pointer;
+
+  transform: translateY(40px);
+  opacity: 0;
+  animation: cardReveal 0.9s ease forwards;
+}
+
+.tg-img-card:nth-child(1) { animation-delay: 0.15s; }
+.tg-img-card:nth-child(2) { animation-delay: 0.3s; }
+.tg-img-card:nth-child(3) { animation-delay: 0.45s; }
+
+/* ================= IMAGE ================= */
+.tg-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.3s cubic-bezier(0.22,1,0.36,1);
+  will-change: transform;
+}
+
+/* ================= OVERLAY ================= */
+.tg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2,8,23,0.1),
+    var(--overlay-dark)
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 38px;
+  color: #fff;
+
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ================= ICON ================= */
+.tg-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(2,132,199,0.22);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tg-icon svg {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+/* ================= TEXT ================= */
+.tg-overlay h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tg-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 22px;
+}
+
+/* ================= EXPLORE ================= */
+.tg-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: gap 0.35s ease;
+}
+
+.tg-explore svg {
+  transition: transform 0.35s ease;
+}
+
+/* ================= HOVER EFFECTS ================= */
+.tg-img-card:hover img {
+  transform: scale(1.08);
+}
+
+.tg-img-card:hover .tg-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tg-img-card:hover .tg-icon {
+  transform: scale(1.15) rotate(-4deg);
+  box-shadow: 0 18px 40px rgba(2,132,199,0.35);
+}
+
+.tg-img-card:hover .tg-explore {
+  gap: 16px;
+}
+
+.tg-img-card:hover .tg-explore svg {
+  transform: translateX(6px);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes heroFadeDown {
+  from { opacity: 0; transform: translateY(-35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes introReveal {
+  from { opacity: 0; transform: translateY(45px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .tg-grid {
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
+  }
+
+  .tg-img-card {
+    height: 380px;
+  }
+
+  .tg-intro {
+    margin: -70px auto 110px;
+    padding: 36px;
+  }
+}

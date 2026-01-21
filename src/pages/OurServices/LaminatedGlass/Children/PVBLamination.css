@@ -1,0 +1,298 @@
+/* ================= HERO ================= */
+
+.PVBhero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.PVBheaderimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.PVBhero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px 32px;
+  text-align: center;
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 22px;
+  z-index: 2;
+}
+
+.PVBheaderhead {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.PVBdescription {
+  background: #f8f9fb;
+  padding: 4.5rem 6%;
+  margin-top: 3rem;
+}
+
+.PVBdescription-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= MAIN HEADING ================= */
+
+.PVBdescription h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  color: #0b2e3c;
+  position: relative;
+}
+
+.PVBdescription h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #1e4fd8;
+  display: block;
+  margin: 0.8rem auto 0;
+  border-radius: 6px;
+}
+
+/* ================= TEXT ================= */
+
+.PVBdescription p {
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+  color: #444;
+}
+
+/* ================= SECTION HEADINGS ================= */
+/* ================= ALL SECTION HEADINGS ================= */
+
+.PVBdescription h2,
+.PVBdescription h3 {
+  font-size: 2.3rem;
+  text-align: center;
+  color: #0b2e3c;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.PVBdescription h2::after,
+.PVBdescription h3::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #1e4fd8;
+  display: block;
+  margin: 0.8rem auto 0;
+  border-radius: 6px;
+}
+
+/* ================= GRID SYSTEM ================= */
+
+.PVBgrid {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.PVBgrid.two {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.PVBgrid.three {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* ================= IMAGE CARDS ================= */
+
+.PVBimage-card {
+  position: relative;
+  height: 270px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  cursor: pointer;
+}
+
+
+
+.PVBimage-overlay {
+  z-index: 2;
+}
+
+
+.PVBimage-card {
+  z-index: 1;
+}
+
+.PVBimage-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+
+
+
+
+
+.PVBimage-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= CARD TITLE ================= */
+
+.PVBimage-card h4 {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ================= CAPABILITIES (NO CARDS) ================= */
+
+.PVBcapabilities {
+  margin-top: 5rem;
+}
+
+/* List container */
+.PVBcapabilities ul {
+  max-width: 700px;
+  margin: 3rem auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* List item */
+.PVBcapabilities li {
+  position: relative;
+  padding: 1.2rem 1.2rem 1.2rem 2.5rem;
+  margin-bottom: 1rem;
+
+  font-size: 1.05rem;
+  color: #0b2e3c;
+  background: #ffffff;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Accent line */
+.P
+
+/* ================= BACKGROUND IMAGES ================= */
+
+/* Types */
+.normal-pvb {
+  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+}
+
+.acoustic-pvb {
+  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+}
+
+/* Applications */
+.car {
+  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+}
+
+.truck {
+  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+}
+
+.bus {
+  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .PVBhero {
+    height: 60vh;
+  }
+
+  .PVBheaderhead {
+    font-size: 2rem;
+  }
+
+  .PVBimage-card {
+    height: 230px;
+  }
+}
+
+/* ================= CLICKABLE IMAGE OVERLAY ================= */
+
+.PVBimage-card {
+  position: relative;
+  cursor: pointer;
+}
+
+/* overlay container */
+.PVBimage-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* show overlay on hover */
+.PVBimage-card:hover .PVBimage-overlay {
+  opacity: 1;
+}
+
+/* overlay title */
+.PVBimage-overlay h4 {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* overlay text */
+.PVBimage-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #eaeaea;
+}
+
+/* remove underline from links */
+.PVBimage-link {
+  text-decoration: none;
+  display: block;
+}

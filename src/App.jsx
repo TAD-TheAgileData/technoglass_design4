@@ -61,7 +61,7 @@ import Certifications_Compilance from "./pages/Trust/Certifications&compilance/C
 import Enviromental from "./pages/Trust/EnivornmentalCompliance/EnvironmentalCompliance.jsx";
 import Media from "./pages/Trust/Media&Gallery/Media_Gallery.jsx";
 import Partnership from "./pages/Trust/Partnerships&Clients/Partnerships_Clients.jsx";
-import Quality from "./pages/Trust/QualityAssurance/QualityAssurance.jsx";
+import QualityAssurance from "./pages/Trust/QualityAssurance/QualityAssurance.jsx";
 
 //News
 import Press from "./pages/News/Press/Press.jsx";
@@ -146,15 +146,15 @@ function App() {
           />
           <Route
             path="/services/laminated-glass/pvb-lamination"
-            element={<Autoclave />}
+            element={< PVBLamination />}
           />
           <Route
             path="/services/laminated-glass/autoclave-capacity"
-            element={<OpticalQualityControl />}
+            element={< Autoclave/>}
           />
           <Route
             path="/services/laminated-glass/optical-quality-control"
-            element={<PVBLamination />}
+            element={<OpticalQualityControl />}
           />
 
           <Route
@@ -170,7 +170,7 @@ function App() {
             element={<BendingCapabilities />}
           />
           <Route
-            path="/services/tempered-glass/fragmentatio"
+            path="/services/tempered-glass/fragmentation"
             element={<FragmentationStandards />}
           />
 
@@ -194,7 +194,7 @@ function App() {
 
           <Route path="/trust/casestudies" element={<CaseStudies />} />
           <Route
-            path="/trust/certification"
+            path="/trust/certifications-compliance"
             element={<Certifications_Compilance />}
           />
           <Route
@@ -203,7 +203,7 @@ function App() {
           />
           <Route path="/trust/mediagallery" element={<Media />} />
           <Route path="/trust/partnership" element={<Partnership />} />
-          <Route path="/trust/quality" element={<Quality />} />
+          <Route path="/trust/quality-assurance" element={<QualityAssurance/>} />
 
           <Route path="/news/press" element={<Press />} />
           <Route path="/news/events" element={<Events />} />
