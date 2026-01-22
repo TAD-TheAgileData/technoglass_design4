@@ -9,7 +9,7 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import "./LaminatedGlass.css";
+import "./LaminatedglassManufacturing.css";
 
 /* ===== IMAGES ===== */
 import heroImg from "../../../assets/PVBLamination/PVBhero.jpg";
