@@ -29,7 +29,7 @@ import Rail_metro from "./pages/Industries/rail_metro/Rail_metro.jsx";
 import Sepeciality_Application from "./pages/Industries/Sepeciality_applications/Sepeciality_Application.jsx";
 
 //PortFolio
-import Tempered from "./pages/Portfolio/Temperedglass/Temperedglass.jsx";
+import Backlites from "./pages/Portfolio/Temperedglass/Backlites.jsx";
 import Laminated from "./pages/Portfolio/Laminatedglass/Laminatedglass.jsx";
 import HighPerformanceglass from "./pages/Portfolio/High_PerformanceGlass/HighPerformanceglass.jsx";
 import QuarterGlass from "./pages/Portfolio/QuarterGlass/QuarterGlass.jsx";
@@ -122,7 +122,7 @@ function App() {
             element={<Sepeciality_Application />}
           />
 
-          <Route path="/products/backlites-tempered" element={<Tempered />} />
+          <Route path="/products/backlites-tempered" element={< Backlites />} />
           <Route
             path="/products/windshields-laminated"
             element={<Laminated />}

@@ -1,9 +1,9 @@
 import React from "react";
 import "./CeramicPrinting.css";
-import heroImg from "../../assets/PVBLamination/PVBhero.jpg";
-import windshieldImg from "../../assets/PVBLamination/PVBhero.jpg";
-import backliteImg from "../../assets/PVBLamination/PVBhero.jpg";
-import sideliteImg from "../../assets/PVBLamination/PVBhero.jpg";
+import heroImg from "../../assets/Ceramic/CeramicHero2.jpg";
+import windshieldImg from "../../assets/Ceramic/Windshield.png";
+import backliteImg from "../../assets/Ceramic/BacklitesProcess.jpg";
+import sideliteImg from "../../assets/Ceramic/Sidelites.jpg";
 
 const CeramicPrinting = () => {
   return (

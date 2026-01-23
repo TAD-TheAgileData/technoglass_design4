@@ -1,0 +1,215 @@
+.sidelite-root{
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --accent: #0284c7;
+
+  --shadow-soft: 0 20px 50px rgba(15,23,42,0.08);
+  --shadow-hover: 0 35px 90px rgba(2,132,199,0.18);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================= ROOT ================= */
+.sidelite-root {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #e8e8ed, #ffffff);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.sidelite-hero {
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.sidelite-hero-overlay {
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.88),
+    rgba(167, 156, 156, 0.96)
+  );
+  display: flex;
+  align-items: center;
+}
+
+.sidelite-hero-content {
+  padding: 0 8%;
+  max-width: 720px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-chip {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  background: rgba(2,132,199,0.1);
+  color: white;
+  margin-bottom: 22px;
+}
+
+.sidelite-hero-content h1 {
+  font-size: 3.1rem;
+  margin-bottom: 18px;
+}
+
+.sidelite-hero-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: white;
+}
+
+/* ================= OVERVIEW ================= */
+.sidelite-overview {
+  padding: 120px 8%;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* CARD */
+.overview-card {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  padding: 45px 35px;
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+
+  /* animation */
+  transform: translateY(35px);
+  animation: cardReveal 0.9s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+/* STAGGER */
+.overview-card:nth-child(1) { animation-delay: 0.1s; }
+.overview-card:nth-child(2) { animation-delay: 0.25s; }
+.overview-card:nth-child(3) { animation-delay: 0.4s; }
+
+/* HOVER */
+.overview-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* TEXT */
+.overview-card h3 {
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.overview-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ANIMATION */
+@keyframes cardReveal {
+  to {
+    transform: translateY(0);
+  }
+}
+.overview-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      transparent 55%,
+      rgba(2,132,199,0.12) 56%,
+      rgba(2,132,199,0.12) 70%,
+      transparent 71%
+    );
+  z-index: 0; /* 🔑 stays behind text */
+}
+.overview-card h3,
+.overview-card p {
+  position: relative;
+  z-index: 2; /* 🔑 text always visible */
+}
+.overview-card:nth-child(1) { animation-delay: 0.1s; }
+.overview-card:nth-child(2) { animation-delay: 0.25s; }
+.overview-card:nth-child(3) { animation-delay: 0.4s; }
+@keyframes cardReveal {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ================= PRECISION ================= */
+.sidelite-precision {
+  padding: 120px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+}
+
+.precision-text h2 {
+  font-size: 2.3rem;
+  margin-bottom: 28px;
+}
+
+
+.precision-image img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 35px 80px rgba(15,23,42,0.2);
+  transition: transform 0.6s var(--ease);
+}
+
+.precision-image:hover img {
+  transform: scale(1.04);
+}
+.precision-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidelite-precision {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

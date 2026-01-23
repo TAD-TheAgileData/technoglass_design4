@@ -129,6 +129,7 @@
   height: 270px;
   border-radius: 20px;
   overflow: hidden;
+  
   background-size: cover;
   background-position: center;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
@@ -170,7 +171,7 @@
   bottom: 22px;
   left: 22px;
   z-index: 2;
-  color: #fff;
+  color:  #f8fbfb;
   font-size: 1.3rem;
   font-weight: 600;
   margin: 0;
@@ -220,15 +221,15 @@
 
 /* Applications */
 .car {
-  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+  background-image: url("../../../../assets/PVBLamination/Windshield.png");
 }
 
 .truck {
-  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+  background-image: url("../../../../assets/PVBLamination/Hero2.jpg");
 }
 
 .bus {
-  background-image: url("../../../../assets/PVBLamination/PVBhero.jpg");
+  background-image: url("../../../../assets/PVBLamination/Bus.jpg");
 }
 
 /* ================= RESPONSIVE ================= */
