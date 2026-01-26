@@ -1,0 +1,165 @@
+.scm-root {
+  --bg: #f8fafc;
+  --surface: rgba(255,255,255,0.97);
+  --border: rgba(15,23,42,0.08);
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+
+  --shadow-low: 0 15px 40px rgba(15,23,42,0.08);
+  --shadow-high: 0 40px 120px rgba(2,132,199,0.28);
+}
+
+/* ROOT */
+.scm-root {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #eef2f7);
+  color: var(--text);
+}
+
+/* ================= HERO ================= */
+.scm-hero {
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.scm-hero-glass {
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.95),
+    rgba(255,255,255,0.72)
+  );
+  display: flex;
+  align-items: center;
+}
+
+.scm-hero-text {
+  padding: 0 10%;
+  max-width: 760px;
+}
+
+.scm-chip {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  background: rgba(2,132,199,0.14);
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 28px;
+}
+
+.scm-hero-text h1 {
+  font-size: 3.8rem;
+  margin-bottom: 22px;
+}
+
+.scm-hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* ================= ARCHITECTURE ================= */
+.scm-architecture {
+  padding: 160px 10% 180px;
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 120px;
+  align-items: start;
+}
+
+/* LEFT */
+.scm-left h2 {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.scm-left p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 46px;
+}
+
+.scm-metrics {
+  display: flex;
+  gap: 60px;
+}
+
+.scm-metrics strong {
+  font-size: 2.4rem;
+  color: var(--accent);
+  display: block;
+}
+
+.scm-metrics span {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* RIGHT MODULES */
+.scm-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 42px;
+}
+
+.scm-module {
+  background: var(--surface);
+  border-radius: 34px;
+  padding: 46px 40px;
+  box-shadow: var(--shadow-low);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.scm-module svg {
+  font-size: 2.6rem;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+
+.scm-module h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.scm-module p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* HIGHLIGHT */
+.scm-module.highlight {
+  box-shadow:
+    0 0 0 1px rgba(2,132,199,0.25),
+    var(--shadow-high);
+}
+
+/* HOVER */
+.scm-module:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-high);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .scm-architecture {
+    grid-template-columns: 1fr;
+    gap: 90px;
+  }
+
+  .scm-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .scm-hero-text h1 {
+    font-size: 3rem;
+  }
+}

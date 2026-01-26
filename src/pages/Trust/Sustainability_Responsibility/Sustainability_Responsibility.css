@@ -1,0 +1,111 @@
+/* ================= HERO SECTION ================= */
+.Susenvironment-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.Susenvironment-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Sushero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Sushero-content {
+  text-align: center;
+  color: #ffffff;
+  max-width: 850px;
+  padding: 0 20px;
+}
+
+.Sushero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.Sushero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* ================= EDITORIAL SECTION ================= */
+.Suseditorial-section {
+  background: #ffffff;
+  padding: 90px 20px;
+}
+
+.Suseditorial-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.Suseditorial-intro {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+/* Editorial blocks */
+.Suseditorial-block {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.Suseditorial-block:last-child {
+  border-bottom: none;
+}
+
+.Suseditorial-block h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2933;
+}
+
+.Suseditorial-block p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+.Suseditorial-final {
+  border-bottom: 1px solid #d1d5db; /* slightly darker */
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+/* Explicit divider for last paragraph */
+.Suseditorial-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .Sushero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .Susenvironment-hero {
+    height: 55vh;
+  }
+
+  .editorial-section {
+    padding: 70px 20px;
+  }
+}

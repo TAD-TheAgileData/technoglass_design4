@@ -1,0 +1,158 @@
+
+
+/* ================= ROOT ================= */
+
+/* ================= HERO ================= */
+.ohv-hero {
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.ohv-overlay {
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    rgba(11,15,20,0.9),
+    rgba(11,15,20,0.6)
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.ohv-label {
+  display: inline-block;
+  padding: 10px 26px;
+  background: rgba(245,158,11,0.2);
+  color: #fde68a;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 26px;
+}
+
+.ohv-hero-content h1 {
+  font-size: 3.4rem;
+  margin-bottom: 22px;
+  color: white;
+}
+
+.ohv-hero-content p {
+  max-width: 560px;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #e5e7eb;
+}
+
+/* ================= INTRO ================= */
+.ohv-intro {
+  padding: 140px 10%;
+  background: white;
+  text-align: center;
+}
+
+.ohv-intro h2 {
+  font-size: 2.6rem;
+  margin-bottom: 24px;
+}
+
+.ohv-intro p {
+  max-width: 760px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* ================= FEATURES ================= */
+.ohv-features {
+  padding: 120px 10%;
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+}
+
+.ohv-feature-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.ohv-feature-icon {
+  font-size: 2.4rem;
+  color: var(--accent);
+  background: rgba(245,158,11,0.15);
+  padding: 26px;
+  border-radius: 18px;
+}
+
+.ohv-feature-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.ohv-feature-text p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ================= IMAGE BAND ================= */
+.ohv-band {
+  height: 70vh;
+  overflow: hidden;
+}
+
+.ohv-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: var(--shadow-heavy);
+}
+
+/* ================= TECH ================= */
+.ohv-tech {
+  padding: 160px 10%;
+  background: var(--panel);
+}
+
+.ohv-tech-box {
+  max-width: 900px;
+  background: #595a5a;
+  border-radius: 34px;
+  padding: 80px;
+  color: white;
+  box-shadow: var(--shadow-heavy);
+}
+
+.ohv-tech-box h2 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+.ohv-tech-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ohv-tech-box li {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  padding-left: 28px;
+  position: relative;
+  color: #d1d5db;
+}
+
+.ohv-tech-box li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .ohv-feature-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}

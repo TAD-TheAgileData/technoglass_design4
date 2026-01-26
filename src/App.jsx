@@ -21,22 +21,24 @@ import Milestones from "./pages/about/Milestone/Milestones.jsx";
 
 //Industries
 import Industries from "./pages/Industries/IndustryDetail/IndustriesServed.jsx";
-
-import Commercial_Vehicles from "./pages/Industries/Commercial_vehicles/Commercial_Vehicles.jsx";
-import Off_highway_Equipment from "./pages/Industries/Off_highway Equipment/Off_highway_Equipment.jsx";
-import Passenger_Vehicle from "./pages/Industries/Passenger_vehicles/Passenger_vehicles.jsx";
+import AutomotiveIndustry from "./pages/Industries/Automotive Industry/Automotive_Industry.jsx";
 import Rail_metro from "./pages/Industries/rail_metro/Rail_metro.jsx";
-import Sepeciality_Application from "./pages/Industries/Sepeciality_applications/Sepeciality_Application.jsx";
 
 //PortFolio
 import Backlites from "./pages/Portfolio/Temperedglass/Backlites.jsx";
-import Laminated from "./pages/Portfolio/Laminatedglass/Laminatedglass.jsx";
-import HighPerformanceglass from "./pages/Portfolio/High_PerformanceGlass/HighPerformanceglass.jsx";
+import Laminated from "./pages/Portfolio/Automotive Windshields/Laminatedglass.jsx";
+import Automotive_Applications_Gallery from "./pages/Portfolio/Automotive Applications Gallery/Automotive_Applications_Gallery.jsx";
 import QuarterGlass from "./pages/Portfolio/QuarterGlass/QuarterGlass.jsx";
 import Sidelites from "./pages/Portfolio/Sidelites/Sidelites.jsx";
-import SpecialityGlass from "./pages/Portfolio/SpecialityGlass/SpecialityGlass.jsx";
+import SpecialityAutomotiveGlass from "./pages/Portfolio/Speciality Automotive Glass/Speciality_Automotive_Glass.jsx";
+// Childeren
+import Commercial_Vehicles from "./pages/Portfolio/Speciality Automotive Glass/Commercial_vehicles glass/Commercial_Vehicles.jsx";
+import Off_highway_Equipment from "./pages/Portfolio/Speciality Automotive Glass/Off_highway Equipment/Off_highway_Equipment.jsx";
+import BusandCoach from "./pages/Portfolio/Speciality Automotive Glass/Bus_Coach_glass/Passenger_vehicles.jsx";
+import Defense_Armored_Vehicles from "./pages/Portfolio/Speciality Automotive Glass/Defense Armored Vehicles/Sepeciality_Application.jsx";
+//
 import Sunroofs from "./pages/Portfolio/Sunroofs/Sunroofs.jsx";
-
+import ValueAddedFeatures from "./pages/Portfolio/ValueAddedFeatures/ValueAddedFeatures.jsx";
 //OurServices
 import LaminatedGlassManufacturing from "./pages/OurServices/LaminatedGlass/LaminatedGlassManufacturing.jsx";
 import Autoclave from "./pages/OurServices/LaminatedGlass/Children/AutoClaveCapacity.jsx";
@@ -48,21 +50,30 @@ import AdvancedTemperingfurnaces from "./pages/OurServices/TemperedGlass/Childre
 import BendingCapabilities from "./pages/OurServices/TemperedGlass/Children/BendingCapabilities.jsx";
 import FragmentationStandards from "./pages/OurServices/TemperedGlass/Children/FragmentationStandards.jsx";
 
+import AutomationDigital from "./pages/OurServices/AutomationDigitalManufacturing.jsx";
 import CeramicPrinting from "./pages/OurServices/CeramicPrinting.jsx";
 import CNCShaping from "./pages/OurServices/CNCShaping.jsx";
 import CoatingTechnoglass from "./pages/OurServices/CoatingTechnologies.jsx";
 import Edge_Finishing from "./pages/OurServices/Edge_Finishing.jsx";
 import TechnicalResources from "./pages/OurServices/TechnicalResources.jsx";
+import QualityAssurance from "./pages/OurServices/QualityAssurance/QualityAssurance.jsx";
+import Enviromental from "./pages/OurServices/EnivornmentalCompliance/EnvironmentalCompliance.jsx";
 
 //Trust
 
-import CaseStudies from "./pages/Trust/CaseStudies/CaseStudies.jsx";
-import Certifications_Compilance from "./pages/Trust/Certifications&compilance/Certifications_Compilance.jsx";
-import Enviromental from "./pages/Trust/EnivornmentalCompliance/EnvironmentalCompliance.jsx";
-import Media from "./pages/Trust/Media&Gallery/Media_Gallery.jsx";
-import Partnership from "./pages/Trust/Partnerships&Clients/Partnerships_Clients.jsx";
-import QualityAssurance from "./pages/Trust/QualityAssurance/QualityAssurance.jsx";
+import QualityCommitment from "./pages/Trust/Our Commitment to Quality/QualityCommitment.jsx";
+import Certifications_Compilance from "./pages/Trust/Certifications Globally Compliant/Certifications_Compilance.jsx";
 
+import ProvenManufacturingExcellence from "./pages/Trust/Proven Manufacturing Excellence/ProvenManufacturingExcellence.jsx";
+import Customer_First_Approach from "./pages/Trust/Customer_First_Approach/Customer_First_Approach.jsx";
+
+import DeliveryReliability_LogisticsExcellence from "./pages/Trust/DeliveryReliability&SupplyChainExcellence/DeliveryReliability_LogisticsExcellence.jsx";
+import Safety from "./pages/Trust/Safety as a Core Value/SafetyCoreValueMaterial.jsx";
+import Ethics_Integrity from "./pages/Trust/Ethics_Integrity/EthicsIntegrity.jsx";
+import Sustainability_Responsibility from "./pages/Trust/Sustainability_Responsibility/Sustainability_Responsibility.jsx";
+
+import Trusted_industries from "./pages/Trust/Trusted_by_Leading_Brands/Trusted_Partners.jsx";
+import Continuous_Improvement from "./pages/Trust/Continuous Improvement/Continuous_Improvement.jsx";
 //News
 import Press from "./pages/News/Press/Press.jsx";
 import Events from "./pages/News/OurEvents/Events.jsx";
@@ -71,7 +82,7 @@ import Events from "./pages/News/OurEvents/Events.jsx";
 import Contact from "./pages/Contact/Contact/Contact.jsx";
 import Location from "./pages/Contact/Location/Location.jsx";
 import Services from "./pages/OurServices/Servicescard/Services.jsx";
-import Trust from "./pages/Trust/Trust.jsx";
+import Trusted_Partners from "./pages/Trust/Trust.jsx";
 import ProductProtofolio from "./pages/Portfolio/ProductProtofolio.jsx";
 import Codeofethics from "./pages/about/CodeEthics/Codeofethics.jsx";
 import StartegicDrivers from "./pages/about/StartegicDrivers/StartegicDrivers.jsx";
@@ -96,49 +107,67 @@ function App() {
           <Route path="/about/company-overview" element={<CompanyOverview />} />
           <Route path="/about/vision_mission" element={<Vision_mission />} />
           <Route path="/about/leadership" element={<Leadership />} />
-          <Route path="/about/codeofethics" element={<Codeofethics/>}/>
-          <Route path="/about/StartegicDrivers" element={<StartegicDrivers/>}/>
+          <Route path="/about/codeofethics" element={<Codeofethics />} />
+          <Route
+            path="/about/StartegicDrivers"
+            element={<StartegicDrivers />}
+          />
           <Route path="/about/sustainability" element={<Sustainability />} />
           <Route path="/about/milestones" element={<Milestones />} />
-          <Route path="/about/valueproposition" element={<ValueProposition/>}/>
+          <Route
+            path="/about/valueproposition"
+            element={<ValueProposition />}
+          />
+          {/* Industries */}
+          <Route
+            path="/industries/automotive_industry"
+            element={<AutomotiveIndustry />}
+          />
 
           <Route path="/industries" element={<Industries />} />
 
+          {/* Portfolio */}
           <Route
-            path="/industries/commercial_vehicles"
+            path="/products/specialty-glass"
+            element={<SpecialityAutomotiveGlass />}
+          />
+          {/* Children */}
+          <Route
+            path="/products/specialty-glass/commercial-vehicles"
             element={<Commercial_Vehicles />}
           />
           <Route
-            path="/industries/off_highway_equipment"
+            path="/products/specialty-glass/off-highway-industrial"
             element={<Off_highway_Equipment />}
           />
           <Route
-            path="/industries/passenger_vehicles"
-            element={<Passenger_Vehicle />}
+            path="/products/specialty-glass/bus-coach"
+            element={<BusandCoach />}
           />
-          <Route path="/industries/rail_metro" element={<Rail_metro />} />
+          {/* <Route path="/industries/rail_metro" element={<Rail_metro />} /> */}
           <Route
-            path="/industries/sepeciality_application"
-            element={<Sepeciality_Application />}
+            path="/products/specialty-glass/defense-armored"
+            element={<Defense_Armored_Vehicles />}
           />
-
-          <Route path="/products/backlites-tempered" element={< Backlites />} />
+          {/*  */}
+          <Route path="/products/backlites-tempered" element={<Backlites />} />
           <Route
             path="/products/windshields-laminated"
             element={<Laminated />}
           />
           <Route
-            path="/products/high-performance-glass"
-            element={<HighPerformanceglass />}
+            path="/products/automotive_applications_gallery"
+            element={<Automotive_Applications_Gallery />}
           />
           <Route path="/products/quarter-glasses" element={<QuarterGlass />} />
           <Route path="/products/sidelites" element={<Sidelites />} />
-          <Route
-            path="/products/specialty-glass"
-            element={<SpecialityGlass />}
-          />
-          <Route path="/products/sunroofs" element={<Sunroofs />} />
 
+          <Route path="/products/sunroofs" element={<Sunroofs />} />
+          <Route
+            path="/products/ValueAddedFeatures"
+            element={<ValueAddedFeatures />}
+          />
+          {/* Manufacturing Capablities */}
           <Route path="/services" element={<Services />} />
           <Route
             path="/services/laminated-glass"
@@ -146,11 +175,11 @@ function App() {
           />
           <Route
             path="/services/laminated-glass/pvb-lamination"
-            element={< PVBLamination />}
+            element={<PVBLamination />}
           />
           <Route
             path="/services/laminated-glass/autoclave-capacity"
-            element={< Autoclave/>}
+            element={<Autoclave />}
           />
           <Route
             path="/services/laminated-glass/optical-quality-control"
@@ -173,7 +202,10 @@ function App() {
             path="/services/tempered-glass/fragmentation"
             element={<FragmentationStandards />}
           />
-
+          <Route
+            path="/services/automationdigital"
+            element={<AutomationDigital />}
+          />
           <Route
             path="/services/ceramic-printing"
             element={<CeramicPrinting />}
@@ -191,28 +223,64 @@ function App() {
             path="/services/technical-resources"
             element={<Edge_Finishing />}
           />
-
-          <Route path="/trust/casestudies" element={<CaseStudies />} />
           <Route
-            path="/trust/certifications-compliance"
-            element={<Certifications_Compilance />}
-          />
-          <Route
-            path="/trust/enivornmentalcompilance"
+            path="/services/enivornmentalcompilance"
             element={<Enviromental />}
           />
-          <Route path="/trust/mediagallery" element={<Media />} />
-          <Route path="/trust/partnership" element={<Partnership />} />
-          <Route path="/trust/quality-assurance" element={<QualityAssurance/>} />
+          <Route
+            path="/services/quality-assurance"
+            element={<QualityAssurance />}
+          />
 
+          {/* Trust */}
+
+          <Route
+            path="/trust/qualitycommitment"
+            element={<QualityCommitment />}
+          />
+          <Route
+            path="/trust/certifications-Globally-Compliant"
+            element={<Certifications_Compilance />}
+          />
+
+          <Route
+            path="/trust/proven-manufacturing-excellence"
+            element={<ProvenManufacturingExcellence />}
+          />
+          <Route
+            path="/trust/customer_first_approach"
+            element={<Customer_First_Approach />}
+          />
+
+          <Route
+            path="/trust/DeliveryReliability_LogisticsExcellence"
+            element={<DeliveryReliability_LogisticsExcellence />}
+          />
+          <Route path="/trust/safety" element={<Safety />} />
+          <Route
+            path="/trust/ethics_integrity"
+            element={<Ethics_Integrity />}
+          />
+          <Route
+            path="/trust/sustainability_responsibility"
+            element={<Sustainability_Responsibility />}
+          />
+          <Route
+            path="/trust/continuousimprovement"
+            element={<Continuous_Improvement />}
+          />
+          <Route path="/trust/trusted_by_leading_companies" element={<Trusted_industries/>}/>
           <Route path="/news/press" element={<Press />} />
           <Route path="/news/events" element={<Events />} />
 
           <Route path="/contact" element={<Contact />} />
           <Route path="/locations" element={<Location />} />
           <Route />
-          <Route path="/trust" element={<Trust/>}/>
-          <Route path="/products" element={<ProductProtofolio/>}/>
+          <Route
+            path="/trust/trusted_partners"
+            element={<Trusted_Partners />}
+          />
+          <Route path="/products" element={<ProductProtofolio />} />
         </Routes>
       </main>
       <Footer />

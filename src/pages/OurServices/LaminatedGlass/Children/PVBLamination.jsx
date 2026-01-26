@@ -1,8 +1,8 @@
 import React from "react";
 import "./PVBLamination.css";
-import heroimg from "../../../../assets/PVBLamination/PVBhero.jpg";
+import heroimg from "../../../../assets/PVBLamination/PVBhero1.jpg";
 import { Link } from "react-router-dom";
-// import normalImg from "../../../../assets/PVBLamination/normal-pvb.jpg";
+import normalImg from "../../../../assets/PVBLamination/Windshield.png";
 // import acousticImg from "../../../../assets/PVBLamination/acoustic-pvb.jpg";
 
 const PVBLamination = () => {
@@ -43,8 +43,8 @@ const PVBLamination = () => {
             <ul className="PVBgrid two">
               {/* Normal PVB */}
               <li
-                className="PVBimage-card"
-                style={{ backgroundImage: `url(${heroimg})` }}
+                className="PVBimage-card normal-pvb"
+                style={{ backgroundImage: `url(${normalImg})` }}
               >
                 <Link to="/pvb/normal" className="PVBimage-link">
                   <div className="PVBimage-overlay">
@@ -55,7 +55,7 @@ const PVBLamination = () => {
               </li>
 
               <li
-                className="PVBimage-card"
+                className="PVBimage-card acoustic-pvb"
                 style={{ backgroundImage: `url(${heroimg})` }}
               >
                 <Link to="/pvb/acoustic" className="PVBimage-link">

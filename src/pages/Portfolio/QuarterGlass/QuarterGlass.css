@@ -1,0 +1,200 @@
+.qg-root {
+  /* DESIGN TOKENS */
+  --bg: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.85);
+  --border-soft: rgba(15, 23, 42, 0.08);
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+
+  --shadow-soft: 0 20px 55px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 35px 90px rgba(2, 132, 199, 0.28);
+
+  /* ROOT STYLES */
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ================= HERO IMAGE ================= */
+.qg-hero-image {
+  height: 100vh;
+  background: url("../../../assets/Quarterglass/Quartermainhero.jpg") center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.qg-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.279),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+
+.qg-hero-overlay {
+  position: relative;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.qg-chip {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 999px;
+  background: rgba(2, 132, 199, 0.12);
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 28px;
+}
+
+.qg-hero-overlay h1 {
+  font-size: 3.8rem;
+  margin-bottom: 22px;
+}
+
+.qg-hero-overlay p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: white;
+}
+
+/* ================= CONTENT ================= */
+.qg-content {
+  padding: 140px 8% 160px;
+}
+
+/* ================= SHOWCASE ================= */
+.qg-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 110px;
+  align-items: center;
+}
+
+/* ================= IMAGE ================= */
+.qg-image-wrap {
+  position: relative;
+}
+
+.qg-image-wrap img {
+  width: 100%;
+  border-radius: 36px;
+  box-shadow: 0 50px 130px rgba(15, 23, 42, 0.18);
+  position: relative;
+  z-index: 2;
+}
+
+.qg-orb {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(
+    circle,
+    rgba(2, 132, 199, 0.28),
+    transparent 70%
+  );
+  z-index: 1;
+}
+
+/* ================= CARDS GRID ================= */
+.qg-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 42px;
+}
+
+/* ================= CARD ================= */
+.qg-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(248, 250, 252, 0.98)
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 42px 38px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ===== GRADIENT BORDER (ALL SIDES) ===== */
+.qg-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.6px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 132, 199, 0.75),
+    rgba(56, 189, 248, 0.45),
+    rgba(75, 77, 78, 0.75)
+  );
+  -webkit-mask:
+    linear-gradient(#918a8a 0 0) content-box,
+    linear-gradient(#625e5e 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ===== HOVER PREMIUM ===== */
+.qg-card:hover {
+  transform: translateY(-14px) scale(1.015);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===== ICON ===== */
+.qg-card svg {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+/* ===== TEXT ===== */
+.qg-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.qg-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ===== FEATURE / HIGHLIGHT CARD ===== */
+.qg-card.highlight::before {
+  background: linear-gradient(
+    135deg,
+    rgba(2, 132, 199, 1),
+    rgba(56, 189, 248, 0.75),
+    rgba(2, 132, 199, 1)
+  );
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .qg-showcase {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .qg-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .qg-hero-overlay h1 {
+    font-size: 3rem;
+  }
+}

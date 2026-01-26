@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+/* ROOT */
+.qc-root {
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #ffffff, #eef2f7);
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+/* ================= HERO ================= */
+.qc-hero {
+  height: 92vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* SOFT PREMIUM OVERLAY */
+.qc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.96),
+      rgba(255,255,255,0.72)
+    );
+}
+
+/* HERO CONTENT */
+.qc-hero-content {
+  position: relative;
+  padding: 0 9%;
+  max-width: 760px;
+  z-index: 2;
+}
+
+/* OPTIONAL: PARALLAX FEEL */
+@media (prefers-reduced-motion: no-preference) {
+  .qc-hero {
+    background-attachment: fixed;
+  }
+}
+
+
+/* ================= IMAGE CARD SECTION ================= */
+.qc-section {
+  padding: 140px 8% 160px;
+}
+
+.qc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
+}
+
+/* IMAGE CARD */
+.qc-img-card {
+  position: relative;
+  height: 420px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(15,23,42,0.18);
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
+}
+
+.qc-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+/* OVERLAY */
+.qc-overlay-card {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15,23,42,0.75),
+    rgba(15,23,42,0.15)
+  );
+}
+
+/* TEXT OVER IMAGE */
+.qc-card-text {
+  position: absolute;
+  bottom: 36px;
+  left: 34px;
+  right: 34px;
+  color: #ffffff;
+  z-index: 2;
+  transform: translateY(30px);
+  opacity: 0.95;
+  transition: transform 0.6s ease;
+}
+
+.qc-card-text h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.qc-card-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* HOVER */
+.qc-img-card:hover {
+  transform: translateY(-16px);
+  box-shadow: 0 50px 140px rgba(2,132,199,0.35);
+}
+
+.qc-img-card:hover img {
+  transform: scale(1.08);
+}
+
+.qc-img-card:hover .qc-card-text {
+  transform: translateY(0);
+}
+
+/* ================= QUALITY FRAMEWORK ================= */
+.qc-framework {
+  padding: 160px 8%;
+  background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+}
+
+.qc-framework-head {
+  max-width: 760px;
+  margin-bottom: 90px;
+}
+
+.qc-framework-head h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 24px 0 22px;
+}
+
+.qc-framework-head p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #475569;
+}
+
+/* GRID */
+.qc-framework-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 100px;
+}
+
+.qc-framework-item {
+  position: relative;
+  padding-left: 80px;
+}
+
+.qc-framework-item span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: rgba(2,132,199,0.18);
+}
+
+.qc-framework-item h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.qc-framework-item p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .qc-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qc-framework-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .qc-hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .qc-framework-head h2 {
+    font-size: 2.4rem;
+  }
+}

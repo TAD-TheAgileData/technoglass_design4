@@ -4,6 +4,7 @@ import { FaBars, FaXmark, FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../../assets/icon/cropped-logo-glass.png";
 import { useEffect, useRef } from "react";
+import { path } from "framer-motion/client";
 
 /* ================= MENU DATA ================= */
 
@@ -63,27 +64,45 @@ const menuData = [
           },
         ],
       },
+
       { label: "Ceramic Printing", path: "/services/ceramic-printing" },
       { label: "CNC Shaping", path: "/services/cnc-shaping" },
-      { label: "Coating Technologies", path: "/services/coating-technologies" },
-      { label: "Edge Finishing", path: "/services/edge-finishing" },
-      { label: "Technical Resources", path: "/services/technical-resources" },
+      {
+        label: "Quality Assurance & Testing Laboratory",
+        path: "/services/quality-assurance",
+      },
+      {
+        label: "Automation Digital Manufacturing",
+        path: "/services/automationdigital",
+      },
+      {
+        label: "Sustainability & Environmental Responsibility",
+        path: "/services/enivornmentalcompilance",
+      },
+
+      // { label: "Coating Technologies", path: "/services/coating-technologies" },
+      // { label: "Edge Finishing", path: "/services/edge-finishing" },
+      // { label: "Technical Resources", path: "/services/technical-resources" },
     ],
   },
 
   {
     title: "Industries",
     links: [
-      { label: "Passenger Vehicles", path: "/industries/passenger_vehicles" },
-      { label: "Commercial Vehicles", path: "/industries/commercial_vehicles" },
+      // { label: "Passenger Vehicles", path: "/industries/passenger_vehicles" },
+      // { label: "Commercial Vehicles", path: "/industries/commercial_vehicles" },
+      // {
+      //   label: "Off-Highway Equipment",
+      //   path: "/industries/off_highway_equipment",
+      // },
+      // { label: "Rail & Metro", path: "/industries/rail_metro" },
+      // {
+      //   label: "Specialty Applications",
+      //   path: "/industries/sepeciality_application",
+      // },
       {
-        label: "Off-Highway Equipment",
-        path: "/industries/off_highway_equipment",
-      },
-      { label: "Rail & Metro", path: "/industries/rail_metro" },
-      {
-        label: "Specialty Applications",
-        path: "/industries/sepeciality_application",
+        label: "Automotive Industry",
+        path: "/industries/automotive_industry",
       },
     ],
   },
@@ -91,35 +110,78 @@ const menuData = [
     title: "Product Portfolio",
     links: [
       {
-        label: "Windshields (Laminated)",
+        label: "Automotive Windshields",
         path: "/products/windshields-laminated",
       },
-      { label: "Backlites (Tempered)", path: "/products/backlites-tempered" },
+
       { label: "Sidelites", path: "/products/sidelites" },
-      { label: "Sunroofs", path: "/products/sunroofs" },
+      { label: "Backlites (Tempered)", path: "/products/backlites-tempered" },
       { label: "Quarter Glasses", path: "/products/quarter-glasses" },
-      { label: "Specialty Glass", path: "/products/specialty-glass" },
+      { label: "Sunroofs", path: "/products/sunroofs" },
+
       {
-        label: "High-Performance Glass",
-        path: "/products/high-performance-glass",
+        label: "Specialty Automotive Glass",
+        path: "/products/specialty-glass",
+        children: [
+          {
+            label: "Bus & Coach Glass",
+            path: "/products/specialty-glass/bus-coach",
+          },
+          {
+            label: "Commercial Vehicle Glass",
+            path: "/products/specialty-glass/commercial-vehicles",
+          },
+          {
+            label: "Off-Highway & Industrial Vehicles",
+            path: "/products/specialty-glass/off-highway-industrial",
+          },
+          {
+            label: "Defense & Armored Vehicles",
+            path: "/products/specialty-glass/defense-armored",
+          },
+        ],
+      },
+
+      { label: "Value Added Features", path: "/products/ValueAddedFeatures" },
+      {
+        label: "Automotive Applications Gallery",
+        path: "/products/automotive_applications_gallery",
       },
     ],
   },
   {
     title: "Trust",
     links: [
+      { label: "Our Commitment to Quality", path: "/trust/qualitycommitment" },
       {
-        label: "Certifications & Compliance",
-        path: "/trust/certifications-compliance",
+        label: "Certifications & Globally Compliant",
+        path: "/trust/certifications-Globally-Compliant",
       },
-      { label: "Quality Assurance", path: "/trust/quality-assurance" },
       {
-        label: "Environmental Compliance",
-        path: "/trust/enivornmentalcompilance",
+        label: "Proven Manufacturing Excellence",
+        path: "/trust/proven-manufacturing-excellence",
       },
-      { label: "Partnerships & Clients", path: "/trust/partnerships-clients" },
-      { label: "Media & Gallery", path: "/trust/media-gallery" },
-      { label: "Case Studies", path: "/trust/case-studies" },
+      {
+        label: "Delivery Reliability&LogisticsExcellence",
+        path: "/trust/DeliveryReliability_LogisticsExcellence",
+      },
+
+      {
+        label: "Customer‑First Approach",
+        path: "/trust/customer_first_approach",
+      },
+      { label: "Safety as a Core Value", path: "/trust/safety" },
+      { label: "Ethics & Integrity", path: "/trust/ethics_integrity" },
+      {
+        label: "Sustainability & Responsibility",
+        path: "/trust/sustainability_responsibility",
+      },
+
+      {
+        label: "Trusted by Leading Brands",
+        path: "/trust/trusted_by_leading_companies",
+      },
+      { label: "Continuous Improvement", path: "/trust/continuousimprovement" },
     ],
   },
   {

@@ -1,0 +1,144 @@
+/* ROOT */
+.cip-root {
+  --bg: #f8fafc;
+  --surface: rgba(255,255,255,0.96);
+  --border: rgba(15,23,42,0.08);
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
+
+  --shadow-soft: 0 20px 50px rgba(15,23,42,0.08);
+  --shadow-strong: 0 50px 140px rgba(2,132,199,0.28);
+
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #eef2f7);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.cip-hero {
+  height: 92vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cip-hero-glass {
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.96),
+    rgba(255,255,255,0.72)
+  );
+  display: flex;
+  align-items: center;
+}
+
+.cip-hero-content {
+  padding: 0 10%;
+  max-width: 780px;
+}
+
+.cip-chip {
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 999px;
+  background: rgba(2,132,199,0.14);
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 28px;
+}
+
+.cip-hero-content h1 {
+  font-size: 3.8rem;
+  margin-bottom: 22px;
+}
+
+.cip-hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* ================= SYSTEM ================= */
+.cip-system {
+  padding: 160px 10% 180px;
+}
+
+.cip-system-head {
+  max-width: 720px;
+  margin-bottom: 110px;
+}
+
+.cip-system-head h2 {
+  font-size: 2.9rem;
+  margin-bottom: 24px;
+}
+
+.cip-system-head p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* ================= NODES ================= */
+.cip-nodes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 120px;
+}
+
+.cip-node {
+  background: var(--surface);
+  border-radius: 36px;
+  padding: 52px 46px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  position: relative;
+}
+
+.cip-node svg {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+
+.cip-node h3 {
+  font-size: 1.45rem;
+  margin-bottom: 16px;
+}
+
+.cip-node p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+/* HIGHLIGHT NODE */
+.cip-node.highlight {
+  box-shadow:
+    0 0 0 1px rgba(2,132,199,0.28),
+    var(--shadow-strong);
+}
+
+/* HOVER */
+.cip-node:hover {
+  transform: translateY(-14px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .cip-nodes {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cip-hero-content h1 {
+    font-size: 3rem;
+  }
+}

@@ -12,12 +12,12 @@ import {
 import "./LaminatedglassManufacturing.css";
 
 /* ===== IMAGES ===== */
-import heroImg from "../../../assets/PVBLamination/PVBhero.jpg";
+import heroImg from "../../../assets/LaminatedGlassManuf/plant1.png";
 import pvbImg from "../../../assets/PVBLamination/PVBhero.jpg";
-import laminateImg from "../../../assets/PVBLamination/PVBhero.jpg";
-import capabilityImg from "../../../assets/PVBLamination/PVBhero.jpg";
+import laminateImg from "../../../assets/LaminatedGlassManuf/Windshield.png";
+import capabilityImg from "../../../assets/LaminatedGlassManuf/Capablitiesglass.jpg";
 import autoclaveImg from "../../../assets/PVBLamination/PVBhero.jpg";
-import qualityImg from "../../../assets/PVBLamination/PVBhero.jpg";
+import qualityImg from "../../../assets/LaminatedGlassManuf/Testing.png";
 
 export default function LaminatedGlassManufacturing() {
   return (
