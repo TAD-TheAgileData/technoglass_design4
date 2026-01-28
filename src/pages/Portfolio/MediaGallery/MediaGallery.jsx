@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "react-image-lightbox/style.css";
-import Lightbox from "react-image-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
+import Lightbox from "yet-another-react-lightbox";
 
 import "./MediaGallery.css";
 
