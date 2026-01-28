@@ -1,0 +1,217 @@
+/* ================= ROOT ================= */
+.aag-root {
+  font-family: "Poppins", sans-serif;
+  background: #97989a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.aag-hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 12%;
+}
+
+.aag-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(56,189,248,0.35),
+    transparent 55%
+  ),
+  linear-gradient(180deg, #020617, #020617);
+  z-index: 0;
+}
+
+.aag-hero-content {
+  position: relative;
+  max-width: 780px;
+  z-index: 1;
+}
+
+.aag-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: #38bdf8;
+}
+
+.aag-hero h1 {
+  font-size: 4.2rem;
+  margin: 24px 0;
+  line-height: 1.1;
+}
+
+.aag-hero h1 span {
+  color: #38bdf8;
+}
+
+.aag-hero p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #cbd5f5;
+}
+
+/* ================= VEHICLES ================= */
+.aag-vehicles {
+  padding: 160px 12%;
+}
+
+.aag-vehicles h2 {
+  font-size: 2.8rem;
+  margin-bottom: 80px;
+}
+
+.aag-vehicle-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.aag-vehicle-card {
+  position: relative;
+  height: 420px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 60px 120px rgba(0,0,0,0.6);
+}
+
+.aag-vehicle-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aag-vehicle-text {
+  position: absolute;
+  inset: 0;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.aag-vehicle-text span {
+  font-size: 3rem;
+  color: rgba(255,255,255,0.25);
+}
+
+.aag-vehicle-text h3 {
+  font-size: 1.5rem;
+}
+
+/* ================= PROCESS ================= */
+.aag-process {
+  padding: 0 12% 160px;
+}
+
+.aag-process h2 {
+  font-size: 2.8rem;
+  margin-bottom: 70px;
+}
+
+.aag-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+}
+
+/* PROCESS TILE CONTENT */
+.aag-process-tile {
+  height: 240px;
+  padding: 26px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #818c92, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 40px 80px rgba(56,189,248,0.45);
+  transition: all 0.5s ease;
+}
+
+.aag-process-tile h4 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.aag-process-tile p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(26, 9, 9, 0.9);
+}
+
+.aag-play {
+  font-size: 1.8rem;
+  align-self: flex-end;
+  opacity: 0.85;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* Hover Glow */
+.aag-process-tile:hover {
+  box-shadow: 0 70px 120px rgba(56,189,248,0.6);
+}
+
+
+.aag-process-tile span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ================= VIDEO MODAL ================= */
+.aag-video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.aag-video-box {
+  background: #020617;
+  padding: 32px;
+  border-radius: 28px;
+  max-width: 960px;
+  width: 90%;
+}
+
+.aag-video-box h3 {
+  margin-bottom: 18px;
+}
+
+.aag-video-box video {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .aag-vehicle-strip,
+  .aag-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aag-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .aag-vehicle-strip,
+  .aag-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aag-hero {
+    padding: 120px 8%;
+    height: auto;
+  }
+}

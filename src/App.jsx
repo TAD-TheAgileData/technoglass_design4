@@ -27,7 +27,8 @@ import Rail_metro from "./pages/Industries/rail_metro/Rail_metro.jsx";
 //PortFolio
 import Backlites from "./pages/Portfolio/Temperedglass/Backlites.jsx";
 import Laminated from "./pages/Portfolio/Automotive Windshields/Laminatedglass.jsx";
-import Automotive_Applications_Gallery from "./pages/Portfolio/Automotive Applications Gallery/Automotive_Applications_Gallery.jsx";
+import MediaGallery from "./pages/Portfolio/MediaGallery/MediaGallery.jsx";
+import ApplicationAutomotivegallery from "./pages/Portfolio/AutomotiveApplicationGallery/AutomotiveApplicationGallery.jsx"
 import QuarterGlass from "./pages/Portfolio/QuarterGlass/QuarterGlass.jsx";
 import Sidelites from "./pages/Portfolio/Sidelites/Sidelites.jsx";
 import SpecialityAutomotiveGlass from "./pages/Portfolio/Speciality Automotive Glass/Speciality_Automotive_Glass.jsx";
@@ -155,10 +156,8 @@ function App() {
             path="/products/windshields-laminated"
             element={<Laminated />}
           />
-          <Route
-            path="/products/automotive_applications_gallery"
-            element={<Automotive_Applications_Gallery />}
-          />
+          <Route path="/products/mediagallery" element={<MediaGallery />} />
+          <Route path="/products/automotiveapplicationgallery" element={<ApplicationAutomotivegallery/>}/>
           <Route path="/products/quarter-glasses" element={<QuarterGlass />} />
           <Route path="/products/sidelites" element={<Sidelites />} />
 
@@ -269,7 +268,10 @@ function App() {
             path="/trust/continuousimprovement"
             element={<Continuous_Improvement />}
           />
-          <Route path="/trust/trusted_by_leading_companies" element={<Trusted_industries/>}/>
+          <Route
+            path="/trust/trusted_by_leading_companies"
+            element={<Trusted_industries />}
+          />
           <Route path="/news/press" element={<Press />} />
           <Route path="/news/events" element={<Events />} />
 

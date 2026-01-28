@@ -144,9 +144,10 @@ const menuData = [
 
       { label: "Value Added Features", path: "/products/ValueAddedFeatures" },
       {
-        label: "Automotive Applications Gallery",
-        path: "/products/automotive_applications_gallery",
+        label: "Media and Gallery",
+        path: "/products/mediagallery",
       },
+      {label:"Automotive Application Gallery" , path:"/products/automotiveapplicationgallery"}
     ],
   },
   {

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ShieldCheck, Layers, Eye, CheckCircle } from "lucide-react";
 import "./OpticalQualityControl.css";
-import heroImg from "../../../../assets/PVBLamination/PVBhero.jpg";
+import heroImg from "../../../../assets/Qualitycontrol/HeroQuality.png";
 
 export default function OpticalQualityControl() {
 
