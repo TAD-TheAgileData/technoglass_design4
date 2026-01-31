@@ -104,6 +104,8 @@ const menuData = [
         label: "Automotive Industry",
         path: "/industries/automotive_industry",
       },
+      {label:"Bus & Coach",path:"/industries/bus-coach"},
+      {label:"Trucks",path:"/industries/commercial-vehicles"}
     ],
   },
   {

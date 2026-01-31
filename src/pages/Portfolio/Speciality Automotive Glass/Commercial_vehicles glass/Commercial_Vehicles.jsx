@@ -43,11 +43,12 @@ const Commercial_Vehicles = () => {
             variants={fadeSlide}
             transition={{ duration: 1.2 }}
           >
-            <span className="cv-badge">FLEET & COMMERCIAL SOLUTIONS</span>
-            <h1>Commercial Vehicle Glass</h1>
+            <span className="cv-badge">COMMERCIAL TRUCKS</span>
+            <h1>Commercial Truck Glass</h1>
             <p>
-              Engineered glazing systems for trucks, pickups, and delivery vans
-              — built to endure heavy-duty operations and long-haul performance.
+              Heavy-duty glazing solutions engineered for commercial trucks,
+              delivering high impact resistance and long-life performance in
+              demanding operating conditions.
             </p>
           </motion.div>
         </div>
@@ -56,7 +57,7 @@ const Commercial_Vehicles = () => {
       {/* ================= SEGMENTS ================= */}
       <section className="cvx-flow">
         <h2 className="cvx-section-title">
-          Designed for Heavy-Duty Performance
+          Designed for Commercial & Fleet Applications
         </h2>
 
         <div className="cvx-flow-line"></div>
@@ -73,10 +74,10 @@ const Commercial_Vehicles = () => {
             <FiTruck />
           </div>
           <div>
-            <h3>Trucks & Long-Haul Vehicles</h3>
+            <h3>Applications</h3>
             <p>
-              High-impact laminated windshields engineered to withstand
-              vibration, debris impact, and extreme weather.
+              Heavy-duty windshields, cabin glass, bonding primers, and
+              precision fitment solutions for commercial truck platforms.
             </p>
           </div>
         </motion.div>
@@ -93,10 +94,10 @@ const Commercial_Vehicles = () => {
             <FiTool />
           </div>
           <div>
-            <h3>Pickups & Utility Vehicles</h3>
+            <h3>Strengths</h3>
             <p>
-              Rugged glass systems optimized for construction, agriculture, and
-              off-road commercial use.
+              High impact resistance, superior structural strength, and reliable
+              long-life performance under heavy-duty usage.
             </p>
           </div>
         </motion.div>
@@ -113,10 +114,10 @@ const Commercial_Vehicles = () => {
             <FiShield />
           </div>
           <div>
-            <h3>Delivery & Fleet Vans</h3>
+            <h3>Customers</h3>
             <p>
-              Lightweight, safety-compliant glazing designed for urban logistics
-              and high-frequency usage.
+              Trusted by truck OEMs, fleet body builders, and authorized dealer
+              networks across commercial vehicle segments.
             </p>
           </div>
         </motion.div>
@@ -132,20 +133,20 @@ const Commercial_Vehicles = () => {
           variants={fadeSlide}
           transition={{ duration: 1 }}
         >
-          <h2>Built for Commercial Reliability</h2>
+          <h2>Built for Heavy-Duty Commercial Performance</h2>
 
           <ul className="cv-list">
             <li>
-              <FiShield /> Laminated & tempered safety glass
+              <FiShield /> Heavy-duty laminated & tempered safety glass
             </li>
             <li>
-              <FiLayers /> Acoustic and solar-control options
+              <FiLayers /> Structural bonding & primer compatibility
             </li>
             <li>
-              <FiActivity /> Enhanced impact & vibration resistance
+              <FiActivity /> High impact resistance & vibration durability
             </li>
             <li>
-              <FiTool /> OEM & aftermarket fitment compatibility
+              <FiTool /> OEM, fleet body builder & dealer fitment support
             </li>
           </ul>
         </motion.div>

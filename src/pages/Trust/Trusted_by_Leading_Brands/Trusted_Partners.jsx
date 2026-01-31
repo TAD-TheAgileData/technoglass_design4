@@ -1,10 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  MdVerified,
-  MdHandshake,
-  MdBusinessCenter,
-} from "react-icons/md";
+import { MdVerified, MdHandshake, MdBusinessCenter } from "react-icons/md";
 import "./Trusted_Partners.css";
 
 import heroImg from "../../../assets/TrustedBrands/HeroTrusted.jpg";
@@ -22,7 +18,6 @@ const fadeUp = {
 export default function Trusted_Partners() {
   return (
     <div className="tb-root">
-
       {/* ================= HERO ================= */}
       <section
         className="tb-hero"
@@ -38,8 +33,8 @@ export default function Trusted_Partners() {
             <span className="tb-chip">GLOBAL TRUST</span>
             <h1>Trusted by Leading Brands</h1>
             <p>
-              Long-term partnerships built on reliability, performance,
-              and uncompromised quality across industries worldwide.
+              Long-term partnerships built on reliability, performance, and
+              uncompromised quality across industries worldwide.
             </p>
           </motion.div>
         </div>
@@ -92,15 +87,27 @@ export default function Trusted_Partners() {
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
         >
-          What Our Partners Say
+          What Our Industry Partners Say
         </motion.h2>
 
         <div className="tb-testimonial-grid">
           {[
-            "Consistent quality and on-time delivery make them a trusted partner.",
-            "Their engineering support and customization capabilities stand out.",
-            "A reliable supplier with world-class manufacturing discipline.",
-          ].map((text, i) => (
+            {
+              text: "Consistent quality and on-time delivery make them a trusted long-term partner.",
+              name: "Senior Procurement Manager",
+              company: "Leading Automotive OEM",
+            },
+            {
+              text: "Their engineering support and customization capabilities truly stand out.",
+              name: "Head of Product Engineering",
+              company: "Global Mobility Solutions Provider",
+            },
+            {
+              text: "A reliable supplier with world-class manufacturing discipline and safety focus.",
+              name: "Operations Director",
+              company: "Commercial Vehicle Manufacturer",
+            },
+          ].map((item, i) => (
             <motion.div
               key={i}
               className="tb-testimonial-card"
@@ -109,8 +116,12 @@ export default function Trusted_Partners() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.8 }}
             >
-              <p>“{text}”</p>
-              <span>— Industry Partner</span>
+              <p>“{item.text}”</p>
+
+              <div className="tb-testimonial-author">
+                <strong>{item.name}</strong>
+                <span>{item.company}</span>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -133,7 +144,6 @@ export default function Trusted_Partners() {
           </p>
         </motion.div>
       </section>
-
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./TemperedglassManufacturing.css";
 
 /* IMAGES */
-import heroImg from "../../../assets/TemperedglassManufacturing/Hero.png";
+import heroImg from "../../../assets/TemperedglassManufacturing/newHero.png";
 import furnaceImg from "../../../assets/PVBLamination/PVBhero.jpg";
 import bendingImg from "../../../assets/TemperedglassManufacturing/image.png";
 import fragmentImg from "../../../assets/PVBLamination/PVBhero.jpg";

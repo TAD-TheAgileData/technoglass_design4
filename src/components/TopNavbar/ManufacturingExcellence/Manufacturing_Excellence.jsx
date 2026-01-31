@@ -19,13 +19,13 @@ import heroImg from "../../../assets/TopNavbar/ManufacturingExcellence/Images/ma
 import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image1.1.jpg";
 import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Images2.1.jpg";
 import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.1.webp";
-import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image4.JPG";
+import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image4.png";
 import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.1.webp";
 import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.JPG";
 import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.1.webp";
-import img8 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image8.JPG";
+import img8 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image8.png";
 import img9 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image9.1.jpg";
-import img10 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image10.jpeg";
+import img10 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image10.png";
 import img11 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image11.png";
 import img12 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image12.png";
 import img13 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image13.png";
@@ -126,35 +126,35 @@ const cardData = [
   },
   {
     image: img11,
-    logo: northGlassLogo,
+    logo: ChanZhou,
     make: "China",
     process: "Autoclave",
     desc: ["Uniform bonding", "Industrial scale", "Quality consistency"],
   },
   {
     image: img12,
-    logo: northGlassLogo,
+    logo: chinalogo,
     make: "China",
     process: "Bending",
     desc: ["Optimized workflow", "Scalable production", "High efficiency"],
   },
   {
     image: img13,
-    logo: northGlassLogo,
+    logo: Jumbo,
     make: "China",
     process: "Cutting",
     desc: ["High-speed cutting", "Low material waste", "Tight tolerances"],
   },
   {
     image: img14,
-    logo: northGlassLogo,
+    logo: Bystroniclogo,
     make: "USA",
     process: "Cutting",
     desc: ["Precision edges", "Clean finish", "Demanding applications"],
   },
   {
     image: img15,
-    logo: northGlassLogo,
+    logo: chinalogo,
     make: "China",
     process: "Flat Lamination",
     desc: ["Safety glass", "High strength", "Uniform bonding"],

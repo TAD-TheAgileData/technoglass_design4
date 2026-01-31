@@ -20,9 +20,11 @@
   transform: translate(-50%, -50%);
   padding: 18px 32px;
   text-align: center;
-  color: #fff;
+  color: #ede6e6;
+  font-weight: 400;
+  font-size: 1.5rem;
 
-  background: rgba(0, 0, 0, 0.35);
+   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
@@ -74,7 +76,7 @@
 .PVBdescription p {
   max-width: 900px;
   margin: 2.5rem auto 0;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   text-align: center;
   color: #444;
@@ -242,7 +244,7 @@
 }
 
 .truck {
-  background-image: url("../../../../assets/PVBLamination/Hero2.jpg");
+  background-image: url("../../../../assets/PVBLamination/Hero2.png");
 }
 
 .truck::before {
@@ -255,7 +257,7 @@
 
 
 .bus {
-  background-image: url("../../../../assets/PVBLamination/Bus.jpg");
+  background-image: url("../../../../assets/PVBLamination/bus.png");
 }
 
 .bus::before {

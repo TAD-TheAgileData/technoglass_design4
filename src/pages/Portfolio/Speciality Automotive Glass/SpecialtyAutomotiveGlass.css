@@ -1,0 +1,155 @@
+/* ================= ROOT ================= */
+.sag-root {
+  background: #020617;
+  color: #f8fafc;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= HERO ================= */
+.sag-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 12%;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(56,189,248,0.25), transparent 50%),
+    linear-gradient(180deg, #020617, #020617);
+}
+
+.sag-eyebrow {
+  letter-spacing: 0.4em;
+  font-size: 0.75rem;
+  color: #38bdf8;
+}
+
+.sag-hero h1 {
+  font-size: 4.2rem;
+  margin: 24px 0;
+  line-height: 1.1;
+}
+
+.sag-hero h1 span {
+  color: #38bdf8;
+}
+
+.sag-hero p {
+  max-width: 640px;
+  line-height: 1.9;
+  color: #cbd5f5;
+}
+
+/* ================= LAYOUT ================= */
+.sag-layout {
+  padding: 160px 10%;
+}
+
+.sag-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+
+/* ================= CARD ================= */
+.sag-layout-card {
+  position: relative;
+  height: 460px;
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #020617;
+  box-shadow: 0 60px 140px rgba(0,0,0,0.7);
+  transition: transform 0.6s ease;
+}
+
+.sag-layout-card:hover {
+  transform: translateY(-16px);
+}
+
+/* IMAGE */
+.sag-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 1.2s ease;
+}
+
+.sag-layout-card:hover .sag-bg img {
+  transform: scale(1.08);
+}
+
+/* CONTENT */
+.sag-content {
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(2,6,23,0.9),
+    rgba(2,6,23,0.4),
+    transparent
+  );
+}
+
+.sag-icon {
+  font-size: 2.4rem;
+  color: #38bdf8;
+  margin-bottom: 14px;
+}
+
+.sag-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.sag-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+  margin-bottom: 16px;
+  max-width: 90%;
+}
+
+/* CTA */
+.sag-link {
+  font-size: 0.95rem;
+  color: #38bdf8;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* GLOW EFFECT */
+.sag-glow {
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle, rgba(56,189,248,0.18), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.sag-layout-card:hover .sag-glow {
+  opacity: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+  .sag-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sag-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sag-hero {
+    padding: 120px 8%;
+    height: auto;
+  }
+}

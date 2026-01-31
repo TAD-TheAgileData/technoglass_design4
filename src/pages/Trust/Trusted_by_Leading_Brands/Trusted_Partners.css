@@ -164,3 +164,16 @@
     font-size: 3rem;
   }
 }
+
+.tb-testimonial-author {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-test
+imonial-author span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}

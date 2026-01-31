@@ -1,12 +1,7 @@
 import React from "react";
 import "./Passenger_vehicles.css";
 import { motion } from "framer-motion";
-import {
-  FiShield,
-  FiTruck,
-  FiLayers,
-  FiWind
-} from "react-icons/fi";
+import { FiShield, FiTruck, FiLayers, FiWind } from "react-icons/fi";
 
 import heroImg from "../../../../assets/Passenger vehicle/Hero1.jpg";
 import glassImg from "../../../../assets/Passenger vehicle/BusGlass.jpg";
@@ -14,7 +9,6 @@ import glassImg from "../../../../assets/Passenger vehicle/BusGlass.jpg";
 export default function Passenger_vehicles() {
   return (
     <div className="bcx-root">
-
       {/* ================= SPLIT HERO ================= */}
       <section className="bcx-hero">
         <motion.div
@@ -23,11 +17,11 @@ export default function Passenger_vehicles() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <span className="bcx-tag">PREMIUM PASSENGER GLAZING</span>
-          <h1>Bus & Coach Glass</h1>
+          <span className="bcx-tag">BUS & COACH</span>
+          <h1>Bus & Coach Glass Solutions</h1>
           <p>
-            Advanced curved glass systems engineered for large passenger
-            vehicles, delivering safety, visibility, and long-term durability.
+            High-performance glazing solutions for modern buses and coaches,
+            engineered for safety, durability, and advanced vehicle integration.
           </p>
         </motion.div>
 
@@ -50,10 +44,11 @@ export default function Passenger_vehicles() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h2>Designed for Scale & Strength</h2>
+          <h2>Engineered for Passenger Transport</h2>
           <p>
-            Our bus and coach glazing solutions are optimized for large surface
-            areas, complex curvature, and structural bonding requirements.
+            Large-format safety glass solutions supporting complex vehicle
+            designs, structural bonding, and long service life across demanding
+            applications.
           </p>
         </motion.div>
       </section>
@@ -62,25 +57,25 @@ export default function Passenger_vehicles() {
       <section className="bcx-rail">
         {[
           {
-            icon: <FiTruck />,
-            title: "Large Curved Windshields",
-            text: "Panoramic, distortion-free windshields with precision curvature control."
-          },
-          {
             icon: <FiLayers />,
-            title: "Side & Quarter Glass",
-            text: "Consistent thickness and optical clarity across extended glass panels."
+            title: "Applications",
+            text: "Large-format laminated & tempered glass, double glazing, adhesive bonding, and precision fitment solutions.",
           },
           {
             icon: <FiShield />,
-            title: "Laminated Safety Panels",
-            text: "Impact-resistant laminated glazing for enhanced passenger protection."
+            title: "Strengths",
+            text: "Custom sizes, rapid design & development cycles, high durability, and consistent optical quality.",
+          },
+          {
+            icon: <FiTruck />,
+            title: "Markets",
+            text: "Electric buses, intercity coaches, school buses, and next-generation passenger transport systems.",
           },
           {
             icon: <FiWind />,
-            title: "Comfort Optimized",
-            text: "Noise reduction and thermal insulation for long-distance travel comfort."
-          }
+            title: "Performance Focus",
+            text: "Optimized for noise reduction, thermal comfort, and long-distance passenger comfort.",
+          },
         ].map((item, i) => (
           <motion.div
             className="bcx-rail-item"
@@ -119,16 +114,15 @@ export default function Passenger_vehicles() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h2>Built for Regulatory Compliance & Long Service Life</h2>
+          <h2>Built for Reliability, Safety & Scalability</h2>
           <ul>
-            <li>ECE R43 and global safety standards</li>
-            <li>Structural bonding compatibility</li>
-            <li>High optical quality over large areas</li>
-            <li>Proven durability in high-duty cycles</li>
+            <li>Large-format laminated and tempered safety glass</li>
+            <li>Compatible with adhesive bonding & modern fitment systems</li>
+            <li>Designed for electric and high-duty passenger vehicles</li>
+            <li>Durable performance across diverse operating conditions</li>
           </ul>
         </motion.div>
       </section>
-
     </div>
   );
 }

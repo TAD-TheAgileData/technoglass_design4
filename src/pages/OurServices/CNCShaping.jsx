@@ -1,7 +1,7 @@
 import React from "react";
 import "./CNCShaping.css";
-import heroImg from "../../assets/PVBLamination/PVBhero.jpg";
-import machineImg from "../../assets/PVBLamination/PVBhero.jpg";
+import heroImg from "../../assets/CNCShaping/CNC1.png";
+import machineImg from "../../assets/CNCShaping/CNC2.png";
 
 const CNCShaping = () => {
   return (
@@ -91,6 +91,12 @@ const CNCShaping = () => {
           <span>Automotive Windshields</span>
           <span>Backlite</span>
           <span>Side Lite</span>
+          <span>Sunroof</span>
+          <span>Rear glass</span>
+          <span>Door glass</span>
+          <span>Quarter glass</span>
+          <span>Bus & Truck windshield</span>
+          <span>Marine Industries</span>
           <span>Custom Shapes</span>
         </div>
       </section>

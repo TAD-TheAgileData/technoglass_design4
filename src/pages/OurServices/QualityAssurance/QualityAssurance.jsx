@@ -62,7 +62,7 @@ const QualityAssurance = () => {
           </p>
 
           <div className="qa-badges">
-            <span>ISO</span>
+            <span>AS-1</span>
             <span>ECE R43</span>
           </div>
         </div>

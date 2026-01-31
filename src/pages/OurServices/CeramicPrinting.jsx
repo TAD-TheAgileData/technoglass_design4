@@ -1,14 +1,18 @@
 import React from "react";
 import "./CeramicPrinting.css";
+import ceramicdesign from "../../assets/Ceramic/CeramicDesign.jpeg";
 import heroImg from "../../assets/Ceramic/CeramicHero2.jpg";
 import windshieldImg from "../../assets/Ceramic/Windshield.png";
 import backliteImg from "../../assets/Ceramic/BacklitesProcess.jpg";
 import sideliteImg from "../../assets/Ceramic/Sidelites.jpg";
-
+import sunroofImg from "../../assets/Ceramic/Sunroof.jpg";
+import Railimg from "../../assets/Ceramic/Railimage.jpg";
+import bus from "../../assets/Ceramic/Bus.png";
+import truck from "../../assets/Ceramic/truck.png"
 const CeramicPrinting = () => {
   return (
     <div className="ceramic-container">
-    {/* ===== HERO IMAGE (AFTER INTRO) ===== */}
+      {/* ===== HERO IMAGE (AFTER INTRO) ===== */}
       <section
         className="hero-image-section"
         style={{ backgroundImage: `url(${heroImg})` }}
@@ -28,7 +32,8 @@ const CeramicPrinting = () => {
           is widely used in automotive, architectural, and industrial glass
           applications due to its durability, heat resistance, and aesthetic
           appeal.
-          <br /><br />
+          <br />
+          <br />
           This technology enables manufacturers to achieve permanent patterns,
           logos, and functional coatings that do not fade, peel, or degrade over
           time. Ceramic printing also plays a crucial role in enhancing safety,
@@ -36,51 +41,46 @@ const CeramicPrinting = () => {
         </p>
       </section>
 
-  
-{/* ===== HERO CONTENT (REWORKED DESIGN – SAME TEXT) ===== */}
-<section className="hero-content-section">
-  <div className="hero-wrapper">
+      {/* ===== HERO CONTENT (REWORKED DESIGN – SAME TEXT) ===== */}
+      <section className="hero-content-section">
+        <div className="hero-wrapper">
+          {/* IMAGE PANEL */}
+          <div className="hero-image-panel">
+            <img src={ceramicdesign} alt="Ceramic Printing" />
+          </div>
 
-    {/* IMAGE PANEL */}
-    <div className="hero-image-panel">
-      <img src={heroImg} alt="Ceramic Printing" />
-    </div>
+          {/* CONTENT PANEL */}
+          <div className="hero-text-panel">
+            <div className="text-block">
+              <h3>Screen Printing</h3>
+              <p>
+                Screen printing technology is widely used in ceramic printing to
+                apply ceramic inks onto glass surfaces. In this process, ink is
+                transferred through a mesh screen that contains the desired
+                design pattern. The blocked areas of the screen prevent ink
+                flow, while open areas allow ink to pass onto the glass. This
+                method provides uniform ink thickness, high precision, and
+                consistent print quality. Screen printing is cost-effective and
+                suitable for large-scale production.
+              </p>
+            </div>
 
-    {/* CONTENT PANEL */}
-    <div className="hero-text-panel">
-      <div className="text-block">
-        <h3>Screen Printing</h3>
-        <p>
-          Screen printing technology is widely used in ceramic printing to
-          apply ceramic inks onto glass surfaces. In this process, ink is
-          transferred through a mesh screen that contains the desired design
-          pattern. The blocked areas of the screen prevent ink flow, while
-          open areas allow ink to pass onto the glass. This method provides
-          uniform ink thickness, high precision, and consistent print
-          quality. Screen printing is cost-effective and suitable for
-          large-scale production.
-        </p>
-      </div>
-
-      <div className="text-block">
-        <h3>Color Accuracy & Opacity Control</h3>
-        <p>
-          Ceramic printing offers excellent color accuracy due to the use of
-          stable inorganic pigments that retain their color even after
-          high-temperature firing. Opacity control is achieved by adjusting
-          ink formulation, mesh size, and print thickness, allowing
-          transparent to fully opaque designs. The technology also provides
-          high design flexibility, enabling the creation of complex
-          patterns, logos, text, and decorative elements to meet functional
-          and aesthetic requirements.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
+            <div className="text-block">
+              <h3>Color Accuracy & Opacity Control</h3>
+              <p>
+                Ceramic printing offers excellent color accuracy due to the use
+                of stable inorganic pigments that retain their color even after
+                high-temperature firing. Opacity control is achieved by
+                adjusting ink formulation, mesh size, and print thickness,
+                allowing transparent to fully opaque designs. The technology
+                also provides high design flexibility, enabling the creation of
+                complex patterns, logos, text, and decorative elements to meet
+                functional and aesthetic requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ===== PROCESS SECTION ===== */}
       <section className="process-section">
@@ -103,21 +103,85 @@ const CeramicPrinting = () => {
         <div className="applications-grid">
           <div className="app-card">
             <img src={windshieldImg} alt="Windshield" />
-            <h4>Windshield</h4>
+            <div className="app-overlay">
+              <h4>Windshield</h4>
+              <p>
+                Ceramic printed windshields enhance UV protection, glare
+                control, and long-term durability.
+              </p>
+            </div>
           </div>
 
           <div className="app-card">
             <img src={backliteImg} alt="Backlite" />
-            <h4>Backlite</h4>
+            <div className="app-overlay">
+              <h4>Backlite</h4>
+              <p>
+                Backlite ceramic printing improves thermal insulation, branding,
+                and rear visibility performance.
+              </p>
+            </div>
           </div>
 
           <div className="app-card">
             <img src={sideliteImg} alt="Sidelite" />
-            <h4>Sidelite</h4>
+            <div className="app-overlay">
+              <h4>Sidelite</h4>
+              <p>
+                Sidelite applications provide privacy control, decorative
+                styling, and enhanced safety features.
+              </p>
+            </div>
+          </div>
+
+          <div className="app-card">
+            <img src={sunroofImg} alt="Sidelite" />
+            <div className="app-overlay">
+              <h4>Sunroof</h4>
+              <p>
+                It offers UV protection, heat reduction, and high impact
+                resistance for a comfortable and secure driving experience.
+              </p>
+            </div>
+          </div>
+
+          <div className="app-card">
+            <img src={Railimg} alt="Sidelite" />
+            <div className="app-overlay">
+              <h4> Metro & Rail</h4>
+              <p>
+                thermal and acoustic insulation, and enhanced passenger
+                visibility while meeting strict safety and durability standards.
+              </p>
+            </div>
+          </div>
+
+          <div className="app-card">
+            <img src={bus} alt="Sidelite" />
+            <div className="app-overlay">
+              <h4>Bus & Coach</h4>
+              <p>
+                Bus glass is designed for high safety and durability, using
+                laminated or toughened glass to protect passengers from impact,
+                noise, and harsh weather.
+              </p>
+            </div>
+          </div>
+
+          <div className="app-card">
+            <img src={truck} alt="Sidelite" />
+            <div className="app-overlay">
+              <h4>Truck</h4>
+              <p>
+                Heavy-duty windshields, cabin glass, bonding primers, Fitment
+                applications
+                High impact resistance,
+                long-life performance
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

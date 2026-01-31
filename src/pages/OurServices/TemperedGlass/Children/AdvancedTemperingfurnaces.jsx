@@ -1,5 +1,5 @@
 import React from "react";
-import furnaceHero from "../../../../assets/Tempering/Temperingfurnance.jpg";
+import furnaceHero from "../../../../assets/Tempering/Hero.webp";
 import "./AdvancedTempering.css";
 import convectionImg from "../../../../assets/Tempering/Temperingfurnance.jpg";
 import bentImg from "../../../../assets/Tempering/Temperingfurnance.jpg";

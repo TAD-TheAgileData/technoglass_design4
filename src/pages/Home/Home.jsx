@@ -211,7 +211,7 @@ export default function Home() {
 
   <button
     className="success-btn"
-    onClick={() => navigate("/trust/certifications-compliance")}
+    onClick={() => navigate("/WhyChooseUs")}
   >
     Know More
   </button>

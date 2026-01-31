@@ -1,6 +1,6 @@
 import React from "react";
 import "./AutoClaveCapacity.css";
-import heroImg from "../../../../assets/PVBLamination/PVBhero.jpg";
+import heroImg from "../../../../assets/Autoclave/Hero.png";
 import tempIcon from "../../../../assets/PVBLamination/PVBhero.jpg";
 import pressureIcon from "../../../../assets/PVBLamination/PVBhero.jpg";
 import clarityIcon from "../../../../assets/PVBLamination/PVBhero.jpg";

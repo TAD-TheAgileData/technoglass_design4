@@ -12,7 +12,7 @@ import {
 import "./LaminatedglassManufacturing.css";
 
 /* ===== IMAGES ===== */
-import heroImg from "../../../assets/LaminatedGlassManuf/plant1.png";
+import heroImg from "../../../assets/LaminatedGlassManuf/Hero1.png";
 import pvbImg from "../../../assets/PVBLamination/PVBhero.jpg";
 import laminateImg from "../../../assets/LaminatedGlassManuf/Windshield.png";
 import capabilityImg from "../../../assets/LaminatedGlassManuf/Capablitiesglass.jpg";

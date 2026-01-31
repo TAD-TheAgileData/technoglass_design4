@@ -22,6 +22,8 @@ import Milestones from "./pages/about/Milestone/Milestones.jsx";
 //Industries
 import Industries from "./pages/Industries/IndustryDetail/IndustriesServed.jsx";
 import AutomotiveIndustry from "./pages/Industries/Automotive Industry/Automotive_Industry.jsx";
+import Bus from "./pages/Industries/Bus_Coach/Bus_Coach.jsx"
+import Truck from "./pages/Industries/CommercialTrucks/Commercial_Vehicles.jsx"
 import Rail_metro from "./pages/Industries/rail_metro/Rail_metro.jsx";
 
 //PortFolio
@@ -124,7 +126,8 @@ function App() {
             path="/industries/automotive_industry"
             element={<AutomotiveIndustry />}
           />
-
+          <Route path="/industries/bus-coach" element={<Bus/>}/>
+          <Route path="/industries/commercial-vehicles" element={<Truck/>}/>
           <Route path="/industries" element={<Industries />} />
 
           {/* Portfolio */}
