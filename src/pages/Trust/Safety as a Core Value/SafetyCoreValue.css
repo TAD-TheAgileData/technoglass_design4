@@ -47,7 +47,7 @@
   border-radius: 999px;
   background: rgba(2,132,199,0.14);
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.25em;
   margin-bottom: 28px;
 }
@@ -58,7 +58,7 @@
 }
 
 .scm-hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -79,7 +79,7 @@
 }
 
 .scm-left p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
   margin-bottom: 46px;
@@ -97,7 +97,7 @@
 }
 
 .scm-metrics span {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--muted);
 }
 
@@ -117,18 +117,18 @@
 }
 
 .scm-module svg {
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: var(--accent);
   margin-bottom: 22px;
 }
 
 .scm-module h3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-bottom: 14px;
 }
 
 .scm-module p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--muted);
 }
@@ -144,6 +144,90 @@
 .scm-module:hover {
   transform: translateY(-12px);
   box-shadow: var(--shadow-high);
+}
+/* =====================================================
+   PLANT SAFETY RULES
+===================================================== */
+.scm-safety-rules {
+  padding: 120px 10%;
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef2f7 50%,
+    #ffffff 100%
+  );
+}
+
+/* HEADER */
+.scm-safety-header {
+  max-width: 640px;
+  margin-bottom: 80px;
+}
+
+.scm-safety-header h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 18px 0 14px;
+  color: #020617;
+}
+
+.scm-safety-header p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* GRID */
+.scm-safety-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* IMAGE */
+.scm-safety-image img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 40px 80px rgba(15, 23, 42, 0.2);
+}
+
+/* CONTENT */
+.scm-safety-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scm-safety-content li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #020617;
+}
+
+/* CHECK ICON */
+.scm-safety-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #0284c7;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .scm-safety-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .scm-safety-header h2 {
+    font-size: 2.2rem;
+  }
 }
 
 /* RESPONSIVE */

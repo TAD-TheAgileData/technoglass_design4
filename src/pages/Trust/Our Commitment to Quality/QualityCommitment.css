@@ -102,13 +102,13 @@
 
 .qc-card-text h3 {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
 .qc-card-text p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: #e5e7eb;
 }
@@ -147,7 +147,7 @@
 }
 
 .qc-framework-head p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #475569;
 }
@@ -176,13 +176,13 @@
 
 .qc-framework-item h3 {
   font-family: "Poppins", sans-serif;
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
 .qc-framework-item p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #475569;
 }

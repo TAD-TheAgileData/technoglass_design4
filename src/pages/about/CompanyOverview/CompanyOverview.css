@@ -9,7 +9,7 @@
 }
 
 /* ================= PAGE ROOT ================= */
-.company-overview {
+.Maincompany-overview {
   font-family: "Montserrat", "Roboto", "Helvetica Neue", "Avenir", "Futura",
     sans-serif;
   background: #f6f8fa;
@@ -19,19 +19,19 @@
 /* ========================================================= */
 /* ================= HERO (UNCHANGED) ====================== */
 /* ========================================================= */
-.overview-hero {
+.Mainoverview-hero {
   position: relative;
   height: 65vh;
   overflow: hidden;
 }
 
-.overview-hero img {
+.Mainoverview-hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero-overlay {
+.Mainhero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 30, 50, 0.75);
@@ -41,13 +41,13 @@
   flex-direction: column;
 }
 
-.hero-overlay h1 {
+.Mainhero-overlay h1 {
   font-size: 3rem;
   font-weight: 600;
   color: #fff;
 }
 
-.hero-overlay p {
+.Mainhero-overlay p {
   color: #dce7ec;
   font-weight: 400;
 }
@@ -55,7 +55,7 @@
 /* ========================================================= */
 /* ================= STATS (UNCHANGED) ===================== */
 /* ========================================================= */
-.stats-bar {
+.Mainstats-bar {
   max-width: 1200px;
   margin: -60px auto 60px;
   padding: 0 20px;
@@ -64,7 +64,7 @@
   gap: 20px;
 }
 
-.stat-card {
+.Mainstat-card {
   background: rgba(255, 255, 255, 0.92);
   border-radius: 18px;
   padding: 32px;
@@ -74,13 +74,13 @@
   outline-offset: -2px;
 }
 
-.stat-card h2 {
+.Mainstat-card h2 {
   font-size: 34px;
   font-weight: 600;
   color: #004f6e;
 }
 
-.stat-card p {
+.Mainstat-card p {
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.6px;
@@ -90,7 +90,7 @@
 /* ========================================================= */
 /* ================= CONTENT SECTION ======================= */
 /* ========================================================= */
-.container {
+.Maincontainer {
   max-width: 1200px;
   margin: auto;
   padding: 0 1.5rem 5rem;
@@ -100,7 +100,7 @@
   padding-left: 1rem;
 }
 /* ================= CARD TITLE SPACING ================= */
-.card-title {
+.Maincard-title {
   font-size: 1.7rem;
   font-weight: 600;
   color: #08394c;
@@ -108,7 +108,7 @@
 }
 
 /* ================= SUBTITLE (OPTIONAL) ================= */
-.card-subtitle {
+.Maincard-subtitle {
   padding-left: 1rem;
   margin-bottom: 0.8rem;
   font-size: 1rem;
@@ -117,7 +117,7 @@
 }
 
 /* ================= TEXT CONTENT ================= */
-.card-text {
+.Maincard-text {
   padding-left: 1rem; /* ✅ YOUR REQUIRED pl:1rem */
   font-size: 0.95rem;
   line-height: 1.7;
@@ -125,18 +125,18 @@
 }
 
 /* ================= LIST CONTENT ================= */
-.card-list {
+.Maincard-list {
   padding-left: 1rem; /* ✅ applies to ALL cards */
   margin-top: 0.8rem;
 }
 /* ================= ICON TEXT (NO BULLETS) ================= */
-.card-list {
+.Maincard-list {
   padding-left: 1rem; /* your required spacing */
   margin-top: 0.8rem;
 }
 
 /* Row with icon */
-.icon-row {
+.Mainicon-row {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
@@ -147,7 +147,7 @@
 }
 
 /* Icon style */
-.list-icon {
+.Mainlist-icon {
   color: #22b3b1;
   font-size: 0.85rem;
   margin-top: 0.3rem;
@@ -155,13 +155,13 @@
 }
 
 /* Grid version */
-.icon-grid {
+.Mainicon-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.4rem 3rem;
 }
 @media (max-width: 768px) {
-  .icon-grid {
+  .Mainicon-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -169,7 +169,7 @@
 /* ========================================================= */
 /* ================= CONTENT CARD ========================== */
 /* ========================================================= */
-.overview-card {
+.Mainoverview-card {
   position: relative;
   border: 2px solid #cfcfcf;
   border-radius: 6px;
@@ -181,7 +181,7 @@
 }
 
 /* ===== DIAGONAL CORNER ===== */
-.overview-card::after {
+.Mainoverview-card::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -200,13 +200,13 @@
 }
 
 /* ================= LEFT ACCENT BORDER ================= */
-.overview-card {
+.Mainoverview-card {
   border-left: 4px solid #f5a623; /* reference yellow */
   padding-left: 1rem; /* compensate for border */
 }
 
 /* Even cards: move yellow line to right side */
-.overview-card:nth-child(even) {
+.Mainoverview-card:nth-child(even) {
   border-left: none;
   border-right: 4px solid #f5a623; /* reference yellow */
   padding-left: 0;
@@ -214,7 +214,7 @@
 }
 
 /* Last card: ensure it has a yellow line */
-.overview-card:last-child {
+.Mainoverview-card:last-child {
   border-left: 4px solid #f5a623 !important; /* reference yellow */
   border-right: none;
   padding-left: 1rem !important; /* compensate for border */
@@ -222,7 +222,7 @@
 }
 
 /* Rotate diagonal for even cards */
-.overview-card:nth-child(even)::after {
+.Mainoverview-card:nth-child(even)::after {
   top: 0;
   right: 0;
   bottom: auto;
@@ -230,14 +230,14 @@
 }
 
 /* Highlighted card */
-.overview-card.highlight {
+.Mainoverview-card.highlight {
   border-color: #e4f1f1;
 }
 
 /* ========================================================= */
 /* ================= CARD CONTENT LAYOUT =================== */
 /* ========================================================= */
-.overview-row {
+.Mainoverview-row {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 2.5rem;
@@ -247,22 +247,22 @@
 }
 
 /* Zig-zag layout */
-.overview-row.reverse {
+.Mainoverview-row.reverse {
   grid-template-columns: 1.2fr 1fr;
 }
 
-.overview-row.reverse .overview-image {
+.Mainoverview-row.reverse .overview-image {
   order: 2;
 }
 
-.overview-row.reverse .overview-content {
+.Mainoverview-row.reverse .overview-content {
   order: 1;
 }
 
 /* ========================================================= */
 /* ================= IMAGE ================================ */
 /* ========================================================= */
-.overview-image img {
+.Mainoverview-image img {
   width: 100%;
   height: 240px;
   object-fit: cover;
@@ -272,14 +272,14 @@
 /* ========================================================= */
 /* ================= TEXT ================================ */
 /* ========================================================= */
-.overview-content h3 {
+.Mainoverview-content h3 {
   font-size: 1.7rem;
   font-weight: 600;
   color: #08394c;
   margin-bottom: 0.8rem;
 }
 
-.overview-content p {
+.Mainoverview-content p {
   font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.7;
@@ -290,7 +290,7 @@
 /* ========================================================= */
 /* ================= GRID LIST ============================ */
 /* ========================================================= */
-.grid-list {
+.Maingrid-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   list-style: none;
@@ -301,7 +301,7 @@
   gap: 0.7rem 3rem;
 }
 
-.grid-list li {
+.Maingrid-list li {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -310,7 +310,7 @@
   color: #4e616d;
 }
 
-.list-icon {
+.Mainlist-icon {
   color: #22b3b1;
   font-size: 0.85rem;
   flex-shrink: 0;
@@ -324,28 +324,28 @@
 /* ========================================================= */
 @media (max-width: 768px) {
   /* Force same layout for ALL cards */
-  .overview-row {
+  .Mainoverview-row {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
   }
 
   /* Disable zig-zag behavior */
-  .overview-row.reverse {
+  .Mainoverview-row.reverse {
     grid-template-columns: unset;
   }
 
-  .overview-row.reverse .overview-image,
-  .overview-row.reverse .overview-content {
+  .Mainoverview-row.reverse .Mainoverview-image,
+  .Mainoverview-row.reverse .Mainoverview-content {
     order: unset;
   }
 
   /* Image always on top */
-  .overview-image {
+  .Mainoverview-image {
     width: 100%;
   }
 
-  .overview-image img {
+  .Mainoverview-image img {
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -353,24 +353,24 @@
   }
 
   /* Text below image */
-  .overview-content {
+  .Mainoverview-content {
     width: 100%;
   }
 
   /* Card padding adjustment */
-  .overview-card {
+  .Mainoverview-card {
     padding: 1.4rem;
   }
 
   /* Keep diagonal but make it subtle */
-  .overview-card::after {
+  .Mainoverview-card::after {
     width: 180px;
     height: 180px;
     opacity: 0.4;
   }
 
   /* Lists single column on mobile */
-  .grid-list {
+  .Maingrid-list {
     grid-template-columns: 1fr;
     gap: 0.6rem;
   }
@@ -380,13 +380,13 @@
 /* ===== BIG LIGHT TRIANGLE (REFERENCE STYLE ONLY) ========= */
 /* ========================================================= */
 
-.overview-card {
+.Mainoverview-card {
   position: relative;
   overflow: hidden;
 }
 
 /* Big light blue triangle - ODD cards (bottom-right) */
-.overview-card:nth-child(odd)::before {
+.Mainoverview-card:nth-child(odd)::before {
   content: "";
   position: absolute;
   right: 0;
@@ -399,7 +399,7 @@
 }
 
 /* Big light blue triangle - EVEN cards (bottom-left) */
-.overview-card:nth-child(even)::before {
+.Mainoverview-card:nth-child(even)::before {
   content: "";
   position: absolute;
   left: 0;
@@ -412,9 +412,9 @@
 }
 
 /* Keep content above triangle */
-.overview-row,
-.overview-content,
-.overview-image {
+.Mainoverview-row,
+.Mainoverview-content,
+.Mainoverview-image {
   position: relative;
   z-index: 2;
 }

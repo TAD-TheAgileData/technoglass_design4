@@ -1,0 +1,212 @@
+/* ================= ROOT ================= */
+.mr-root {
+  background: #f7fbff;
+  color: #020617;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* ================= HERO ================= */
+/* ================= HERO ================= */
+.mr-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+/* HERO IMAGE */
+.mr-hero-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* OVERLAY */
+.mr-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2, 6, 23, 0.75) 0%,
+      rgba(2, 6, 23, 0.55) 40%,
+      rgba(2, 6, 23, 0.85) 100%
+    );
+  z-index: 2;
+}
+
+/* CONTENT */
+.mr-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+  color: #ffffff;
+}
+
+/* EYEBROW */
+.mr-eyebrow {
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7dd3fc;
+}
+
+/* TITLE */
+.mr-hero h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 28px 0;
+}
+
+.mr-hero h1 span {
+  color: #38bdf8;
+}
+
+/* DESCRIPTION */
+.mr-hero p {
+  font-size: 1.18rem;
+  line-height: 1.9;
+  color: #e5e7eb;
+  max-width: 620px;
+}
+
+/* SCROLL */
+.mr-scroll-indicator {
+  margin-top: 40px;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: #7dd3fc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mr-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+
+/* ================= OVERVIEW ================= */
+.mr-overview {
+  padding: 160px 10%;
+}
+
+.mr-overview-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 90px;
+  align-items: center;
+}
+.mr-overview-text h1 {
+  font-size: 3.6rem;
+  margin-bottom: 20px;
+}
+.mr-overview-text h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.mr-overview-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 32px;
+}
+.mr-line {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  margin-bottom: 28px;
+}
+
+.mr-overview-image img {
+  width: 100%;
+  border-radius: 34px;
+  box-shadow: 0 60px 140px rgba(2,6,23,0.2);
+}
+
+/* ================= SECTIONS ================= */
+.mr-section,
+.mr-strengths,
+.mr-markets {
+  padding: 0 10% 160px;
+}
+
+.mr-section h2,
+.mr-strengths h2,
+.mr-markets h2 {
+  font-size: 2.8rem;
+  margin-bottom: 80px;
+}
+
+.mr-section p,
+.mr-strengths p,
+.mr-markets p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+/* ================= CARDS ================= */
+.mr-cards,
+.mr-strength-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
+}
+
+.mr-card,
+.mr-strength-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 30px;
+  padding: 48px;
+  box-shadow: 0 30px 90px rgba(2,6,23,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mr-card:hover,
+.mr-strength-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 50px 120px rgba(2,6,23,0.18);
+}
+
+.mr-icon,
+.mr-strength-card span {
+  font-size: 2.6rem;
+  color: #0284c7;
+  margin-bottom: 22px;
+}
+
+/* ================= MARKETS ================= */
+.mr-market-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.mr-market-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  padding: 24px 30px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(2,6,23,0.12);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+  .mr-overview-grid,
+  .mr-cards,
+  .mr-strength-grid,
+  .mr-market-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mr-hero h1 {
+    font-size: 3.2rem;
+  }
+}

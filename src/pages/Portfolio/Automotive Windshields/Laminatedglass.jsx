@@ -107,8 +107,13 @@ const Laminatedglass = () => {
         <h2>Applications</h2>
         <p>
           Passenger Vehicles • Commercial Vehicles • Premium & ADAS-Enabled
-          Vehicles
+          Vehicles • Off-Highway Equipment
         </p>
+        {/* <ul> */}
+          {/* <li>Passenger Vehicles</li> */}
+          {/* <li>Commercial Vehicles</li> */}
+          {/* <li>Premium & ADAS-Enabled Vehicles </li> */}
+        {/* </ul> */}
       </section>
 
     </main>

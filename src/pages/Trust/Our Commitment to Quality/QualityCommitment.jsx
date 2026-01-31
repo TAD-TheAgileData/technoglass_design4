@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./QualityCommitment.css";
-import heroImg from "../../../assets/QualityCommitment/QualityHero.jpg";
+import heroImg from "../../../assets/QualityCommitment/QualityHero.png";
 
 import imgSafety from "../../../assets/QualityCommitment/QualityHero.jpg";
 import imgQuality from "../../../assets/QualityCommitment/imgQuality.jpg";

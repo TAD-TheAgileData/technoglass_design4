@@ -1,0 +1,559 @@
+/* =====================================================
+   ROOT + VARIABLES
+===================================================== */
+.pcm-root {
+  --pcm-primary: #0284c7;
+  --pcm-accent: #38bdf8;
+  --pcm-dark: #020617;
+  --pcm-muted: #475569;
+  --pcm-bg: #f8fafc;
+  --pcm-glass: rgba(255, 255, 255, 0.78);
+  --pcm-border: rgba(255, 255, 255, 0.6);
+  --pcm-shadow-lg: 0 40px 80px rgba(15, 23, 42, 0.15);
+  --pcm-shadow-xl: 0 80px 160px rgba(2, 132, 199, 0.25);
+}
+
+
+.pcm-root {
+  font-family: "Inter", "SF Pro Display", system-ui, sans-serif;
+  background: var(--pcm-bg);
+  color: var(--pcm-dark);
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+.pcm-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 12%;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.pcm-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.85) contrast(1.05);
+  animation: heroZoom 22s ease-in-out infinite alternate;
+}
+
+/* OVERLAY */
+.pcm-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.55),
+    rgba(2, 6, 23, 0.85)
+  );
+}
+
+/* CONTENT */
+.pcm-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+}
+
+/* EYEBROW */
+.pcm-eyebrow {
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  color: #7dd3fc;
+}
+
+/* HEADING */
+.pcm-hero h1 {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.12;
+  margin: 26px 0;
+  color: #ffffff;
+}
+
+.pcm-hero h1 span {
+  background: linear-gradient(90deg, #38bdf8, #7dd3fc);
+  background-clip: text;
+  color: transparent;
+}
+
+/* DESCRIPTION */
+.pcm-hero p {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #e5e7eb;
+  max-width: 620px;
+}
+
+/* HERO ANIMATION */
+@keyframes heroZoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.12); }
+}
+/* CENTER ALIGNMENT */
+.pcm-zigzag-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CENTERED ACCENT LINE */
+.pcm-zigzag-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* OPTIONAL SOFT GLOW UNDERLINE */
+.pcm-zigzag-center::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  width: 120px;
+  height: 16px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(56, 189, 248, 0.25),
+    transparent 70%
+  );
+  filter: blur(10px);
+}
+
+/* ================= ZIGZAG SECTION TITLE ================= */
+.pcm-zigzag-title {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #020617;
+  margin-bottom: 90px;
+  position: relative;
+}
+
+/* GRADIENT ACCENT LINE */
+.pcm-zigzag-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 72px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #0284c7,
+    #38bdf8
+  );
+}
+
+/* SOFT FADE SHINE ANIMATION */
+.pcm-zigzag-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.6),
+    transparent 70%
+  );
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pcm-zigzag-title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+}
+/* ================= GENERIC SECTION ================= */
+.pcm-section {
+  padding: 120px 12%;
+  position: relative;
+}
+
+/* ================= APPLICATIONS ZIGZAG ================= */
+.pcm-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* ROW */
+.pcm-zigzag-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* REVERSE ROW (IMAGE RIGHT, CONTENT LEFT) */
+.pcm-zigzag-row.reverse {
+  direction: rtl;
+}
+
+.pcm-zigzag-row.reverse > * {
+  direction: ltr;
+}
+
+/* IMAGE */
+.pcm-zigzag-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 40px 80px rgba(15, 23, 42, 0.18);
+  transition: transform 0.6s ease;
+}
+
+.pcm-zigzag-image img:hover {
+  transform: scale(1.04);
+}
+
+/* CONTENT */
+.pcm-zigzag-content {
+  max-width: 520px;
+}
+
+.pcm-zigzag-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #020617;
+}
+
+.pcm-zigzag-content p {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .pcm-zigzag-row {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .pcm-zigzag-row.reverse {
+    direction: ltr;
+  }
+
+  .pcm-zigzag-content {
+    max-width: 100%;
+  }
+
+  .pcm-zigzag-image img {
+    max-height: 320px;
+  }
+}
+
+
+/* =====================================================
+   STRENGTHS SECTION
+===================================================== */
+/* ================= KEY STRENGTHS ================= */
+.pcm-strengths {
+  padding: 120px 12%;
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef6fb 45%,
+    #ffffff 100%
+  );
+}
+
+/* HEADER */
+.pcm-strengths-header {
+  max-width: 620px;
+  margin-bottom: 70px;
+}
+
+.pcm-eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  color: #0284c7;
+}
+
+.pcm-strengths-header h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 16px 0 14px;
+  color: #020617;
+}
+
+.pcm-strengths-header p {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* GRID */
+.pcm-strength-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 42px;
+}
+
+/* CARD */
+.pcm-strength-card {
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 48px 42px;
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.12),
+    inset 0 0 0 1px rgba(226, 232, 240, 0.9);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* SOFT GLOW ON HOVER */
+.pcm-strength-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.6),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.9s ease, opacity 0.4s;
+}
+
+.pcm-strength-card:hover::after {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+.pcm-strength-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 60px 120px rgba(2, 132, 199, 0.25);
+}
+
+/* ICON */
+.pcm-strength-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.6rem;
+  box-shadow: 0 20px 40px rgba(2, 132, 199, 0.4);
+  margin-bottom: 26px;
+}
+
+/* TEXT */
+.pcm-strength-card h4 {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  color: #020617;
+}
+
+.pcm-strength-card p {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pcm-strengths {
+    padding: 90px 8%;
+  }
+
+  .pcm-strengths-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* =====================================================
+   PREMIUM MARKETS & CUSTOMERS
+===================================================== */
+/* ================= MARKETS & CUSTOMERS ================= */
+.pcm-markets-premium {
+  padding: 120px 12%;
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef6fb 45%,
+    #ffffff 100%
+  );
+}
+
+/* HEADER */
+.pcm-markets-header {
+  max-width: 640px;
+  margin-bottom: 80px;
+}
+
+.pcm-markets-header h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 16px 0 14px;
+  color: #020617;
+}
+
+.pcm-markets-sub {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* GRID */
+.pcm-market-premium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* CARD */
+.pcm-market-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 48px 44px 46px 56px;
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.12),
+    inset 0 0 0 1px rgba(226, 232, 240, 0.9);
+  transition: all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+/* LEFT ACCENT */
+.pcm-market-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #0284c7,
+    #38bdf8
+  );
+  border-radius: 6px;
+}
+
+/* ICON */
+.pcm-market-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+  box-shadow: 0 18px 36px rgba(2, 132, 199, 0.4);
+  margin-bottom: 24px;
+}
+
+/* TEXT */
+.pcm-market-card h4 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  color: #020617;
+}
+
+.pcm-market-card p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* HOVER */
+.pcm-market-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 60px 120px rgba(2, 132, 199, 0.25);
+}
+
+/* SOFT SHINE */
+.pcm-market-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.6),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.9s ease, opacity 0.4s;
+}
+
+.pcm-market-card:hover::after {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pcm-markets-premium {
+    padding: 90px 8%;
+  }
+
+  .pcm-markets-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 1024px) {
+  .pcm-hero h1 {
+    font-size: 3.4rem;
+  }
+  .pcm-section {
+    padding: 90px 8%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pcm-hero {
+    padding: 0 8%;
+  }
+
+  .pcm-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .pcm-section {
+    padding: 80px 8%;
+  }
+}
+@media (max-width: 480px) {
+  .pcm-hero {
+    padding: 0 6%;
+  }
+
+  .pcm-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .pcm-section {
+    padding: 60px 6%;
+  }
+}

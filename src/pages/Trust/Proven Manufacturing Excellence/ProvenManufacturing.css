@@ -50,7 +50,7 @@
   border-radius: 999px;
   background: rgba(2,132,199,0.15);
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.24em;
   margin-bottom: 28px;
 }
@@ -61,7 +61,7 @@
 }
 
 .me-hero-text p {
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -131,12 +131,12 @@
 
 /* TEXT */
 .me-card h3 {
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   margin-bottom: 16px;
 }
 
 .me-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--muted);
 }

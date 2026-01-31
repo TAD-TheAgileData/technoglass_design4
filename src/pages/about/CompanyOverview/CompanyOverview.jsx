@@ -14,9 +14,9 @@ import overviewImg5 from "../../../assets/Companyoverview/Technologycollab.jpg";
 
 export default function CompanyOverview() {
   return (
-    <section className="company-overview">
+    <section className="Maincompany-overview">
       {/* ================= HERO ================= */}
-      <div className="overview-hero">
+      <div className="Mainoverview-hero">
         <motion.img
           src={heroImage}
           alt="Technoglass Manufacturing Facility"
@@ -25,7 +25,7 @@ export default function CompanyOverview() {
           transition={{ duration: 1.4, ease: "easeOut" }}
         />
 
-        <div className="hero-overlay">
+        <div className="Mainhero-overlay">
           <motion.h1
             initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -45,11 +45,11 @@ export default function CompanyOverview() {
       </div>
 
       {/* ================= STATS ================= */}
-      <div className="stats-bar">
+      <div className="Mainstats-bar">
         {stats.map((item, i) => (
           <motion.div
             key={i}
-            className="stat-card"
+            className="Mainstat-card"
             initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             whileHover={{ scale: 1.05, y: -6 }}
@@ -63,33 +63,33 @@ export default function CompanyOverview() {
       </div>
 
       {/* ================= CONTENT ================= */}
-      <div className="container">
+      <div className="Maincontainer">
         {sections.map((section, index) => (
           <motion.div
             key={index}
-            className={`overview-card ${section.highlight ? "highlight" : ""}`}
+            className={`Mainoverview-card ${section.highlight ? "highlight" : ""}`}
             initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             whileHover={{ scale: 1.03, y: -6 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className={`overview-row ${index % 2 !== 0 ? "reverse" : ""}`}>
+            <div className={`Mainoverview-row ${index % 2 !== 0 ? "reverse" : ""}`}>
               {/* IMAGE */}
-              <div className="overview-image">
+              <div className="Mainoverview-image">
                 <img src={section.image} alt={section.title} />
               </div>
 
               {/* CONTENT */}
-              <div className="overview-content">
-                <h3 className="card-title">{section.title}</h3>
+              <div className="Mainoverview-content">
+                <h3 className="Maincard-title">{section.title}</h3>
 
                 {section.subtitle && (
-                  <p className="card-subtitle">{section.subtitle}</p>
+                  <p className="Maincard-subtitle">{section.subtitle}</p>
                 )}
 
                 {section.text && (
-                  <p className="card-text">{section.text}</p>
+                  <p className="Maincard-text">{section.text}</p>
                 )}
 
                 {section.list && (
@@ -101,8 +101,8 @@ export default function CompanyOverview() {
                     }
                   >
                     {section.list.map((item, i) => (
-                      <div key={i} className="icon-row">
-                        <FaCheckCircle className="list-icon" />
+                      <div key={i} className="Mainicon-row">
+                        <FaCheckCircle className="Mainlist-icon" />
                         <span>{item}</span>
                       </div>
                     ))}

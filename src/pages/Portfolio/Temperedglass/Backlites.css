@@ -51,7 +51,7 @@
   display: inline-block;
   padding: 8px 18px;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   letter-spacing: 0.12em;
   background: rgba(2,132,199,0.1);
   color: white;
@@ -64,7 +64,7 @@
 }
 
 .backlite-hero-content p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.85;
   color: white;
 }
@@ -220,7 +220,7 @@
   display: flex;
   gap: 18px;
   margin-bottom: 22px;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--text-muted);
 }

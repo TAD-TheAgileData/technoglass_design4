@@ -104,8 +104,11 @@ const menuData = [
         label: "Automotive Industry",
         path: "/industries/automotive_industry",
       },
+      {label:"Passenger Car Market ",path:"/industries/carmarket"},
       {label:"Bus & Coach",path:"/industries/bus-coach"},
-      {label:"Trucks",path:"/industries/commercial-vehicles"}
+      {label:"Trucks",path:"/industries/commercial-vehicles"},
+      {label:"Metro Rail",path:"/industries/metrorail"},
+      {label:"Marine",path:"/industries/marine"},
     ],
   },
   {

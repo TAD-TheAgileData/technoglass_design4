@@ -29,7 +29,7 @@
 }
 
 .ei2-header p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #475569;
 }
@@ -75,7 +75,7 @@
 
 /* INDEX */
 .ei2-index {
-  font-size: 2.6rem;
+  font-size: 2.7rem;
   font-weight: 600;
   color: rgba(2,132,199,0.18);
   display: block;
@@ -84,12 +84,12 @@
 
 /* TEXT */
 .ei2-card h3 {
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   margin-bottom: 14px;
 }
 
 .ei2-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #475569;
 }

@@ -35,7 +35,7 @@
 }
 
 .Sushero-content p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   opacity: 0.95;
 }
@@ -52,7 +52,7 @@
 }
 
 .Suseditorial-intro {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #333;
   margin-bottom: 60px;
@@ -70,14 +70,14 @@
 }
 
 .Suseditorial-block h3 {
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 12px;
   color: #1f2933;
 }
 
 .Suseditorial-block p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #4b5563;
 }

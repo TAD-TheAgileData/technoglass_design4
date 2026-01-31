@@ -48,7 +48,7 @@
   border-radius: 999px;
   background: rgba(2,132,199,0.15);
   color: var(--accent);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.22em;
   margin-bottom: 28px;
 }
@@ -59,7 +59,7 @@
 }
 
 .tb-hero-content p {
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -87,12 +87,12 @@
 }
 
 .tb-metric h3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin-bottom: 12px;
 }
 
 .tb-metric p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--muted);
 }
 
@@ -124,14 +124,14 @@
 }
 
 .tb-testimonial-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--muted);
   margin-bottom: 20px;
 }
 
 .tb-testimonial-card span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--accent);
   font-weight: 500;
 }
@@ -142,6 +142,7 @@
 }
 
 .tb-case-card {
+  
   background: linear-gradient(
     135deg,
     rgba(2,132,199,0.08),
@@ -152,6 +153,21 @@
   box-shadow: var(--shadow-2);
   max-width: 900px;
 }
+
+.tb-case-card h3 {
+  font-size: 2.2rem;        /* increase heading size */
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+.tb-case-card p {
+  font-size: 1.2rem;        /* increase body text */
+  line-height: 1.75;
+  color: #334155;
+  max-width: 720px;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 1100px) {

@@ -24,7 +24,9 @@ import Industries from "./pages/Industries/IndustryDetail/IndustriesServed.jsx";
 import AutomotiveIndustry from "./pages/Industries/Automotive Industry/Automotive_Industry.jsx";
 import Bus from "./pages/Industries/Bus_Coach/Bus_Coach.jsx"
 import Truck from "./pages/Industries/CommercialTrucks/Commercial_Vehicles.jsx"
-import Rail_metro from "./pages/Industries/rail_metro/Rail_metro.jsx";
+import Passenger from "./pages/Industries/Passengercarmarket/PassengerCarMarket.jsx";
+import Rail_metro from "./pages/Industries/Metro&rail/MetroRail.jsx";
+import Marine from "./pages/Industries/Marine/MarineBoatsPremium.jsx";
 
 //PortFolio
 import Backlites from "./pages/Portfolio/Temperedglass/Backlites.jsx";
@@ -129,7 +131,9 @@ function App() {
           <Route path="/industries/bus-coach" element={<Bus/>}/>
           <Route path="/industries/commercial-vehicles" element={<Truck/>}/>
           <Route path="/industries" element={<Industries />} />
-
+          <Route path="/industries/carmarket" element={<Passenger/>}/>
+          <Route path="/industries/metrorail" element={<Rail_metro/>}/>
+          <Route path="/industries/marine" element={<Marine/>}/>
           {/* Portfolio */}
           <Route
             path="/products/specialty-glass"

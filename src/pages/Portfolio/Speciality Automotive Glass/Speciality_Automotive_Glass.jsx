@@ -40,28 +40,28 @@ export default function Speciality_Automotive_Glass() {
       desc: "Large curved windshields, panoramic side glass and laminated safety panels.",
       icon: <FaBus />,
       img: busImg,
-      link: "/specialty/bus-coach"
+      link: "/products/specialty-glass/bus-coach"
     },
     {
       title: "Commercial Vehicle Glass",
       desc: "Heavy-duty glazing for trucks, pickups and delivery vehicles.",
       icon: <FaTruckMoving />,
       img: truckImg,
-      link: "/specialty/commercial"
+      link: "/products/specialty-glass/commercial-vehicles"
     },
     {
       title: "Off-Highway & Industrial",
       desc: "Impact-resistant glass for tractors and construction machinery.",
       icon: <FaTractor />,
       img: offroadImg,
-      link: "/specialty/off-highway"
+      link: "/products/specialty-glass/off-highway-industrial"
     },
     {
       title: "Defense & Armored Vehicles",
       desc: "Multi-layer laminated ballistic glass for extreme protection.",
       icon: <FaShieldAlt />,
       img: defenseImg,
-      link: "/specialty/defense"
+      link: "/products/specialty-glass/defense-armored"
     }
   ];
 

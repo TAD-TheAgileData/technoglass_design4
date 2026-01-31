@@ -9,6 +9,7 @@ import {
 import "./SafetyCoreValue.css";
 
 import heroImg from "../../../assets/safetycorevalue/HeroSafety.jpg";
+import safetyRulesImg from "../../../assets/safetycorevalue/Image2.jpeg";
 
 /* MOTION */
 const fadeSlide = {
@@ -55,7 +56,7 @@ export default function SafetyCoreValueMaterial() {
         </div>
       </section>
 
-      {/* ================= ARCHITECTURE SECTION ================= */}
+      {/* ================= ARCHITECTURE ================= */}
       <section className="scm-architecture">
 
         <motion.div
@@ -89,44 +90,87 @@ export default function SafetyCoreValueMaterial() {
             initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <Shield />
             <h3>Safety-First Culture</h3>
-            <p>
-              Ownership-driven safety culture reinforced at every
-              organizational level.
-            </p>
+            <p>Ownership-driven safety culture reinforced at every level.</p>
           </motion.div>
 
           <motion.div className="scm-module" variants={iconFloat}
             initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <GraduationCap />
             <h3>Training & Competency</h3>
-            <p>
-              Continuous training, certification, and awareness
-              programs reduce risk proactively.
-            </p>
+            <p>Continuous training and awareness programs reduce risk.</p>
           </motion.div>
 
           <motion.div className="scm-module highlight" variants={iconFloat}
             initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <ClipboardList />
             <h3>Audits & Risk Control</h3>
-            <p>
-              Regular audits, hazard analysis, and preventive
-              actions ensure compliance and control.
-            </p>
+            <p>Audits and preventive actions ensure compliance.</p>
           </motion.div>
 
           <motion.div className="scm-module" variants={iconFloat}
             initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <Target />
             <h3>Zero-Incident Mindset</h3>
-            <p>
-              Clear reporting, accountability, and learning loops
-              drive incident-free operations.
-            </p>
+            <p>Accountability and learning loops drive safe operations.</p>
           </motion.div>
 
         </div>
       </section>
+
+      {/* ================= PLANT SAFETY RULES ================= */}
+      <section className="scm-safety-rules">
+
+        <motion.div
+          className="scm-safety-header"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <span className="scm-chip">PLANT SAFETY</span>
+          <h2>Mandatory Safety Rules</h2>
+          <p>
+            Strictly enforced rules ensuring a safe, controlled,
+            and incident-free manufacturing environment.
+          </p>
+        </motion.div>
+
+        <div className="scm-safety-grid">
+
+          {/* IMAGE */}
+          <motion.div
+            className="scm-safety-image"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+          >
+            <img src={safetyRulesImg} alt="Plant Safety Rules" />
+          </motion.div>
+
+          {/* CONTENT */}
+          <motion.div
+            className="scm-safety-content"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+          >
+            <ul>
+              <li>Safety shoes are mandatory inside the premises</li>
+              <li>Photography is strictly prohibited</li>
+              <li>Restricted movement within the production floor</li>
+              <li>Follow escort instructions during plant visits</li>
+              <li>Do not touch equipment or unknown materials</li>
+              <li>Mobile phone usage is prohibited on the shop floor</li>
+              <li>Avoid loose clothing inside the plant</li>
+              <li>Use only marked pedestrian pathways</li>
+              <li>Observe all safety signs and warnings</li>
+            </ul>
+          </motion.div>
+
+        </div>
+      </section>
+
     </div>
   );
 }
