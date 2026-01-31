@@ -1,6 +1,6 @@
 import React from "react";
 import "./PVBLamination.css";
-import heroimg from "../../../../assets/PVBLamination/PVBhero.png";
+import heroimg from "../../../../assets/PVBLamination/PVBhero.jpg";
 import { Link } from "react-router-dom";
 import normalImg from "../../../../assets/PVBLamination/Windshield.png";
 // import acousticImg from "../../../../assets/PVBLamination/acoustic-pvb.jpg";
