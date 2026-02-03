@@ -9,8 +9,8 @@ import {
 } from "react-icons/fa";
 import "./MetroRail.css";
 
-import railImg from "../../../assets/Metro_Rail/Railimage.jpg";
-
+import railImg from "../../../assets/Metro_Rail/RailHero.png";
+import railImg1 from "../../../assets/Metro_Rail/Railimage.png";
 /* ================= ANIMATIONS ================= */
 const heroText = {
   hidden: { opacity: 0, y: 80 },
@@ -104,7 +104,7 @@ export default function MetroRail() {
           </motion.div>
 
           <motion.div variants={fadeCard} className="mr-overview-image">
-            <img src={railImg} alt="Rail Glass Systems" />
+            <img src={railImg1} alt="Rail Glass Systems" />
           </motion.div>
         </motion.div>
       </section>

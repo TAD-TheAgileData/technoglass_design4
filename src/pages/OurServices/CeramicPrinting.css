@@ -173,6 +173,55 @@
   height: 2px;
   background: #0284c7;
 }
+/* ================= PROCESS CARDS ================= */
+.process-cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.process-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.22);
+}
+
+.process-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.process-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #0284c7;
+  font-weight: 600;
+}
+
+.process-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+@media (max-width: 1024px) {
+  .process-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ================= ANIMATIONS ================= */
 @keyframes imageReveal {

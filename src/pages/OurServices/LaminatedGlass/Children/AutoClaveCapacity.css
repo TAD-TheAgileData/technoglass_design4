@@ -1,7 +1,81 @@
-.autoclave-section { 
+/* ================= ROOT MOTION VARIABLES ================= */
+:root {
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --blue-accent: #0284c7;
+}
+
+/* ================= HERO SECTION ================= */
+.autoclave-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.autoclave-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transform-origin: center;
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+
+/* HERO IMAGE SLOW CINEMATIC ZOOM */
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+/* ================= HERO OVERLAY ================= */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.7)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* HERO TEXT */
+.hero-overlay h1 {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+  animation: fadeUp 1.2s var(--ease-premium) both;
+}
+
+.hero-overlay p {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  max-width: 720px;
+  line-height: 1.7;
+  opacity: 0.92;
+  animation: fadeUp 1.4s var(--ease-premium) both;
+}
+
+/* ================= SECTION BASE ================= */
+.autoclave-section {
   background-color: #d4dde2;
   color: #1a1818;
-  padding: 80px 20px;
+  padding: 90px 20px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -11,10 +85,12 @@
   text-align: center;
 }
 
+/* ================= TITLES ================= */
 .autoclave-title {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 20px;
+  animation: fadeUp 1s var(--ease-premium);
 }
 
 .autoclave-intro {
@@ -22,124 +98,72 @@
   line-height: 1.8;
   margin-bottom: 60px;
   color: #0f1010;
+  animation: fadeUp 1.2s var(--ease-premium);
 }
 
-.autoclave-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  width: 280px;
-  padding: 30px 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
-
-.card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.card-image {
-  width: 100%;
-  height: 180px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.autoclave-subtitle {
-  font-size: 1.6rem;
-  margin-bottom: 25px;
-  font-weight: 500;
-}
-
-.autoclave-list {
-  list-style: none;
-  padding: 0;
-}
-
-.autoclave-list li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-}
-
-.autoclave-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #090909;
-}
-
-/* ===== HERO SECTION ===== */
-.autoclave-hero {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  overflow: hidden;
-}
-
-.autoclave-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* ================= MERGED IMAGE + CONTENT ================= */
+.autoclave-merged {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
   align-items: center;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero-overlay h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  max-width: 700px;
-}
-
-/* ===== BENEFITS SECTION ===== */
-.autoclave-benefits {
   margin-top: 90px;
+}
+
+/* IMAGE */
+.autoclave-merged-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 35px 90px rgba(0,0,0,0.18);
+  transition: transform 1s var(--ease-premium);
+}
+
+.autoclave-merged-image:hover img {
+  transform: scale(1.04);
+}
+
+/* CONTENT */
+.autoclave-merged-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+/* TOPICS */
+.autoclave-topic {
+  margin-bottom: 28px;
+  padding-left: 18px;
+  border-left: 3px solid var(--blue-accent);
+  transition: transform 0.4s var(--ease-premium);
+}
+
+.autoclave-topic:hover {
+  transform: translateX(6px);
+}
+
+.autoclave-topic h3 {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.autoclave-topic p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 520px;
+}
+
+/* ================= BENEFITS ================= */
+.autoclave-benefits {
+  margin-top: 100px;
 }
 
 .benefits-title {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 45px;
-  color: #1a1818;
 }
 
 .benefits-grid {
@@ -150,23 +174,45 @@
   margin: 0 auto;
 }
 
+/* BENEFIT CARD */
 .benefit-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 35px 30px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 38px 30px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.5s var(--ease-premium),
+              box-shadow 0.5s var(--ease-premium);
+  position: relative;
+  overflow: hidden;
 }
 
 .benefit-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-14px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* SHINE EFFECT */
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(2,132,199,0.12),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.benefit-card:hover::before {
+  opacity: 1;
 }
 
 .benefit-icon {
   font-size: 42px;
-  color: #0f4c5c; /* Technoglass-style industrial blue */
+  color: #0f4c5c;
   margin-bottom: 18px;
 }
 
@@ -174,11 +220,48 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #1a1818;
 }
 
 .benefit-card p {
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   color: #555;
+}
+
+/* ================= KEYFRAMES ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .autoclave-merged {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .autoclave-merged-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .autoclave-hero {
+    height: 70vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1.05rem;
+  }
 }

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Box, Container, Typography, Grid, Dialog } from "@mui/material";
 
 /* IMAGES */
-import heroImg from "../../../assets/About_us/LeaderShip/White.jpg";
+import heroImg from "../../../assets/Certificate/Herook.png";
 import iso9001 from "../../../assets/Certificate/Iso9001.jpg";
 // import iso45001 from "../../../assets/About_us/LeaderShip/White.jpg";
 // import iso14001 from "../../../assets/About_us/LeaderShip/White.jpg";
@@ -16,25 +16,15 @@ import iso45001 from "../../../assets/Certificate/ISO45001.jpeg";
 const certCards = [
   {
     title: "IATF 16949:2016– Automotive Quality Management System",
-    subtitle: (
-      <strong>
-        Ensures consistent quality, defect prevention, 
-        and reduction of variation and waste.
-      </strong>
-    ),
-    image:iso9001,
+    subtitle: "Ensures consistent quality, defect prevention, and reduction of variation and waste.",
+    image: iso9001,
     desc: `➤ Harmonizes global automotive quality requirements  
 ➤ Ensures suppliers meet OEM expectations  
 ➤ Focuses on customer satisfaction and continuous improvement`,
   },
   {
     title: "ISO 9001:2015– Quality Management System",
-    subtitle: (
-      <strong>
-        Delivers a structured framework for consistent product and service
-        quality.
-      </strong>
-    ),
+    subtitle: "Delivers a structured framework for consistent product and service quality.",
     image: iso9001,
     desc: `➤ Improves operational efficiency  
 ➤ Enhances customer satisfaction  
@@ -42,9 +32,7 @@ const certCards = [
   },
   {
     title: "ISO 14001:2015– Environmental Management System",
-    subtitle: (
-      <strong>Supports environmental responsibility and sustainability.</strong>
-    ),
+    subtitle: "Supports environmental responsibility and sustainability.",
     image: iso14001,
     desc: `➤ Reduces environmental impact  
 ➤ Ensures regulatory compliance  
@@ -52,9 +40,7 @@ const certCards = [
   },
   {
     title: "ISO 45001:2018– Occupational Health & Safety",
-    subtitle: (
-      <strong>Improves workplace safety and employee well-being.</strong>
-    ),
+    subtitle: "Improves workplace safety and employee well-being.",
     image: iso45001,
     desc: `➤ Identifies hazards and risks  
 ➤ Reduces work-related incidents  
@@ -62,7 +48,7 @@ const certCards = [
   },
   {
     title: "ECE R-43– Automotive Safety Glazing",
-    subtitle: <strong>UN regulation for automotive glazing materials.</strong>,
+    subtitle: "UN regulation for automotive glazing materials.",
     image: fssc,
     desc: `➤ Prevents dangerous glass fragmentation  
 ➤ Ensures optical clarity  
@@ -70,15 +56,15 @@ const certCards = [
   },
   {
     title: "CoP Certification– Conformity of Production",
-    subtitle: <strong>Ensures mass production consistency.</strong>,
-    image: Copcertificate,
+    subtitle: "Ensures mass production consistency.",
+    image: encon,
     desc: `➤ Maintains approved specifications  
 ➤ Reduces recall risks  
 ➤ Builds regulatory confidence`,
   },
   {
     title: "NM 22.0.010– Morocco Automotive Standard",
-    subtitle: <strong>Mandatory Moroccan automotive compliance.</strong>,
+    subtitle: "Mandatory Moroccan automotive compliance.",
     image: encon,
     desc: `➤ Meets national safety laws  
 ➤ Required for exporters  
@@ -86,8 +72,8 @@ const certCards = [
   },
   {
     title: "Global Tier-1 Partnership for Strategic Materials",
-    subtitle: <strong>Strategic partnerships with global suppliers.</strong>,
-    image: encon,
+    subtitle: "Strategic partnerships with global suppliers.",
+    
     desc: `Raw Glass:
 ➤ Guardian – Thailand  
 ➤ Asahi – China  
@@ -97,10 +83,12 @@ PVB:
 ➤ Eastman Saflex – Belgium  
 ➤ Trosifol – Germany  
 ➤ Sekisui – Japan  
+➤ KingBoard – China
 
 Black Ceramic:
 ➤ Ferro – Germany  
-➤ Torrecid – Spain`,
+➤ Torrecid – Spain
+➤ Octopus – China`,
   },
 ];
 
@@ -180,35 +168,42 @@ export default function Certifications() {
         />
         <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.75)" }} />
 
-        <Container sx={{ position: "relative", zIndex: 1, pt: 18 }}>
+        {/* <Container sx={{ position: "relative", zIndex: 1, pt: 18 }}>
           <Typography variant="h2" fontWeight={900} color="#fff">
             Certifications & Compliance
           </Typography>
           <Typography variant="h6" color="#cbd5f5" maxWidth={640}>
             International standards ensuring quality, safety, and sustainability.
           </Typography>
-        </Container>
+        </Container> */}
       </Box>
 
       {/* CONTENT */}
       <Container maxWidth="lg" sx={{ py: 16 }}>
         {certCards.map((item, index) => {
           const reverse = index % 2 !== 0;
-
+ const hasImage = Boolean(item.image);
           return (
-            <Grid
-              container
-              spacing={8}
-              key={index}
-              direction={reverse ? "row-reverse" : "row"}
-              alignItems="center"
-              sx={{ mb: 14 }}
-            >
-              <Grid item xs={12} md={4}>
-                <CertificationImageZoom item={item} />
-              </Grid>
+          
 
-              <Grid item xs={12} md={8}>
+<Grid
+  container
+  spacing={8}
+  key={index}
+  direction={hasImage && reverse ? "row-reverse" : "row"}
+  alignItems="center"
+  sx={{ mb: 14 }}
+>
+
+              {item.title !== "Global Tier-1 Partnership for Strategic Materials" && (
+  <Grid item xs={12} md={4}>
+    <CertificationImageZoom item={item} />
+  </Grid>
+)}
+
+
+              <Grid item xs={12} md={hasImage ? 8 : 12}>
+
                 <motion.div whileHover={{ y: -6 }}>
                   <Box
   sx={{

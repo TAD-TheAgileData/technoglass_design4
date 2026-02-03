@@ -13,27 +13,93 @@
 }
 
 /* ================= HERO ================= */
-.bcx-hero {
-  min-height: 95vh;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
+.bcx-hero-full {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
   align-items: center;
-  padding: 0 8%;
-  background: linear-gradient(120deg, #393a3bba 55%, #494a4bae);
-  color: white;
+  padding: 0 10%;
+  color: #ffffff;
+  font-family: "Inter", "Poppins", sans-serif;
 }
 
-.bcx-hero-text h1 {
-  font-size: 3.6rem;
-  margin: 20px 0;
+/* BACKGROUND IMAGE */
+.bcx-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
-.bcx-hero-text p {
-  font-size: 1.15rem;
-  line-height: 1.9;
-  color: #d1d5db;
-  max-width: 520px;
+/* DARK OVERLAY */
+.bcx-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 6, 23, 0.75),
+    rgba(2, 6, 23, 0.45),
+    rgba(2, 6, 23, 0.75)
+  );
+  z-index: 2;
 }
+
+/* CONTENT */
+.bcx-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
+}
+
+.bcx-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  color: #7dd3fc;
+}
+
+.bcx-hero-content h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.bcx-hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e5e7eb;
+  max-width: 560px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .bcx-hero-full {
+    padding: 0 6%;
+  }
+
+  .bcx-hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bcx-hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .bcx-hero-content p {
+    font-size: 1.05rem;
+  }
+}
+
 
 .bcx-tag {
   display: inline-block;
@@ -45,37 +111,57 @@
   color: #bfdbfe;
 }
 
-.bcx-hero-image img {
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: var(--shadow-xl);
-}
 
 /* ================= FLOAT ================= */
+/* ================= FLOATING STRIP ================= */
 .bcx-float {
+  position: relative;
+  margin-top: -120px; /* pulls card over hero */
+  z-index: 5;
   display: flex;
   justify-content: center;
-  margin-top: -120px;
+  padding: 0 6%;
 }
 
 .bcx-float-card {
-  background: var(--glass);
-  backdrop-filter: var(--blur);
-  border-radius: 40px;
-  padding: 70px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 48px 56px;
   max-width: 900px;
-  box-shadow: var(--shadow-soft);
   text-align: center;
+  box-shadow: 0 40px 90px rgba(15, 23, 42, 0.25);
 }
 
 .bcx-float-card h2 {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
 }
 
 .bcx-float-card p {
-  font-size: 1.1rem;
-  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .bcx-float {
+    margin-top: -80px;
+  }
+
+  .bcx-float-card {
+    padding: 36px 28px;
+  }
+
+  .bcx-float-card h2 {
+    font-size: 2rem;
+  }
 }
 
 /* ================= FEATURE RAIL ================= */
@@ -149,7 +235,7 @@
 }
 
 .bcx-statement-box li {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   margin-bottom: 18px;
   padding-left: 28px;
   position: relative;

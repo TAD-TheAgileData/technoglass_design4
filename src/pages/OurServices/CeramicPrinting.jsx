@@ -1,14 +1,17 @@
 import React from "react";
 import "./CeramicPrinting.css";
 import ceramicdesign from "../../assets/Ceramic/CeramicDesign.jpeg";
-import heroImg from "../../assets/Ceramic/CeramicHero2.jpg";
+import heroImg from "../../assets/Ceramic/CeramicHero2.png";
+import Printing1 from "../../assets/Ceramic/Printing1.png";
+import Printing2 from "../../assets/Ceramic/Printing2.png";
+import Printing3 from "../../assets/Ceramic/Printing3.png";
 import windshieldImg from "../../assets/Ceramic/Windshield.png";
 import backliteImg from "../../assets/Ceramic/BacklitesProcess.jpg";
 import sideliteImg from "../../assets/Ceramic/Sidelites.jpg";
 import sunroofImg from "../../assets/Ceramic/Sunroof.jpg";
 import Railimg from "../../assets/Ceramic/Railimage.jpg";
 import bus from "../../assets/Ceramic/Bus.png";
-import truck from "../../assets/Ceramic/truck.png"
+import truck from "../../assets/Ceramic/truck.png";
 const CeramicPrinting = () => {
   return (
     <div className="ceramic-container">
@@ -96,6 +99,36 @@ const CeramicPrinting = () => {
         </p>
       </section>
 
+      {/* ===== FRIT CARDS ===== */}
+      <div className="process-cards">
+        <div className="process-card">
+          <img src={Printing1} alt="Low Temperature Frit" />
+          {/* <h4>Low-Temperature Frit</h4> */}
+          {/* <p> */}
+            {/* Used for laminated and coated glass applications where controlled */}
+            {/* melting and smooth fusion are required. */}
+          {/* </p> */}
+        </div>
+
+        <div className="process-card">
+          <img src={Printing2} alt="Medium Temperature Frit" />
+          {/* <h4>Medium-Temperature Frit</h4> */}
+          {/* <p> */}
+            {/* Suitable for automotive glass printing, offering balanced adhesion */}
+            {/* and color stability. */}
+          {/* </p> */}
+        </div>
+
+        <div className="process-card">
+          <img src={Printing3} alt="High Temperature Frit" />
+          {/* <h4>High-Temperature Frit</h4> */}
+          {/* <p> */}
+            {/* Designed for toughened glass applications, ensuring maximum */}
+            {/* durability after firing. */}
+          {/* </p> */}
+        </div>
+      </div>
+
       {/* ===== APPLICATIONS ===== */}
       <section className="applications-section">
         <h2>Applications</h2>
@@ -174,9 +207,7 @@ const CeramicPrinting = () => {
               <h4>Truck</h4>
               <p>
                 Heavy-duty windshields, cabin glass, bonding primers, Fitment
-                applications
-                High impact resistance,
-                long-life performance
+                applications High impact resistance, long-life performance
               </p>
             </div>
           </div>

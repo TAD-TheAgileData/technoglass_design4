@@ -166,6 +166,18 @@
   }
 }
 
+.Mainhero-overlay p {
+  max-width: 820px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.Mainhero-overlay p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
 /* ========================================================= */
 /* ================= CONTENT CARD ========================== */
 /* ========================================================= */

@@ -7,31 +7,36 @@ import heroImg from "../../../assets/Passenger vehicle/Hero1.jpg";
 import glassImg from "../../../assets/Passenger vehicle/BusGlass.jpg";
 
 export default function Bus_Coach() {
-  return (
+return (
     <div className="bcx-root">
-      {/* ================= SPLIT HERO ================= */}
-      <section className="bcx-hero">
-        <motion.div
-          className="bcx-hero-text"
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        >
-          <span className="bcx-tag">BUS & COACH</span>
-          <h1>Bus & Coach Glass Solutions</h1>
-          <p>
-            High-performance glazing solutions for modern buses and coaches,
-            engineered for safety, durability, and advanced vehicle integration.
-          </p>
-        </motion.div>
 
+    {/* ================= FULL HERO ================= */}
+      <section className="bcx-hero-full">
+        {/* BACKGROUND IMAGE */}
         <motion.div
-          className="bcx-hero-image"
-          initial={{ opacity: 0, scale: 1.15 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.6, ease: "easeOut" }}
+          className="bcx-hero-bg"
+          style={{ backgroundImage: `url(${heroImg})` }}
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+        />
+
+        {/* OVERLAY */}
+        <div className="bcx-hero-overlay" />
+
+        {/* CONTENT */}
+        <motion.div
+          className="bcx-hero-content"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <img src={heroImg} alt="Bus Glass Hero" />
+          <span className="bcx-tag">PREMIUM PASSENGER GLAZING</span>
+          <h1>Bus & Coach Glass</h1>
+          <p>
+            Advanced curved glass systems engineered for large passenger
+            vehicles, delivering safety, visibility, and long-term durability.
+          </p>
         </motion.div>
       </section>
 
@@ -42,13 +47,13 @@ export default function Bus_Coach() {
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h2>Engineered for Passenger Transport</h2>
+          <h2>Designed for Scale & Strength</h2>
           <p>
-            Large-format safety glass solutions supporting complex vehicle
-            designs, structural bonding, and long service life across demanding
-            applications.
+            Our bus and coach glazing solutions are optimized for large surface
+            areas, complex curvature, and high-strength structural bonding
+            requirements demanded by modern passenger mobility.
           </p>
         </motion.div>
       </section>
@@ -57,25 +62,25 @@ export default function Bus_Coach() {
       <section className="bcx-rail">
         {[
           {
+            icon: <FiTruck />,
+            title: "Large Curved Windshields",
+            text: "Panoramic, distortion-free windshields with precision curvature control."
+          },
+          {
             icon: <FiLayers />,
-            title: "Applications",
-            text: "Large-format laminated & tempered glass, double glazing, adhesive bonding, and precision fitment solutions.",
+            title: "Side & Quarter Glass",
+            text: "Consistent thickness and optical clarity across extended glass panels."
           },
           {
             icon: <FiShield />,
-            title: "Strengths",
-            text: "Custom sizes, rapid design & development cycles, high durability, and consistent optical quality.",
-          },
-          {
-            icon: <FiTruck />,
-            title: "Markets",
-            text: "Electric buses, intercity coaches, school buses, and next-generation passenger transport systems.",
+            title: "Laminated Safety Panels",
+            text: "Impact-resistant laminated glazing for enhanced passenger protection."
           },
           {
             icon: <FiWind />,
-            title: "Performance Focus",
-            text: "Optimized for noise reduction, thermal comfort, and long-distance passenger comfort.",
-          },
+            title: "Comfort Optimized",
+            text: "Noise reduction and thermal insulation for long-distance travel comfort."
+          }
         ].map((item, i) => (
           <motion.div
             className="bcx-rail-item"
@@ -114,15 +119,16 @@ export default function Bus_Coach() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h2>Built for Reliability, Safety & Scalability</h2>
+          <h2>Built for Regulatory Compliance & Long Service Life</h2>
           <ul>
-            <li>Large-format laminated and tempered safety glass</li>
-            <li>Compatible with adhesive bonding & modern fitment systems</li>
-            <li>Designed for electric and high-duty passenger vehicles</li>
-            <li>Durable performance across diverse operating conditions</li>
+            <li>ECE R43 and global safety standards</li>
+            <li>Structural bonding compatibility</li>
+            <li>High optical quality over large areas</li>
+            <li>Proven durability in high-duty cycles</li>
           </ul>
         </motion.div>
       </section>
+
     </div>
   );
 }

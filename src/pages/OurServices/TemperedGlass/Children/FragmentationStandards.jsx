@@ -64,7 +64,7 @@ export default function FragmentationStandards() {
           variants={stagger}
         >
           <motion.div variants={fadeUp} className="fs-text">
-            <h2>Controlled & Certified Breakage</h2>
+            <h2>Regulation Compilance</h2>
             <p>
               Fragmentation standards define how tempered automotive glass
               breaks under impact. Instead of sharp shards, glass must

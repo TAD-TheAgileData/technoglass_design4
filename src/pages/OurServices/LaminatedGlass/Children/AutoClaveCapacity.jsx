@@ -1,91 +1,191 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./AutoClaveCapacity.css";
+
 import heroImg from "../../../../assets/Autoclave/Hero.png";
-import tempIcon from "../../../../assets/PVBLamination/PVBhero.jpg";
-import pressureIcon from "../../../../assets/PVBLamination/PVBhero.jpg";
-import clarityIcon from "../../../../assets/PVBLamination/PVBhero.jpg";
+import autoclaveImg from "../../../../assets/Autoclave/Process.png";
+
 import { FaWind, FaLink, FaEye } from "react-icons/fa";
 
-const AutoClaveCapacity = () => {
+/* ================= ANIMATION VARIANTS ================= */
+const fadeUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] }
+  }
+};
+
+const imageReveal = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1.1, ease: "easeOut" }
+  }
+};
+
+const stagger = {
+  visible: {
+    transition: { staggerChildren: 0.15 }
+  }
+};
+
+export default function AutoClaveCapacity() {
   return (
     <>
       {/* ===== HERO SECTION ===== */}
-      <section className="autoclave-hero">
-        <img src={heroImg} alt="Autoclave Process" />
-        <div className="hero-overlay">
-          <h1>Autoclave Capacity</h1>
-          <p>Advanced lamination technology for strength and clarity</p>
-        </div>
-      </section>
+      {/* ===== HERO SECTION ===== */}
+<section className="autoclave-hero">
+  <motion.img
+    src={heroImg}
+    alt="Autoclave Process"
+    initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 2.5, ease: "easeOut" }}
+  />
+
+  <div className="hero-overlay">
+    <motion.h1
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      Autoclave Capacity
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.25, duration: 1 }}
+    >
+      Advanced lamination technology for strength and clarity
+    </motion.p>
+  </div>
+</section>
+
 
       {/* ===== MAIN CONTENT ===== */}
       <section className="autoclave-section">
         <div className="autoclave-container">
-          <h2 className="autoclave-title">
+
+          <motion.h2
+            className="autoclave-title"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             Autoclave Process & Specifications
-          </h2>
-          <p className="autoclave-intro">
-            The laminated glass manufacturing process uses autoclaves to ensure
-            perfect bonding and long-term durability.
-          </p>
+          </motion.h2>
 
-          <div className="autoclave-cards">
-            <div className="card">
-              <div className="card-image">
-                <img src={tempIcon} alt="Temperature" />
-              </div>
-              <h3>Precisely regulated temperature</h3>
-            </div>
+          <motion.p
+            className="autoclave-intro"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            High-capacity autoclaves ensure flawless lamination,
+            long-term durability, and superior optical performance.
+          </motion.p>
 
-            <div className="card">
-              <div className="card-image">
-                <img src={pressureIcon} alt="Pressure" />
-              </div>
-              <h3>Controlled pressure cycles</h3>
-            </div>
+          {/* ===== IMAGE + CONTENT ===== */}
+          <div className="autoclave-merged">
 
-            <div className="card">
-              <div className="card-image">
-                <img src={clarityIcon} alt="Clarity" />
-              </div>
-              <h3>Uniform heating for consistent lamination</h3>
-            </div>
+            <motion.div
+              className="autoclave-merged-image"
+              variants={imageReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <img src={autoclaveImg} alt="Autoclave Lamination" />
+            </motion.div>
+
+            <motion.div
+              className="autoclave-merged-content"
+              variants={stagger}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <motion.h2 variants={fadeUp}>
+                Autoclave Lamination Process Control
+              </motion.h2>
+
+              <motion.div className="autoclave-topic" variants={fadeUp}>
+                <h3>Precisely Regulated Temperature</h3>
+                <p>
+                  Uniform temperature profiles ensure distortion-free
+                  bonding and optimal interlayer fusion.
+                </p>
+              </motion.div>
+
+              <motion.div className="autoclave-topic" variants={fadeUp}>
+                <h3>Controlled Pressure Cycles</h3>
+                <p>
+                  Managed pressure eliminates air pockets and guarantees
+                  structural integrity.
+                </p>
+              </motion.div>
+
+              <motion.div className="autoclave-topic" variants={fadeUp}>
+                <h3>Uniform Heating & Optical Consistency</h3>
+                <p>
+                  Even heat penetration ensures premium clarity and
+                  compliance with global safety standards.
+                </p>
+              </motion.div>
+            </motion.div>
           </div>
-          <div className="autoclave-benefits">
-            <h3 className="benefits-title">Key Process Outcomes</h3>
+
+          {/* ===== BENEFITS ===== */}
+          <motion.div
+            className="autoclave-benefits"
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.h3 className="benefits-title" variants={fadeUp}>
+              Key Process Outcomes
+            </motion.h3>
 
             <div className="benefits-grid">
-              <div className="benefit-card">
-                <FaWind className="benefit-icon" />
-                <h4>Complete Air Removal</h4>
-                <p>
-                  Advanced vacuum and pressure control remove trapped air,
-                  ensuring defect-free lamination.
-                </p>
-              </div>
-
-              <div className="benefit-card">
-                <FaLink className="benefit-icon" />
-                <h4>Strong Interlayer Bonding</h4>
-                <p>
-                  Optimized heat and pressure cycles deliver exceptional
-                  adhesion and durability.
-                </p>
-              </div>
-
-              <div className="benefit-card">
-                <FaEye className="benefit-icon" />
-                <h4>High Optical Clarity</h4>
-                <p>
-                  Precise temperature regulation maintains crystal-clear
-                  transparency across all layers.
-                </p>
-              </div>
+              {[
+                {
+                  icon: <FaWind />,
+                  title: "Complete Air Removal",
+                  desc: "Vacuum and pressure systems eliminate air entrapment."
+                },
+                {
+                  icon: <FaLink />,
+                  title: "Strong Interlayer Bonding",
+                  desc: "Durable adhesion for long-term performance."
+                },
+                {
+                  icon: <FaEye />,
+                  title: "High Optical Clarity",
+                  desc: "Crystal-clear transparency across all layers."
+                }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="benefit-card"
+                  variants={fadeUp}
+                >
+                  <span className="benefit-icon">{item.icon}</span>
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </motion.div>
+
         </div>
       </section>
     </>
   );
-};
-export default AutoClaveCapacity;
+}

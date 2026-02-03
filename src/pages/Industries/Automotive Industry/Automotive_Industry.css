@@ -1,8 +1,8 @@
 /* ================= ROOT ================= */
 .auto-root {
   font-family: "Poppins", sans-serif;
-  background: #6c6e6f;
-  color: #f8fafc;
+  background: #fbfeff;
+  color: #121212;
   position: relative;
   overflow-x: hidden;
 }
@@ -97,6 +97,8 @@
 .auto-hero h1 {
   font-size: 4rem;
   margin: 25px 0;
+  color: white;
+  
 }
 
 .auto-hero p {
@@ -129,7 +131,7 @@
   margin: 25px 0;
   font-size: 1.1rem;
   line-height: 1.9;
-  color: #cbd5f5;
+  color: #000000;
 }
 
 .auto-story-text li {
@@ -150,8 +152,8 @@
 .auto-card {
   background: linear-gradient(
     180deg,
-    rgba(255,255,255,0.08),
-    rgba(255,255,255,0.02)
+    rgba(94, 93, 93, 0.866),
+    rgba(255, 255, 255, 0.925)
   );
   border-radius: 30px;
   overflow: hidden;
@@ -185,7 +187,7 @@
   margin: 0 28px 32px;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #cbd5f5;
+  color: #000000;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -199,3 +201,21 @@
     font-size: 2.8rem;
   }
 }
+
+.auto-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+.auto-card-list svg {
+  color: #176179;
+  font-size: 1.25rem;
+}
+
+/* .Application_head{
+  text-align: center;
+} */

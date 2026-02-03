@@ -9,8 +9,8 @@ import {
 } from "react-icons/fa";
 import "./BendingCapabilities.css";
 
-import bendImg from "../../../../assets/BendingCapablities/Hero.png";
-import probendImg from "../../../../assets/BendingCapablities/Hero2.png";
+import bendImg1 from "../../../../assets/BendingCapablities/Hero2.png";
+import bendImg2 from "../../../../assets/BendingCapablities/Hero.png";
 /* ================= ANIMATIONS ================= */
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -55,9 +55,9 @@ export default function BendingCapabilities() {
       </h1>
 
       <p>
-        Accurate bending for car, truck, and bus glass engineered with
-        exceptional optical consistency, curvature precision, and
-        OEM-grade quality standards.
+     Thermally strengthened automotive glass engineered for superior
+        impact resistance, thermal durability, and safe fragmentation,
+        meeting stringent OEM and global safety standards
       </p>
     </motion.div>
 
@@ -68,7 +68,7 @@ export default function BendingCapabilities() {
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1.2 }}
     >
-      <img src={probendImg} alt="Automotive Glass Bending" />
+      <img src={bendImg1} alt="Automotive Glass Bending" />
     </motion.div>
   </motion.div>
 </section>
@@ -98,7 +98,7 @@ export default function BendingCapabilities() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="bc-image">
-            <img src={bendImg} alt="Glass Bending Process" />
+            <img src={bendImg2} alt="Glass Bending Process" />
           </motion.div>
         </motion.div>
       </section>

@@ -6,8 +6,8 @@ import "./TemperedglassManufacturing.css";
 /* IMAGES */
 import heroImg from "../../../assets/TemperedglassManufacturing/newHero.png";
 import furnaceImg from "../../../assets/PVBLamination/PVBhero.jpg";
-import bendingImg from "../../../assets/TemperedglassManufacturing/image.png";
-import fragmentImg from "../../../assets/PVBLamination/PVBhero.jpg";
+import bendingImg from "../../../assets/TemperedglassManufacturing/Bendingmanuf.png";
+import fragmentImg from "../../../assets/TemperedglassManufacturing/Fragmen.jpeg";
 
 export default function TemperedglassManufacturing() {
   return (

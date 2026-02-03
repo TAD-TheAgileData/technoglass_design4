@@ -10,7 +10,7 @@ import "./Automotive_Industry.css";
 import heroImg from "../../../assets/AutomotiveIndustry_industries/glass.jpg";
 import OEM from "../../../assets/AutomotiveIndustry_industries/AftermarketSolutions.png";
 import glass1 from "../../../assets/AutomotiveIndustry_industries/Application.png";
-import glass2 from "../../../assets/AutomotiveIndustry_industries/AdvancedCapablities.png";
+import glass2 from "../../../assets/AutomotiveIndustry_industries/Capablities.png";
 import glass3 from "../../../assets/AutomotiveIndustry_industries/GlobalCompliance.png";
 
 /* ================= ANIMATIONS ================= */
@@ -55,7 +55,6 @@ const floatCard = {
 export default function Automotive_Industry() {
   return (
     <div className="auto-root">
-
       {/* ===== BACKGROUND LIGHT EFFECT ===== */}
       <div className="bg-light-layer">
         <span className="light-orb orb-a" />
@@ -83,13 +82,11 @@ export default function Automotive_Industry() {
             INDUSTRIES
           </motion.span>
 
-          <motion.h1 variants={textUp}>
-            Automotive Glass Engineering
-          </motion.h1>
+          <motion.h1 variants={textUp}>Automotive Glass Engineering</motion.h1>
 
           <motion.p variants={textUp}>
-            Precision-engineered glazing systems enabling safety,
-            performance, and next-generation mobility platforms.
+            Precision-engineered glazing systems enabling safety, performance,
+            and next-generation mobility platforms.
           </motion.p>
         </motion.div>
       </section>
@@ -115,9 +112,9 @@ export default function Automotive_Industry() {
         >
           <h2>OEM & Aftermarket Solutions</h2>
           <p>
-            From mass-production OEM programs to precision aftermarket
-            glazing, our solutions deliver durability, optical clarity,
-            and regulatory compliance.
+            From mass-production OEM programs to precision aftermarket glazing,
+            our solutions deliver durability, optical clarity, and regulatory
+            compliance.
           </p>
 
           <ul>
@@ -142,8 +139,8 @@ export default function Automotive_Industry() {
           <MdPrecisionManufacturing />
           <h3>Advanced Capabilities</h3>
           <p>
-            Ceramic printing, lamination, bending, tempering,
-            ADAS cut-outs, and sensor integration.
+            Ceramic printing, lamination, bending, tempering, ADAS cut-outs, and
+            sensor integration.
           </p>
         </motion.div>
 
@@ -158,8 +155,7 @@ export default function Automotive_Industry() {
           <MdVerifiedUser />
           <h3>Global Compliance</h3>
           <p>
-            ECE R43, DOT, ISO & IATF 16949 certified
-            automotive quality systems.
+            ECE R43, DOT, ISO & IATF 16949 certified automotive quality systems.
           </p>
         </motion.div>
 
@@ -172,14 +168,29 @@ export default function Automotive_Industry() {
         >
           <img src={glass1} alt="Applications" />
           <MdLayers />
-          <h3>Applications</h3>
-          <p>
-            Passenger vehicles, commercial fleets,
-            buses, and specialty platforms.
-          </p>
+          <h3 className="Application_head">Applications</h3>
+          <ul className="auto-card-list">
+            <li>
+              <MdLayers /> Passenger Vehicles
+            </li>
+            <li>
+              <MdLayers /> Commercial Fleets
+            </li>
+            <li>
+              <MdLayers /> Buses
+            </li>
+            <li>
+              <MdLayers /> Marine
+            </li>
+             <li>
+              <MdLayers /> Rail & Metro
+            </li>
+            <li>
+              <MdLayers /> Specialty Platforms
+            </li>
+          </ul>
         </motion.div>
       </section>
-
     </div>
   );
 }

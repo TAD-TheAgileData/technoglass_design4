@@ -179,7 +179,7 @@
 }
 
 .bc-card {
-  background: linear-gradient(135deg, #8c8f9c, #020617);
+  background: linear-gradient(135deg, #aeaeae, #38bdf8);
   border-radius: 30px;
   padding: 46px 36px;
   text-align: center;
@@ -194,7 +194,7 @@
 
 .bc-card svg {
   font-size: 3rem;
-  color: #38bdf8;
+  color: #0a0a0a;
   margin-bottom: 22px;
 }
 
@@ -206,7 +206,7 @@
 .bc-card p {
   font-size: 1.25rem;
   line-height: 1.7;
-  color: #cbd5f5;
+  color: #181818;
 }
 
 /* ================= QUALITY ================= */

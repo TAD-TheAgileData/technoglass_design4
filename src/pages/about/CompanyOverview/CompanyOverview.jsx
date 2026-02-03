@@ -39,7 +39,10 @@ export default function CompanyOverview() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Engineering clarity. Manufacturing excellence.
+            Precision Glass Solutions for Automotive which includes Passenger
+            Cars, Commercial Trucks, Bus and Coach, Metro Rail & Marine
+            Industries. Delivering safety, performance, and reliability through
+            world‑class manufacturing and engineering excellence.
           </motion.p>
         </div>
       </div>
@@ -74,7 +77,9 @@ export default function CompanyOverview() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className={`Mainoverview-row ${index % 2 !== 0 ? "reverse" : ""}`}>
+            <div
+              className={`Mainoverview-row ${index % 2 !== 0 ? "reverse" : ""}`}
+            >
               {/* IMAGE */}
               <div className="Mainoverview-image">
                 <img src={section.image} alt={section.title} />
@@ -95,9 +100,7 @@ export default function CompanyOverview() {
                 {section.list && (
                   <div
                     className={
-                      section.grid
-                        ? "icon-grid card-list"
-                        : "card-list"
+                      section.grid ? "icon-grid card-list" : "card-list"
                     }
                   >
                     {section.list.map((item, i) => (
@@ -132,7 +135,7 @@ const sections = [
     image: overviewImg1,
     text: (
       <>
-          <strong> Technical Glass Co.(Technoglass)</strong> is a leading
+        <strong> Technical Glass Co.(Technoglass)</strong> is a leading
         automotive glass manufacturer established in <strong>1993</strong>. With
         over <strong>30+ years of experience</strong>, Technoglass is known for
         engineering precision, consistent quality, and dependable delivery.

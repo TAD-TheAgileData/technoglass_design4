@@ -9,8 +9,8 @@ import {
   FiActivity,
 } from "react-icons/fi";
 
-import heroImg from "../../../../assets/commercialglass/Hero2.jpg";
-import fleetImg from "../../../../assets/commercialglass/Hero1.jpg";
+import heroImg from "../../../../assets/commercialglass/Hero1.jpg";
+import fleetImg from "../../../../assets/commercialglass/Hero2.png";
 
 /* ================= ANIMATIONS ================= */
 const fadeSlide = {

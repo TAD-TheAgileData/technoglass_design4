@@ -17,11 +17,11 @@ import heroImg from "../../../assets/TopNavbar/ManufacturingExcellence/Images/ma
 
 /* ================= MACHINE IMAGES ================= */
 import img1 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image1.1.jpg";
-import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Images2.1.jpg";
-import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.1.webp";
+import img2 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image2.1.png";
+import img3 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image3.1.png";
 import img4 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image4.png";
-import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.1.webp";
-import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.JPG";
+import img5 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image5.1.png";
+import img6 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image6.1.png";
 import img7 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image7.1.webp";
 import img8 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/image8.png";
 import img9 from "../../../assets/TopNavbar/ManufacturingExcellence/Images/Image9.1.jpg";
@@ -69,96 +69,62 @@ const cardData = [
     logo: joisonLogo,
     make: "China",
     process: "Enamel Drying",
-    desc: ["Controlled drying", "Color consistency", "Strong adhesion"],
+    desc: ["IR Dryer,", "Controlled Process,", "Proper Querying"],
   },
   {
     image: img4,
     logo: tamglassLogo,
     make: "Finland",
-    process: "Bending",
-    desc: ["Advanced furnaces", "Optical clarity", "Precise curvature"],
+    process: "Bending(Windshield)",
+    desc: [" Receipe Controlled Programme", "Precise Bending Profile", "Achieve CpK > 1.33"],
   },
   {
     image: img5,
     logo: tamglassLogo,
     make: "Finland",
-    process: "Bending",
-    desc: ["Thermal forming", "Complex geometry", "Repeatable accuracy"],
+    process: "Bending(Windshield)",
+    desc: [" Receipe Controlled Programme", "Precise Bending Profile", "Achieve CpK > 1.33"],
   },
   {
     image: img6,
     logo: tamglassLogo,
     make: "Finland",
-    process: "Bending",
+    process: "Bending - Bus WindShield",
     desc: [
-      "Engineered bending lines",
-      "Uniform curvature",
-      "Minimal distortion",
+      "Receipe Controlled Programme",
+      "Achieve Complex profile curvature",
+      "Fully Automatic",
     ],
   },
   {
     image: img7,
     logo: northGlassLogo,
     make: "China",
-    process: "Bending",
-    desc: ["Precision control", "Architectural glass", "High reliability"],
+    process: "Bending -Toughned Glass",
+    desc: ["roller bending Process", "Receipe Controlled Programme", "High repetablity and dimensional accuracy"],
   },
   {
     image: img8,
     logo: northGlassLogo,
     make: "China",
-    process: "Bending",
-    desc: ["High-volume output", "Consistent quality", "Dimensional accuracy"],
+    process: "Bending -Toughned Glass",
+    desc: ["roller bending Process", "Receipe Controlled Programme", "High repetablity and dimensional accuracy"],
   },
   {
     image: img9,
     logo: glastonLogo,
     make: "Finland",
-    process: "Deairing",
-    desc: ["Vacuum deairing", "No air bubbles", "Perfect lamination"],
+    process: "Lamination and Deairing",
+    desc: ["Vacuum deairing", "Pokayoke Process", "Controlled Environment"],
   },
   {
     image: img10,
     logo: glastonLogo,
     make: "Finland",
     process: "Autoclave",
-    desc: ["High-pressure bonding", "Maximum strength", "Durable lamination"],
+    desc: ["Digitally Program-Controlled Process (Temperature & Pressure)", "Uniform Heat Penetration", "Continuous Monitoring and Ensured Safety"],
   },
-  {
-    image: img11,
-    logo: ChanZhou,
-    make: "China",
-    process: "Autoclave",
-    desc: ["Uniform bonding", "Industrial scale", "Quality consistency"],
-  },
-  {
-    image: img12,
-    logo: chinalogo,
-    make: "China",
-    process: "Bending",
-    desc: ["Optimized workflow", "Scalable production", "High efficiency"],
-  },
-  {
-    image: img13,
-    logo: Jumbo,
-    make: "China",
-    process: "Cutting",
-    desc: ["High-speed cutting", "Low material waste", "Tight tolerances"],
-  },
-  {
-    image: img14,
-    logo: Bystroniclogo,
-    make: "USA",
-    process: "Cutting",
-    desc: ["Precision edges", "Clean finish", "Demanding applications"],
-  },
-  {
-    image: img15,
-    logo: chinalogo,
-    make: "China",
-    process: "Flat Lamination",
-    desc: ["Safety glass", "High strength", "Uniform bonding"],
-  },
+  
 ];
 
 /* ANIMATION */
