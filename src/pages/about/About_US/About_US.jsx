@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /* ===== IMAGES ===== */
 import Hero from "../../../assets/About_us/Hero.jpg";
 import CompanyOverview from "../../../assets/About_us/CompanyOverview.jpg";
-import VMV from "../../../assets/About_us/VMV.jpg";
+import VMV from "../../../assets/About_us/VMV.png";
 import Leadership from "../../../assets/About_us/Leadership.jpg";
 import value from "../../../assets/About_us/ValuePropsition/HeroValue.jpg";
 import Sustainable from "../../../assets/About_us/sustainable&ESG.webp";
@@ -14,28 +14,28 @@ import Startegic from "../../../assets/About_us/StartegicDrivers/Startegic.jpg"
 /* ===== ABOUT US CARD DATA ===== */
 const aboutCards = [
   {
-    title: "Company Overview",
+    title: "COMPANY OVERVIEW",
     description:
       "Learn about our company, heritage, expertise, and commitment to high-performance glass solutions.",
     image: CompanyOverview,
     path: "/about/company-overview",
   },
   {
-    title: "Vision, Mission & Values",
+    title: "VISION,MISSION & PURPOSE",
     description:
-      "Discover our guiding principles, long-term vision, and values that drive everything we do.",
+      "Discover our guiding principles, long-term vision, and Purpose that drive everything we do.",
     image: VMV,
     path: "/about/vision_mission",
   },
   {
-    title: "Value Proposition",
+    title: "LEADERSHIP MESSAGE",
     description:
-      "Precision-driven glass solutions engineered for performance, reliability, and global compliance.",
-    image: value,
-    path: "/about/valueproposition",
+      "We lead through advanced technology, trusted expertise, and a relentless focus on excellence., reliability, and global compliance.",
+    image: Leadership,
+    path: "/about/leadership",
   },
   {
-    title: "Code Of Ethics",
+    title: "CODE OF ETHICS",
     description:
       "At Technoglass, our Code of Ethics defines the values, principles, and standards that guide our decisions, behavior, and relationships with employees, customers, and society.",
     image: Ethics,
@@ -43,7 +43,7 @@ const aboutCards = [
   },
 
   {
-    title: "Startegic Drivers",
+    title: "STARTEGIC DRIVERS",
     description:
       "The key pillars guiding our growth, innovation, and commitment to excellence.",
     image: Startegic,
@@ -51,21 +51,21 @@ const aboutCards = [
   },
 
   {
-    title: "Leadership Message",
+    title: "VALUE AND PROPOSITION",
     description:
       "A message from our leadership team sharing insights, direction, and commitment to excellence.",
-    image: Leadership,
-    path: "/about/leadership",
+    image:value ,
+    path: "/about/valueproposition",
   },
   {
-    title: "Sustainability & ESG",
+    title: "SUSTAINABILITY & ESG",
     description:
       "Our commitment to sustainability, responsible practices, and environmental stewardship.",
     image: Sustainable,
     path: "/about/sustainability",
   },
   {
-    title: "Corporate Milestones",
+    title: "CORPORATE MILESTONES",
     description:
       "Key milestones that define our journey, innovation, and growth over the years.",
     image: Milestone,

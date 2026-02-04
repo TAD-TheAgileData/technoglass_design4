@@ -80,13 +80,14 @@ const Footer = () => {
               <Link to="/about">About Us</Link>
             </li>
             <li>
+              <Link to="/manufacturing-capablities">Manufacturing Capablities</Link>
+            </li>
+
+            <li>
               <Link to="/industries">Industries</Link>
             </li>
             <li>
               <Link to="/products">Product Portfolio</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
             </li>
             <li>
               <Link to="/trust">Trust</Link>

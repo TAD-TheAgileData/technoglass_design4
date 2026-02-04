@@ -2,222 +2,174 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Box, Container, Typography, Grid } from "@mui/material";
+import "./ProductPortfolio.css";
 
 /* ===== HERO IMAGE ===== */
 import heroImg from "../../assets/Product/HeroProduct.jpg";
 
 /* ===== PRODUCT IMAGES ===== */
-import windshieldImg from "../../assets/Product/windshields.jpg";
-import backliteImg from "../../assets/Product/Backlite.jpg";
-import sideliteImg from "../../assets/Product/Sidelites.jpg";
-import sunroofImg from "../../assets/Product/Sunroof.avif";
+import windshieldImg from "../../assets/Product/Windshield.png";
+import backliteImg from "../../assets/Product/Backlites.png";
+import sideliteImg from "../../assets/Product/Sidelite.png";
+import sunroofImg from "../../assets/Product/Sunroof.png";
 import quarterImg from "../../assets/Product/Quarterglassavif.avif";
-import specialtyImg from "../../assets/Product/Specilityglass.jpg";
+import media from "../../assets/Product/Media&Gallery.png";
+import Bus_Coach from "../../assets/Product/Bus_Coach.png";
+import Truck from "../../assets/Product/Truck.png";
+import OFFHighway from "../../assets/Product/OFF_Highway.png";
+import Defence from "../../assets/Product/Defence.png";
+import ValueAddedFeature from "../../assets/Product/ValueAddedFeature.png";
+import AutomotiveApplicationGallery from "../../assets/Product/AutomotiveApplicationGallery.png";
 
 /* ===== DATA ===== */
 const glassSolutions = [
   {
-    title: "Windshields (Laminated)",
-    desc:
-      "Discover advanced laminated windshield solutions designed for superior safety and performance.",
+    title: "AUTOMOTIVE WINDSHIELDS",
+    desc: "Discover advanced laminated windshield solutions designed for superior safety and performance.",
     image: windshieldImg,
     link: "/products/windshields",
   },
   {
-    title: "Backlites (Tempered)",
-    desc:
-      "Upgrade your vehicle glazing with durable tempered backlite solutions.",
-    image: backliteImg,
-    link: "/products/backlites",
-  },
-  {
-    title: "Sidelites",
-    desc:
-      "Precision-engineered sidelites delivering clarity, strength, and aesthetics.",
+    title: "SIDELITES",
+    desc: "Precision-engineered sidelites delivering clarity, strength, and aesthetics.",
     image: sideliteImg,
     link: "/products/sidelites",
   },
   {
-    title: "Sunroofs",
-    desc:
-      "Panoramic and standard sunroof glass for enhanced driving comfort.",
-    image: sunroofImg,
-    link: "/products/sunroofs",
+    title: "BACKLITES",
+    desc: "Upgrade your vehicle glazing with durable tempered backlite solutions.",
+    image: backliteImg,
+    link: "/products/backlites",
   },
   {
     title: "Quarter Glasses",
-    desc:
-      "Custom-shaped quarter glass solutions for seamless vehicle integration.",
+    desc: "Custom-shaped quarter glass solutions for seamless vehicle integration.",
     image: quarterImg,
     link: "/products/quarter-glasses",
   },
   {
-    title: "Specialty Glass",
-    desc:
-      "High-performance automotive glass solutions for demanding applications.",
-    image: specialtyImg,
-    link: "/products/specialty-glass",
+    title: "Sunroofs",
+    desc: "Panoramic and standard sunroof glass for enhanced driving comfort.",
+    image: sunroofImg,
+    link: "/products/sunroofs",
+  },
+  {
+    title: "BUS & COACH",
+    desc: "Advanced laminated and tempered glass for buses and coaches, compliant with international safety standards.",
+    image: Bus_Coach,
+    link: "/products/specialty-glass/bus-coach",
+  },
+  {
+    title: "COMMERCIAL VEHICLE GLASS",
+    desc: "Advanced laminated and tempered glass for commercial vehicles, meeting global safety standards.",
+    image: Truck,
+    link: "/products/specialty-glass/commercial-vehicles",
+  },
+  {
+    title: "OFF-HIGHWAY & INDUSTRIAL VEHICLES",
+    desc: "High-strength laminated and tempered glass designed for off-highway and industrial vehicle environments.",
+    image: OFFHighway,
+    link: "/products/specialty-glass/off-highway-industrial",
+  },
+  {
+    title: "Defense & Armored Vehicles",
+    desc: "Ballistic-resistant glass solutions developed to meet defense and armored vehicle standards.",
+    image: Defence,
+    link: "/products/specialty-glass/defense-armored",
+  },
+  {
+    title: "VALUE ADDED FEATURES",
+    desc: "Enhanced glass features delivering superior safety, comfort, and long-term performance.",
+    image: ValueAddedFeature,
+    link: "/products/ValueAddedFeatures",
+  },
+  {
+    title: "MEDIA AND GALLERY",
+    desc: "Discover Technoglass through images and videos highlighting innovation and quality.",
+    image: media,
+    link: "/products/mediagallery",
+  },
+  {
+    title: "AUTOMOTIVE APPLICATION GALLERY",
+    desc: "A visual journey of automotive glass applications highlighting quality and performance.",
+    image: AutomotiveApplicationGallery,
+    link: "/products/automotiveapplicationgallery",
   },
 ];
 
-/* ===== FRAMER OPTIMIZED ===== */
+/* ===== FRAMER ===== */
 const MotionBox = motion(Box);
 
 const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.45,
-      ease: "easeOut",
-    },
+    transition: { duration: 0.45, ease: "easeOut" },
   },
 };
 
-export default function ProductProtofolio() {
+export default function ProductPortfolio() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ bgcolor: "#fff" }}>
-      {/* ================= HERO ================= */}
+    <Box className="PPproduct-root">
+      {/* ===== HERO ===== */}
       <Box
-        sx={{
-          height: { xs: "55vh", md: "70vh" },
-          backgroundImage: `url(${heroImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-        }}
+        className="PPproduct-hero"
+        style={{ backgroundImage: `url(${heroImg})` }}
       >
-        <Box
-          sx={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4))",
-          }}
-        />
-        <Container sx={{ position: "relative", zIndex: 1 }}>
-          <Typography variant="h2" fontWeight={700} sx={{ color: "#fff", mb: 2 }}>
+        <div className="PPhero-overlay" />
+        <Container className="PPhero-content">
+          <Typography variant="h2" className="PPhero-title">
             Products
           </Typography>
-          <Typography sx={{ color: "#E5E7EB", maxWidth: 650 }}>
+          <Typography className="PPhero-subtitle">
             Elevate Your Everyday: Best for lifestyle or premium goods.
           </Typography>
         </Container>
       </Box>
 
-      {/* ================= INTRO ================= */}
-      <Container maxWidth="md" sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="h4" fontWeight={600} sx={{ mb: 2 }}>
+      {/* ===== INTRO ===== */}
+      <Container maxWidth="md" className="PPproduct-intro">
+        <Typography variant="h4" className="PPintro-title">
           Our Products and Services
         </Typography>
-        <Typography sx={{ color: "#475569", lineHeight: 1.8 }}>
-          Discover our automotive glass designed to enhance safety,
-          performance, and efficiency.
+        <Typography className="PPintro-text">
+          Discover our automotive glass designed to enhance safety, performance,
+          and efficiency.
         </Typography>
       </Container>
 
-      {/* ================= CARDS ================= */}
-      <Container maxWidth="lg" sx={{ pb: 10 }}>
-        <Grid container spacing={3}>
+      {/* ===== CARDS ===== */}
+      <Container maxWidth="lg" className="PPproduct-cards">
+        <Grid container spacing={4}>
           {glassSolutions.map((item, index) => (
             <Grid item xs={12} md={4} key={index}>
               <MotionBox
+                className="PPproduct-card"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-120px" }}
+                style={{ backgroundImage: `url(${item.image})` }}
                 onClick={() => navigate(item.link)}
-                sx={{
-                  position: "relative",
-                  height: 340,
-                  cursor: "pointer",
-                  overflow: "hidden",
-
-                  backgroundImage: `url(${item.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-
-                  willChange: "transform, opacity",
-                  transform: "translateZ(0)",
-
-                  "&:hover .overlay": {
-                    backgroundColor: "rgba(0,0,0,0.55)",
-                  },
-
-                  "&:hover .arrow": {
-                    transform: "translateX(6px)",
-                  },
-                }}
               >
-                {/* Overlay */}
-                <Box
-                  className="overlay"
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundColor: "rgba(0,0,0,0.4)",
-                    transition: "background-color 0.25s ease",
-                  }}
-                />
+                <div className="PPcard-overlay" />
 
-                {/* Content */}
-                <Box
-                  sx={{
-                    position: "relative",
-                    zIndex: 1,
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                    p: 4,
-                    color: "#fff",
-                  }}
-                >
-                  <Typography variant="h5" fontWeight={400} sx={{ mb: 1 }}>
+                <div className="PPcard-content">
+                  <Typography variant="h5" className="PPcard-title">
                     {item.title}
                   </Typography>
 
-                  <Typography
-                    sx={{
-                      fontSize: "0.95rem",
-                      lineHeight: 1.6,
-                      maxWidth: 280,
-                      mb: 2,
-                      opacity: 0.9,
-                    }}
-                  >
+                  <Typography className="PPcard-desc">
                     {item.desc}
                   </Typography>
 
-                  <Typography
-                    sx={{
-                      fontSize: "0.85rem",
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1,
-                    }}
-                  >
-                    Read More
-                    <span
-                      className="arrow"
-                      style={{
-                        transition: "transform 0.25s ease",
-                      }}
-                    >
-                      →
-                    </span>
+                  <Typography className="PPcard-link">
+                    Read More <span className="PParrow">→</span>
                   </Typography>
-                </Box>
+                </div>
               </MotionBox>
             </Grid>
           ))}

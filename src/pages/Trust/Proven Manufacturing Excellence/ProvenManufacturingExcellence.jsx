@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import "./ProvenManufacturing.css";
 
-import heroImg from "../../../assets/ProvenManufacturing/Hero.jpg";
+import heroImg from "../../../assets/ProvenManufacturing/ManufacturingExcecellence.png";
 
 const fade = {
   hidden: { opacity: 0, y: 40 },

@@ -22,8 +22,8 @@ import Milestones from "./pages/about/Milestone/Milestones.jsx";
 //Industries
 import Industries from "./pages/Industries/IndustryDetail/IndustriesServed.jsx";
 import AutomotiveIndustry from "./pages/Industries/Automotive Industry/Automotive_Industry.jsx";
-import Bus from "./pages/Industries/Bus_Coach/Bus_Coach.jsx"
-import Truck from "./pages/Industries/CommercialTrucks/Commercial_Vehicles.jsx"
+import Bus from "./pages/Industries/Bus_Coach/Bus_Coach.jsx";
+import Truck from "./pages/Industries/CommercialTrucks/Commercial_Vehicles.jsx";
 import Passenger from "./pages/Industries/Passengercarmarket/PassengerCarMarket.jsx";
 import Rail_metro from "./pages/Industries/Metro&rail/MetroRail.jsx";
 import Marine from "./pages/Industries/Marine/MarineBoatsPremium.jsx";
@@ -32,7 +32,7 @@ import Marine from "./pages/Industries/Marine/MarineBoatsPremium.jsx";
 import Backlites from "./pages/Portfolio/Temperedglass/Backlites.jsx";
 import Laminated from "./pages/Portfolio/Automotive Windshields/Laminatedglass.jsx";
 import MediaGallery from "./pages/Portfolio/MediaGallery/MediaGallery.jsx";
-import ApplicationAutomotivegallery from "./pages/Portfolio/AutomotiveApplicationGallery/AutomotiveApplicationGallery.jsx"
+import ApplicationAutomotivegallery from "./pages/Portfolio/AutomotiveApplicationGallery/AutomotiveApplicationGallery.jsx";
 import QuarterGlass from "./pages/Portfolio/QuarterGlass/QuarterGlass.jsx";
 import Sidelites from "./pages/Portfolio/Sidelites/Sidelites.jsx";
 import SpecialityAutomotiveGlass from "./pages/Portfolio/Speciality Automotive Glass/Speciality_Automotive_Glass.jsx";
@@ -65,7 +65,7 @@ import QualityAssurance from "./pages/OurServices/QualityAssurance/QualityAssura
 import Enviromental from "./pages/OurServices/EnivornmentalCompliance/EnvironmentalCompliance.jsx";
 
 //Trust
-
+import Trust from "./pages/Trust/Trust.jsx";
 import QualityCommitment from "./pages/Trust/Our Commitment to Quality/QualityCommitment.jsx";
 import Certifications_Compilance from "./pages/Trust/Certifications Globally Compliant/Certifications_Compilance.jsx";
 
@@ -128,12 +128,12 @@ function App() {
             path="/industries/automotive_industry"
             element={<AutomotiveIndustry />}
           />
-          <Route path="/industries/bus-coach" element={<Bus/>}/>
-          <Route path="/industries/commercial-vehicles" element={<Truck/>}/>
+          <Route path="/industries/bus-coach" element={<Bus />} />
+          <Route path="/industries/commercial-vehicles" element={<Truck />} />
           <Route path="/industries" element={<Industries />} />
-          <Route path="/industries/carmarket" element={<Passenger/>}/>
-          <Route path="/industries/metrorail" element={<Rail_metro/>}/>
-          <Route path="/industries/marine" element={<Marine/>}/>
+          <Route path="/industries/carmarket" element={<Passenger />} />
+          <Route path="/industries/metrorail" element={<Rail_metro />} />
+          <Route path="/industries/marine" element={<Marine />} />
           {/* Portfolio */}
           <Route
             path="/products/specialty-glass"
@@ -164,7 +164,10 @@ function App() {
             element={<Laminated />}
           />
           <Route path="/products/mediagallery" element={<MediaGallery />} />
-          <Route path="/products/automotiveapplicationgallery" element={<ApplicationAutomotivegallery/>}/>
+          <Route
+            path="/products/automotiveapplicationgallery"
+            element={<ApplicationAutomotivegallery />}
+          />
           <Route path="/products/quarter-glasses" element={<QuarterGlass />} />
           <Route path="/products/sidelites" element={<Sidelites />} />
 
@@ -174,7 +177,7 @@ function App() {
             element={<ValueAddedFeatures />}
           />
           {/* Manufacturing Capablities */}
-          <Route path="/services" element={<Services />} />
+          <Route path="/manufacturing-capablities" element={<Services />} />
           <Route
             path="/services/laminated-glass"
             element={<LaminatedGlassManufacturing />}
@@ -239,7 +242,7 @@ function App() {
           />
 
           {/* Trust */}
-
+          <Route path="/trust" element={<Trust/>} />
           <Route
             path="/trust/qualitycommitment"
             element={<QualityCommitment />}

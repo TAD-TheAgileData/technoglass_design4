@@ -4,44 +4,43 @@ import { Link } from "react-router-dom";
 import "./IndustriesServed.css";
 
 /* ================= IMAGES ================= */
-import heroImg from "../../../assets/Industriescard/Hero.jpg";
+import heroImg from "../../../assets/Industriescard/Heroimage01.png";
 import passengerImg from "../../../assets/Industriescard/Passengervehicle.avif";
 import commercialImg from "../../../assets/Industriescard/commercialglass.jpg";
-import offhighwayImg from "../../../assets/Industriescard/OffhighwayEquipment.jpg";
+import BusCoach from "../../../assets/Industriescard/BUSHeroimage.png";
 import railImg from "../../../assets/Industriescard/Rail.jpg";
-import specialtyImg from "../../../assets/Industriescard/Specialityglass.jpg";
-
+import MarineheroImg from "../../../assets/Industriescard/Marinehero.png";
 /* ================= DATA ================= */
 const industries = [
   {
-    path: "/industries/passenger-vehicles",
-    title: "Passenger Vehicles",
+    path: "/industries/carmarket",
+    title: "Passenger Car Market",
     desc: "Advanced automotive glazing solutions engineered for safety and comfort.",
     image: passengerImg,
   },
   {
+    path: "/industries/bus-coach",
+    title: "BUS & COACH",
+    desc: "Safety-engineered glass offering exceptional strength, clarity, and long-lasting performance.",
+    image: BusCoach,
+  },
+  {
     path: "/industries/commercial-vehicles",
-    title: "Commercial Vehicles",
-    desc: "Robust and compliant glass systems for heavy-duty transport.",
+    title: "TRUCKS",
+    desc: "High-strength glass solutions for trucks, engineered for safety, durability, and reliable performance in demanding conditions.",
     image: commercialImg,
   },
   {
-    path: "/industries/off-highway-equipment",
-    title: "Off-Highway Equipment",
-    desc: "High-impact glazing for construction and industrial machinery.",
-    image: offhighwayImg,
-  },
-  {
-    path: "/industries/rail-metro",
-    title: "Rail & Metro",
+    path: "/industries/metrorail",
+    title: "METRO RAIL",
     desc: "Certified glazing systems for rail and urban transit.",
     image: railImg,
   },
   {
-    path: "/industries/specialty-applications",
-    title: "Specialty Applications",
-    desc: "Custom-engineered solutions for demanding environments.",
-    image: specialtyImg,
+    path: "/industries/marine",
+    title: "MARINE",
+    desc: "Marine-grade safety glass designed to withstand impact, pressure, and harsh sea conditions while maintaining clarity.",
+    image: MarineheroImg,
   },
 ];
 

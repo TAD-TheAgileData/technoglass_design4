@@ -4,25 +4,31 @@ import "./Trust.css";
 
 /* ================= IMAGES ================= */
 import heroImg from "../../assets/Trust/TrustHero.jpg";
-import Certification from "../../assets/Trust/Certified.jpg";
-import Quality from "../../assets/Trust/Quality.jpg";
+import Certification from "../../assets/Trust/Certified.png";
+import ManufacturingExcecellence from "../../assets/Trust/ManufacturingExcecellence.png";
 import Partnership from "../../assets/Trust/Partnership.jpg";
 import MediaGallery from "../../assets/Trust/Media&Gallery.jpg";
 import Sustainable from "../../assets/Trust/Sustainable.jpg";
 import CaseStudies from "../../assets/Trust/CaseStudy.jpg";
-
+import Commitment from "../../assets/Trust/Commitment.jpeg"
 const trustCards = [
   {
-    title: "Certifications",
-    desc: "Internationally recognized certifications ensuring compliance and quality excellence.",
-    image: Certification,
-    path: "/trust/certification",
+    title: "OUR COMMITMENT TO QUALITY",
+    desc: "Quality driven by standardized processes, validated parameters, and continuous monitoring.",
+    image: Commitment,
+    path: "/trust/qualitycommitment",
   },
   {
-    title: "Quality Assurance",
-    desc: "Strict quality control systems delivering consistent and reliable glass solutions.",
-    image: Quality,
-    path: "/trust/quality",
+    title: "CERTIFICATIONS & GLOBALLY COMPLIANT",
+    desc: "Internationally recognized certifications ensuring compliance and quality excellence.",
+    image: Certification,
+    path: "/trust/certifications-Globally-Compliant",
+  },
+  {
+    title: "PROVEN MANUFACTURING EXCELLENCE",
+    desc: "Validated processes delivering consistent performance, precision, and reliability.",
+    image: ManufacturingExcecellence,
+    path: "/trust/proven-manufacturing-excellence",
   },
   {
     title: "Strategic Partnerships",
