@@ -19,12 +19,12 @@
 
 .sag-eyebrow {
   letter-spacing: 0.4em;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: #38bdf8;
 }
 
 .sag-hero h1 {
-  font-size: 4.2rem;
+  font-size: 4.rem;
   margin: 24px 0;
   line-height: 1.1;
 }
@@ -34,7 +34,6 @@
 }
 
 .sag-hero p {
-  font-size: 1.25rem;
   max-width: 640px;
   line-height: 1.9;
   color: #cbd5f5;
@@ -104,12 +103,12 @@
 }
 
 .sag-content h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
 .sag-content p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: #e5e7eb;
   margin-bottom: 16px;
@@ -118,7 +117,7 @@
 
 /* CTA */
 .sag-link {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #38bdf8;
   font-weight: 500;
   letter-spacing: 0.05em;

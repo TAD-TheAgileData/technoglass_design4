@@ -80,8 +80,6 @@ const mdFloatImg = (isMobile) => ({
   borderRadius: 18,
   objectFit: "cover",
 });
-
-
 /* ====== COMPONENT ====== */
 export default function LeadershipMessage() {
   const isMobile = window.innerWidth <= 768;
@@ -134,7 +132,6 @@ export default function LeadershipMessage() {
             <span style={leaderRole()}>Chairman</span>
 
             <p style={text(isMobile)}>
-
               <strong>Leadership</strong> begins with vision and responsibility.
               At <strong>Technoglass</strong>, our journey has always been
               guided by integrity, trust, and long-term partnerships.
@@ -149,32 +146,31 @@ export default function LeadershipMessage() {
         </motion.div>
 
         {/* ===== MANAGING DIRECTOR ===== */}
- {/* ===== MANAGING DIRECTOR ===== */}
-<motion.div
-  variants={fadeUp}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true }}
-  style={leaderCard(isMobile)}
-  {...hoverLift}
->
-  <div style={mdFlowWrap(isMobile)}>
-    {/* FLOAT IMAGE */}
-    <motion.img
-      src={mdImg}
-      alt="Managing Director"
-      style={mdFloatImg(isMobile)}
-      whileHover={{ scale: 1.04 }}
-      transition={{ duration: 0.4 }}
-    />
+        {/* ===== MANAGING DIRECTOR ===== */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          style={leaderCard(isMobile)}
+          {...hoverLift}
+        >
+          <div style={mdFlowWrap(isMobile)}>
+            {/* FLOAT IMAGE */}
+            <motion.img
+              src={mdImg}
+              alt="Managing Director"
+              style={mdFloatImg(isMobile)}
+              whileHover={{ scale: 1.04 }}
+              transition={{ duration: 0.4 }}
+            />
 
-    {/* FLOWING CONTENT — UNCHANGED */}
-    <h2 style={leaderName(isMobile)}>Mr. Mousa Al Gedaily</h2>
-    <span style={leaderRole()}>Managing Director</span>
+            {/* FLOWING CONTENT — UNCHANGED */}
+            <h2 style={leaderName(isMobile)}>Mr. Mousa Al Gedaily</h2>
+            <span style={leaderRole()}>Managing Director</span>
 
-    <p style={text(isMobile)}>
-
-     For the last three decades, Technoglass has provided the
+            <p style={text(isMobile)}>
+              For the last three decades, Technoglass has provided the
               automotive replacement glass market from KSA to Gulf regions and
               is a leading independent exporter to the rest of the world. For
               many years, we have witnessed consistent growth, achieved
@@ -205,7 +201,7 @@ export default function LeadershipMessage() {
               continuously to provide our customers with superior service and
               high-quality products at competitive prices. To achieve this, our
               strategic drivers are Sustainability, Profitability &
-              Competitiveness, People Development, and Customer Satisfaction. 
+              Competitiveness, People Development, and Customer Satisfaction.
               <br />
               On Quality Management Systems The Technoglass management team is
               committed to the company’s core values, which have been the
@@ -214,22 +210,13 @@ export default function LeadershipMessage() {
               work, integrity, and honesty.
             </p>
 
-    
-
-    
-
-    <div style={{ clear: "both" }} />
-  </div>
-</motion.div>
-
-
-
-       
+            <div style={{ clear: "both" }} />
+          </div>
+        </motion.div>
       </div>
     </div>
   );
 }
-
 
 /* ====== STYLES ====== */
 const pageBg = () => ({ background: COLORS.white });
@@ -333,14 +320,13 @@ const teamGrid = (isMobile) => ({
   gap: 26,
 });
 
-
 const teamCard = () => ({
   background: "#fff",
   borderRadius: 24,
   minHeight: 260,
-display: "flex",
-flexDirection: "column",
-justifyContent: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
 
   overflow: "hidden",
   border: `1px solid ${COLORS.steel}`,

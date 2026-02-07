@@ -95,12 +95,12 @@
 }
 
 .mgp-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 12px;
 }
 
 .mgp-hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #475569;
   margin-top: 10px;
 }
@@ -162,7 +162,7 @@
 }
 
 .mgp-overview-card p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   color: #475569;
 }
@@ -170,7 +170,7 @@
 .mgp-play {
   display: inline-block;
   margin-top: 12px;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   color: #0284c7;
   font-weight: 600;
@@ -181,7 +181,6 @@
   position: fixed;
   inset: 0;
   background: rgba(2, 6, 23, 0.85);
-  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,7 +233,6 @@
     rgba(240, 248, 255, 0.7),
     rgba(230, 240, 255, 0.9)
   );
-  backdrop-filter: blur(20px);
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
@@ -274,7 +272,6 @@
   padding: 40px 28px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.45s ease;
@@ -385,7 +382,7 @@
 }
 
 .mgp-exp-badge p {
-  font-size: 1.03 rem;
+  font-size: 1.25rem;
   letter-spacing: 0.18em;
   margin-top: 4px;
 }
@@ -399,7 +396,6 @@
 }
 
 .mgp-filter button {
-  font-size: 1rem;  
   padding: 12px 26px;
   border: 1px solid #0284c7;
   background: transparent;
@@ -469,7 +465,8 @@
 }
 
 .mgp-tag {
-  font-size: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   letter-spacing: 0.15em;
   color: #38bdf8;
   margin-bottom: 6px;
@@ -477,13 +474,13 @@
 }
 
 .mgp-overlay h4 {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .mgp-overlay p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: #e5e7eb;
 }
 

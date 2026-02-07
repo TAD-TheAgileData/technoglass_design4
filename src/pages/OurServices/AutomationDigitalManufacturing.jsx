@@ -4,7 +4,7 @@ import heroImg from "../../assets/AutomationDigitalManufacturing/glass.jpg";
 import automationImg from "../../assets/AutomationDigitalManufacturing/Hero.jpg";
 
 const AutomationDigitalManufacturing = () => {
-  return (
+   return (
     <div className="adm-root">
 
       {/* ================= HERO ================= */}

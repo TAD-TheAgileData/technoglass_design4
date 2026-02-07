@@ -1,15 +1,6 @@
+/* ===== ROOT ===== */
 .PPproduct-root {
   background-color: #ffffff;
-}
-.MuiGrid-item {
-  display: flex;
-}
-.PPproduct-card {
-  height: 340px;        /* fixed height */
-  width: 100%;
-  flex: 1;     
-  min-height: 340px;
-  max-height: 340px;         /* 🔥 this is the key */
 }
 
 /* ===== HERO ===== */
@@ -39,8 +30,9 @@
 
 .PPhero-title {
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 16px;
+  font-size: 28px;
 }
 
 .PPhero-subtitle {
@@ -64,16 +56,26 @@
   line-height: 1.8;
 }
 
-/* ===== CARDS ===== */
+/* ===== CARD GRID (FIXED 2 PER ROW) ===== */
+/* ===== CARD GRID (FIXED 3 PER ROW) ===== */
 .PPproduct-cards {
   padding: 60px 0 100px;
-  background-color: #f8fafc; /* light grey like Technoglass */
+  background-color: #f8fafc;
 }
 
+.PPcard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px); /* 🔥 3 FIXED COLUMNS */
+  justify-content: center;
+  gap: 32px;
+}
+
+/* ===== FIXED CARD SIZE ===== */
 .PPproduct-card {
   position: relative;
-  height: 340px;
-  width: 100%;
+  width: 360px;      /* FIXED WIDTH */
+  height: 340px;     /* FIXED HEIGHT */
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -87,7 +89,7 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-
+/* ===== HOVER ===== */
 .PPproduct-card:hover .PPcard-overlay {
   background: linear-gradient(
     180deg,
@@ -100,6 +102,7 @@
   transform: translateX(6px);
 }
 
+/* ===== OVERLAY ===== */
 .PPcard-overlay {
   position: absolute;
   inset: 0;
@@ -110,7 +113,7 @@
   );
 }
 
-
+/* ===== CONTENT ===== */
 .PPcard-content {
   position: relative;
   z-index: 1;
@@ -122,12 +125,12 @@
   color: #ffffff;
 }
 
+/* ===== TEXT (SAFE) ===== */
 .PPcard-title {
   font-weight: 300;
   margin-bottom: 8px;
-
   display: -webkit-box;
-  -webkit-line-clamp: 2;   /* max 2 lines */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -137,9 +140,8 @@
   line-height: 1.6;
   opacity: 0.9;
   margin-bottom: 16px;
-
   display: -webkit-box;
-  -webkit-line-clamp: 3;   /* max 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -157,78 +159,20 @@
   transition: transform 0.25s ease;
 }
 
-@media (max-width: 599px) {
-  .PPproduct-hero {
-    height: 55vh;
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .PPcard-grid {
+    grid-template-columns: 420px; /* 1 CARD ON SMALL */
   }
-
-  .PPhero-title {
-     font-size: 1.05rem;
-    -webkit-line-clamp: 2;
-  }
-
-  .PPhero-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .PPproduct-intro {
-    padding: 50px 16px;
-  }
-
-  .PPproduct-cards {
-    padding: 40px 16px 60px;
-  }
-
-  .PPproduct-card {
-    height: 300px;
-    border-radius: 14px;
-  }
-
-  .PPcard-content {
-    padding: 20px;
-  }
-
-  .PPcard-title {
-    font-size: 1.1rem;
-  }
-
-  .PPcard-desc {
-    font-size: 0.8rem;
-     -webkit-line-clamp: 3;
-  }
-
-  .PPcard-link {
-    font-size: 0.75rem;
+}
+@media (max-width: 1200px) {
+  .PPcard-grid {
+    grid-template-columns: repeat(2, 360px);
   }
 }
 
-@media (min-width: 600px) and (max-width: 1199px) {
-  .PPproduct-hero {
-    height: 60vh;
-  }
-
-  .PPproduct-intro {
-    padding: 60px 24px;
-  }
-
-  .PPproduct-card {
-    height: 360px;
-    min-height: 360px;
-    max-height: 360px;
-  }
-
-  .PPcard-content {
-    padding: 26px;
-  }
-
-  .PPcard-title {
-   font-size: 1.2rem;
-    -webkit-line-clamp: 2;
-  }
-
-  .PPcard-desc {
-    font-size: 0.85rem;
-    -webkit-line-clamp: 3;
+@media (max-width: 800px) {
+  .PPcard-grid {
+    grid-template-columns: 360px;
   }
 }
-

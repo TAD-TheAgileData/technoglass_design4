@@ -1,6 +1,4 @@
-/* Root */
-
-.tb-root {
+:root {
   --bg: #f8fafc;
   --surface: #ffffff;
   --border: rgba(15,23,42,0.08);
@@ -10,13 +8,14 @@
 
   --shadow-1: 0 12px 30px rgba(15,23,42,0.08);
   --shadow-2: 0 30px 90px rgba(2,132,199,0.25);
+}
 
+/* ROOT */
+.tb-root {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to bottom, #ffffff, #eef2f7);
   color: var(--text);
 }
-
-
 
 /* HERO */
 .tb-hero {
@@ -48,13 +47,13 @@
   border-radius: 999px;
   background: rgba(2,132,199,0.15);
   color: var(--accent);
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   letter-spacing: 0.22em;
   margin-bottom: 28px;
 }
 
 .tb-hero-content h1 {
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   margin-bottom: 22px;
 }
 
@@ -87,7 +86,7 @@
 }
 
 .tb-metric h3 {
-  font-size: 1.7rem;
+  font-size: 1.54rem;
   margin-bottom: 12px;
 }
 
@@ -131,18 +130,18 @@
 }
 
 .tb-testimonial-card span {
-  font-size: 1rem;
+  font-size: 1.45rem;
   color: var(--accent);
   font-weight: 500;
 }
 
 /* CASE STUDY */
 .tb-case {
+  font-size: 1.25rem;
   padding: 120px 10% 180px;
 }
 
 .tb-case-card {
-  
   background: linear-gradient(
     135deg,
     rgba(2,132,199,0.08),
@@ -153,22 +152,17 @@
   box-shadow: var(--shadow-2);
   max-width: 900px;
 }
+.tb-testimonial-author {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
 
-.tb-case-card h3 {
-  font-size: 2.2rem;        /* increase heading size */
+.tb-testimonial-author span {
+  font-size: 1.35rem;
   font-weight: 600;
-  margin-bottom: 18px;
-  color: #0f172a;
+  color: var(--text);
 }
-
-.tb-case-card p {
-  font-size: 1.2rem;        /* increase body text */
-  line-height: 1.75;
-  color: #334155;
-  max-width: 720px;
-}
-
-
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .tb-metrics,
@@ -179,17 +173,4 @@
   .tb-hero-content h1 {
     font-size: 3rem;
   }
-}
-
-.tb-testimonial-author {
-  margin-top: 22px;
-  display: flex;
-  flex-direction: column;
-}
-
-.tb-test
-imonial-author span {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
 }

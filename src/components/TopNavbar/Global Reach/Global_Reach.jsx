@@ -11,7 +11,7 @@ import {
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import heroImage from "../../../assets/TopNavbar/GlobalReach/Newmap.jpg";
+import heroImage from "../../../assets/TopNavbar/GlobalReach/MAPno11.png";
 const MotionBox = motion(Box);
 const CARD_BG_COLOR = "#aebebea1";
 /* Regions for modal */
@@ -289,9 +289,9 @@ export default function GlobalReach() {
                     />
 
                     <Typography
-                      variant="h6"
+                      variant="h5"
                       fontWeight={800}
-                      sx={{ color: "#0e2c6e", mb: 1 }}
+                      sx={{ color: "#0e2c6e", mb: 2 }}
                     >
                       {item.title}
                     </Typography>
@@ -329,11 +329,11 @@ export default function GlobalReach() {
                             <Box
                               sx={{
                                 p: 2,
-                                borderRadius: 3,
+                                borderRadius: 4,
                                 background: CARD_BG_COLOR,
 
                                 border: "1px solid #E5E7EB",
-                                fontWeight: 600,
+                                fontWeight: 400,
                                 boxShadow: "0 10px 25px rgba(2,6,23,0.06)",
                               }}
                             >

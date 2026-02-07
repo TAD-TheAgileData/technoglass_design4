@@ -1,19 +1,21 @@
 .vaf-root {
-  --vaf-bg: #f8fafc;
-  --vaf-panel: rgba(255,255,255,0.82);
-  --vaf-border: rgba(15,23,42,0.08);
-  --vaf-text: #0f172a;
-  --vaf-muted: #475569;
-  --vaf-accent: #0284c7;
+  --bg: #f8fafc;
+  --panel: rgba(255,255,255,0.82);
+  --border: rgba(15,23,42,0.08);
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0284c7;
 
-  --vaf-shadow-soft: 0 25px 60px rgba(15,23,42,0.08);
-  --vaf-shadow-hover: 0 50px 140px rgba(2,132,199,0.35);
-
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #ffffff, #eef2f7);
-  color: var(--vaf-text);
+  --shadow-soft: 0 25px 60px rgba(15,23,42,0.08);
+  --shadow-hover: 0 50px 140px rgba(2,132,199,0.35);
 }
 
+/* ROOT */
+.vaf-root {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #ffffff, #eef2f7);
+  color: var(--text);
+}
 
 /* HERO */
 .vaf-hero {
@@ -30,8 +32,8 @@
   inset: 0;
   background: linear-gradient(
     110deg,
-    rgba(48, 48, 48, 0.571),
-    rgba(78, 77, 77, 0.367)
+    rgba(255,255,255,0.96),
+    rgba(255,255,255,0.7)
   );
 }
 
@@ -46,8 +48,8 @@
   padding: 10px 30px;
   border-radius: 999px;
   background: rgba(2,132,199,0.15);
-  color: white;
-  font-size: 0.9rem;
+  color: var(--accent);
+  font-size: 0.7rem;
   letter-spacing: 0.24em;
   margin-bottom: 28px;
 }
@@ -55,13 +57,12 @@
 .vaf-hero-content h1 {
   font-size: 3.8rem;
   margin-bottom: 22px;
-  color: #ffffff;
 }
 
 .vaf-hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   line-height: 1.9;
-  color: #ffffff;
+  color: var(--muted);
 }
 
 /* SECTION */
@@ -138,12 +139,12 @@
 
 /* TEXT */
 .vaf-card h3 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-bottom: 16px;
 }
 
 .vaf-card p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.75;
   color: var(--muted);
 }

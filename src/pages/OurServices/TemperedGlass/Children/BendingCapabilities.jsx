@@ -24,7 +24,6 @@ const fadeUp = {
 const stagger = {
   visible: { transition: { staggerChildren: 0.2 } }
 };
-
 export default function BendingCapabilities() {
   return (
     <div className="bc-root">

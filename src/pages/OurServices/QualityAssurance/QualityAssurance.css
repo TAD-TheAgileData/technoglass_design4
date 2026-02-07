@@ -91,7 +91,7 @@
 }
 
 .qa-hero-content p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #475569;
 }
@@ -144,7 +144,7 @@
 }
 
 .qa-test-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: #475569;
 }
 
@@ -220,12 +220,12 @@
 }
 
 .trace-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 18px;
 }
 
 .trace-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #475569;
 }

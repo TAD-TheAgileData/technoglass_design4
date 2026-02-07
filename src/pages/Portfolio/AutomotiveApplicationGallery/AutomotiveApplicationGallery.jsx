@@ -10,9 +10,10 @@ import evImg from "../../../assets/AutomotiveapplicationGallery/Evwindshield.png
 
 /* ================= VIDEOS ================= */
 import cuttingVideo from "../../../assets/AutomotiveapplicationGallery/Video.mp4";
+import printingVideo from "../../../assets/AutomotiveapplicationGallery/Video.mp4";
 import bendingVideo from "../../../assets/AutomotiveapplicationGallery/Video.mp4";
 import laminationVideo from "../../../assets/AutomotiveapplicationGallery/Video.mp4";
-import printingVideo from "../../../assets/AutomotiveapplicationGallery/Video.mp4";
+
 
 /* ================= DATA ================= */
 const vehicleData = [
@@ -45,6 +46,11 @@ const processVideos = [
     src: cuttingVideo,
     desc: "High-precision CNC cutting ensures exact dimensions and flawless edge quality."
   },
+    {
+    title: "Ceramic Printing",
+    src: printingVideo,
+    desc: "Advanced ceramic frit printing improves UV protection, aesthetics, and durability."
+  },
   {
     title: "Glass Bending",
     src: bendingVideo,
@@ -55,15 +61,10 @@ const processVideos = [
     src: laminationVideo,
     desc: "Multi-layer lamination enhances safety, strength, and acoustic performance."
   },
-  {
-    title: "Ceramic Printing",
-    src: printingVideo,
-    desc: "Advanced ceramic frit printing improves UV protection, aesthetics, and durability."
-  }
+
 ];
 
-
-export default function AutomotiveApplicationGallery() {
+export default function AutomotiveApplicationsGallery() {
   const [activeVideo, setActiveVideo] = useState(null);
 
   return (
@@ -173,7 +174,7 @@ export default function AutomotiveApplicationGallery() {
             >
               <h3>{activeVideo.title}</h3>
               <video controls autoPlay>
-                <source src={cuttingVideo} />
+                <source src={activeVideo.src} type="video/mp4" />
               </video>
             </motion.div>
           </motion.div>

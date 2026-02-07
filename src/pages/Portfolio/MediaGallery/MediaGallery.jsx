@@ -149,7 +149,7 @@ const allMedia = [
 
 const categories = ["All", "Factory", "Machinery", "Product", "Case Study"];
 
-export default function  MediaGallery() {
+export default function MediaGallery() {
   const [filter, setFilter] = useState("All");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -265,7 +265,7 @@ export default function  MediaGallery() {
             </button>
 
             <video controls autoPlay>
-              <source src={video} type="video/mp4" />
+              <source src="/videos/factory-tour.mp4" type="video/mp4" />
             </video>
           </motion.div>
         </motion.div>

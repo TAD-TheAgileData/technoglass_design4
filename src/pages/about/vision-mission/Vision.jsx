@@ -1,12 +1,5 @@
-
 import React from "react";
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Paper,
-} from "@mui/material";
+import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -101,51 +94,69 @@ const Vision = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.55)" }} />
+        <Box
+          sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.55)" }}
+        />
       </Box>
 
       {/* ================= PURPOSE (CONTENT | IMAGE) ================= */}
       <Box sx={{ py: 13, bgcolor: PAGE_BG_COLOR }}>
         <BackgroundAnimation />
         <Container maxWidth="lg">
-          <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
+          <motion.div
+            variants={cardEntrance}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Paper sx={cardStyle}>
               <Grid container spacing={6} alignItems="center" wrap="nowrap">
                 <Grid item xs={6}>
                   <Typography
-  fontWeight={900}
-  color="#176179"
-  sx={{
-    fontSize: { xs: "2rem", md: "2.6rem" }, // 🔥 BIG TITLE
-    letterSpacing: "0.5px",
-  }}
->
-  Our Purpose
-</Typography>
+                    fontWeight={800}
+                    color="#176179"
+                    sx={{
+                      fontSize: { xs: "2rem", md: "2.6rem" }, // 🔥 BIG TITLE
+                      letterSpacing: "0.5px",
+                    }}
+                  >
+                    Our Purpose
+                  </Typography>
 
-
-<Typography
-  sx={{
-    mt: 2,
-    lineHeight: 1.9,
-    fontSize: { xs: "1.05rem", md: "1.2rem" }, // 🔥 BIG CONTENT
-    color: "#020202",
-  }}
->
-                    <strong><b>Supporting Mobility & Home for a Better Life.</b></strong>
-                    <br /><br />
-                    Our diverse and multi-lingual <strong>Sales Teams travel the globe constantly</strong>,
-                    strengthening customer relationships and keeping us ahead of international trends.
-                    <br /><br />
-                    <strong>A key to our success is our extensive knowledge of:</strong>
+                  <Typography
+                    sx={{
+                      mt: 2,
+                      lineHeight: 1.9,
+                      fontSize: { xs: "1.05rem", md: "1.2rem" }, // 🔥 BIG CONTENT
+                      color: "#020202",
+                    }}
+                  >
+                    <strong>
+                      <b>Supporting Mobility & Home for a Better Life.</b>
+                    </strong>
+                    <br />
+                    <br />
+                    Our diverse and multi-lingual{" "}
+                    <strong>Sales Teams travel the globe constantly</strong>,
+                    strengthening customer relationships and keeping us ahead of
+                    international trends.
+                    <br />
+                    <br />
+                    <strong>
+                      A key to our success is our extensive knowledge of:
+                    </strong>
                     <ul>
                       <li>Glass processing</li>
                       <li>World trade</li>
                       <li>Cultures</li>
                       <li>Business customs</li>
                     </ul>
-                    By working in collaboration with our business partners, we ensure that our
-                    <strong> quality products and services meet or exceed customer expectations.</strong>
+                    By working in collaboration with our business partners, we
+                    ensure that our
+                    <strong>
+                      {" "}
+                      quality products and services meet or exceed customer
+                      expectations.
+                    </strong>
                   </Typography>
                 </Grid>
 
@@ -163,7 +174,11 @@ const Vision = () => {
       {/* ================= VISION (IMAGE | CONTENT) ================= */}
       <Box sx={{ py: 14, bgcolor: PAGE_BG_COLOR }}>
         <Container maxWidth="lg">
-          <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
+          <motion.div
+            variants={cardEntrance}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Paper sx={cardStyle}>
               <Grid container spacing={6} alignItems="center" wrap="nowrap">
                 <Grid item xs={6}>
@@ -173,36 +188,44 @@ const Vision = () => {
                 </Grid>
 
                 <Grid item xs={6}>
-                 <Typography
-  fontWeight={900}
-  color="#176179"
-  sx={{
-    fontSize: { xs: "2rem", md: "2.6rem" }, // 🔥 BIG TITLE
-    letterSpacing: "0.5px",
-  }}
->
-  Our Vision
-</Typography>
+                  <Typography
+                    fontWeight={900}
+                    color="#176179"
+                    sx={{
+                      fontSize: { xs: "2rem", md: "2.6rem" }, // 🔥 BIG TITLE
+                      letterSpacing: "0.5px",
+                    }}
+                  >
+                    Our Vision
+                  </Typography>
 
-
-<Typography
-  sx={{
-    mt: 3,
-    lineHeight: 1.9,
-    fontSize: { xs: "1.05rem", md: "1.2rem" }, // 🔥 BIG CONTENT
-    color: "#0d0d0d",
-  }}
->
-                    <strong>“Make every glass to deliver a great experience”</strong>
-                    <br /><br />
-                    Technical Glass Co. success is based on <strong>commitment, dedication, integrity,
-                    hard work, and the vision of its founders and employees.</strong>
-                    <br /><br />
-                    <strong>Leadership:</strong><br />
-                   <b>Mr. Hashim Al Sheikh</b> <br />
+                  <Typography
+                    sx={{
+                      mt: 3,
+                      lineHeight: 1.9,
+                      fontSize: { xs: "1.05rem", md: "1.2rem" }, // 🔥 BIG CONTENT
+                      color: "#0d0d0d",
+                    }}
+                  >
+                    <strong>
+                      “Make every glass to deliver a great experience”
+                    </strong>
+                    <br />
+                    <br />
+                    Technical Glass Co. success is based on{" "}
+                    <strong>
+                      commitment, dedication, integrity, hard work, and the
+                      vision of its founders and employees.
+                    </strong>
+                    <br />
+                    <br />
+                    <strong>Leadership:</strong>
+                    <br />
+                    <b>Mr. Hashim Al Sheikh</b> <br />
                     <b>Eng. Mousa Al-Gedaily</b> <br />
                     <br />
-                    As a trusted automotive partner, we create innovative glazing solutions that enhance:
+                    As a trusted automotive partner, we create innovative
+                    glazing solutions that enhance:
                     <ul>
                       <li>Visibility</li>
                       <li>Safety</li>
@@ -217,79 +240,80 @@ const Vision = () => {
       </Box>
 
       {/* ================= MISSION (CONTENT | IMAGE) ================= */}
-<Box sx={{ py: 14, bgcolor: PAGE_BG_COLOR }}>
-  <Container maxWidth="lg">
-    <motion.div variants={cardEntrance} initial="hidden" whileInView="visible">
-      <Paper sx={cardStyle}>
-        <Grid container spacing={6} alignItems="center" wrap="nowrap">
+      <Box sx={{ py: 14, bgcolor: PAGE_BG_COLOR }}>
+        <Container maxWidth="lg">
+          <motion.div
+            variants={cardEntrance}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <Paper sx={cardStyle}>
+              <Grid container spacing={6} alignItems="center" wrap="nowrap">
+                {/* ===== TEXT ===== */}
+                <Grid item xs={6}>
+                  {/* TITLE */}
+                  <Typography
+                    fontWeight={900}
+                    color="#176179"
+                    sx={{
+                      fontSize: { xs: "2rem", md: "2.6rem" },
+                      letterSpacing: "0.6px",
+                    }}
+                  >
+                    Our Mission
+                  </Typography>
 
-          {/* ===== TEXT ===== */}
-          <Grid item xs={6}>
-            {/* TITLE */}
-            <Typography
-              fontWeight={900}
-              color="#176179"
-              sx={{
-                fontSize: { xs: "2rem", md: "2.6rem" },
-                letterSpacing: "0.6px",
-              }}
-            >
-              Our Mission
-            </Typography>
+                  {/* CONTENT */}
+                  <Typography
+                    sx={{
+                      mt: 3,
+                      lineHeight: 1.9,
+                      fontSize: { xs: "1.05rem", md: "1.2rem" },
+                      color: "#0d0d0d",
+                    }}
+                  >
+                    <strong
+                      style={{
+                        display: "block",
+                        fontSize: "1.3rem",
+                        fontWeight: 700,
+                        marginBottom: "18px",
+                      }}
+                    >
+                      “To build a Customer Centric organization for achieving
+                      sustainable leadership position & profitable growth”
+                    </strong>
+                    Technical Glass Company Ltd. <strong>(Techno Glass)</strong>{" "}
+                    was established in 1993, specializing in auto glass
+                    manufacturing and technically supported by TAMGLASS,
+                    Finland.
+                    <br />
+                    <br />
+                    <strong style={{ fontSize: "1.15rem" }}>
+                      Certifications & Standards:
+                    </strong>
+                    <ul style={{ marginTop: "10px", paddingLeft: "20px" }}>
+                      <li>American & Canadian Standard AS-1 (DOT 531)</li>
+                      <li>European ECE Regulation R-43</li>
+                      <li>South Africa SABS 1191:1978</li>
+                      <li>SAUDI MADE</li>
+                      <li>ISO 9001, ISO 14001, ISO 45001</li>
+                      <li>D-U-N-S</li>
+                    </ul>
+                  </Typography>
+                </Grid>
 
-            {/* CONTENT */}
-            <Typography
-              sx={{
-                mt: 3,
-                lineHeight: 1.9,
-                fontSize: { xs: "1.05rem", md: "1.2rem" },
-                color: "#0d0d0d",
-              }}
-            >
-              <strong
-                style={{
-                  display: "block",
-                  fontSize: "1.3rem",
-                  fontWeight: 700,
-                  marginBottom: "18px",
-                }}
-              >
-                “To build a Customer Centric organization for achieving sustainable leadership
-                position & profitable growth”
-              </strong>
-
-              Technical Glass Company Ltd. <strong>(Techno Glass)</strong> was established in 1993,
-              specializing in auto glass manufacturing and technically supported by TAMGLASS, Finland.
-              <br /><br />
-
-              <strong style={{ fontSize: "1.15rem" }}>
-                Certifications & Standards:
-              </strong>
-
-              <ul style={{ marginTop: "10px", paddingLeft: "20px" }}>
-                <li>American & Canadian Standard AS-1 (DOT 531)</li>
-                <li>European ECE Regulation R-43</li>
-                <li>South Africa SABS 1191:1978</li>
-                <li>SAUDI MADE</li>
-                <li>ISO 9001, ISO 14001, ISO 45001</li>
-                <li>D-U-N-S</li>
-              </ul>
-            </Typography>
-          </Grid>
-
-          {/* ===== IMAGE ===== */}
-          <Grid item xs={6}>
-            <motion.div style={{ y: parallaxY }}>
-              <CardImage src={missionImg} />
-            </motion.div>
-          </Grid>
-
-        </Grid>
-      </Paper>
-    </motion.div>
-  </Container>
-</Box>
-
+                {/* ===== IMAGE ===== */}
+                <Grid item xs={6}>
+                  <motion.div style={{ y: parallaxY }}>
+                    <CardImage src={missionImg} />
+                  </motion.div>
+                </Grid>
+              </Grid>
+            </Paper>
+          </motion.div>
+        </Container>
+      </Box>
     </>
   );
 };

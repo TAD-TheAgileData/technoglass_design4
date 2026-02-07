@@ -32,6 +32,7 @@
 }
 
 .defx-hero-text {
+    
   padding: 0 8%;
   max-width: 820px;
 }
@@ -53,7 +54,7 @@
 }
 
 .defx-hero-text p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: var(--text-muted);
 }
@@ -92,12 +93,12 @@
 }
 
 .defx-slab h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 14px;
 }
 
 .defx-slab p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: var(--text-muted);
 }
@@ -118,7 +119,7 @@
 }
 
 .defx-structure-text p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: black;
 }

@@ -34,7 +34,7 @@
 }
 
 .aag-eyebrow {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   letter-spacing: 0.4em;
   color: #38bdf8;
 }
@@ -50,7 +50,7 @@
 }
 
 .aag-hero p {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #cbd5f5;
 }
@@ -101,7 +101,7 @@
 }
 
 .aag-vehicle-text h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 /* ================= PROCESS ================= */
@@ -110,7 +110,7 @@
 }
 
 .aag-process h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 70px;
 }
 
@@ -135,13 +135,13 @@
 }
 
 .aag-process-tile h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.9);
 }
 
 .aag-process-tile p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: rgba(26, 9, 9, 0.9);
 }

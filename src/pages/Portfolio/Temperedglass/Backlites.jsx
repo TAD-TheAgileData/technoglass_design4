@@ -6,7 +6,7 @@ import heroImg from "../../../assets/Backlites/Backliteshero.jpg";
 import processImg from "../../../assets/Backlites/BacklitesProcess.jpg";
 
 const Backlites = () => {
-  return (
+   return (
     <div className="backlite-root">
 
       {/* ================= HERO ================= */}

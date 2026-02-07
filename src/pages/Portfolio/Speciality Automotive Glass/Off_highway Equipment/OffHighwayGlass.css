@@ -33,14 +33,14 @@
 }
 
 .ohv-hero-content h1 {
-  font-size: 3.4rem;
+  font-size: 3.5rem;
   margin-bottom: 22px;
   color: white;
 }
 
 .ohv-hero-content p {
   max-width: 560px;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   line-height: 1.9;
   color: #e5e7eb;
 }
@@ -117,7 +117,7 @@
 
 .ohv-tech-box {
   max-width: 900px;
-  background: #595a5a;
+  background: #3e3e3f;
   border-radius: 34px;
   padding: 80px;
   color: white;

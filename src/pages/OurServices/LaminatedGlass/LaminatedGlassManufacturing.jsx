@@ -20,7 +20,7 @@ import autoclaveImg from "../../../assets/PVBLamination/PVBhero.jpg";
 import qualityImg from "../../../assets/LaminatedGlassManuf/Testing.png";
 
 export default function LaminatedGlassManufacturing() {
-  return (
+   return (
     <div className="laminated-page">
 
       {/* ===== HERO ===== */}

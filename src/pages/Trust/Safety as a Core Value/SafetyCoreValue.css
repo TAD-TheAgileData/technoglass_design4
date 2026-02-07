@@ -97,7 +97,7 @@
 }
 
 .scm-metrics span {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--muted);
 }
 
@@ -172,7 +172,7 @@
 }
 
 .scm-safety-header p {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: #475569;
 }

@@ -78,7 +78,7 @@
 }
 
 .hero-text p {
-  font-size: 1.02rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   margin-bottom: 24px;
   color: #475569;
@@ -284,7 +284,7 @@
 }
 
 .applications-section h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 60px;
   color: #0284c7;
   font-weight: 600;
@@ -353,7 +353,7 @@
 }
 
 .app-overlay p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: #e2e8f0;
 }

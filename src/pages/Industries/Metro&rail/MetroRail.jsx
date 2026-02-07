@@ -76,7 +76,7 @@ export default function MetroRail() {
       variants={heroText}
       className="mr-scroll-indicator"
     >
-      ⟱ Explore Capabilities
+      
     </motion.div>
   </motion.div>
 </section>

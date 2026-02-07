@@ -16,7 +16,8 @@ import iso45001 from "../../../assets/Certificate/ISO45001.jpeg";
 const certCards = [
   {
     title: "IATF 16949:2016– Automotive Quality Management System",
-    subtitle: "Ensures consistent quality, defect prevention, and reduction of variation and waste.",
+    subtitle:
+      "Ensures consistent quality, defect prevention, and reduction of variation and waste.",
     image: iso9001,
     desc: `➤ Harmonizes global automotive quality requirements  
 ➤ Ensures suppliers meet OEM expectations  
@@ -24,7 +25,8 @@ const certCards = [
   },
   {
     title: "ISO 9001:2015– Quality Management System",
-    subtitle: "Delivers a structured framework for consistent product and service quality.",
+    subtitle:
+      "Delivers a structured framework for consistent product and service quality.",
     image: iso9001,
     desc: `➤ Improves operational efficiency  
 ➤ Enhances customer satisfaction  
@@ -73,7 +75,7 @@ const certCards = [
   {
     title: "Global Tier-1 Partnership for Strategic Materials",
     subtitle: "Strategic partnerships with global suppliers.",
-    
+
     desc: `Raw Glass:
 ➤ Guardian – Thailand  
 ➤ Asahi – China  

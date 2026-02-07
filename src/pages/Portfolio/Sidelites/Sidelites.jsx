@@ -6,7 +6,7 @@ import heroImg from "../../../assets/PVBLamination/PVBhero.jpg";
 import processImg from "../../../assets/PVBLamination/PVBhero.jpg";
 
 const Sidelites = () => {
-  return (
+   return (
       <div className="sidelite-root">
 
       {/* ================= HERO ================= */}
@@ -97,4 +97,4 @@ const Sidelites = () => {
   )
 }
 
-export default Sidelites
+export default Sidelites;

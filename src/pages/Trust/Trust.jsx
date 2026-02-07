@@ -7,10 +7,15 @@ import heroImg from "../../assets/Trust/TrustHero.jpg";
 import Certification from "../../assets/Trust/Certified.png";
 import ManufacturingExcecellence from "../../assets/Trust/ManufacturingExcecellence.png";
 import Partnership from "../../assets/Trust/Partnership.jpg";
-import MediaGallery from "../../assets/Trust/Media&Gallery.jpg";
-import Sustainable from "../../assets/Trust/Sustainable.jpg";
-import CaseStudies from "../../assets/Trust/CaseStudy.jpg";
-import Commitment from "../../assets/Trust/Commitment.jpeg"
+import TrustedbyBrands from "../../assets/Trust/TrustedHero.png";
+import Sustainable from "../../assets/Trust/SustainableHero.jpg";
+import Continouosimprovement from "../../assets/Trust/Continouosimprovementhero.png";
+import Commitment from "../../assets/Trust/Commitment.jpeg";
+import DeliveryReliablity from "../../assets/Trust/DeliveryRealiablity01.jpg";
+import CustomerHero from "../../assets/Trust/CustomerHero.png";
+import safetyimg from "../../assets/Trust/HeroSafety.jpg";
+import Ethics from "../../assets/Trust/Ethics.jpg"
+import { desc, image, path, title } from "framer-motion/client";
 const trustCards = [
   {
     title: "OUR COMMITMENT TO QUALITY",
@@ -31,28 +36,47 @@ const trustCards = [
     path: "/trust/proven-manufacturing-excellence",
   },
   {
-    title: "Strategic Partnerships",
-    desc: "Strong global partnerships enhancing innovation and operational excellence.",
-    image: Partnership,
-    path: "/trust/partnership",
+    title: "DELIVERY RELIABILITY & LOGISTICS EXCELLENCE",
+    desc: "Ensuring on-time delivery through robust logistics and reliable planning.",
+    image: DeliveryReliablity,
+    path: "/trust/DeliveryReliability_LogisticsExcellence",
   },
   {
-    title: "Media & Gallery",
-    desc: "Explore our facilities, processes, and achievements through visual media.",
-    image: MediaGallery,
-    path: "/trust/mediagallery",
+    title:"CUSTOMER FIRST APPROACH",
+    desc:"Customer requirements integrated into design, process, and delivery.",
+    image:CustomerHero,
+    path:"/trust/customer_first_approach",
   },
   {
-    title: "Sustainability",
+    title:"SAFETY AS A CORE VALUE",
+    desc:"Proactive safety practices embedded across all operations.",
+    image:safetyimg,
+    path:"/trust/safety",
+  },
+  {
+    title:"ETHICS & INTEGRITY",
+    desc:"Integrity-driven operations aligned with regulatory and corporate standards.",
+    image:Ethics,
+    path:"/trust/ethics_integrity"
+  }, 
+  {
+    title: "SUSTAINABLITY & RESPONSIBLITY",
     desc: "Responsible manufacturing focused on energy efficiency and sustainability.",
     image: Sustainable,
-    path: "/trust/enivornmentalcompilance",
+    path: "/trust/sustainability_responsibility",
   },
   {
-    title: "Case Studies",
-    desc: "Real-world projects demonstrating our expertise and trusted solutions.",
-    image: CaseStudies,
-    path: "/trust/casestudies",
+    title: "TRUSTED BY LEADING BRANDS",
+    desc: "Preferred by leading brands for quality and reliability.",
+    image: TrustedbyBrands,
+    path: "/trust/trusted_by_leading_companies",
+  },
+  
+  {
+    title: "CONTINUOUS IMPROVEMENT",
+    desc: "A disciplined system combining Kaizen, data intelligence, and innovation to drive sustainable excellence.",
+    image: Continouosimprovement,
+    path: "/trust/continuousimprovement",
   },
 ];
 

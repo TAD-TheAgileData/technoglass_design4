@@ -52,7 +52,7 @@
 }
 
 .adm-hero-inner h1 {
-  font-size: 3.7rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
@@ -89,13 +89,13 @@
 
 .adm-card h3 {
   margin-bottom: 16px;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
 }
 
 .adm-card p {
   color: var(--text-muted);
   line-height: 1.7;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 /* ================= MONITOR ================= */
@@ -109,7 +109,7 @@
 }
 
 .monitor-content h2 {
-  font-size: 2.3rem;
+  font-size: 2.75rem;
   margin-bottom: 28px;
 }
 
@@ -119,7 +119,7 @@
 }
 
 .monitor-content li {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   margin-bottom: 16px;
   padding-left: 22px;
   position: relative;

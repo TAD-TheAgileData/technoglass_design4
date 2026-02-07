@@ -72,8 +72,8 @@
 
 /* HEADING */
 .pcm-hero h1 {
-  font-size: 4.4rem;
-  font-weight: 600;
+  font-size: 4rem;
+  font-weight: 700;
   line-height: 1.12;
   margin: 26px 0;
   color: #ffffff;
@@ -87,7 +87,7 @@
 
 /* DESCRIPTION */
 .pcm-hero p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.85;
   color: #e5e7eb;
   max-width: 620px;

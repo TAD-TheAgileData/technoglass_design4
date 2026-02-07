@@ -55,8 +55,8 @@
 }
 
 .cnc-hero-content h1 {
-  font-size: 3.8rem;
-  font-weight: 600;
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 28px;
 }
 
@@ -135,8 +135,8 @@
 
 /* Section title */
 .cnc-capabilities h2 {
-  font-size: 2.6rem;
-  font-weight: 600;
+  font-size: 2.75rem;
+  font-weight: 700;
   margin-bottom: 70px;
   opacity: 0;
   transform: translateY(30px);
@@ -208,7 +208,7 @@
 }
 
 .cap-card p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.85;
   color: #475569;
 }
@@ -272,7 +272,7 @@
 /* Line-start alignment fix */
 .precision-content li {
   position: relative;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #475569;
   margin-bottom: 18px;

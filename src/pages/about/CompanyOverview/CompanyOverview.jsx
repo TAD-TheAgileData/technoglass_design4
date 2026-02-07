@@ -13,10 +13,10 @@ import overviewImg4 from "../../../assets/Companyoverview/Manufacturig.jpg";
 import overviewImg5 from "../../../assets/Companyoverview/Technologycollab.jpg";
 
 export default function CompanyOverview() {
-  return (
-    <section className="Maincompany-overview">
+ return (
+    <section className="company-overview">
       {/* ================= HERO ================= */}
-      <div className="Mainoverview-hero">
+      <div className="overview-hero">
         <motion.img
           src={heroImage}
           alt="Technoglass Manufacturing Facility"
@@ -25,7 +25,7 @@ export default function CompanyOverview() {
           transition={{ duration: 1.4, ease: "easeOut" }}
         />
 
-        <div className="Mainhero-overlay">
+        <div className="hero-overlay">
           <motion.h1
             initial={{ opacity: 0, y: 40, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -39,20 +39,16 @@ export default function CompanyOverview() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Precision Glass Solutions for Automotive which includes Passenger
-            Cars, Commercial Trucks, Bus and Coach, Metro Rail & Marine
-            Industries. Delivering safety, performance, and reliability through
-            world‑class manufacturing and engineering excellence.
-          </motion.p>
+Precision Glass Solutions for Automotive which includes Passenger Cars, Commercial Trucks, Bus and Coach, Metro Rail & Marine Industries. Delivering safety, performance, and reliability through world‑class manufacturing and engineering excellence.          </motion.p>
         </div>
       </div>
 
       {/* ================= STATS ================= */}
-      <div className="Mainstats-bar">
+      <div className="stats-bar">
         {stats.map((item, i) => (
           <motion.div
             key={i}
-            className="Mainstat-card"
+            className="stat-card"
             initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             whileHover={{ scale: 1.05, y: -6 }}
@@ -66,56 +62,59 @@ export default function CompanyOverview() {
       </div>
 
       {/* ================= CONTENT ================= */}
-      <div className="Maincontainer">
-        {sections.map((section, index) => (
-          <motion.div
-            key={index}
-            className={`Mainoverview-card ${section.highlight ? "highlight" : ""}`}
-            initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            whileHover={{ scale: 1.03, y: -6 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <div
-              className={`Mainoverview-row ${index % 2 !== 0 ? "reverse" : ""}`}
-            >
-              {/* IMAGE */}
-              <div className="Mainoverview-image">
-                <img src={section.image} alt={section.title} />
-              </div>
+      {/* ================= CONTENT ================= */}
+<div className="container">
+  {sections.map((section, index) => (
+    <motion.div
+      key={index}
+      className={`overview-card ${section.highlight ? "highlight" : ""}`}
+      initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      whileHover={{ scale: 1.03, y: -6 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <div className={`overview-row ${index % 2 !== 0 ? "reverse" : ""}`}>
+        
+        {/* IMAGE */}
+        <div className="overview-image">
+          <img src={section.image} alt={section.title} />
+        </div>
 
-              {/* CONTENT */}
-              <div className="Mainoverview-content">
-                <h3 className="Maincard-title">{section.title}</h3>
+        {/* CONTENT */}
+        <div className="overview-content">
+          <h3 className="card-title">{section.title}</h3>
 
-                {section.subtitle && (
-                  <p className="Maincard-subtitle">{section.subtitle}</p>
-                )}
+          {section.subtitle && (
+            <p className="card-subtitle">{section.subtitle}</p>
+          )}
 
-                {section.text && (
-                  <p className="Maincard-text">{section.text}</p>
-                )}
+          {section.text && (
+            <p className="card-text">{section.text}</p>
+          )}
 
-                {section.list && (
-                  <div
-                    className={
-                      section.grid ? "icon-grid card-list" : "card-list"
-                    }
-                  >
-                    {section.list.map((item, i) => (
-                      <div key={i} className="Mainicon-row">
-                        <FaCheckCircle className="Mainlist-icon" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+          {/* ICON LIST — NO BULLETS */}
+          {section.list && (
+            <div className={section.grid ? "icon-grid card-list" : "card-list"}>
+              {section.list.map((item, i) => (
+                <div key={i} className="icon-row">
+                  <FaCheckCircle className="list-icon" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
-          </motion.div>
-        ))}
+          )}
+        </div>
+
       </div>
+    </motion.div>
+  ))}
+</div>
+
+
+          
+      
+    
     </section>
   );
 }
@@ -149,7 +148,7 @@ const sections = [
         region. Today, Technoglass is widely recognized as one of the most
         preferred automotive glass suppliers in the GCC, driven by its
         dedication to innovation, continuous improvement, and long-term
-        partnerships built on trust, performance, and excellence
+        partnerships built on trust, performance, and excellence.
       </>
     ),
   },

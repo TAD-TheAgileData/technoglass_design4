@@ -57,8 +57,8 @@
 
 /* TITLE */
 .mr-hero h1 {
-  font-size: 4.4rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 800;
   line-height: 1.15;
   margin: 28px 0;
 }
@@ -69,7 +69,7 @@
 
 /* DESCRIPTION */
 .mr-hero p {
-  font-size: 1.18rem;
+  font-size: 1.25rem;
   line-height: 1.9;
   color: #e5e7eb;
   max-width: 620px;
@@ -111,7 +111,7 @@
   margin-bottom: 20px;
 }
 .mr-overview-text p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #475569;
   margin-bottom: 32px;
@@ -146,7 +146,7 @@
 .mr-section p,
 .mr-strengths p,
 .mr-markets p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #475569;
 }
@@ -160,6 +160,7 @@
 
 .mr-card,
 .mr-strength-card {
+  font-size: 1.5rem;
   background: rgba(255,255,255,0.85);
   border-radius: 30px;
   padding: 48px;

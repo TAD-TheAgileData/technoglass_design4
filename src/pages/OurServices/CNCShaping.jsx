@@ -4,7 +4,7 @@ import heroImg from "../../assets/CNCShaping/CNC1.png";
 import machineImg from "../../assets/CNCShaping/CNC2.png";
 
 const CNCShaping = () => {
-  return (
+    return (
     <div className="cnc-container">
 
       {/* ================= HERO ================= */}

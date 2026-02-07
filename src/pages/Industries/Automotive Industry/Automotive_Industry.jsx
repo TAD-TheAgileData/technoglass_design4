@@ -14,6 +14,7 @@ import glass2 from "../../../assets/AutomotiveIndustry_industries/Capablities.pn
 import glass3 from "../../../assets/AutomotiveIndustry_industries/GlobalCompliance.png";
 
 /* ================= ANIMATIONS ================= */
+/* ================= ANIMATIONS ================= */
 
 const heroReveal = {
   hidden: { opacity: 0, scale: 1.12 },
@@ -53,7 +54,7 @@ const floatCard = {
 };
 
 export default function Automotive_Industry() {
-  return (
+   return (
     <div className="auto-root">
       {/* ===== BACKGROUND LIGHT EFFECT ===== */}
       <div className="bg-light-layer">

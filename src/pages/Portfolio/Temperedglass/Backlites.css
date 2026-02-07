@@ -59,7 +59,7 @@
 }
 
 .backlite-hero-content h1 {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   margin-bottom: 18px;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .overview-card p {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--text-muted);
   position: relative;

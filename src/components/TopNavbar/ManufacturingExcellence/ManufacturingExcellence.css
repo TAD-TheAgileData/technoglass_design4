@@ -21,13 +21,14 @@
 
 .mc-hero-title {
   color: #fff;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 900;
 }
 
 .mc-hero-subtitle {
   color: #ddd;
   letter-spacing: 1px;
+  font-size: 2rem;
   margin-top: 6px;
 }
 
@@ -102,13 +103,13 @@
 
 /* TEXT */
 .mc-make {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #777;
   letter-spacing: 0.5px;
 }
 
 .mc-process {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #007bff;
   margin-bottom: 8px;
@@ -125,7 +126,7 @@
   display: flex;
   align-items: flex-start;   /* 🔑 FIXED ICON ALIGNMENT */
   gap: 10px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 6px;
 }

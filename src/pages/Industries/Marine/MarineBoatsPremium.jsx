@@ -12,6 +12,7 @@ import "./MarineBoats.css";
 import marineImg from "../../../assets/MarineBoats/Hero.png";
 
 /* ================= MOTION ================= */
+/* ================= MOTION ================= */
 const reveal = {
   hidden: { opacity: 0, y: 80 },
   visible: {
@@ -31,8 +32,9 @@ const floatCard = {
   }
 };
 
+
 export default function MarineBoatsPremium() {
-  return (
+ return (
     <div className="mbp-root">
 
       {/* ================= HERO ================= */}

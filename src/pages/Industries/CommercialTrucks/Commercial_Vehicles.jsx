@@ -13,6 +13,7 @@ import heroImg from "../../../assets/commercialglass/Hero1.jpg";
 import fleetImg from "../../../assets/commercialglass/Hero2.png";
 
 /* ================= ANIMATIONS ================= */
+/* ================= ANIMATIONS ================= */
 const fadeSlide = {
   hidden: { opacity: 0, y: 70 },
   visible: { opacity: 1, y: 0 },
@@ -28,7 +29,7 @@ const slideRight = {
   visible: { opacity: 1, x: 0 },
 };
 const Commercial_Vehicles = () => {
-  return (
+ return (
     <div className="cv-root">
       {/* ================= HERO ================= */}
       <section

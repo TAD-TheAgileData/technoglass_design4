@@ -4,7 +4,7 @@ import {
   FaLeaf,
   FaChartLine,
   FaUsers,
-  FaSmile
+  FaSmile,
 } from "react-icons/fa";
 
 const StrategicDrivers = () => {
