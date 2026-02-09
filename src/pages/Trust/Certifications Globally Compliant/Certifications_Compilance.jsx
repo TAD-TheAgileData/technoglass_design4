@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./Certifications.css";
 
-import heroImg from "../../../assets/Certificate/CertificateHero.jpg";
+import heroImg from "../../../assets/Certificate/Hero1.png";
 import iso9001 from "../../../assets/Certificate/Iso9001.jpg";
 import iso14001 from "../../../assets/Certificate/ISO14001Certificate.jpeg";
 import iso45001 from "../../../assets/Certificate/ISO45001.jpeg";
 import cop from "../../../assets/Certificate/Copcertificate.jpeg";
-
+import MorrocoCertificate from "../../../assets/Certificate/MorrocoCertificate.png";
+import ECER from "../../../assets/Certificate/ECE43Rcertificate.png";
 const certificates = [
   {
-    title: "IATF 16949:2016",
+    title: "IATF 16949:2016(IN PROGRESS)",
     subtitle: "Automotive Quality Management System",
     image: iso9001,
     desc: "Ensures defect prevention, customer satisfaction, and continuous improvement across automotive supply chains.",
@@ -41,9 +42,15 @@ const certificates = [
   {
     title: "ECE R-43– Automotive Safety Glazing",
     subtitle: <strong>UN regulation for automotive glazing materials.</strong>,
-    image: cop,
+    image: ECER,
     desc: "Prevents dangerous glass fragmentation, ensures optical clarity, and withstands mechanical stress.",
   },
+  {
+      title: "NM 22.0.010– Morocco Automotive Standard",
+      subtitle: "Mandatory Moroccan automotive compliance.",
+      image: MorrocoCertificate,
+      desc:"Meets national safety regulations, mandatory for exporters, and confirms product conformity.",
+    },
 ];
 
 export default function Certifications() {
@@ -56,10 +63,10 @@ export default function Certifications() {
         className="Ccert-hero"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
-        <div className="Ccert-hero-overlay">
-          <h1>Certifications & Compliance</h1>
-          <p>International standards ensuring quality, safety, and trust.</p>
-        </div>
+        {/* <div className="Ccert-hero-overlay"> */}
+          {/* <h1>Certifications & Compliance</h1> */}
+          {/* <p>International standards ensuring quality, safety, and trust.</p> */}
+        {/* </div> */}
       </section>
 
       {/* CONTENT */}

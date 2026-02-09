@@ -3,10 +3,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Box, Container, Typography, Grid, Dialog } from "@mui/material";
 
 /* IMAGES */
-import heroImg from "../../../assets/Certificate/Herook.png";
+import heroImg from "../../../assets/Certificate/Hero1.png";
 import iso9001 from "../../../assets/Certificate/Iso9001.jpg";
-// import iso45001 from "../../../assets/About_us/LeaderShip/White.jpg";
-// import iso14001 from "../../../assets/About_us/LeaderShip/White.jpg";
+import ECER from "../../../assets/Certificate/ECE43Rcertificate.png";
+import MorrocoCertificate from "../../../assets/Certificate/MorrocoCertificate.png";
 import fssc from "../../../assets/About_us/LeaderShip/White.jpg";
 import encon from "../../../assets/About_us/LeaderShip/White.jpg";
 import Copcertificate from "../../../assets/Certificate/Copcertificate.jpeg";
@@ -15,7 +15,7 @@ import iso45001 from "../../../assets/Certificate/ISO45001.jpeg";
 /* DATA */
 const certCards = [
   {
-    title: "IATF 16949:2016– Automotive Quality Management System",
+    title: "IATF 16949:2016– Automotive Quality Management System (IN PROGRESS)",
     subtitle:
       "Ensures consistent quality, defect prevention, and reduction of variation and waste.",
     image: iso9001,
@@ -51,7 +51,7 @@ const certCards = [
   {
     title: "ECE R-43– Automotive Safety Glazing",
     subtitle: "UN regulation for automotive glazing materials.",
-    image: fssc,
+    image: ECER,
     desc: `➤ Prevents dangerous glass fragmentation  
 ➤ Ensures optical clarity  
 ➤ Withstands mechanical stress`,
@@ -59,7 +59,7 @@ const certCards = [
   {
     title: "CoP Certification– Conformity of Production",
     subtitle: "Ensures mass production consistency.",
-    image: encon,
+    image: Copcertificate,
     desc: `➤ Maintains approved specifications  
 ➤ Reduces recall risks  
 ➤ Builds regulatory confidence`,
@@ -67,7 +67,7 @@ const certCards = [
   {
     title: "NM 22.0.010– Morocco Automotive Standard",
     subtitle: "Mandatory Moroccan automotive compliance.",
-    image: encon,
+    image: MorrocoCertificate,
     desc: `➤ Meets national safety laws  
 ➤ Required for exporters  
 ➤ Confirms product conformity`,
@@ -121,15 +121,28 @@ const CertificationImageZoom = ({ item }) => {
         onClick={() => setOpen(true)}
       />
 
-      <Dialog open={open} onClose={() => setOpen(false)} maxWidth="lg">
+      <Dialog
+        open={open}
+        onClose={() => setOpen(false)}
+        maxWidth={false}
+        PaperProps={{
+          sx: {
+            backgroundColor: "transparent",
+            boxShadow: "none",
+            overflow: "hidden",
+          },
+        }}
+      >
         <Box
           component="img"
           src={item.image}
           alt={item.title}
           sx={{
-            width: { xs: "90vw", md: "70vw" },
-            maxHeight: "90vh",
+            maxWidth: "95vw",
+            maxHeight: "95vh",
+            objectFit: "contain",
             borderRadius: 2,
+            backgroundColor: "#fff",
           }}
         />
       </Dialog>
@@ -150,7 +163,7 @@ export default function Certifications() {
       "linear-gradient(180deg, #22c55e, #16a34a)",
       "linear-gradient(180deg, #f97316, #dc2626)",
       "linear-gradient(180deg, #9333ea, #6366f1)",
-    ]
+    ],
   );
 
   return (
@@ -168,7 +181,9 @@ export default function Certifications() {
             backgroundSize: "cover",
           }}
         />
-        <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.75)" }} />
+        <Box
+          sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.75)" }}
+        />
 
         {/* <Container sx={{ position: "relative", zIndex: 1, pt: 18 }}>
           <Typography variant="h2" fontWeight={900} color="#fff">
@@ -184,114 +199,125 @@ export default function Certifications() {
       <Container maxWidth="lg" sx={{ py: 16 }}>
         {certCards.map((item, index) => {
           const reverse = index % 2 !== 0;
- const hasImage = Boolean(item.image);
+          const hasImage = Boolean(item.image);
           return (
-          
-
-<Grid
-  container
-  spacing={8}
-  key={index}
-  direction={hasImage && reverse ? "row-reverse" : "row"}
-  alignItems="center"
-  sx={{ mb: 14 }}
->
-
-              {item.title !== "Global Tier-1 Partnership for Strategic Materials" && (
-  <Grid item xs={12} md={4}>
-    <CertificationImageZoom item={item} />
-  </Grid>
-)}
-
+            <Grid
+              container
+              spacing={8}
+              key={index}
+              direction={hasImage && reverse ? "row-reverse" : "row"}
+              alignItems="center"
+              sx={{ mb: 14 }}
+            >
+              {item.title !==
+                "Global Tier-1 Partnership for Strategic Materials" && (
+                <Grid item xs={12} md={4}>
+                  <CertificationImageZoom item={item} />
+                </Grid>
+              )}
 
               <Grid item xs={12} md={hasImage ? 8 : 12}>
-
                 <motion.div whileHover={{ y: -6 }}>
                   <Box
-  sx={{
-    position: "relative",
-    bgcolor: "#fff",
-    p: 5,
-    borderRadius: 4,
-    boxShadow: "0 30px 100px rgba(0,0,0,0.1)",
-    overflow: "hidden",
-    transition: "0.3s ease",
-  }}
->
-{/* BACKGROUND DESIGN UI/UX */}
-<motion.div
-  animate={{ rotate: [0, 360] }}
-  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-  style={{
-    position: "absolute",
-    inset: 0,
-    borderRadius: 16,
-    background: `
+                    sx={{
+                      position: "relative",
+                      bgcolor: "#fff",
+                      p: 5,
+                      borderRadius: 4,
+                      boxShadow: "0 30px 100px rgba(0,0,0,0.1)",
+                      overflow: "hidden",
+                      transition: "0.3s ease",
+                    }}
+                  >
+                    {/* BACKGROUND DESIGN UI/UX */}
+                    <motion.div
+                      animate={{ rotate: [0, 360] }}
+                      transition={{
+                        duration: 60,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        borderRadius: 16,
+                        background: `
       radial-gradient(circle at 20% 20%, rgba(14,165,233,0.05), transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(99,102,241,0.05), transparent 50%),
       repeating-conic-gradient(from 0deg, rgba(14,165,233,0.03) 0deg 45deg, transparent 45deg 90deg)
     `,
-    zIndex: 0,
-    pointerEvents: "none",
-  }}
-/>
+                        zIndex: 0,
+                        pointerEvents: "none",
+                      }}
+                    />
 
-{/* OPTIONAL — subtle animated pulse circles */}
-<motion.div
-  animate={{ scale: [1, 1.15, 1] }}
-  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-  style={{
-    position: "absolute",
-    top: "30%",
-    left: "30%",
-    width: 180,
-    height: 180,
-    borderRadius: "50%",
-    background: "rgba(14,165,233,0.05)",
-    zIndex: 0,
-  }}
-/>
-<motion.div
-  animate={{ scale: [1, 1.12, 1] }}
-  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-  style={{
-    position: "absolute",
-    top: "50%",
-    left: "55%",
-    width: 120,
-    height: 120,
-    borderRadius: "50%",
-    background: "rgba(99,102,241,0.05)",
-    zIndex: 0,
-  }}
-/>
+                    {/* OPTIONAL — subtle animated pulse circles */}
+                    <motion.div
+                      animate={{ scale: [1, 1.15, 1] }}
+                      transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      style={{
+                        position: "absolute",
+                        top: "30%",
+                        left: "30%",
+                        width: 180,
+                        height: 180,
+                        borderRadius: "50%",
+                        background: "rgba(14,165,233,0.05)",
+                        zIndex: 0,
+                      }}
+                    />
+                    <motion.div
+                      animate={{ scale: [1, 1.12, 1] }}
+                      transition={{
+                        duration: 7,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "55%",
+                        width: 120,
+                        height: 120,
+                        borderRadius: "50%",
+                        background: "rgba(99,102,241,0.05)",
+                        zIndex: 0,
+                      }}
+                    />
 
-
-{/* GLOW BORDER */}
-<motion.div
-  animate={{ opacity: [0.4, 0.8, 0.4] }}
-  transition={{ duration: 4, repeat: Infinity }}
-  style={{
-    position: "absolute",
-    inset: -2,
-    borderRadius: 20,
-    background: accentGradient,
-    filter: "blur(18px)",
-    zIndex: -1,
-  }}
-/>
-{/* LEFT TECH SCAN LINE */}
-<motion.div
-  animate={{ backgroundPositionY: ["0%", "300%"] }}
-  transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
-  style={{
-    position: "absolute",
-    top: 26,
-    bottom: 26,
-    left: 8,
-    width: 6,
-    borderRadius: 12,
-    background: `
+                    {/* GLOW BORDER */}
+                    <motion.div
+                      animate={{ opacity: [0.4, 0.8, 0.4] }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      style={{
+                        position: "absolute",
+                        inset: -2,
+                        borderRadius: 20,
+                        background: accentGradient,
+                        filter: "blur(18px)",
+                        zIndex: -1,
+                      }}
+                    />
+                    {/* LEFT TECH SCAN LINE */}
+                    <motion.div
+                      animate={{ backgroundPositionY: ["0%", "300%"] }}
+                      transition={{
+                        duration: 3.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                      style={{
+                        position: "absolute",
+                        top: 26,
+                        bottom: 26,
+                        left: 8,
+                        width: 6,
+                        borderRadius: 12,
+                        background: `
       linear-gradient(
         180deg,
         transparent 0%,
@@ -302,23 +328,27 @@ export default function Certifications() {
       ),
       ${accentGradient}
     `,
-    backgroundSize: "100% 300%",
-    boxShadow: "0 0 24px rgba(99,102,241,0.55)",
-  }}
-/>
+                        backgroundSize: "100% 300%",
+                        boxShadow: "0 0 24px rgba(99,102,241,0.55)",
+                      }}
+                    />
 
-{/* RIGHT TECH SCAN LINE */}
-<motion.div
-  animate={{ backgroundPositionY: ["300%", "0%"] }}
-  transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
-  style={{
-    position: "absolute",
-    top: 26,
-    bottom: 26,
-    right: 8,
-    width: 6,
-    borderRadius: 12,
-    background: `
+                    {/* RIGHT TECH SCAN LINE */}
+                    <motion.div
+                      animate={{ backgroundPositionY: ["300%", "0%"] }}
+                      transition={{
+                        duration: 3.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                      style={{
+                        position: "absolute",
+                        top: 26,
+                        bottom: 26,
+                        right: 8,
+                        width: 6,
+                        borderRadius: 12,
+                        background: `
       linear-gradient(
         180deg,
         transparent 0%,
@@ -329,254 +359,256 @@ export default function Certifications() {
       ),
       ${accentGradient}
     `,
-    backgroundSize: "100% 300%",
-    boxShadow: "0 0 24px rgba(99,102,241,0.55)",
-  }}
-/>
+                        backgroundSize: "100% 300%",
+                        boxShadow: "0 0 24px rgba(99,102,241,0.55)",
+                      }}
+                    />
 
                     {/* ACCENT BAR */}
                     {/* LEFT ACCENT BAR */}
-<motion.div
-  whileHover={{ scaleY: 1.15 }}
-  style={{
-    position: "absolute",
-    top: 30,
-    bottom: 30,
-    left: 0,
-    width: 6,
-    borderRadius: 12,
-    background: accentGradient,
-    boxShadow: "0 0 22px rgba(99,102,241,0.45)",
-  }}
-/>
+                    <motion.div
+                      whileHover={{ scaleY: 1.15 }}
+                      style={{
+                        position: "absolute",
+                        top: 30,
+                        bottom: 30,
+                        left: 0,
+                        width: 6,
+                        borderRadius: 12,
+                        background: accentGradient,
+                        boxShadow: "0 0 22px rgba(99,102,241,0.45)",
+                      }}
+                    />
 
-{/* RIGHT ACCENT BAR */}
-<motion.div
-  whileHover={{ scaleY: 1.15 }}
-  style={{
-    position: "absolute",
-    top: 30,
-    bottom: 30,
-    right: 0,
-    width: 6,
-    borderRadius: 12,
-    background: accentGradient,
-    boxShadow: "0 0 22px rgba(99,102,241,0.45)",
-  }}
-/>
-{/* LEFT PREMIUM GLOW LINE */}
-<div
-  style={{
-    position: "absolute",
-    top: 28,
-    bottom: 28,
-    left: 10,
-    width: 8,
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      borderRadius: 10,
-      background: accentGradient,
-      filter: "blur(8px)",
-      opacity: 0.6,
-    }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      inset: 2,
-      borderRadius: 8,
-      background: accentGradient,
-    }}
-  />
-</div>
+                    {/* RIGHT ACCENT BAR */}
+                    <motion.div
+                      whileHover={{ scaleY: 1.15 }}
+                      style={{
+                        position: "absolute",
+                        top: 30,
+                        bottom: 30,
+                        right: 0,
+                        width: 6,
+                        borderRadius: 12,
+                        background: accentGradient,
+                        boxShadow: "0 0 22px rgba(99,102,241,0.45)",
+                      }}
+                    />
+                    {/* LEFT PREMIUM GLOW LINE */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 28,
+                        bottom: 28,
+                        left: 10,
+                        width: 8,
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          borderRadius: 10,
+                          background: accentGradient,
+                          filter: "blur(8px)",
+                          opacity: 0.6,
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 2,
+                          borderRadius: 8,
+                          background: accentGradient,
+                        }}
+                      />
+                    </div>
 
-{/* RIGHT PREMIUM GLOW LINE */}
-<div
-  style={{
-    position: "absolute",
-    top: 28,
-    bottom: 28,
-    right: 10,
-    width: 8,
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      borderRadius: 10,
-      background: accentGradient,
-      filter: "blur(8px)",
-      opacity: 0.6,
-    }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      inset: 2,
-      borderRadius: 8,
-      background: accentGradient,
-    }}
-  />
-</div>
+                    {/* RIGHT PREMIUM GLOW LINE */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 28,
+                        bottom: 28,
+                        right: 10,
+                        width: 8,
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          borderRadius: 10,
+                          background: accentGradient,
+                          filter: "blur(8px)",
+                          opacity: 0.6,
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          inset: 2,
+                          borderRadius: 8,
+                          background: accentGradient,
+                        }}
+                      />
+                    </div>
 
-{/* LEFT CUT LINE */}
-<div
-  style={{
-    position: "absolute",
-    top: 34,
-    bottom: 34,
-    left: 6,
-    width: 5,
-    background: accentGradient,
-    borderRadius: 10,
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      top: -10,
-      left: -4,
-      width: 14,
-      height: 14,
-      borderRadius: "50%",
-      background: accentGradient,
-      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
-    }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      bottom: -10,
-      left: -4,
-      width: 14,
-      height: 14,
-      borderRadius: "50%",
-      background: accentGradient,
-      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
-    }}
-  />
-</div>
+                    {/* LEFT CUT LINE */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 34,
+                        bottom: 34,
+                        left: 6,
+                        width: 5,
+                        background: accentGradient,
+                        borderRadius: 10,
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: -10,
+                          left: -4,
+                          width: 14,
+                          height: 14,
+                          borderRadius: "50%",
+                          background: accentGradient,
+                          boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: -10,
+                          left: -4,
+                          width: 14,
+                          height: 14,
+                          borderRadius: "50%",
+                          background: accentGradient,
+                          boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+                        }}
+                      />
+                    </div>
 
-{/* RIGHT CUT LINE */}
-<div
-  style={{
-    position: "absolute",
-    top: 34,
-    bottom: 34,
-    right: 6,
-    width: 5,
-    background: accentGradient,
-    borderRadius: 10,
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      top: -10,
-      right: -4,
-      width: 14,
-      height: 14,
-      borderRadius: "50%",
-      background: accentGradient,
-      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
-    }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      bottom: -10,
-      right: -4,
-      width: 14,
-      height: 14,
-      borderRadius: "50%",
-      background: accentGradient,
-      boxShadow: "0 0 16px rgba(99,102,241,0.7)",
-    }}
-  />
-</div>
+                    {/* RIGHT CUT LINE */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 34,
+                        bottom: 34,
+                        right: 6,
+                        width: 5,
+                        background: accentGradient,
+                        borderRadius: 10,
+                      }}
+                    >
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: -10,
+                          right: -4,
+                          width: 14,
+                          height: 14,
+                          borderRadius: "50%",
+                          background: accentGradient,
+                          boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+                        }}
+                      />
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: -10,
+                          right: -4,
+                          width: 14,
+                          height: 14,
+                          borderRadius: "50%",
+                          background: accentGradient,
+                          boxShadow: "0 0 16px rgba(99,102,241,0.7)",
+                        }}
+                      />
+                    </div>
 
-  <Box
-  sx={{
-    position: "relative",
-    bgcolor: "#fff",
-    p: 5,
-    borderRadius: 4,
-    boxShadow: "0 30px 100px rgba(0,0,0,0.1)",
-    overflow: "hidden",
-    transition: "0.3s ease",
-  }}
->
-  {/* BACKGROUND ANIMATION */}
-  <motion.div
-    animate={{ rotate: [0, 360] }}
-    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-    style={{
-      position: "absolute",
-      inset: 0,
-      borderRadius: 16,
-      background: `
+                    <Box
+                      sx={{
+                        position: "relative",
+                        bgcolor: "#fff",
+                        p: 5,
+                        borderRadius: 4,
+                        boxShadow: "0 30px 100px rgba(0,0,0,0.1)",
+                        overflow: "hidden",
+                        transition: "0.3s ease",
+                      }}
+                    >
+                      {/* BACKGROUND ANIMATION */}
+                      <motion.div
+                        animate={{ rotate: [0, 360] }}
+                        transition={{
+                          duration: 60,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          borderRadius: 16,
+                          background: `
         radial-gradient(circle at 20% 20%, rgba(14,165,233,0.05), transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(99,102,241,0.05), transparent 50%),
         repeating-conic-gradient(from 0deg, rgba(14,165,233,0.03) 0deg 45deg, transparent 45deg 90deg)
       `,
-      zIndex: 0,
-      pointerEvents: "none",
-    }}
-  />
+                          zIndex: 0,
+                          pointerEvents: "none",
+                        }}
+                      />
 
-  {/* TITLE */}
-  <Typography
-    variant="h5"
-    fontWeight={900}
-    color="#111827"
-    sx={{ position: "relative", zIndex: 1, mb: 2 }}
-  >
-    {item.title}
-  </Typography>
+                      {/* TITLE */}
+                      <Typography
+                        variant="h5"
+                        fontWeight={900}
+                        color="#111827"
+                        sx={{ position: "relative", zIndex: 1, mb: 2 }}
+                      >
+                        {item.title}
+                      </Typography>
 
-  {/* SUBTITLE */}
-  <Typography
-    variant="h7"
-    fontWeight={600}
-    color="#4b5563"
-    sx={{ position: "relative", zIndex: 1, mb: 2 ,pl:1}}
-  >
-    {item.subtitle}
-  </Typography>
+                      {/* SUBTITLE */}
+                      <Typography
+                        variant="h7"
+                        fontWeight={600}
+                        color="#4b5563"
+                        sx={{ position: "relative", zIndex: 1, mb: 2, pl: 1 }}
+                      >
+                        {item.subtitle}
+                      </Typography>
 
-  {/* DASH SEPARATOR */}
-  <Box
-    sx={{
-      width: "60px",
-      height: 2,
-      bgcolor: "#e5e7eb",
-      mb: 2,
-      
-      position: "relative",
-      zIndex: 1,
-      borderRadius: 1,
-    }}
-  />
+                      {/* DASH SEPARATOR */}
+                      <Box
+                        sx={{
+                          width: "60px",
+                          height: 2,
+                          bgcolor: "#e5e7eb",
+                          mb: 2,
 
-  {/* DESCRIPTION */}
-  <Typography
-    variant="body1"
-    color="#6b7280"
-    lineHeight={1.8}
-    whiteSpace="pre-line"
-    sx={{ position: "relative", zIndex: 1, pl: 4 }}
-  >
-    {item.desc}
-  </Typography>
-</Box>
+                          position: "relative",
+                          zIndex: 1,
+                          borderRadius: 1,
+                        }}
+                      />
 
-
-</Box>
+                      {/* DESCRIPTION */}
+                      <Typography
+                        variant="body1"
+                        color="#6b7280"
+                        lineHeight={1.8}
+                        whiteSpace="pre-line"
+                        sx={{ position: "relative", zIndex: 1, pl: 4 }}
+                      >
+                        {item.desc}
+                      </Typography>
+                    </Box>
+                  </Box>
                 </motion.div>
               </Grid>
             </Grid>
